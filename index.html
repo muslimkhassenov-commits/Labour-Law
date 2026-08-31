@@ -241,13 +241,21 @@ function videoPlayer(id,src,label){
   return `<div class="video-frame"><span class="vlabel">${label}</span><video id="vid-${id}" class="auto-video" src="${src}" controls playsinline></video></div>
   <div class="video-nudge">Если видео не начало воспроизводиться автоматически — нажмите ▶ на плеере (ограничение браузера).</div>`;
 }
-function qrZone(id,label,placeholderUrl){
+function qrZone(id,label,placeholderUrl,prefillUrl){
   return `<div class="qr-zone">
     <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
     <div class="qr-meta"><b>${label}</b>
-      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" />
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
       <button onclick="renderQr('${id}')">Показать QR-код</button>
     </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
 }
 function choiceListFull(id,opts,correctIdx,explain){
   const letters=["A","B","C","D"];
@@ -453,7 +461,7 @@ const SLIDES = [
   <h2 class="section-title">А теперь: с чем у вас ассоциируется трудовое право?</h2>
   <p class="lede">После разговора о рынке труда, труде, капитале, политэкономии и наёмном труде напишите 5 слов, которые теперь ассоциируются у вас с трудовым правом.</p>
   <p class="note">Подсказка: труд, капитал, стоимость, прибавочная стоимость, власть, зависимость, защита, баланс, гарантии, договор, зарплата, прибыль, работник, работодатель, государство.</p>
-  ${qrZone("menti","Mentimeter — облако слов","https://menti.com")}`},
+  ${qrZone("menti","Mentimeter — облако слов","https://menti.com","https://www.menti.com/ald5885ifci4")}`},
 // 19
 {kicker:"Обсуждение облака слов", render:()=>`
   <h2 class="section-title">Что изменилось в восприятии трудового права?</h2>
@@ -991,6 +999,7 @@ function render(){
   }
   app.innerHTML = `<div class="screen active">${html}</div>`;
   updateProgress();
+  autoRenderQrZones();
 }
 function updateProgress(){
   const order=['cover','roadmap','presentation','trainers','map','after'];
