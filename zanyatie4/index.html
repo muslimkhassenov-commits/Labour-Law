@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Занятие №4. Международное регулирование труда. Наука трудового права</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU: презентация на 45 слайдов и 15 тренажёров юридического мышления для занятия «Международное регулирование труда. Наука трудового права»." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-node.zone{border-color:var(--burgundy);}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.ladder{display:flex;flex-direction:column-reverse;gap:8px;max-width:520px;margin:0 auto;}
+.ladder .rung{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+.ladder .rung .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.85;font-weight:700;}
+
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.pyramid .level{border-radius:10px;padding:11px 14px;text-align:center;color:#fff;font-size:12.5px;font-weight:600;box-shadow:var(--shadow);}
+.pyramid .level small{display:block;font-weight:500;font-size:11px;opacity:.85;margin-top:3px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.rank-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:13.5px;}
+.rank-item .pos{color:var(--red);font-weight:700;margin-right:8px;}
+.rank-item.correct{border-color:var(--ok);background:#e9f5ee;}
+.rank-item.wrong{border-color:var(--red);background:#fbeceb;}
+
+.msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Занятие 4</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главная</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика занятия</button>
+    <button class="navbtn primary" onclick="goTo('presentation')">К презентации</button>
+    <button class="navbtn" onclick="goToStandards()">К международным стандартам</button>
+    <button class="navbtn" onclick="goToScience()">К науке трудового права</button>
+    <button class="navbtn" onclick="goTo('trainers')">К тренажёрам</button>
+    <button class="navbtn" onclick="goTo('map')">Карта понимания</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+    <button class="navbtn ghost" onclick="openTrainer(14)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Занятие №4 · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ ЗАНЯТИЯ №4 — МЕЖДУНАРОДНОЕ РЕГУЛИРОВАНИЕ ТРУДА. НАУКА ТРУДОВОГО ПРАВА
+   ============================================================ */
+const ROADMAP_NODES = ["Миссия трудового права","Метод и принципы","Источники и формула","Международное регулирование труда","Промышленная революция","Социальная несправедливость","Международная конкуренция","Версальский договор","МОТ","Трипартизм","Конвенции и рекомендации","Фундаментальные права","Контроль МОТ","Казахстан и МОТ","Наука трудового права","Доктрина","Научные школы","Современный юрист","Тренажёры"];
+
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node ${opts.zoneIdx&&opts.zoneIdx.includes(i)?'zone':''}">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть эталонный ответ':'Показать эталонный ответ'}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt=(rightPct-leftPct)/8;
+  return `<div class="scale-wrap"><svg viewBox="0 0 320 180" width="260" height="150">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:260px;font-size:12.5px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div></div>`;
+}
+function compassSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#dfdbd2" stroke-width="1"/>
+    <polygon points="50,14 58,50 50,86 42,50" fill="#c8102e"/>
+    <polygon points="14,50 50,42 86,50 50,58" fill="#0c2340"/>
+    <circle cx="50" cy="50" r="4" fill="#7c1327"/>
+    <text x="50" y="10" text-anchor="middle" font-size="8" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">N</text>
+  </svg>`;
+}
+function globeSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <ellipse cx="50" cy="50" rx="44" ry="17" fill="none" stroke="#585c63" stroke-width="1.4"/>
+    <ellipse cx="50" cy="50" rx="19" ry="44" fill="none" stroke="#585c63" stroke-width="1.4"/>
+    <line x1="6" y1="50" x2="94" y2="50" stroke="#585c63" stroke-width="1.4"/>
+    <circle cx="50" cy="50" r="44" fill="none" stroke="#c8102e" stroke-width="2" stroke-dasharray="2 5"/>
+  </svg>`;
+}
+function triangleSVG(labels,size){
+  size=size||260;
+  labels=labels||["Правительства","Работники","Работодатели"];
+  return `<svg viewBox="0 0 300 210" width="${size}" height="${Math.round(size*210/300)}">
+    <polygon points="150,34 55,182 245,182" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="150" cy="34" r="8" fill="#7c1327"/>
+    <circle cx="55" cy="182" r="8" fill="#c8102e"/>
+    <circle cx="245" cy="182" r="8" fill="#123058"/>
+    <text x="150" y="18" text-anchor="middle" font-size="13" font-weight="700" fill="#7c1327" font-family="Inter,sans-serif">${labels[0]}</text>
+    <text x="55" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#c8102e" font-family="Inter,sans-serif">${labels[1]}</text>
+    <text x="245" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#123058" font-family="Inter,sans-serif">${labels[2]}</text>
+  </svg>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function ladderWidget(rungs){
+  const colors=["#0c2340","#123058","#585c63","#7c1327","#c8102e"];
+  return `<div class="ladder">${rungs.map((r,i)=>`<div class="rung" style="background:${colors[i%colors.length]};"><span>${r}</span></div>`).join("")}</div>`;
+}
+function pyramidWidget(levels){
+  const n=levels.length;
+  const colors=["#0c2340","#123058","#1a3a63","#585c63","#7c1327","#93172c","#a91d31","#c8102e"];
+  return `<div class="pyramid">${levels.map((l,i)=>{
+    const width = 100 - i*(60/Math.max(n-1,1));
+    return `<div class="level" style="width:${width}%;background:${colors[Math.min(i,colors.length-1)]};">${l.title}${l.sub?`<small>${l.sub}</small>`:''}</div>`;
+  }).join("")}</div>`;
+}
+
+/* stepped reveal helper */
+function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
+function stepHint(stage,max){ return stage<max ? `<div class="step-hint">Нажмите «Далее» / клавишу клика, чтобы показать ещё (${stage}/${max})</div>` : ""; }
+
+/* ranking exercise (сортировка по порядку кликом, без drag-and-drop) */
+function rankingExercise(key, items){
+  const chosen = state.rankings[key] || [];
+  const pool = items.filter(x=>!chosen.includes(x));
+  const checked = state.rankChecked[key];
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(x=>`<span class="chip" onclick="pickRank('${key}','${x.replace(/'/g,"\\'")}',${items.length})">${x}</span>`).join("")||'<span class="note">Все карточки расставлены.</span>'}</div>
+  <div class="bucket" style="min-height:100px;"><h4>Ваша последовательность</h4>
+    ${chosen.map((x,i)=>{
+      let cls='';
+      if(checked) cls = (items[i]===x) ? 'correct' : 'wrong';
+      return `<div class="rank-item ${cls}"><span><span class="pos">${i+1}.</span>${x}</span><button class="navbtn" style="padding:3px 10px;font-size:11px;" onclick="unRank('${key}','${x.replace(/'/g,"\\'")}')">убрать</button></div>`;
+    }).join("")}
+  </div>
+  ${chosen.length===items.length ? `<button class="btn btn-navy" style="margin-top:12px;" onclick="checkRank('${key}')">Проверить порядок</button>` : ''}
+  ${checked?`<div class="explain-box ${chosen.every((x,i)=>items[i]===x)?'ok':'no'}" style="margin-top:12px;">${chosen.every((x,i)=>items[i]===x)?'✓ Порядок верный.':'✕ Есть ошибки — красным отмечены позиции не на своём месте.'}</div>`:''}`;
+}
+window.pickRank=function(key,item,total){
+  if(!state.rankings[key]) state.rankings[key]=[];
+  state.rankings[key].push(item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.unRank=function(key,item){
+  state.rankings[key]=(state.rankings[key]||[]).filter(x=>x!==item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.checkRank=function(key){ state.rankChecked[key]=true; save(); render(); };
+
+/* multi-select exercise (выбор нескольких верных карточек из списка) */
+function multiSelectExercise(key, items){
+  const picked = state.multiSel[key] || {};
+  const checked = state.multiSelChecked[key];
+  return `${items.map((it,i)=>{
+    let style='';
+    if(checked){
+      if(it.correct) style = picked[i] ? 'border-color:#1f6f43;background:#e9f5ee;' : 'border-color:#c8102e;background:#fbeceb;';
+      else style = picked[i] ? 'border-color:#c8102e;background:#fbeceb;' : '';
+    }
+    return `<label class="msel-item" style="${style}"><input type="checkbox" ${picked[i]?'checked':''} onchange="toggleMultiSel('${key}',${i})"> ${it.text}</label>`;
+  }).join("")}
+  <button class="btn btn-navy" style="margin-top:6px;" onclick="checkMultiSel('${key}')">Проверить</button>
+  ${checked?`<div class="explain-box ${items.every((it,i)=>!!picked[i]===!!it.correct)?'ok':'no'}" style="margin-top:12px;">${items.every((it,i)=>!!picked[i]===!!it.correct)?'✓ Все выбраны верно.':'✕ Есть ошибки — зелёным отмечены верные, красным — неверно отмеченные или пропущенные позиции.'}</div>`:''}`;
+}
+window.toggleMultiSel=function(key,i){
+  if(!state.multiSel[key]) state.multiSel[key]={};
+  state.multiSel[key][i]=!state.multiSel[key][i];
+  state.multiSelChecked[key]=false;
+  save(); render();
+};
+window.checkMultiSel=function(key){ state.multiSelChecked[key]=true; save(); render(); };
+
+/* ============================================================
+   СЛАЙДЫ (45)
+   ============================================================ */
+const SLIDES = [
+// 1. Титульный слайд
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:26px 0;">
+    <div class="logo-wrap" style="width:60px;height:60px;margin:0 auto 20px;"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Занятие №4</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое право Республики Казахстан</h1>
+    <p class="subtitle" style="margin:0 auto 18px;text-align:center;">Международное регулирование труда. Наука трудового права</p>
+    <p class="lede" style="margin:0 auto 20px;text-align:center;font-style:italic;">От фабричных законов — к международным стандартам и научной доктрине</p>
+    <div style="display:flex;justify-content:center;gap:28px;">${globeSVG(70)}${compassSVG(70)}</div>
+  </div>`},
+// 2. Связь с предыдущими занятиями
+{kicker:"Связь с предыдущими занятиями", render:()=>`
+  <h2 class="section-title">От национальной формулы — к международным стандартам</h2>
+  <div class="grid cols-2">
+    ${infoCard("Занятие 1. Миссия трудового права","Зачем существует трудовое право?")}
+    ${infoCard("Занятие 2. Метод и принципы","Как трудовое право регулирует зависимый труд?")}
+    ${infoCard("Занятие 3. Источники и формула","Где искать нормы и как проверять законность?")}
+    ${infoCard("Занятие 4. Международное регулирование и наука","Почему труд стал глобальной и научной проблемой?")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Сегодня мы увидим, что трудовое право — это не только ТК РК, но и международные стандарты, глобальная социальная справедливость и научная доктрина.</b></p>`},
+// 3. Проблемный кейс
+{kicker:"Проблемный кейс занятия", render:()=>`
+  <h2 class="section-title">Можно ли конкурировать за счёт дешёвого труда?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Государство А устанавливает 8-часовой рабочий день, запрет детского труда, охрану труда и право на профсоюзы. Государство Б не ограничивает рабочее время, допускает детский труд, запрещает профсоюзы и снижает издержки бизнеса. Товары государства Б дешевле на международном рынке».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Является ли это только внутренним делом государства Б?</p>
+  ${choiceListFull("case4",["Да, каждое государство само решает, как регулировать труд.","Нет, потому что низкие трудовые стандарты создают социальную несправедливость и недобросовестную конкуренцию.","Да, трудовое право не связано с международным правом.","Нет, но только если нарушены права граждан другого государства."],1,"Международное регулирование труда возникло потому, что эксплуатация труда, социальные потрясения и конкуренция за счёт низких трудовых стандартов стали проблемой не только национального, но и международного уровня.")}`},
+// 4. Главный вопрос
+{kicker:"Главный вопрос", render:()=>`
+  <h2 class="section-title">Главный вопрос занятия</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(17px,2.4vw,22px);color:var(--navy);line-height:1.4;">«Почему трудовые права стали предметом международного регулирования и зачем юристу по трудовому праву знать не только нормы, но и науку трудового права?»</p>
+  <p class="lede" style="margin-top:10px;"><b>Это вопрос о глобальной природе труда и интеллектуальной основе трудового права.</b></p>
+  <div style="display:flex;justify-content:center;gap:24px;margin-top:14px;">${globeSVG(64)}</div>`},
+// 5. Почему труд стал международной проблемой
+{kicker:"Три причины интернационализации труда", maxStep:4, render:(stage)=>{
+  const items=[
+    infoCard("1. Гуманитарная причина","тяжёлые условия труда, эксплуатация, бедность, детский труд, опасное производство"),
+    infoCard("2. Социальная причина","массовые протесты, рабочее движение, риск революций и социальных потрясений"),
+    infoCard("3. Экономическая причина","государства с низкими трудовыми стандартами получают конкурентное преимущество за счёт работников"),
+  ];
+  return `<h2 class="section-title">Трудовая проблема вышла за пределы государства</h2>
+  <div class="grid cols-3">${steps(stage,items)}</div>
+  ${stepHint(stage,4)}
+  ${stage>=4?`<p class="lede" style="margin-top:12px;"><b>Международные трудовые стандарты возникли как ответ на несправедливость, нестабильность и нечестную конкуренцию.</b></p>`:""}`;
+}},
+// 6. Промышленная революция
+{kicker:"Промышленная революция", render:()=>`
+  <h2 class="section-title">Фабрика изменила труд</h2>
+  ${numList(["массовый наёмный труд","длинный рабочий день","женский и детский труд","опасные условия","зависимость от заработной платы","юридическое равенство в договоре и фактическое неравенство в реальности"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Гражданско-правовая свобода договора оказалась недостаточной для защиты промышленного рабочего.</div>`},
+// 7. Первые фабричные законы
+{kicker:"Первые фабричные законы", render:()=>`
+  <h2 class="section-title">Первые ограничения свободы договора</h2>
+  <div class="grid cols-2">${infoCard("Рабочее время","")}${infoCard("Минимальный возраст приёма на работу","")}${infoCard("Ограничение труда детей","")}${infoCard("Минимальные стандарты условий труда","")}</div>
+  <p class="note" style="margin-top:10px;">Почему первые трудовые законы ограничивали именно свободу договора?</p>
+  <p class="lede" style="margin-top:8px;"><b>Трудовое право появляется там, где формальное согласие работника не гарантирует справедливости.</b></p>`},
+// 8. Роберт Оуэн
+{kicker:"Роберт Оуэн", render:()=>`
+  <h2 class="section-title">Роберт Оуэн: можно ли соединить прибыль и гуманность?</h2>
+  <p class="lede">Роберт Оуэн показал, что фабрика может быть не только местом эксплуатации, но и пространством образования, воспитания, социальной заботы и более гуманных условий труда.</p>
+  <div class="grid cols-3" style="margin-top:12px;">${infoCard("Фабрика","")}${infoCard("Образование и социальная забота","")}${infoCard("Экономическое процветание","+ хорошие условия труда")}</div>
+  <p class="note" style="margin-top:10px;">Почему добровольных усилий отдельных работодателей было недостаточно?</p>
+  <p class="lede" style="margin-top:8px;"><b>Если хорошие условия труда зависят только от доброй воли работодателя, они не становятся общей системой защиты.</b></p>`},
+// 9. Чарльз Фредерик Хиндли
+{kicker:"Чарльз Фредерик Хиндли", render:()=>`
+  <h2 class="section-title">Идея международного регулирования труда</h2>
+  <p class="lede">В 1833 году Чарльз Фредерик Хиндли впервые предложил идею международного регулирования труда.</p>
+  <div class="grid cols-2" style="margin-top:12px;">${infoCard("1. Моральная причина","улучшить положение рабочих во всём мире")}${infoCard("2. Экономическая причина","высокие стандарты труда эффективны только тогда, когда их придерживаются и другие государства")}</div>
+  <p class="lede" style="margin-top:10px;"><b>Международные трудовые стандарты — это одновременно вопрос гуманности и честной конкуренции.</b></p>`},
+// 10. Три мотива + Mentimeter
+{kicker:"Три мотива международных стандартов", render:()=>`
+  <h2 class="section-title">Гуманитарный, социальный, экономический мотив</h2>
+  <div class="grid cols-3">
+    ${infoCard("Гуманитарный мотив","работник нуждается в защите")}
+    ${infoCard("Социальный мотив","эксплуатация ведёт к протестам и нестабильности")}
+    ${infoCard("Экономический мотив","низкие стандарты труда искажают конкуренцию")}
+  </div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin:14px 0 10px;">Какой мотив кажется вам наиболее сильным сегодня?</p>
+  ${qrZone("menti-motive","Mentimeter — выберите главный мотив международного регулирования труда","https://www.menti.com/…")}`},
+// 11. Первая мировая война
+{kicker:"Первая мировая война и социальный взрыв", render:()=>`
+  <h2 class="section-title">Почему после войны труд стал вопросом мира?</h2>
+  ${numList(["усиление рабочего движения","рост профсоюзов","революция 1917 года","страх распространения революционных настроений","поиск социально-демократической альтернативы"])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Международное трудовое право стало способом заменить социальный взрыв институциональной социальной справедливостью.</p></div>`},
+// 12. Версальский мирный договор
+{kicker:"Версальский мирный договор 1919 года", render:()=>`
+  <h2 class="section-title">Социальная справедливость как условие мира</h2>
+  <div class="grid cols-2">${statCard("1919","Версальский мирный договор")}${statCard("Раздел XIII","«Труд» — Устав МОТ")}</div>
+  <div class="quote-slide" style="margin-top:16px;padding:32px 26px;"><blockquote>«Всеобщий мир может быть основан лишь на принципе социальной справедливости»</blockquote></div>
+  <p class="lede" style="margin-top:12px;"><b>МОТ родилась не как техническая организация, а как проект мира через социальную справедливость.</b></p>`},
+// 13. Девять принципов Версальского договора
+{kicker:"Девять принципов 1919 года", maxStep:9, render:(stage)=>{
+  const items=["Труд не является товаром.","Свобода союзов работников и работодателей.","Заработная плата для подобающего уровня жизни.","8-часовой рабочий день / 48-часовая неделя как цель.","Еженедельный отдых.","Отмена детского труда.","Равная оплата без различия пола.","Справедливый экономический режим для трудящихся.","Инспекция труда."];
+  return `<h2 class="section-title">Первые международные принципы труда</h2>
+  ${numList(items.slice(0,stage))}
+  ${stepHint(stage,9)}
+  ${stage>=9?`<p class="lede" style="margin-top:10px;"><b>Многие идеи современного трудового права были сформулированы уже в 1919 году.</b></p>`:""}`;
+}},
+// 14. Труд не является товаром
+{kicker:"Труд не является товаром", render:()=>`
+  <h2 class="section-title">Краеугольный камень трудового права</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(16px,2.4vw,20px);margin-bottom:14px;">«Труд не является товаром»</div>
+  <p class="lede">Работник передаёт работодателю не вещь, а свою живую способность к труду, связанную с личностью, временем, здоровьем, достоинством и свободой.</p>
+  <p class="note">Что изменилось бы, если бы труд действительно считался обычным товаром?</p>
+  <p class="lede" style="margin-top:8px;"><b>Связь с занятием 1: именно поэтому трудовое право очеловечивает рынок труда.</b></p>`},
+// 15. Трудовые права как права человека
+{kicker:"Трудовые права — права человека", render:()=>`
+  <h2 class="section-title">Социально-трудовые права как второе поколение прав человека</h2>
+  ${numList(["Всеобщая декларация прав человека 1948 года","Международный пакт о гражданских и политических правах 1966 года","Международный пакт об экономических, социальных и культурных правах 1966 года","право на труд","право на справедливые условия труда","право на объединение","право на социальную защиту"])}
+  <p class="lede" style="margin-top:10px;"><b>Трудовые права стали частью международной системы прав человека.</b></p>`},
+// 16. Место международного трудового права в системе права
+{kicker:"Международное трудовое право в системе права", render:()=>`
+  <h2 class="section-title">Где находится международное трудовое право?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Международный уровень</h4>${verticalFlow(["Международное публичное право","Международное трудовое право"])}</div>
+    <div class="branch right"><h4>Национальный уровень</h4>${verticalFlow(["Национальное право","Трудовое право Республики Казахстан"])}</div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Международное трудовое право не заменяет национальное трудовое право, но влияет на него через стандарты, обязательства и принципы.</b></p>`},
+// 17. МОТ: уникальная организация
+{kicker:"МОТ — международная организация труда", render:()=>`
+  <h2 class="section-title">МОТ: уникальная организация</h2>
+  ${numList(["учреждена в 1919 году","специализированная организация системы ООН","основана на принципе трипартизма","занимается разработкой международных трудовых стандартов","контролирует их соблюдение","продвигает социальную справедливость и достойный труд"])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">МОТ — главный институт международного трудового права.</p></div>`},
+// 18. Трипартизм
+{kicker:"Трипартизм", render:()=>`
+  <h2 class="section-title">Трипартизм: три голоса в регулировании труда</h2>
+  <div style="display:flex;justify-content:center;margin:10px 0;">${triangleSVG(["Правительства","Работники","Работодатели"],200)}</div>
+  <p class="lede" style="text-align:center;"><b>«В МОТ социальные партнёры имеют голос в международном нормотворчестве».</b></p>
+  <p class="note" style="text-align:center;">Почему международное трудовое право не может создаваться только государствами?</p>
+  <p class="lede" style="text-align:center;margin-top:8px;">Связь с курсом: трипартизм МОТ — международное выражение идеи социального партнёрства.</p>`},
+// 19. Структура МОТ
+{kicker:"Три органа МОТ", render:()=>`
+  <h2 class="section-title">Институциональная архитектура МОТ</h2>
+  ${verticalFlow(["Международная конференция труда — «парламент МОТ», принимает конвенции, рекомендации и декларации","Административный совет — исполнительный орган, международное трудовое правительство","Международное бюро труда — секретариат, исследовательский и экспертный центр"])}`},
+// 20. Филадельфийская декларация
+{kicker:"Филадельфийская декларация 1944 года", render:()=>`
+  <h2 class="section-title">Фундаментальные принципы МОТ</h2>
+  ${numList(["Труд не является товаром.","Свобода слова и профсоюзной деятельности необходима для прогресса.","Нищета в любом месте является угрозой для общего благосостояния.","Борьба с нуждой должна вестись в каждом государстве и международными усилиями."])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Филадельфийская декларация закрепила труд как вопрос достоинства, свободы и общего благосостояния.</div>`},
+// 21. МОТ и Нобелевская премия мира
+{kicker:"МОТ и Нобелевская премия мира", render:()=>`
+  <h2 class="section-title">МОТ как институция, которой может гордиться человечество</h2>
+  <div class="grid cols-3">${statCard("1969","Нобелевская премия мира")}${statCard("50 лет","юбилей МОТ")}${infoCard("Вклад","улучшение условий жизни трудящихся")}</div>
+  <div class="quote-slide" style="margin-top:16px;padding:30px 24px;"><blockquote>«МОТ — один из редких институтов, созданием которых может гордиться человечество»</blockquote></div>
+  <p class="lede" style="margin-top:10px;"><b>Трудовое право — это не только юридическая техника, но и цивилизационный проект.</b></p>`},
+// 22. Концепция достойного труда
+{kicker:"Достойный труд", render:()=>`
+  <h2 class="section-title">Достойный труд</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);margin-bottom:14px;">Достойный и производительный труд в условиях свободы, равенства, социальных гарантий и уважения человеческого достоинства.</div>
+  <div class="grid cols-4">${infoCard("1","Создание рабочих мест")}${infoCard("2","Гарантии прав в сфере труда")}${infoCard("3","Социальная защита")}${infoCard("4","Социальный диалог")}</div>
+  <p class="note" style="margin-top:10px;">Чем достойный труд отличается от просто занятости?</p>`},
+// 23. Международные трудовые стандарты
+{kicker:"Международные трудовые стандарты", render:()=>`
+  <h2 class="section-title">Что такое международные трудовые стандарты?</h2>
+  <p class="lede">Международные трудовые стандарты — это нормативная субстанция международного трудового права, концентрированное выражение опыта многих стран и универсально значимых норм в сфере труда.</p>
+  ${flowRow(["Опыт государств","Универсальные нормы","Международные стандарты","Национальное регулирование"])}
+  <p class="lede" style="margin-top:12px;"><b>Международные стандарты не заменяют национальное право, а задают ориентиры для него.</b></p>`},
+// 24. Конвенции и рекомендации
+{kicker:"Жёсткое и мягкое право", render:()=>`
+  <h2 class="section-title">Конвенции и рекомендации МОТ</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Конвенции</h4><ul><li>юридически обязательны после ратификации</li><li>создают международные обязательства</li><li>требуют имплементации</li></ul></div>
+    <div class="branch right"><h4>Рекомендации</h4><ul><li>не имеют обязательной силы</li><li>уточняют и развивают конвенции</li><li>служат ориентиром для политики, законодательства и практики</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>В международном трудовом праве важно понимать не только текст акта, но и его юридическую силу.</b></p>`},
+// 25. Система инструментов МОТ
+{kicker:"402 инструмента МОТ", render:()=>`
+  <h2 class="section-title">Пирамида международных трудовых стандартов</h2>
+  ${pyramidWidget([
+    {title:"193 конвенции и протокола"},
+    {title:"10 фундаментальных конвенций",sub:"ядро"},
+    {title:"4 приоритетные конвенции",sub:"инфраструктура контроля и политики"},
+    {title:"179 технических конвенций",sub:"конкретные сферы труда"},
+    {title:"209 рекомендаций",sub:"мягкое право"},
+  ])}`},
+// 26. Пять основополагающих принципов
+{kicker:"Фундаментальные права в сфере труда", maxStep:5, render:(stage)=>{
+  const items=[
+    infoCard("1. Свобода объединения и коллективные переговоры",""),
+    infoCard("2. Ликвидация принудительного труда",""),
+    infoCard("3. Эффективное упразднение детского труда",""),
+    infoCard("4. Недопущение дискриминации в труде и занятиях",""),
+    infoCard("5. Безопасность и гигиена труда","принцип, добавленный МОТ в 2022 году"),
+  ];
+  return `<h2 class="section-title">Пять основополагающих принципов и прав в сфере труда</h2>
+  <div class="grid cols-2">${steps(stage,items)}</div>
+  ${stepHint(stage,5)}
+  ${stage>=5?`<p class="lede" style="margin-top:10px;"><b>Эти принципы обязательны для всех членов МОТ в силу самого факта членства.</b></p>`:""}`;
+}},
+// 27. 10 фундаментальных конвенций
+{kicker:"10 фундаментальных конвенций МОТ", render:()=>`
+  <h2 class="section-title">Фундаментальные конвенции по группам</h2>
+  <div class="grid cols-2">
+    ${infoCard("Свобода объединения и коллективные переговоры","№87 · №98")}
+    ${infoCard("Принудительный труд","№29 · №105")}
+    ${infoCard("Детский труд","№138 · №182")}
+    ${infoCard("Недискриминация","№100 · №111")}
+    ${infoCard("Безопасность и гигиена труда","№155 · №187")}
+  </div>
+  <p class="note" style="margin-top:10px;">Интерактив: соотнесите конвенцию с принципом — тренажёр 6.</p>`},
+// 28. Конвенции 87 и 98
+{kicker:"Конвенции №87 и №98", render:()=>`
+  <h2 class="section-title">Свобода объединения и коллективные переговоры</h2>
+  <div class="grid cols-2">
+    ${infoCard("Конвенция №87","право работников и работодателей создавать организации и вступать в них без предварительного разрешения")}
+    ${infoCard("Конвенция №98","защита от дискриминации за профсоюзную деятельность и признание права на коллективные переговоры")}
+  </div>
+  <p class="note" style="margin-top:10px;">Почему свобода объединения является фундаментальным правом в трудовом праве?</p>`},
+// 29. Конвенции 29 и 105
+{kicker:"Конвенции №29 и №105", render:()=>`
+  <h2 class="section-title">Запрет принудительного труда</h2>
+  <div class="card accent-left" style="margin-bottom:12px;"><p style="font-size:13.5px;"><i>«Принудительный труд — всякая работа или служба, требуемая под угрозой наказания, для выполнения которой лицо не предложило своих услуг добровольно».</i></p></div>
+  <div class="grid cols-2">
+    ${infoCard("Конвенция №29","упразднение принудительного труда")}
+    ${infoCard("Конвенция №105","запрет использовать принудительный труд как политическое наказание, метод мобилизации, средство трудовой дисциплины, наказание за забастовку или дискриминацию")}
+  </div>
+  <p class="note" style="margin-top:10px;">Интерактив: что является принудительным трудом, а что нет? — тренажёр 7.</p>`},
+// 30. Конвенции 100 и 111
+{kicker:"Конвенции №100 и №111", render:()=>`
+  <h2 class="section-title">Равное обращение и недискриминация</h2>
+  <div class="grid cols-2">
+    ${infoCard("Конвенция №100","равное вознаграждение мужчин и женщин за труд равной ценности")}
+    ${infoCard("Конвенция №111","запрет дискриминации в области труда и занятий")}
+  </div>
+  <p class="note" style="margin-top:10px;">Почему равная оплата за труд равной ценности шире, чем просто одинаковая зарплата за одинаковую должность?</p>`},
+// 31. Конвенции 138 и 182
+{kicker:"Конвенции №138 и №182", render:()=>`
+  <h2 class="section-title">Детский труд и его наихудшие формы</h2>
+  <div class="grid cols-2">
+    ${infoCard("Конвенция №138","минимальный возраст для приёма на работу")}
+    ${infoCard("Конвенция №182","запрет наихудших форм детского труда")}
+  </div>
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Защита детей в сфере труда — это защита будущего человеческого развития.</p></div>`},
+// 32. Конвенции 155 и 187
+{kicker:"Конвенции №155 и №187", render:()=>`
+  <h2 class="section-title">Безопасность и гигиена труда</h2>
+  <div class="grid cols-2">
+    ${infoCard("Конвенция №155","безопасность и гигиена труда и производственная среда")}
+    ${infoCard("Конвенция №187","основы, содействующие безопасности и гигиене труда")}
+  </div>
+  <p class="lede" style="margin-top:10px;"><b>С 2022 года безопасность и здоровье работников стали частью фундаментальных принципов и прав в сфере труда.</b></p>`},
+// 33. Приоритетные и технические конвенции
+{kicker:"Не все конвенции равны по роли", render:()=>`
+  <h2 class="section-title">Приоритетные и технические конвенции</h2>
+  <div class="grid cols-2">
+    ${infoCard("Приоритетные конвенции","инспекция труда №81 · политика занятости №122 · инспекция труда в сельском хозяйстве №129 · трёхсторонние консультации №144")}
+    ${infoCard("Технические конвенции","рабочее время · оплата труда · охрана материнства · труд мигрантов · отдельные категории работников · социальная защита · безопасность в отдельных отраслях")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Фундаментальные конвенции задают основу, приоритетные — инфраструктуру контроля и политики, технические — конкретные сферы труда.</b></p>`},
+// 34. NORMLEX
+{kicker:"NORMLEX", render:()=>`
+  <h2 class="section-title">NORMLEX: как юрист ищет международный стандарт</h2>
+  ${numList(["конвенция","рекомендация","статус","ратификация","комментарии контрольных органов","доклады государств","замечания социальных партнёров"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin:12px 0 10px;">Как проверить, ратифицировал ли Казахстан конкретную конвенцию МОТ?</p>
+  ${qrZone("normlex","Ссылка на NORMLEX","https://normlex.ilo.org/dyn","https://normlex.ilo.org/dyn")}`},
+// 35. Система контроля МОТ
+{kicker:"Система контроля МОТ", render:()=>`
+  <h2 class="section-title">Стандарты без контроля не работают</h2>
+  <div class="grid cols-2">
+    ${infoCard("Регулярный надзор","доклады государств · Комитет экспертов · Комитет Конференции")}
+    ${infoCard("Специальные процедуры","представления · жалобы · процедуры по свободе объединения")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>МОТ контролирует не только принятие норм, но и их применение в законодательстве и практике.</b></p>`},
+// 36. Комитет экспертов и Комитет Конференции
+{kicker:"Два столпа контроля МОТ", render:()=>`
+  <h2 class="section-title">Комитет экспертов и Комитет Конференции</h2>
+  <div class="grid cols-2">
+    ${infoCard("Комитет экспертов","независимые специалисты, технический и юридический анализ законодательства и практики")}
+    ${infoCard("Комитет Конференции","трёхстороннее обсуждение выполнения государствами международных обязательств")}
+  </div>
+  <p class="note" style="margin-top:10px;">Почему контроль МОТ сочетает экспертность и социальный диалог?</p>`},
+// 37. Свобода объединения: специальная процедура
+{kicker:"Свобода объединения под особой защитой", render:()=>`
+  <h2 class="section-title">Специальная процедура по свободе объединения</h2>
+  ${numList(["Комиссия по расследованию и примирению в области свободы объединения","Комитет по свободе объединения","жалобы от организаций работников, работодателей и правительств","рассмотрение даже в отношении государств, не ратифицировавших соответствующие конвенции"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Свобода объединения — один из центральных нервов международного трудового права.</div>`},
+// 38. Казахстан и МОТ
+{kicker:"Казахстан в системе МОТ", render:()=>`
+  <h2 class="section-title">Казахстан и МОТ</h2>
+  ${numList(["Казахстан стал членом МОТ 31 мая 1993 года","Казахстан относится к региону Европы в структуре МБТ","ратифицировано 26 конвенций МОТ","ратифицированы все 10 фундаментальных конвенций","ратифицированы 4 приоритетные конвенции","ратифицированные международные договоры являются частью действующего права РК и имеют приоритет перед законами"])}
+  <p class="note" style="margin-top:10px;">Почему ратификация конвенции меняет работу национального юриста?</p>`},
+// 39. Казахстан: проблема имплементации
+{kicker:"Ратифицировать — не значит реализовать", render:()=>`
+  <h2 class="section-title">Казахстан: проблема имплементации</h2>
+  ${numList(["низкое количество ратифицированных конвенций по сравнению с рядом государств","проблемы применения Конвенций №87 и №98","критика в связи со свободой объединения и коллективными переговорами","необходимость согласования национального законодательства и практики с международными стандартами"])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Главная проблема международного трудового права — не только принятие обязательств, но и их реальное исполнение.</p></div>`},
+// 40. Переход к науке трудового права
+{kicker:"Переход к науке трудового права", render:()=>`
+  <h2 class="section-title">Зачем юристу наука трудового права?</h2>
+  <p class="lede">Международные стандарты показывают, каким должен быть цивилизационный минимум труда. Наука трудового права объясняет, почему труд требует особого регулирования, какие идеи лежат в основе отрасли и как развивать законодательство.</p>
+  <div class="grid cols-2" style="margin-top:14px;">
+    <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Стандарт отвечает: что должно быть защищено?</p></div>
+    <div class="card burgundy"><p style="font-family:'Fraunces',serif;font-size:16px;">Наука отвечает: почему и как это понимать?</p></div>
+  </div>`},
+// 41. Наука трудового права
+{kicker:"Наука трудового права", render:()=>`
+  <h2 class="section-title">Наука трудового права исследует отрасль и законодательство</h2>
+  <p class="lede">Наука трудового права изучает трудовое право как отрасль права, трудовое законодательство, трудовые отношения, правовые институты, доктрину, судебную практику, историю, принципы и тенденции развития регулирования труда.</p>
+  ${flowRow(["Трудовой договор","Коллективный договор","Работодательская власть","Трудовые споры","Охрана труда","Социальное партнёрство","Новые формы занятости","Достойный труд"])}
+  <p class="lede" style="margin-top:12px;"><b>Наука даёт юристу не только знания, но и язык профессионального мышления.</b></p>`},
+// 42. Почему труд стал особым объектом науки
+{kicker:"Труд не укладывается в гражданско-правовую модель", render:()=>`
+  <h2 class="section-title">Почему труд стал особым объектом науки?</h2>
+  ${numList(["труд связан с личностью работника","труд выполняется во времени","работник включается в организацию работодателя","возникает подчинение","существует экономическая зависимость","требуется защита достоинства, здоровья и свободы"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Наука трудового права возникла из необходимости объяснить особую природу наёмного труда.</div>`},
+// 43. Истоки науки трудового права
+{kicker:"Германия и США: начало научного трудового права", render:()=>`
+  <h2 class="section-title">Истоки науки трудового права</h2>
+  ${numList(["XIX век","термин «трудовое право» в Германии в 1876 году","Филипп Лотмар","Хуго Зинцхаймер","США и прогрессивная эпоха реформ","Джон Коммонс и Джон Эндрюс, «Принципы трудового законодательства» 1916 года"])}
+  <p class="lede" style="margin-top:10px;"><b>Наука трудового права формировалась вместе с борьбой за признание труда особым объектом правового регулирования.</b></p>`},
+// 44. Лотмар и Зинцхаймер
+{kicker:"Два интеллектуальных основания трудового права", render:()=>`
+  <h2 class="section-title">Филипп Лотмар и Хуго Зинцхаймер</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Филипп Лотмар</h4><ul><li>единое понимание труда</li><li>трудовой договор</li><li>тарифные соглашения</li><li>условия индивидуального договора не должны ухудшать положение работника по сравнению с коллективным договором</li></ul></div>
+    <div class="branch right"><h4>Хуго Зинцхаймер</h4><ul><li>«отец германского трудового права»</li><li>социальное право как наполовину публичное и наполовину частное</li><li>компромисс интересов работников и работодателей</li><li>минимальные гарантии и улучшение положения работников</li></ul></div>
+  </div>
+  <p class="note" style="margin-top:12px;">Как идеи Лотмара и Зинцхаймера связаны с формулой трудового права?</p>`},
+// 45. Главная идея занятия
+{kicker:"Главная идея занятия", render:()=>`
+  <h2 class="section-title">Главная идея занятия</h2>
+  <div class="card burgundy" style="font-family:'Fraunces',serif;font-size:clamp(15px,2.2vw,19px);margin-bottom:14px;">«Международные стандарты дают минимум. Наука трудового права даёт смысл».</div>
+  <p class="lede">МОТ и международные трудовые стандарты показывают, что защита труда — это вопрос социальной справедливости, прав человека и честной конкуренции. Наука трудового права объясняет, почему труд требует особого правового регулирования, как формируется доктрина и как юрист должен мыслить в сфере труда.</p>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Юрист по трудовому праву должен уметь видеть норму, стандарт, принцип, историю, научную идею и практическую проблему одновременно.</p></div>`},
+];
+
+/* ============================================================
+   ТРЕНАЖЁРЫ (15)
+   ============================================================ */
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey];
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+const SORT_T2_ITEMS=[
+  ["тяжёлые условия труда","hum"],["детский труд","hum"],["бедность рабочих","hum"],
+  ["риск революций","soc"],["массовые протесты","soc"],["усиление рабочего движения","soc"],
+  ["конкуренция за счёт дешёвого труда","eco"],["снижение себестоимости продукции через отсутствие гарантий","eco"],["необходимость равных условий международной торговли","eco"],
+];
+const SORT_T2_BUCKETS=[{key:"hum",label:"Гуманитарный мотив"},{key:"soc",label:"Социальный мотив"},{key:"eco",label:"Экономический мотив"}];
+
+const MSEL_T3=[
+  {text:"труд не является товаром",correct:true},
+  {text:"свобода союзов работников и работодателей",correct:true},
+  {text:"8-часовой рабочий день как цель",correct:true},
+  {text:"отмена детского труда",correct:true},
+  {text:"равная оплата без различия пола",correct:true},
+  {text:"право работодателя на неограниченный локаут",correct:false},
+  {text:"полная свобода работодателя определять условия труда",correct:false},
+  {text:"инспекция труда",correct:true},
+  {text:"еженедельный отдых",correct:true},
+];
+
+const SORT_T4_ITEMS=[
+  ["принимает конвенции, рекомендации и декларации","ilc"],
+  ["выполняет роль «парламента МОТ»","ilc"],
+  ["руководит работой МОТ между сессиями конференции","gb"],
+  ["выполняет роль исполнительного органа","gb"],
+  ["является секретариатом, исследовательским и экспертным центром","ilo"],
+  ["готовит доклады, документы и программы технического сотрудничества","ilo"],
+];
+const SORT_T4_BUCKETS=[{key:"ilc",label:"Конференция труда"},{key:"gb",label:"Административный совет"},{key:"ilo",label:"Бюро труда"}];
+
+const SORT_T5_ITEMS=[
+  ["конвенция МОТ","hard"],["ратифицированная конвенция","hard"],["национальный закон","hard"],
+  ["рекомендация МОТ","soft"],["декларация МОТ","soft"],["нератифицированная конвенция","soft"],["комментарии контрольных органов МОТ","soft"],
+];
+const SORT_T5_BUCKETS=[{key:"hard",label:"Юридическое обязательство"},{key:"soft",label:"Ориентир / мягкое право"}];
+
+const SORT_T6_ITEMS=[
+  ["№87","p1"],["№98","p1"],["№29","p2"],["№105","p2"],["№138","p3"],["№182","p3"],["№100","p4"],["№111","p4"],["№155","p5"],["№187","p5"],
+];
+const SORT_T6_BUCKETS=[
+  {key:"p1",label:"1. Свобода объединения и коллективные переговоры"},
+  {key:"p2",label:"2. Ликвидация принудительного труда"},
+  {key:"p3",label:"3. Упразднение детского труда"},
+  {key:"p4",label:"4. Недискриминация в труде и занятиях"},
+  {key:"p5",label:"5. Безопасность и гигиена труда"},
+];
+
+const RANK_T11=["государство ратифицирует конвенцию","государство представляет доклад","социальные партнёры могут направить замечания","Комитет экспертов анализирует законодательство и практику","Комитет Конференции обсуждает выполнение обязательств","государство получает рекомендации","международное внимание оказывает давление на изменение законодательства и практики"];
+
+const SORT_T13_ITEMS=[
+  ["широкая концепция трудового договора","lotmar"],
+  ["социальное право как переплетение частного и публичного","zincheimer"],
+  ["промышленная демократия","webb"],
+  ["критика капиталистической организации труда","marx"],
+  ["теория трудового договора и внутреннего трудового распорядка","tal"],
+  ["теория трудовых споров и коллективного договора","voytinsky"],
+  ["международная энциклопедия трудового права","blanpain"],
+  ["британская школа трудового права","kahn"],
+  ["казахстанская школа трудового права","abzhanov"],
+  ["механизм правового регулирования общественно-трудовых отношений","nurgalieva"],
+];
+const SORT_T13_BUCKETS=[
+  {key:"lotmar",label:"Лотмар (Филипп)"},{key:"zincheimer",label:"Зинцхаймер (Хуго)"},{key:"webb",label:"Вебб (Сидней и Беатриса)"},{key:"marx",label:"Маркс (Карл)"},
+  {key:"tal",label:"Таль (Лев Семенович)"},{key:"voytinsky",label:"Войтинский (Иосиф Савельевич)"},{key:"blanpain",label:"Бланпэн (Роже)"},{key:"kahn",label:"Кан-Фройнд (Отто)"},
+  {key:"abzhanov",label:"Абжанов (Кубен)"},{key:"nurgalieva",label:"Нургалиева (Енлик)"},
+];
+
+const T14_ANSWER="«Международные трудовые стандарты не имеют значения для Казахстана, потому что трудовое право регулируется только Трудовым кодексом. Конвенции МОТ являются рекомендациями и не создают обязательств. МОТ может напрямую отменять национальные законы и налагать санкции на государства. Наука трудового права нужна только для истории и не имеет практического значения».";
+const T14_ERRORS=[
+ "Трудовое право регулируется не только Трудовым кодексом.",
+ "Ратифицированные международные договоры являются частью действующего права РК.",
+ "Ратифицированные международные договоры имеют приоритет перед законами.",
+ "Конвенции МОТ не являются просто рекомендациями.",
+ "Рекомендации МОТ отличаются от конвенций.",
+ "МОТ не подменяет национальное регулирование.",
+ "МОТ не может напрямую отменять национальные законы.",
+ "Контроль МОТ основан преимущественно на докладах, замечаниях, жалобах, экспертной оценке и международном внимании.",
+ "Наука трудового права имеет практическое значение для толкования, систематизации и развития законодательства.",
+ "Ответ игнорирует связь международных стандартов с правами человека и социальной справедливостью.",
+];
+
+const TRAINERS=[
+ {tag:"Тренажёр 1",title:"Внутреннее дело государства или международная проблема?",desc:"Кейс с выбором и объяснением."},
+ {tag:"Тренажёр 2",title:"Гуманитарный, социальный или экономический мотив?",desc:"Сортировка карточек по мотивам."},
+ {tag:"Тренажёр 3",title:"Какие идеи стали основой МОТ?",desc:"Выберите верные версальские принципы."},
+ {tag:"Тренажёр 4",title:"Кто что делает в МОТ?",desc:"Сопоставление органов и функций."},
+ {tag:"Тренажёр 5",title:"Жёсткое право или мягкое право?",desc:"Классификация инструментов МОТ."},
+ {tag:"Тренажёр 6",title:"Соотнеси принцип и конвенцию",desc:"5 фундаментальных принципов и 10 конвенций."},
+ {tag:"Тренажёр 7",title:"Где граница между обязанностью и принуждением?",desc:"Кейс о принудительном труде."},
+ {tag:"Тренажёр 8",title:"Различие или дискриминация?",desc:"Кейс о дискриминации в найме."},
+ {tag:"Тренажёр 9",title:"Просто работа или достойный труд?",desc:"Матрица оценки условий труда."},
+ {tag:"Тренажёр 10",title:"Что означает ратификация конвенции?",desc:"Кейс о применении конвенции МОТ."},
+ {tag:"Тренажёр 11",title:"Как международный стандарт превращается в контроль?",desc:"Постройте цепочку контроля МОТ."},
+ {tag:"Тренажёр 12",title:"Зачем юристу доктрина?",desc:"Открытый ответ о науке трудового права."},
+ {tag:"Тренажёр 13",title:"Кто что дал трудовому праву?",desc:"Сопоставление учёного и вклада."},
+ {tag:"Тренажёр 14",title:"Проверь ответ искусственного интеллекта",desc:"AI-критика — найдите ошибки."},
+ {tag:"Тренажёр 15",title:"Главный вывод занятия",desc:"Финальная рефлексия — 12 открытых вопросов."},
+];
+
+function trainerBody(idx){
+  switch(idx){
+    case 0: return `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Внутреннее дело государства или международная проблема?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Государство допускает 14-часовой рабочий день, запрещает профсоюзы, не ограничивает детский труд и не обеспечивает охрану труда. Благодаря этому товары становятся дешевле на мировом рынке».</i></p></div>
+      <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Почему такая ситуация стала основанием для международного регулирования труда?</p>
+      ${choiceListFull("t1",["Потому что другие государства хотят вмешиваться во внутренние дела.","Потому что эксплуатация труда создаёт гуманитарную, социальную и экономическую проблему.","Потому что международное право заменяет национальное право.","Потому что трудовое право не может существовать без МОТ."],1,"Международное регулирование труда возникло из сочетания гуманитарных, социальных и экономических причин: защита работников, предотвращение социальных потрясений и недопущение конкуренции за счёт низких трудовых стандартов.")}`;
+    case 1: return `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Гуманитарный, социальный или экономический мотив?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по мотивам международного регулирования труда.</p>
+      ${bucketSorter('t2', SORT_T2_ITEMS, SORT_T2_BUCKETS)}
+      <div class="note">Международное трудовое право нельзя объяснить только моралью или только экономикой. Оно возникло на пересечении гуманности, социальной стабильности и рыночной конкуренции.</div>`;
+    case 2: return `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Какие идеи стали основой МОТ?</h2>
+      <p class="lede" style="margin-bottom:14px;">Отметьте положения, которые относятся к первоначальным принципам международного трудового права (Версальский договор 1919 года).</p>
+      ${multiSelectExercise('t3', MSEL_T3)}
+      <div class="explain-box info" style="margin-top:12px;">Версальский договор заложил фундамент современного международного трудового права: социальная справедливость, свобода объединения, ограничение эксплуатации и защита человеческого достоинства в труде.</div>`;
+    case 3: return `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Кто что делает в МОТ?</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите функцию с органом МОТ.</p>
+      ${bucketSorter('t4', SORT_T4_ITEMS, SORT_T4_BUCKETS)}
+      <div class="note">МОТ соединяет нормотворчество, управление, экспертизу и социальный диалог.</div>`;
+    case 4: return `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Жёсткое право или мягкое право?</h2>
+      <p class="lede" style="margin-bottom:14px;">Определите, какой инструмент создаёт юридические обязательства, а какой служит ориентиром для политики и практики.</p>
+      ${bucketSorter('t5', SORT_T5_ITEMS, SORT_T5_BUCKETS)}
+      <div class="note">Юрист должен различать международный стандарт, международное обязательство и ориентир правовой политики.</div>`;
+    case 5: return `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Соотнеси принцип и конвенцию</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите номера конвенций по пяти фундаментальным принципам.</p>
+      ${bucketSorter('t6', SORT_T6_ITEMS, SORT_T6_BUCKETS)}
+      <div class="note">Фундаментальные конвенции образуют ядро международного трудового права. Они выражают минимальный цивилизационный стандарт защиты труда.</div>`;
+    case 6: return `<div class="kicker">Тренажёр 7</div><h2 class="section-title">Где граница между обязанностью и принуждением?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работника заставляют выйти на работу в выходной день под угрозой увольнения. Другого гражданина привлекают к работам в условиях чрезвычайной ситуации. Третий выполняет работу по приговору суда под контролем государства».</i></p></div>
+      <label class="q">Что такое принудительный труд?</label>${answerBox('t7-q1')}
+      <label class="q">Всегда ли обязательная работа является принудительным трудом?</label>${answerBox('t7-q2')}
+      <label class="q">Какие исключения допускаются международными стандартами?</label>${answerBox('t7-q3')}
+      <label class="q">Почему принудительный труд запрещён как средство трудовой дисциплины?</label>${answerBox('t7-q4')}
+      <label class="q">Какой вывод должен сделать юрист?</label>${answerBox('t7-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Принудительный труд — это работа под угрозой наказания, на которую лицо не согласилось добровольно. Однако международные стандарты допускают отдельные исключения, например военную службу, обычные гражданские обязанности, работы по приговору суда под контролем государства и чрезвычайные обстоятельства.</div>`;
+    case 7: return `<div class="kicker">Тренажёр 8</div><h2 class="section-title">Различие или дискриминация?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работодатель отказал кандидату, потому что он не соответствует профессиональным требованиям должности. Другому кандидату отказали из-за пола. Третьему — из-за участия в профсоюзе. Четвёртому — из-за отсутствия обязательной лицензии».</i></p></div>
+      <label class="q">Что такое дискриминация по Конвенции №111?</label>${answerBox('t8-q1')}
+      <label class="q">Всегда ли различие в обращении является дискриминацией?</label>${answerBox('t8-q2')}
+      <label class="q">Что означает «специфические требования определённой работы»?</label>${answerBox('t8-q3')}
+      <label class="q">Как отличить объективное требование от дискриминационного основания?</label>${answerBox('t8-q4')}
+      <label class="q">Какой вывод должен сделать HR-юрист?</label>${answerBox('t8-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Не всякое различие является дискриминацией. Но различие, недопущение или предпочтение, основанное на запрещённых признаках и нарушающее равенство возможностей или обращения в сфере труда, является дискриминацией.</div>`;
+    case 8: return `<div class="kicker">Тренажёр 9</div><h2 class="section-title">Просто работа или достойный труд?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работник имеет занятость, но работает в опасных условиях, без права на коллективную защиту, с нестабильной оплатой и без уважения достоинства».</i></p></div>
+      <div class="grid cols-2" style="margin-bottom:14px;">${infoCard("Критерии достойного труда","наличие рабочих мест · права в сфере труда · социальная защита · социальный диалог · безопасность · справедливая оплата · уважение достоинства")}</div>
+      <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Можно ли назвать такую работу достойным трудом?</p>
+      ${choiceListFull("t9",["Да, поскольку у работника есть занятость.","Нет, потому что достойный труд требует безопасности, социальной защиты, диалога и уважения достоинства, а не только наличия работы."],1,"Достойный труд — это не просто наличие работы. Это труд в условиях свободы, равенства, социальных гарантий, безопасности и уважения человеческого достоинства.")}`;
+    case 9: return `<div class="kicker">Тренажёр 10</div><h2 class="section-title">Что означает ратификация конвенции?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Казахстан ратифицировал конвенцию МОТ. Юрист компании считает, что применять её не нужно, потому что в трудовом договоре и локальном акте работодателя указаны другие правила».</i></p></div>
+      <label class="q">Какое значение имеет ратифицированная конвенция МОТ для Казахстана?</label>${answerBox('t10-q1')}
+      <label class="q">Является ли она частью действующего права?</label>${answerBox('t10-q2')}
+      <label class="q">Как соотносится ратифицированная конвенция с законом?</label>${answerBox('t10-q3')}
+      <label class="q">Что должен проверить юрист?</label>${answerBox('t10-q4')}
+      <label class="q">Какой вывод по источникам трудового права?</label>${answerBox('t10-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Ратифицированные международные договоры являются частью действующего права Республики Казахстан и имеют приоритет перед законами. Юрист должен учитывать их при анализе трудовых отношений, локальных актов и трудовых договоров.</div>`;
+    case 10: return `<div class="kicker">Тренажёр 11</div><h2 class="section-title">Как международный стандарт превращается в контроль?</h2>
+      <p class="lede" style="margin-bottom:14px;">Постройте цепочку контроля МОТ, кликая карточки по порядку.</p>
+      ${rankingExercise('t11', RANK_T11)}
+      <div class="note">Контроль МОТ основан не столько на санкциях, сколько на отчётности, экспертной оценке, социальном диалоге и международной репутации.</div>`;
+    case 11: return `<div class="kicker">Тренажёр 12</div><h2 class="section-title">Зачем юристу доктрина?</h2>
+      <label class="q">Что изучает наука трудового права?</label>${answerBox('t12-q1')}
+      <label class="q">Почему труд не укладывается полностью в гражданско-правовую модель?</label>${answerBox('t12-q2')}
+      <label class="q">Что такое доктрина трудового права?</label>${answerBox('t12-q3')}
+      <label class="q">Как научные идеи влияют на законодательство и судебную практику?</label>${answerBox('t12-q4')}
+      <label class="q">Почему юристу недостаточно знать только текст ТК РК?</label>${answerBox('t12-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Наука трудового права формирует понятия, категории, принципы и объяснительные модели, без которых невозможно глубоко понимать законодательство и практику.</div>`;
+    case 12: return `<div class="kicker">Тренажёр 13</div><h2 class="section-title">Кто что дал трудовому праву?</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите учёного трудового права с его вкладом в науку.</p>
+      ${bucketSorter('t13', SORT_T13_ITEMS, SORT_T13_BUCKETS)}
+      <div class="note">История науки трудового права — это история поиска ответа на один вопрос: как право должно регулировать труд, не превращая человека в товар?</div>`;
+    case 13: return `<div class="kicker">Тренажёр 14</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+      <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:13.5px;">${T14_ANSWER}</p></div>
+      <p class="lede" style="margin-bottom:12px;"><b>Задание:</b> найдите минимум 8 ошибок в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+      ${T14_ERRORS.map((e,i)=>`<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;"><input type="checkbox" ${state.ai14[i]?'checked':''} onchange="state.ai14[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}</label>`).join("")}
+      <div class="explain-box ok" style="margin-top:12px;">ИИ может смешать международные стандарты, национальные источники и механизм контроля. Юрист должен уметь проверять юридическую силу акта, статус ратификации, место международного договора в правовой системе и значение научной доктрины.</div>`;
+    case 14: {
+      const qs=[["r1","Почему международное регулирование труда возникло почти одновременно с трудовым правом?"],["r2","Какие три причины объясняют появление международных трудовых стандартов?"],["r3","Почему принцип «труд не является товаром» является фундаментальным?"],["r4","Что такое трипартизм МОТ?"],["r5","Чем конвенция МОТ отличается от рекомендации МОТ?"],["r6","Какие пять основополагающих принципов и прав в сфере труда признаёт МОТ?"],["r7","Почему свобода объединения находится под особой международной защитой?"],["r8","Как работает контроль МОТ?"],["r9","Что означает ратификация конвенции МОТ для Казахстана?"],["r10","Что изучает наука трудового права?"],["r11","Почему трудовое право нуждается в научной доктрине?"],["r12","Как международные стандарты и наука трудового права помогают юристу решать практические трудовые споры?"]];
+      return `<div class="kicker">Тренажёр 15</div><h2 class="section-title">Главный вывод занятия</h2>
+      <p class="lede" style="margin-bottom:14px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия занятия.</p>
+      ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+      <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+        <span class="note" id="export-status" style="margin:0;"></span>
+      </div>
+      <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+    }
+    default: return '';
+  }
+}
+function buildAnswersText(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Занятие №4. Международное регулирование труда. Наука трудового права\nКурс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Тренажёр 10 (ратификация конвенции) —\n";
+  ["t10-q1","t10-q2","t10-q3","t10-q4","t10-q5"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  out += "\n— Тренажёр 15 (финальная рефлексия) —\n";
+  ["r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  return out;
+}
+window.exportAnswers=async function(){
+  const out = buildAnswersText();
+  const status = document.getElementById('export-status');
+  if(window.claude && window.claude.use){
+    try{
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:"otvety-zanyatie4-trudovoe-pravo.txt", data: out});
+        if(status) status.textContent = 'Файл сохранён.';
+        return;
+      }
+    }catch(e){ /* fall through */ }
+  }
+  try{
+    const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "otvety-zanyatie4-trudovoe-pravo.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    if(status) status.textContent = 'Файл сохранён.';
+  }catch(e){
+    try{ await navigator.clipboard.writeText(out); if(status) status.textContent = 'Ответы скопированы в буфер обмена.'; }
+    catch(e2){ if(status) status.textContent = 'Не удалось сохранить — выделите текст ответов вручную.'; }
+  }
+};
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{}, rankings:{}, rankChecked:{}, multiSel:{}, multiSelChecked:{}, ai14:{}, refl:{}};
+if(!state.sorters) state.sorters={};
+['t2','t4','t5','t6','t13'].forEach(k=>{ if(!state.sorters[k]) state.sorters[k]={}; });
+if(!state.rankings) state.rankings={};
+if(!state.rankChecked) state.rankChecked={};
+if(!state.multiSel) state.multiSel={};
+if(!state.multiSelChecked) state.multiSelChecked={};
+if(!state.ai14) state.ai14={};
+function save(){try{localStorage.setItem('mnu_labor_law_lesson4',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_lesson4');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goToStandards(){ currentScreen='presentation'; currentTrainer=null; goSlide(16,'full'); }
+function goToScience(){ currentScreen='presentation'; currentTrainer=null; goSlide(40,'full'); }
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Занятие №4 · Международное регулирование труда. Наука трудового права</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Занятие №4. Международное регулирование труда. Наука трудового права</p>
+      <p class="cover-question">Почему трудовые права стали международным вопросом и зачем юристу нужна наука трудового права?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">Перейти к тренажёрам</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта занятия</button>
+        <button class="btn btn-outline" onclick="goToStandards()">МОТ и международные стандарты</button>
+        <button class="btn btn-outline" onclick="goToScience()">Наука трудового права</button>
+        <button class="btn btn-outline" onclick="openTrainer(14)">Финальная рефлексия</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика занятия</div>
+    <h2 class="section-title">Сегодня мы выходим за пределы национального кодекса</h2>
+    <p class="lede" style="margin-bottom:24px;">Международное регулирование показывает, что трудовые права — это не только внутреннее дело государства. Наука трудового права показывает, как юристы объясняют, развивают и защищают идею достойного труда.</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo('presentation')">Перейти к презентации →</button></div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('map')">К карте понимания →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. «Международные стандарты» — слайды 17–39. «Наука трудового права» — слайды 40–45.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 4</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:24px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, аргументировать и делать вывод о международных стандартах и науке трудового права.</p>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+function screenMap(){
+  const nodes=["Миссия трудового права","Баланс труда и капитала","Метод и принципы","Источники и формула трудового права","Международное регулирование труда","Промышленная революция","Эксплуатация и социальный вопрос","Гуманитарные + социальные + экономические причины","Версальский договор 1919 года","МОТ","Трипартизм","Конвенции + рекомендации + декларации","Фундаментальные права в сфере труда","Достойный труд","Контроль МОТ","Казахстан и международные обязательства","Наука трудового права","Доктрина","Научные школы"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 5</div>
+    <h2 class="section-title">Карта понимания: международное регулирование труда и наука трудового права</h2>
+    ${verticalFlow(nodes,{final:"Профессиональное юридическое мышление"})}
+    <div class="quote-slide" style="margin-top:22px;padding:28px 22px;"><blockquote style="font-size:clamp(14px,1.9vw,17px);">«Международные стандарты показывают минимальный цивилизационный уровень защиты труда. Наука трудового права объясняет, почему этот уровень необходим и как его развивать».</blockquote></div>
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('after')">К самостоятельной работе →</button></div>
+  </div>`;
+}
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 6</div>
+    <h2 class="section-title">После занятия</h2>
+    <p class="lede" style="margin-bottom:22px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:18px;">
+      <div class="card"><h3>1. Повторить</h3><p>Причины возникновения международного регулирования труда · промышленную революцию и появление трудового вопроса · роль Роберта Оуэна · идею Чарльза Фредерика Хиндли · гуманитарные, социальные и экономические причины международных стандартов · Версальский мирный договор 1919 года · раздел XIII «Труд» · принцип «труд не является товаром» · МОТ и её структуру · трипартизм · Международную конференцию труда · Административный совет МОТ · Международное бюро труда · Филадельфийскую декларацию · концепцию достойного труда · конвенции и рекомендации МОТ · жёсткое и мягкое право · фундаментальные, приоритетные и технические конвенции · 10 фундаментальных конвенций МОТ · 5 основополагающих принципов и прав в сфере труда · систему контроля МОТ · регулярный надзор · специальные контрольные процедуры · Комитет по свободе объединения · Казахстан и МОТ · ратифицированные Казахстаном конвенции · проблемы имплементации международных трудовых стандартов · понятие науки трудового права · понятие доктрины трудового права · истоки науки трудового права · Лотмара, Зинцхаймера, Таля, Войтинского, Бланпэна, Кан-Фройнда · казахстанскую науку трудового права · Абжанова, Нургалиеву, Нурмагамбетова, Шайбекова, Николаеву, Уварова, Димитрову.</p></div>
+      <div class="card"><h3>2. Подумать</h3><p>Почему международные трудовые стандарты не заменяют национальное трудовое право, но без них национальное трудовое право теряет связь с глобальным минимумом социальной справедливости?</p></div>
+      <div class="card"><h3>3. Мини-задание</h3><p>Выберите одну фундаментальную конвенцию МОТ и объясните: какой принцип она защищает, почему этот принцип важен и как он связан с трудовым правом Казахстана.</p></div>
+      <div class="card"><h3>4. Практическое задание</h3><p>Откройте NORMLEX и проверьте статус одной конвенции МОТ для Казахстана. Определите: ратифицирована ли она, к какой категории относится, какие обязательства создаёт и в какой теме трудового права она может применяться.</p></div>
+      <div class="card"><h3>5. Научное задание</h3><p>Выберите одного учёного трудового права и объясните, какую идею он внёс в развитие науки трудового права. Свяжите эту идею с одной современной проблемой: платформенная занятость, алгоритмическое управление, дискриминация, охрана труда, коллективные переговоры или трудовые споры.</p></div>
+      <div class="card"><h3>6. AI-задание</h3><p>Спросите ИИ: «Имеют ли конвенции МОТ значение для трудового права Казахстана?» Затем критически разберите ответ с позиции Конституции РК, источников трудового права, статуса ратифицированных международных договоров и роли МОТ.</p></div>
+    </div>
+    ${qrZone("canvas","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="margin-top:16px;">${qrZone("normlex2","NORMLEX — проверить статус конвенции для Казахстана","https://normlex.ilo.org/dyn","https://normlex.ilo.org/dyn")}</div>
+    <div style="margin-top:16px;">${qrZone("tkrk","Ссылка на Трудовой кодекс РК","https://")}</div>
+    <div style="text-align:center;margin-top:26px;"><button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button></div>
+  </div>`;
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 12 + (state.slide/(SLIDES.length-1))*58; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,8,12,78,90,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
