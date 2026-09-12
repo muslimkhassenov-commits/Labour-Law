@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Тема 6. Трудовое правоотношение</title>
+<meta name="description" content="Единый интерактивный образовательный модуль MNU на три занятия (6.1, 6.2, 6.3): понятие и субъекты трудового правоотношения, права и обязанности сторон, фактические и скрытые трудовые отношения, судебная практика и P2P-тренажёр." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice,.case-card{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.case-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.case-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.case-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.case-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);}
+.case-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-node.zone{border-color:var(--burgundy);}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.ladder{display:flex;flex-direction:column-reverse;gap:8px;max-width:520px;margin:0 auto;}
+.ladder .rung{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.pyramid .level{border-radius:10px;padding:11px 14px;text-align:center;color:#fff;font-size:12.5px;font-weight:600;box-shadow:var(--shadow);}
+.pyramid .level small{display:block;font-weight:500;font-size:11px;opacity:.85;margin-top:3px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.rank-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:13.5px;}
+.rank-item .pos{color:var(--red);font-weight:700;margin-right:8px;}
+.rank-item.correct{border-color:var(--ok);background:#e9f5ee;}
+.rank-item.wrong{border-color:var(--red);background:#fbeceb;}
+
+.msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.8px;background:#fff;min-width:560px;}
+table.cmp th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;}
+table.cmp td{padding:10px 12px;border-top:1px solid var(--line);color:var(--graphite-soft);vertical-align:top;}
+table.cmp tr:nth-child(even) td{background:#faf9f6;}
+table.cmp td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+
+.role-card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);}
+.role-card h4{margin:0 0 8px;color:var(--navy);font-size:14.5px;}
+.role-card ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--graphite-soft);line-height:1.65;}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Тема 6</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главный экран</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика темы</button>
+    <button class="navbtn primary" onclick="goTo61()">Занятие 6.1</button>
+    <button class="navbtn" onclick="goTo62()">Занятие 6.2</button>
+    <button class="navbtn" onclick="goTo63()">Занятие 6.3</button>
+    <button class="navbtn" onclick="goTo('cases')">Судебная практика</button>
+    <button class="navbtn" onclick="goTo('p2p')">P2P-тренажёр</button>
+    <button class="navbtn" onclick="goTo('trainers')">Тренажёры</button>
+    <button class="navbtn" onclick="goTo('map')">Карта признаков</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+    <button class="navbtn ghost" onclick="openTrainer(23)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Тема 6. Трудовое правоотношение · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ХЕЛПЕРЫ
+   ============================================================ */
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node ${opts.zoneIdx&&opts.zoneIdx.includes(i)?'zone':''}">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть эталонный ответ':'Показать эталонный ответ / позицию суда'}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt=(rightPct-leftPct)/8;
+  return `<div class="scale-wrap"><svg viewBox="0 0 320 180" width="260" height="150">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:260px;font-size:12.5px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div></div>`;
+}
+function compassSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#dfdbd2" stroke-width="1"/>
+    <polygon points="50,14 58,50 50,86 42,50" fill="#c8102e"/>
+    <polygon points="14,50 50,42 86,50 50,58" fill="#0c2340"/>
+    <circle cx="50" cy="50" r="4" fill="#7c1327"/>
+    <text x="50" y="10" text-anchor="middle" font-size="8" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">N</text>
+  </svg>`;
+}
+function shieldSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 110" width="${size}" height="${Math.round(size*110/100)}">
+    <path d="M50 6 L92 22 V52 C92 78 74 96 50 106 C26 96 8 78 8 52 V22 Z" fill="none" stroke="#0c2340" stroke-width="4"/>
+    <path d="M50 6 L92 22 V52 C92 78 74 96 50 106 Z" fill="#7c1327" opacity="0.1"/>
+    <path d="M32 54 L45 68 L70 38" fill="none" stroke="#c8102e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+function triangleSVG(labels,size){
+  size=size||260;
+  labels=labels||["Государство","Работник","Работодатель"];
+  return `<svg viewBox="0 0 300 210" width="${size}" height="${Math.round(size*210/300)}">
+    <polygon points="150,34 55,182 245,182" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="150" cy="34" r="8" fill="#7c1327"/>
+    <circle cx="55" cy="182" r="8" fill="#c8102e"/>
+    <circle cx="245" cy="182" r="8" fill="#123058"/>
+    <text x="150" y="18" text-anchor="middle" font-size="13" font-weight="700" fill="#7c1327" font-family="Inter,sans-serif">${labels[0]}</text>
+    <text x="55" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#c8102e" font-family="Inter,sans-serif">${labels[1]}</text>
+    <text x="245" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#123058" font-family="Inter,sans-serif">${labels[2]}</text>
+  </svg>`;
+}
+function appSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 80 100" width="${size}" height="${Math.round(size*100/80)}">
+    <rect x="6" y="4" width="68" height="92" rx="10" fill="none" stroke="#0c2340" stroke-width="4"/>
+    <rect x="16" y="18" width="20" height="20" rx="4" fill="#c8102e"/>
+    <rect x="44" y="18" width="20" height="20" rx="4" fill="#123058"/>
+    <rect x="16" y="46" width="20" height="20" rx="4" fill="#123058"/>
+    <rect x="44" y="46" width="20" height="20" rx="4" fill="#7c1327"/>
+    <circle cx="40" cy="86" r="4" fill="#0c2340"/>
+  </svg>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function pyramidWidget(levels){
+  const n=levels.length;
+  const colors=["#0c2340","#123058","#1a3a63","#585c63","#7c1327","#93172c","#a91d31","#c8102e"];
+  return `<div class="pyramid">${levels.map((l,i)=>{
+    const width = 100 - i*(60/Math.max(n-1,1));
+    return `<div class="level" style="width:${width}%;background:${colors[Math.min(i,colors.length-1)]};">${l.title}${l.sub?`<small>${l.sub}</small>`:''}</div>`;
+  }).join("")}</div>`;
+}
+function comparisonTable(headers, rows){
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+/* stepped reveal helper */
+function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
+function stepHint(stage,max){ return stage<max ? `<div class="step-hint">Нажмите «Далее» / клавишу клика, чтобы показать ещё (${stage}/${max})</div>` : ""; }
+
+/* ranking exercise */
+function rankingExercise(key, items){
+  const chosen = state.rankings[key] || [];
+  const pool = items.filter(x=>!chosen.includes(x));
+  const checked = state.rankChecked[key];
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(x=>`<span class="chip" onclick="pickRank('${key}','${x.replace(/'/g,"\\'")}',${items.length})">${x}</span>`).join("")||'<span class="note">Все карточки расставлены.</span>'}</div>
+  <div class="bucket" style="min-height:100px;"><h4>Ваша последовательность</h4>
+    ${chosen.map((x,i)=>{
+      let cls='';
+      if(checked) cls = (items[i]===x) ? 'correct' : 'wrong';
+      return `<div class="rank-item ${cls}"><span><span class="pos">${i+1}.</span>${x}</span><button class="navbtn" style="padding:3px 10px;font-size:11px;" onclick="unRank('${key}','${x.replace(/'/g,"\\'")}')">убрать</button></div>`;
+    }).join("")}
+  </div>
+  ${chosen.length===items.length ? `<button class="btn btn-navy" style="margin-top:12px;" onclick="checkRank('${key}')">Проверить порядок</button>` : ''}
+  ${checked?`<div class="explain-box ${chosen.every((x,i)=>items[i]===x)?'ok':'no'}" style="margin-top:12px;">${chosen.every((x,i)=>items[i]===x)?'✓ Порядок верный.':'✕ Есть ошибки — красным отмечены позиции не на своём месте.'}</div>`:''}`;
+}
+window.pickRank=function(key,item,total){
+  if(!state.rankings[key]) state.rankings[key]=[];
+  state.rankings[key].push(item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.unRank=function(key,item){
+  state.rankings[key]=(state.rankings[key]||[]).filter(x=>x!==item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.checkRank=function(key){ state.rankChecked[key]=true; save(); render(); };
+
+/* multi-select exercise */
+function multiSelectExercise(key, items){
+  const picked = state.multiSel[key] || {};
+  const checked = state.multiSelChecked[key];
+  return `${items.map((it,i)=>{
+    let style='';
+    if(checked){
+      if(it.correct) style = picked[i] ? 'border-color:#1f6f43;background:#e9f5ee;' : 'border-color:#c8102e;background:#fbeceb;';
+      else style = picked[i] ? 'border-color:#c8102e;background:#fbeceb;' : '';
+    }
+    return `<label class="msel-item" style="${style}"><input type="checkbox" ${picked[i]?'checked':''} onchange="toggleMultiSel('${key}',${i})"> ${it.text}</label>`;
+  }).join("")}
+  <button class="btn btn-navy" style="margin-top:6px;" onclick="checkMultiSel('${key}')">Проверить</button>
+  ${checked?`<div class="explain-box ${items.every((it,i)=>!!picked[i]===!!it.correct)?'ok':'no'}" style="margin-top:12px;">${items.every((it,i)=>!!picked[i]===!!it.correct)?'✓ Все выбраны верно.':'✕ Есть ошибки — зелёным отмечены верные, красным — неверно отмеченные или пропущенные позиции.'}</div>`:''}`;
+}
+window.toggleMultiSel=function(key,i){
+  if(!state.multiSel[key]) state.multiSel[key]={};
+  state.multiSel[key][i]=!state.multiSel[key][i];
+  state.multiSelChecked[key]=false;
+  save(); render();
+};
+window.checkMultiSel=function(key){ state.multiSelChecked[key]=true; save(); render(); };
+
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey]||{};
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  if(!state.sorters[sortKey]) state.sorters[sortKey]={};
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ if(state.sorters[sortKey]) delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+/* ============================================================
+   ДАННЫЕ: СЛАЙДЫ (102)
+   ============================================================ */
+const ROADMAP_NODES = ["Миссия трудового права","Метод и принципы","Источники и формула","Международные стандарты","Государственный контроль","Тема 6. Трудовое правоотношение","Система правоотношений","Состав трудового правоотношения","Юридические факты","Субъекты трудового права","Работник и работодатель","Правовой статус","Права и обязанности сторон","Работодательская власть","Представительство работников","Заёмный труд","Фактические и скрытые отношения","Судебная практика","Трудовой договор или ГПХ","P2P-тренажёр"];
+
+const SLIDES = [
+// 1. Титульный слайд
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:26px 0;">
+    <div class="logo-wrap" style="width:60px;height:60px;margin:0 auto 20px;"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Тема 6</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое правоотношение</h1>
+    <p class="subtitle" style="margin:0 auto 18px;text-align:center;">Единый модуль на 3 занятия</p>
+    <p class="lede" style="margin:0 auto 20px;text-align:center;font-style:italic;">От факта выполнения работы — к юридической квалификации отношений</p>
+    ${scaleSVG(50,50,"Трудовой договор","ГПХ")}
+    <p class="note">В центре весов — фактические признаки.</p>
+  </div>`},
+// 2. Почему эта тема центральная
+{kicker:"Ядро индивидуального трудового права", render:()=>`
+  <h2 class="section-title">Трудовое правоотношение — ядро индивидуального трудового права</h2>
+  ${flowRow(["Работник","Работодатель","Трудовая функция","Оплата","Подчинение","Контроль"])}
+  <div class="grid cols-2" style="margin-top:14px;">${infoCard("Права и обязанности","")}${infoCard("Гарантии и ответственность","")}${infoCard("Защита прав","")}</div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Пока мы не установили наличие трудового правоотношения, невозможно применять большинство трудовых гарантий.</div>`},
+// 3. Главный вопрос темы
+{kicker:"Главный вопрос темы", render:()=>`
+  <h2 class="section-title">Когда человек становится работником с точки зрения трудового права?</h2>
+  ${numList(["Достаточно ли подписанного трудового договора?","Исключает ли отсутствие договора трудовые отношения?","Имеет ли значение название договора?","Может ли договор оказания услуг скрывать трудовые отношения?","Может ли платформа быть работодателем?","Кто должен доказать отсутствие трудовых отношений при фактическом допуске?"])}`},
+// 4. Проблемный кейс всей темы
+{kicker:"Проблемный кейс темы", render:()=>`
+  <h2 class="section-title">Договор оказания услуг или фактическое трудовое правоотношение?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Человек заключил договор оказания услуг. В договоре написано, что он не является работником. Но фактически он ежедневно выполняет работу по определённой должности, получает регулярную оплату, подчиняется графику, использует ресурсы организации и выполняет поручения руководителя».</i></p></div>
+  ${revealBox('intro-case','Что должен увидеть юрист: договор оказания услуг или фактическое трудовое правоотношение?','Юрист должен анализировать не только название договора, а фактическое содержание отношений.')}`},
+// 5. Три занятия внутри темы
+{kicker:"Три занятия внутри темы", render:()=>`
+  <h2 class="section-title">Сначала модель, затем содержание, затем судебная практика</h2>
+  <div class="grid cols-3">
+    ${infoCard("Занятие 6.1","Понятие, структура и субъекты трудового правоотношения")}
+    ${infoCard("Занятие 6.2","Содержание трудового правоотношения: права, обязанности, представительство и работодательская власть")}
+    ${infoCard("Занятие 6.3","Фактические и скрытые трудовые отношения. ГПХ. Судебная практика и P2P")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Сначала строим модель правоотношения, затем анализируем содержание и субъектов, затем применяем модель к судебным делам.</b></p>`},
+// 6. Обложка занятия 6.1
+{kicker:"Занятие 6.1", render:()=>`
+  <h2 class="section-title">Понятие, структура и субъекты трудового правоотношения</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);color:var(--navy);line-height:1.4;">«Что такое трудовое правоотношение, из каких элементов оно состоит и кто может быть его субъектом?»</p>`},
+// 7. Когда общественное отношение становится правовым
+{kicker:"Понятие правоотношения", render:()=>`
+  <h2 class="section-title">Когда общественное отношение становится правовым?</h2>
+  <div class="grid cols-2">${infoCard("1. Волевое поведение людей","")}${infoCard("2. Регулирование нормами права","")}</div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Общественное отношение + волевое поведение + норма права = правоотношение</div>
+  <p class="lede" style="margin-top:10px;"><b>Не всякое фактическое взаимодействие людей является правоотношением. Правовое отношение возникает тогда, когда факты попадают в поле правового регулирования.</b></p>`},
+// 8. Правоотношения в области труда
+{kicker:"Правоотношения в области труда", render:()=>`
+  <h2 class="section-title">Правоотношения в области труда</h2>
+  <p class="lede">Правоотношения в области труда — это юридическая форма общественных отношений в сфере наёмного труда, представляющая собой связи конкретных субъектов трудового права, возникающие на основе норм трудового права.</p>
+  ${flowRow(["Наёмный труд","Нормы трудового права","Конкретные субъекты","Права и обязанности"])}`},
+// 9. Почему именно наёмный труд
+{kicker:"Наёмный, зависимый труд", render:()=>`
+  <h2 class="section-title">Почему речь идёт именно о наёмном труде?</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;margin-bottom:12px;">Для трудового права главным является не любой труд, а несамостоятельный, зависимый, наёмный труд.</div>
+  <div class="grid cols-3">${infoCard("1.","Предприниматель организует свой труд сам")}${infoCard("2.","Исполнитель выполняет разовую услугу")}${infoCard("3.","Работник выполняет трудовую функцию в организации работодателя")}</div>
+  <p class="note" style="margin-top:10px;">Где возникает потребность в специальной трудоправовой защите?</p>`},
+// 10. Понятие трудового правоотношения
+{kicker:"Понятие трудового правоотношения", render:()=>`
+  <h2 class="section-title">Понятие трудового правоотношения</h2>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(13.5px,1.9vw,16px);">Трудовое правоотношение — это возникающее на основании трудового договора и урегулированное нормами трудового права трудовое отношение, по которому работник обязуется выполнять трудовую функцию с подчинением трудовому распорядку, а работодатель обязан предоставлять работу, обеспечивать условия труда и выплачивать вознаграждение за труд.</p></div>`},
+// 11. Объект трудового правоотношения
+{kicker:"Объект правоотношения", render:()=>`
+  <h2 class="section-title">Объект трудового правоотношения</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;margin-bottom:12px;">Объектом правовой регламентации выступает способность человека к труду.</div>
+  <p class="lede">Способность к труду неотделима от личности работника и имеет индивидуальный характер.</p>
+  ${flowRow(["Человек","Способность к труду","Организация работодателя","Средства производства","Трудовой распорядок"])}`},
+// 12. Содержание трудовых отношений
+{kicker:"Содержание трудовых отношений", render:()=>`
+  <h2 class="section-title">Содержание трудовых отношений</h2>
+  ${verticalFlow(["Способность человека к труду","Средства производства работодателя","Коллектив / организация","Подчинение трудовому распорядку"],{final:"Трудовое правоотношение"})}
+  <p class="lede" style="margin-top:12px;"><b>Трудовое правоотношение соединяет живой труд человека с организацией работодателя.</b></p>`},
+// 13. Основная классификация
+{kicker:"Основная классификация", render:()=>`
+  <h2 class="section-title">Правоотношения в области труда: основная классификация</h2>
+  <div class="grid cols-2">${infoCard("1. Трудовые правоотношения","")}${infoCard("2. Производные отношения","непосредственно связанные с трудовыми")}</div>
+  <p class="note" style="margin-top:10px;">Трудовое правоотношение — центральная категория. Производные отношения обслуживают его возникновение, существование, развитие, защиту и прекращение.</p>`},
+// 14. Производные отношения
+{kicker:"Производные отношения", render:()=>`
+  <h2 class="section-title">Производные отношения</h2>
+  <div class="grid cols-2">
+    ${infoCard("1. Организация и управление трудом","")}
+    ${infoCard("2. Профподготовка, переподготовка, повышение квалификации","")}
+    ${infoCard("3. Социальное партнёрство","коллективные договоры, соглашения, участие работников в установлении условий труда")}
+    ${infoCard("4. Разрешение трудовых споров и контроль","за соблюдением трудового законодательства")}
+  </div>
+  <div style="margin-top:14px;">${infoCard("5. Трудоустройство","")}</div>
+  <p class="note" style="margin-top:10px;">Почему эти отношения не существуют сами по себе, а связаны с трудовым правоотношением?</p>`},
+// 15. Материальные и процедурно-процессуальные
+{kicker:"Материальные и процедурные", render:()=>`
+  <h2 class="section-title">Материальные и процедурно-процессуальные правоотношения</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Материальные</h4><p style="font-size:13.5px;color:var(--graphite-soft);">устанавливают права, обязанности и правила поведения</p></div>
+    <div class="branch right"><h4>Процедурно-процессуальные</h4><p style="font-size:13.5px;color:var(--graphite-soft);">определяют порядок практической реализации и исполнения норм материального права</p></div>
+  </div>
+  ${numList(["выплата заработной платы — материальное правоотношение","рассмотрение спора в согласительной комиссии — процедурное","проверка инспекции труда — контрольно-надзорное","коллективные переговоры — коллективное процедурное правоотношение"])}`},
+// 16. Четыре типа отношений
+{kicker:"Четыре типа отношений", render:()=>`
+  <h2 class="section-title">Индивидуальные, коллективные, контрольно-надзорные и юрисдикционные отношения</h2>
+  <div class="grid cols-4">${infoCard("1. Индивидуальные","")}${infoCard("2. Коллективные","")}${infoCard("3. Контрольно-надзорные","")}${infoCard("4. Юрисдикционные","")}</div>
+  <div class="card accent-left" style="margin-top:14px;"><p style="font-size:13.5px;"><i>Работник требует зарплату; профсоюз ведёт переговоры; инспектор выдаёт предписание; суд рассматривает спор. Какие здесь правоотношения?</i></p></div>`},
+// 17. Состав трудового правоотношения
+{kicker:"Состав правоотношения", render:()=>`
+  <h2 class="section-title">Состав трудового правоотношения</h2>
+  ${verticalFlow(["Субъект","Объект","Содержание"],{final:"Субъективные права + субъективные обязанности"})}
+  <p class="note" style="margin-top:10px;">Субъективные права — мера возможного поведения. Субъективные обязанности — мера должного поведения.</p>`},
+// 18. Юридические факты
+{kicker:"Юридические факты", render:()=>`
+  <h2 class="section-title">Юридические факты</h2>
+  <p class="lede">Юридические факты — жизненные обстоятельства, которые являются основанием возникновения, изменения или прекращения правоотношений.</p>
+  ${verticalFlow(["Действия / события","Правомерные / неправомерные","Юридические акты / юридические поступки"],{final:"Сделки, договоры, административные акты, решения суда"})}`},
+// 19. Юридические акты в трудовых отношениях
+{kicker:"Юридические акты", render:()=>`
+  <h2 class="section-title">Юридические акты в трудовых отношениях</h2>
+  <div class="grid cols-2">
+    ${infoCard("Договоры в сфере труда","трудовой договор · коллективный договор · договор о полной материальной ответственности · договор обучения · договор о неконкуренции · договор о дуальном обучении")}
+    ${infoCard("Односторонние юридические акты","решения суда · акты государственных органов · акты работодателя · заявления работника · мотивированное мнение профсоюза · предложение о начале коллективных переговоров")}
+  </div>`},
+// 20. Сложный юридический факт
+{kicker:"Сложный юридический факт", render:()=>`
+  <h2 class="section-title">Сложный юридический факт</h2>
+  ${verticalFlow(["Трудовой договор","+ избрание на должность / конкурс / назначение / судебное решение о заключении трудового договора / направление на работу по квоте"],{final:"Возникновение трудовых отношений"})}
+  <p class="lede" style="margin-top:10px;"><b>Иногда для возникновения трудового отношения недостаточно одного договора: требуется сложный юридический состав.</b></p>`},
+// 21. Фактический допуск к работе
+{kicker:"Фактический допуск", render:()=>`
+  <h2 class="section-title">Фактический допуск к работе</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;margin-bottom:12px;">Отсутствие письменного трудового договора не всегда означает отсутствие трудовых отношений.</div>
+  ${flowRow(["Фактический допуск","Выполнение работы","Доказательства","Судебное признание","Трудовые гарантии"])}
+  <p class="lede" style="margin-top:10px;"><b>Если работник фактически приступил к работе с ведома или по поручению работодателя, возникает вопрос о признании трудовых отношений.</b></p>`},
+// 22. Субъекты правоотношений в сфере труда
+{kicker:"Субъекты правоотношений", render:()=>`
+  <h2 class="section-title">Субъекты правоотношений в сфере труда</h2>
+  <div class="grid cols-2">
+    ${infoCard("Основные","1. Работники · 2. Работодатели")}
+    ${infoCard("Производные","3. Представители работников (профсоюзы и их органы либо выборные представители) · 4. Представители работодателей (объединения работодателей)")}
+  </div>`},
+// 23. Кто является субъектом трудового права
+{kicker:"Кто является субъектом", render:()=>`
+  <h2 class="section-title">Субъекты трудового права: кто действует в сфере труда?</h2>
+  <p class="lede">Субъекты трудового права — это лица, наделённые трудовой правосубъектностью, правами, обязанностями, гарантиями и ответственностью.</p>
+  <div class="grid cols-4">${infoCard("1. Правосубъектность","")}${infoCard("2. Права и обязанности","")}${infoCard("3. Гарантии","")}${infoCard("4. Ответственность","")}</div>
+  <p class="lede" style="margin-top:10px;"><b>Субъект трудового права — это не просто участник отношений, а носитель юридического статуса.</b></p>`},
+// 24. Основные и производные субъекты
+{kicker:"Основные и производные субъекты", render:()=>`
+  <h2 class="section-title">Основные и производные субъекты</h2>
+  ${verticalFlow(["Первичные / базовые: работник, работодатель","Вторичные / производные: представители работников, представители работодателей"])}
+  <div class="card navy" style="margin-top:14px;"><p style="color:#fff;">Государство не является стороной трудового правоотношения, кроме случаев, когда оно выступает работодателем.</p></div>
+  <p class="lede" style="margin-top:8px;"><b>Государство устанавливает правила, контролирует их соблюдение и участвует в социальном партнёрстве, но само трудовое правоотношение возникает между работником и работодателем.</b></p>`},
+// 25. Трудовая правосубъектность
+{kicker:"Трудовая правосубъектность", render:()=>`
+  <h2 class="section-title">Трудовая правосубъектность</h2>
+  ${verticalFlow(["Правоспособность","Дееспособность","Деликтоспособность"])}
+  <div class="grid cols-2" style="margin-top:14px;">${infoCard("Материальный критерий","способность к труду")}${infoCard("Формальный критерий","достижение возраста")}</div>
+  <p class="lede" style="margin-top:10px;"><b>Трудовая правосубъектность — предпосылка трудоправового статуса.</b></p>`},
+// 26. Общий и специальный статус
+{kicker:"Общий и специальный статус", render:()=>`
+  <h2 class="section-title">Общий и специальный трудоправовой статус</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Общий статус</h4><p style="font-size:13.5px;color:var(--graphite-soft);">исходное положение субъекта трудового права</p></div>
+    <div class="branch right"><h4>Специальный статус</h4><p style="font-size:13.5px;color:var(--graphite-soft);">дополнительные права, обязанности или изъятия, связанные с особенностями работы, возраста, состояния здоровья, профессии, условий труда</p></div>
+  </div>
+  <p class="note" style="margin-top:10px;">Почему трудовое право одновременно исходит из равенства работников и допускает дифференциацию их статуса?</p>`},
+// 27. Работник как субъект
+{kicker:"Работник — только физлицо", render:()=>`
+  <h2 class="section-title">Работник как субъект</h2>
+  <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Работник — физическое лицо, состоящее в трудовых отношениях с работодателем и непосредственно выполняющее работу по трудовому договору.</p></div>
+  <p class="lede" style="margin-top:10px;"><b>Работником не может быть юридическое лицо, потому что трудовая функция неотделима от личности человека.</b></p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Почему нельзя «заменить» работника представителем при выполнении трудовой функции?</p>`},
+// 28. Возраст работника
+{kicker:"Возраст работника", maxStep:4, render:(stage)=>{
+  const items=[
+    infoCard("16 лет","общее правило заключения трудового договора"),
+    infoCard("15 лет","допускается в случаях получения основного среднего, общего среднего образования в организации среднего образования"),
+    infoCard("до 14 лет","для работы в свободное от учёбы время, не причиняющей вреда здоровью и не нарушающей процесс обучения, а также в организациях кинематографии, театрах, концертных организациях и цирках"),
+    infoCard("18 лет","отдельные виды работ: тяжёлые, вредные, опасные и иные работы с повышенным возрастным порогом"),
+  ];
+  return `<h2 class="section-title">Возраст работника в трудовом праве</h2>
+  <div class="grid cols-2">${steps(stage,items)}</div>
+  ${stepHint(stage,4)}
+  ${stage>=4?`<p class="lede" style="margin-top:10px;"><b>Возраст — формальный критерий трудовой правосубъектности работника.</b></p>`:""}`;
+}},
+// 29. Трудоспособность и дееспособность
+{kicker:"Трудоспособность и дееспособность", render:()=>`
+  <h2 class="section-title">Трудовая правосубъектность шире гражданской дееспособности</h2>
+  ${numList(["трудоспособность — способность выполнять работу определённого объёма и качества","состояние здоровья влияет на объём возможностей, но не всегда исключает трудовую правосубъектность","признание работника недееспособным не всегда автоматически прекращает трудовые отношения","прекращение возможно только если работник не имеет возможности продолжать трудовые отношения"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Гражданская дееспособность и трудовая правосубъектность не совпадают полностью.</div>`},
+// 30. Работодатель как субъект
+{kicker:"Работодатель как субъект", render:()=>`
+  <h2 class="section-title">Работодатель: кто предоставляет работу и организует труд?</h2>
+  <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Работодатель — физическое или юридическое лицо, с которым работник состоит в трудовых отношениях.</p></div>
+  ${numList(["юридическое лицо","индивидуальный предприниматель","крестьянское и фермерское хозяйство","физическое лицо без цели извлечения прибыли","филиал или представительство иностранного юридического лица"])}
+  <p class="lede" style="margin-top:8px;"><b>Для трудового права важна не организационно-правовая форма работодателя, а его способность предоставлять работу, оплачивать труд, обеспечивать условия труда и реализовывать работодательскую власть.</b></p>`},
+// 31. Работодательская правосубъектность
+{kicker:"Работодательская правосубъектность", render:()=>`
+  <h2 class="section-title">Работодательская правосубъектность</h2>
+  ${numList(["утверждено штатное расписание","сформирован фонд оплаты труда","есть фактическая и юридическая готовность принимать работников","уполномоченное лицо допускает работника к работе","организация может предоставлять работу, оплачивать труд и обеспечивать условия труда"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Трудовая правосубъектность работодателя связана не только с регистрацией юридического лица, но и с реальной готовностью организовать труд.</div>`},
+// 32. Мини-тренажёр 6.1: какое правоотношение возникло
+{kicker:"Мини-тренажёр: какое правоотношение?", render:()=>`
+  <h2 class="section-title">Мини-тренажёр: какое правоотношение возникло?</h2>
+  <p class="lede" style="margin-bottom:14px;">Распределите карточки по колонкам.</p>
+  ${bucketSorter('mini32',[
+    ["работник требует заработную плату","trud"],
+    ["профсоюз инициирует коллективные переговоры","proiz"],
+    ["инспектор труда проводит проверку","control"],
+    ["студент проходит дуальное обучение","proiz"],
+    ["работодатель издаёт правила трудового распорядка","fact"],
+    ["суд рассматривает спор о признании отношений трудовыми","control"],
+    ["работник направлен на работу в счёт квоты","fact"],
+    ["работник подписывает договор о полной материальной ответственности","fact"],
+  ],[
+    {key:"trud",label:"Трудовое правоотношение"},
+    {key:"proiz",label:"Производное правоотношение"},
+    {key:"fact",label:"Юридический факт"},
+    {key:"control",label:"Контрольно-надзорное / юрисдикционное"},
+  ])}`},
+// 33. Мини-тренажёр 6.1: кто является субъектом
+{kicker:"Мини-тренажёр: кто субъект?", render:()=>`
+  <h2 class="section-title">Мини-тренажёр: кто является субъектом?</h2>
+  ${revealBox('mini33-1','1. 15-летний школьник хочет работать после уроков в кофейне. Кто субъект? Есть ли правосубъектность?','Школьник может обладать трудовой правосубъектностью при получении основного среднего или общего среднего образования и работе в свободное от учёбы время, не причиняющей вреда здоровью.')}
+  ${revealBox('mini33-2','2. Работник признан судом ограниченно дееспособным, но может выполнять прежнюю работу. Прекращаются ли трудовые отношения?','Ограниченная дееспособность не всегда автоматически прекращает трудовые отношения — важна фактическая возможность продолжать работу.')}
+  ${revealBox('mini33-3','3. Филиал иностранной компании принимает работников. Кто работодатель?','Филиал обладает производной работодательской правосубъектностью и может выступать стороной трудового договора.')}
+  ${revealBox('mini33-4','4. Гражданин нанимает помощника по дому. Есть ли здесь работодатель?','Физическое лицо без цели извлечения прибыли может быть работодателем (домашнее хозяйство граждан).')}`},
+// 34. Судебный мини-кейс: газорезчик
+{kicker:"Кейс: газорезчик на демонтаже", render:()=>`
+  <h2 class="section-title">Судебный мини-кейс: газорезчик на объекте демонтажа</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Рабочий выполнял работы на объекте демонтажа здания без письменного трудового договора. Во время работы получил травму. Ответчик отрицал трудовые отношения и ссылался на гражданско-правовой характер работ».</i></p></div>
+  ${revealBox('case34','Почему для суда важно установить не только факт работы, но и характер правоотношения?','Подсказки: кто организовал работу; кто предоставил инструменты; был ли режим; была ли оплата; были ли свидетельские показания; связан ли несчастный случай с трудовой деятельностью.')}`},
+// 35. Газорезчик: урок для юриста
+{kicker:"Газорезчик: урок для юриста", render:()=>`
+  <h2 class="section-title">Газорезчик: урок для юриста</h2>
+  <p class="note" style="margin-bottom:10px;">Решение Лисаковского городского суда Костанайской области, 2017 год.</p>
+  ${numList(["отсутствие договора не исключает трудовые отношения","свидетельские показания могут подтвердить факт работы","предоставление инструментов и организация работы важны для квалификации","признание отношений трудовыми влияет на компенсацию вреда и ответственность работодателя"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Квалификация правоотношения определяет доступ работника к трудовым гарантиям и защите при несчастном случае.</div>`},
+// 36. Судебный кейс: охранник
+{kicker:"Кейс: охранник без договора", render:()=>`
+  <h2 class="section-title">Судебный кейс: охранник без трудового договора</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Лицо работало охранником на объекте без письменного трудового договора. Работодатель отрицал трудовые отношения и ссылался на краткосрочный гражданско-правовой характер работ».</i></p></div>
+  ${revealBox('case36','Какие доказательства могут подтвердить трудовой характер отношений?','Подсказки: журнал службы охраны; графики сменности; рапорты; банковские переводы; расчёт оплаты за смену; подчинение режиму объекта.')}`},
+// 37. Охранник: признаки трудового правоотношения
+{kicker:"Охранник: признаки", render:()=>`
+  <h2 class="section-title">Охранник: признаки трудового правоотношения</h2>
+  ${numList(["обязанность оформить трудовой договор лежит на работодателе","отсутствие письменного трудового договора не исключает трудовые отношения","работник выполнял функцию охранника","работа подтверждалась журналами, графиками и рапортами","работодатель не может ссылаться на свою же недобросовестность для уклонения от зарплаты и гарантий"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Фактический допуск и доказательства выполнения функции могут быть сильнее отсутствия договора.</div>`},
+// 38. Итог занятия 6.1
+{kicker:"Итог занятия 6.1", render:()=>`
+  <h2 class="section-title">Итог занятия 6.1</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">Трудовое правоотношение — центральная юридическая форма наёмного труда.</div>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(13px,1.8vw,15px);">Наёмный труд + норма права + юридический факт + субъектный состав + объект + содержание = трудовое правоотношение.</p></div>
+  <p class="note" style="margin-top:10px;">Мини-рефлексия: почему без категории «правоотношение» юрист видит только факт работы, но не видит систему прав и обязанностей?</p>`},
+// 39. Обложка занятия 6.2
+{kicker:"Занятие 6.2", render:()=>`
+  <h2 class="section-title">Содержание трудового правоотношения</h2>
+  <p class="subtitle">Права, обязанности, представительство и работодательская власть</p>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);color:var(--navy);line-height:1.4;">«Какие права, обязанности и формы власти возникают внутри трудового правоотношения после его установления?»</p>`},
+// 40. Что такое содержание трудового правоотношения
+{kicker:"Содержание правоотношения", render:()=>`
+  <h2 class="section-title">Что такое содержание трудового правоотношения?</h2>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Содержание = субъективные права + юридические обязанности + гарантии + ответственность + работодательская власть.</p></div>
+  <p class="lede" style="margin-top:10px;"><b>Трудовое правоотношение — это не только обязанность работника трудиться и обязанность работодателя платить зарплату. Это сложная система взаимных прав, обязанностей и ограниченной власти.</b></p>`},
+// 41. Права работника: карта
+{kicker:"Права работника: карта", render:()=>`
+  <h2 class="section-title">Права работника: карта</h2>
+  <div class="grid cols-4">${infoCard("1. Индивидуальные","")}${infoCard("2. Коллективные","")}${infoCard("3. Регулятивные","")}${infoCard("4. Охранительные","")}</div>
+  <p class="lede" style="margin-top:10px;"><b>Права работника показывают, что трудовое правоотношение — это не только обязанность работать, но и система гарантий.</b></p>`},
+// 42. Индивидуальные права работника
+{kicker:"Индивидуальные права", render:()=>`
+  <h2 class="section-title">Индивидуальные права работника</h2>
+  ${numList(["заключение, изменение и прекращение трудового договора","требование выполнения условий договора","безопасные условия труда","достоверная информация об условиях труда","оплата труда","отдых","возмещение вреда здоровью","социальное страхование","гарантии и компенсационные выплаты","рабочее место","средства индивидуальной и коллективной защиты","защита персональных данных"])}`},
+// 43. Коллективные права работника
+{kicker:"Коллективные права", render:()=>`
+  <h2 class="section-title">Коллективные права работника</h2>
+  ${numList(["право на объединение","создание профсоюза и членство в нём","участие через представителей в коллективных переговорах","разработка проекта коллективного договора","ознакомление с коллективным договором","разрешение индивидуальных и коллективных трудовых споров","право на забастовку"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Коллективные права — это способ компенсировать индивидуальную слабость работника.</div>`},
+// 44. Охранительные права работника
+{kicker:"Охранительные права", render:()=>`
+  <h2 class="section-title">Охранительные права работника</h2>
+  ${numList(["право на разрешение индивидуального трудового спора","обращение в согласительную комиссию и суд","обращение в уполномоченный орган по труду и инспекцию труда","обжалование действий или бездействия работодателя","отказ от выполнения работы при угрозе жизни и здоровью"])}`},
+// 45. Обязанности работника
+{kicker:"Обязанности работника", render:()=>`
+  <h2 class="section-title">Обязанности работника</h2>
+  ${numList(["выполнять трудовые обязанности","соблюдать трудовую дисциплину","соблюдать требования безопасности и охраны труда","бережно относиться к имуществу работодателя и работников","сообщать об угрозе жизни, здоровью, сохранности имущества и простое","не разглашать охраняемую законом тайну","возмещать ущерб в пределах закона"])}
+  <p class="lede" style="margin-top:10px;"><b>Обязанности работника связаны не с результатом любой ценой, а с добросовестным личным выполнением трудовой функции внутри организации работодателя.</b></p>`},
+// 46. Права работодателя
+{kicker:"Права работодателя", render:()=>`
+  <h2 class="section-title">Права работодателя</h2>
+  ${numList(["свобода выбора при приёме на работу","изменение, дополнение, прекращение и расторжение трудовых договоров","издание актов работодателя","требование выполнения условий трудового и коллективного договоров","требование соблюдения правил трудового распорядка","поощрение работников","дисциплинарные взыскания","материальная ответственность работника","обращение в суд","испытательный срок","профессиональная подготовка, переподготовка и повышение квалификации","возмещение затрат на обучение"])}`},
+// 47. Обязанности работодателя
+{kicker:"Обязанности работодателя", render:()=>`
+  <h2 class="section-title">Обязанности работодателя</h2>
+  ${numList(["соблюдать трудовое законодательство","заключать трудовые договоры","предоставлять работу по трудовому договору","своевременно и полностью выплачивать заработную плату","знакомить работника с актами работодателя","обеспечивать условия труда","обеспечивать оборудованием и инструментами","выполнять предписания инспекторов труда","приостанавливать работу при угрозе жизни и здоровью","страховать работников","предоставлять отпуск","вести учёт рабочего времени","возмещать вред","допускать инспекторов труда","защищать персональные данные"])}`},
+// 48. Группы прав и обязанностей работодателя
+{kicker:"Группы прав и обязанностей", render:()=>`
+  <h2 class="section-title">Группы прав и обязанностей работодателя</h2>
+  <div class="grid cols-2">
+    ${infoCard("1. Организационно-управленческие","приём, увольнение, управление процессом труда, дисциплина")}
+    ${infoCard("2. Имущественные","оплата труда, поощрения, материальная ответственность, возмещение вреда")}
+    ${infoCard("3. Нормотворческие","акты работодателя, правила трудового распорядка, коллективный договор")}
+    ${infoCard("4. Информационные","ознакомление с актами, предоставление информации представителям работников, защита персональных данных")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Работодатель — это не просто плательщик зарплаты, а субъект организации, нормирования и ответственности в сфере труда.</b></p>`},
+// 49. Работодательская власть
+{kicker:"Работодательская власть", render:()=>`
+  <h2 class="section-title">Работодательская власть</h2>
+  <div class="grid cols-3">${infoCard("1. Организационная власть","")}${infoCard("2. Нормативная власть","")}${infoCard("3. Дисциплинарная власть","")}</div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Работодательская власть возникает потому, что работодатель организует процесс труда, но эта власть ограничена законом, принципами, договором и правами работника.</div>`},
+// 50. Организационная власть работодателя
+{kicker:"Организационная власть", render:()=>`
+  <h2 class="section-title">Организационная власть работодателя</h2>
+  ${numList(["распределение задач","установление рабочего процесса","графики","рабочее место","инструкции","контроль выполнения","организация взаимодействия работников"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Когда организация труда превращается в чрезмерное вмешательство в права работника?</p>`},
+// 51. Нормативная власть работодателя
+{kicker:"Нормативная власть", render:()=>`
+  <h2 class="section-title">Нормативная власть работодателя</h2>
+  ${numList(["акты работодателя","правила внутреннего трудового распорядка","положения об оплате труда","инструкции","политики","правила охраны труда"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Работодатель может устанавливать локальные правила, но они не должны ухудшать положение работника по сравнению с трудовым законодательством.</div>`},
+// 52. Дисциплинарная власть работодателя
+{kicker:"Дисциплинарная власть", render:()=>`
+  <h2 class="section-title">Дисциплинарная власть работодателя</h2>
+  ${numList(["требование дисциплины","фиксация дисциплинарного проступка","объяснение работника","дисциплинарное взыскание","процедура","право на обжалование"])}
+  <p class="lede" style="margin-top:10px;"><b>Дисциплинарная власть работодателя допустима только в пределах закона и процедуры.</b></p>`},
+// 53. Пределы работодательской власти
+{kicker:"Пределы власти", render:()=>`
+  <h2 class="section-title">Пределы работодательской власти</h2>
+  ${numList(["Конституцией","ТК РК","международными стандартами","принципами трудового права","in favorem","запретом дискриминации","добросовестностью","запретом злоупотребления правом","судебной защитой","государственным контролем","представительством работников"])}`},
+// 54. Трудовой коллектив
+{kicker:"Трудовой коллектив", render:()=>`
+  <h2 class="section-title">Трудовой коллектив</h2>
+  <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Трудовой коллектив — это объединение работников, участвующих своим трудом в деятельности работодателя на основе трудовых договоров.</p></div>
+  ${numList(["работники одной организации","трудовые договоры с одним работодателем","общий социально-трудовой интерес","участие в установлении условий труда","общее собрание / конференция работников"])}
+  <p class="lede" style="margin-top:8px;"><b>Трудовой коллектив — это не просто группа людей, а коллективный субъект защиты трудовых интересов.</b></p>`},
+// 55. Представители работников
+{kicker:"Представители работников", render:()=>`
+  <h2 class="section-title">Представители работников</h2>
+  ${verticalFlow(["Профессиональные союзы и их объединения","Выборные представители работников"])}
+  <p class="lede" style="margin-top:12px;"><b>В Казахстане действует дуалистическая модель представительства работников с приоритетом профсоюзного представительства.</b></p>`},
+// 56. Профсоюзное и непрофсоюзное представительство
+{kicker:"Профсоюзное представительство", render:()=>`
+  <h2 class="section-title">Профсоюзное и непрофсоюзное представительство</h2>
+  ${numList(["если профсоюз создан, коллективные переговоры не должны вестись без его участия","выборные представители возможны при отсутствии профсоюза","если членство в профсоюзе менее половины работников, интересы работников могут представлять и профсоюз, и выборные представители"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Выборные представители не должны использоваться работодателем для обхода профсоюза.</div>`},
+// 57. Зачем нужны представители работников
+{kicker:"Зачем нужны представители", render:()=>`
+  <h2 class="section-title">Зачем организации нужны представители работников?</h2>
+  ${numList(["создание согласительной комиссии","аттестационная комиссия","увольнение при снижении объёма производства","увольнение работников предпенсионного возраста при сокращении или несоответствии","производственный совет по безопасности и охране труда","коллективный трудовой спор и забастовка"])}
+  <p class="lede" style="margin-top:10px;"><b>Без представителей работников многие процедуры трудового права невозможно реализовать корректно.</b></p>`},
+// 58. Как избираются выборные представители
+{kicker:"Как избираются представители", render:()=>`
+  <h2 class="section-title">Как избираются выборные представители?</h2>
+  ${numList(["общее собрание / конференция работников","большинство голосов участников","присутствие не менее 2/3 работников","возможно дистанционное голосование","участие подтверждается ЭЦП или иным электронным способом с авторизацией и идентификацией"])}
+  <p class="note" style="margin-top:10px;">Почему нарушение процедуры избрания представителей может поставить под сомнение последующие кадровые и коллективные решения?</p>`},
+// 59. Полномочия выборных представителей
+{kicker:"Полномочия представителей", render:()=>`
+  <h2 class="section-title">Полномочия выборных представителей</h2>
+  ${numList(["представлять и защищать трудовые права и интересы работников","вести коллективные переговоры","участвовать в разработке и заключении коллективного договора","посещать рабочие места для изучения условий труда","участвовать в урегулировании трудовых споров"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Представительство работников связывает индивидуальное трудовое правоотношение с коллективной защитой труда.</div>`},
+// 60. Работники направляющей стороны
+{kicker:"Направляющая сторона", render:()=>`
+  <h2 class="section-title">Работники направляющей стороны</h2>
+  <div style="display:flex;justify-content:center;margin:10px 0;">${triangleSVG(["Направляющая сторона","Работник","Принимающая сторона"],220)}</div>
+  <p class="lede">Это форма отношений, известная как заёмный труд, аутстаффинг или лизинг персонала.</p>
+  <p class="lede"><b>В такой модели юридический работодатель и фактическая организация труда могут быть разделены.</b></p>`},
+// 61. Направляющая и принимающая сторона
+{kicker:"Направляющая и принимающая", render:()=>`
+  <h2 class="section-title">Направляющая и принимающая сторона</h2>
+  <div class="grid cols-3">
+    ${infoCard("Направляющая сторона","юридический работодатель")}
+    ${infoCard("Работник направляющей стороны","состоит в трудовом договоре с направляющей стороной")}
+    ${infoCard("Принимающая сторона","фактически организует выполнение работы")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Принимающая сторона не является классическим работодателем, но несёт специальные обязанности, прежде всего в сфере безопасности и охраны труда.</b></p>`},
+// 62. Множественность лиц на стороне работодателя
+{kicker:"Множественность работодателей", render:()=>`
+  <h2 class="section-title">Множественность лиц на стороне работодателя</h2>
+  ${numList(["холдинг","группа компаний","головная организация","филиал","аффилированные компании","единый центр управления","работник выполняет труд в интересах нескольких лиц"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Если трудовой договор заключён с одной компанией, но задания, контроль и правила исходят от другой компании, кого должен анализировать юрист?</p>`},
+// 63. Коллективный работодатель и employee sharing
+{kicker:"Employee sharing", render:()=>`
+  <h2 class="section-title">Коллективный работодатель и employee sharing</h2>
+  ${infoCard("Employee sharing","несколько предприятий совместно нанимают работников и распределяют их работу между собой")}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Риск: корпоративная множественность может использоваться для уклонения от трудовых гарантий.</p></div>
+  <p class="lede" style="margin-top:10px;"><b>Статус работодателя должен определяться не только по договору, но и по фактическому выполнению функций работодателя.</b></p>`},
+// 64. Мини-тренажёр 6.2: права, обязанности или власть
+{kicker:"Мини-тренажёр: права/обязанности/власть", render:()=>`
+  <h2 class="section-title">Мини-тренажёр: права, обязанности или власть?</h2>
+  ${bucketSorter('mini64',[
+    ["работник требует отпуск","pr"],
+    ["работодатель утверждает правила трудового распорядка","vl"],
+    ["работник отказывается от опасной работы","pr"],
+    ["работодатель применяет дисциплинарное взыскание","vl"],
+    ["работник требует своевременную оплату","pr"],
+    ["представитель работников участвует в согласительной комиссии","kol"],
+    ["работодатель требует соблюдения инструкции","obr"],
+    ["работник обращается в инспекцию труда","pr"],
+  ],[
+    {key:"pr",label:"Право работника"},
+    {key:"obr",label:"Обязанность работника"},
+    {key:"vl",label:"Работодательская власть"},
+    {key:"kol",label:"Коллективное представительство"},
+  ])}`},
+// 65. Судебный кейс: модератор сайта
+{kicker:"Кейс: модератор сайта", render:()=>`
+  <h2 class="section-title">Судебный кейс: модератор сайта</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Истец выполняла обязанности модератора сайта и сетей ТОО, размещала рекламу, объявления и новости, работала дистанционно, получала оплату. Трудовой договор не был представлен. Ответчик не отрицал выполнение определённых работ, но отрицал трудовой характер отношений».</i></p></div>
+  ${revealBox('case65','Исключает ли дистанционный характер работы трудовое правоотношение?','Дистанционная работа является особой формой осуществления трудового процесса и сама по себе не исключает трудовое правоотношение.')}`},
+// 66. Модератор сайта: урок для юриста
+{kicker:"Модератор: урок для юриста", render:()=>`
+  <h2 class="section-title">Модератор сайта: урок для юриста</h2>
+  ${numList(["дистанционная работа является особой формой осуществления трудового процесса","важны длительность отношений","выполнение работы по определённой функции","регулярная оплата","переписка, аудиозаписи, банковские переводы, свидетельские показания","включённость в общий чат организации"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Дистанционная работа не отменяет трудовое правоотношение, если сохраняются трудовая функция, оплата, контроль и включённость в организацию работодателя.</div>`},
+// 67. Судебный кейс: бухгалтер
+{kicker:"Кейс: бухгалтер", render:()=>`
+  <h2 class="section-title">Судебный кейс: бухгалтер</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Истец выполняла обязанности бухгалтера без трудового договора: вела бухгалтерский учёт, сдавала налоговую и статистическую отчётность, занималась авансовыми отчётами, начислением и выдачей зарплаты. Ей была выдана доверенность на подписание документов и получение криптоключей. Оплата производилась ежемесячно».</i></p></div>
+  ${revealBox('case67','Почему выполнение бухгалтерской функции может свидетельствовать о трудовом правоотношении?','Выполнение работы по определённой профессии, доверенность с указанием функции, регулярная ежемесячная оплата и работа в интересах организации — признаки трудового правоотношения.')}`},
+// 68. Бухгалтер: урок для юриста
+{kicker:"Бухгалтер: урок для юриста", render:()=>`
+  <h2 class="section-title">Бухгалтер: урок для юриста</h2>
+  ${numList(["выполнение работы по определённой профессии","доверенность с указанием функции бухгалтера","регулярная ежемесячная оплата","работа в интересах организации","отсутствие договора с бухгалтерской организацией или профессиональным бухгалтером","последствия признания трудовых отношений: зарплата, компенсация за отпуск, пенсионные и медицинские отчисления"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Регулируемая профессиональная функция внутри организации усиливает вывод о трудовой природе отношений.</div>`},
+// 69. Итог занятия 6.2
+{kicker:"Итог занятия 6.2", render:()=>`
+  <h2 class="section-title">Итог занятия 6.2</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">Трудовое правоотношение — это система субъектов, прав, обязанностей и ограниченной работодательской власти.</div>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(13px,1.8vw,15px);">Работник лично выполняет трудовую функцию, работодатель организует труд и платит заработную плату, представители помогают защищать индивидуальные и коллективные интересы, а власть работодателя ограничена трудовыми гарантиями.</p></div>
+  <p class="note" style="margin-top:10px;">Мини-рефлексия: какой субъект трудового права чаще всего остаётся «невидимым» для студентов, но имеет большое значение на практике?</p>`},
+// 70. Обложка занятия 6.3
+{kicker:"Занятие 6.3", render:()=>`
+  <h2 class="section-title">Фактические и скрытые трудовые отношения</h2>
+  <p class="subtitle">Разграничение трудового договора и ГПХ. Судебная практика и P2P-тренажёр</p>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);color:var(--navy);line-height:1.4;">«Почему название договора не решает вопрос о природе отношений?»</p>`},
+// 71. Рекомендация МОТ №198
+{kicker:"Рекомендация МОТ №198", render:()=>`
+  <h2 class="section-title">Рекомендация МОТ №198</h2>
+  <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Национальная политика должна предусматривать меры по фактическому установлению существования индивидуального трудового правоотношения и борьбе со скрытыми формами трудовых отношений.</p></div>
+  <p class="lede" style="margin-top:10px;"><b>Скрытое трудовое правоотношение возникает тогда, когда работодатель обращается с лицом не как с работником, чтобы скрыть его реальный статус и лишить защиты.</b></p>`},
+// 72. Верховенство фактов
+{kicker:"Верховенство фактов", render:()=>`
+  <h2 class="section-title">Верховенство фактов</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">Факты важнее формального названия договора.</div>
+  ${flowRow(["Формальное название договора","Фактическое выполнение работы","Выплата вознаграждения","Контроль и зависимость","Вывод о наличии трудового правоотношения"])}
+  <p class="note" style="margin-top:10px;">Судья должен принимать решение на основе фактов независимо от того, как стороны объясняют или описывают свои договорные отношения.</p>`},
+// 73. Презумпция трудового правоотношения
+{kicker:"Презумпция правоотношения", render:()=>`
+  <h2 class="section-title">Презумпция трудового правоотношения</h2>
+  ${verticalFlow(["Наличие одного или нескольких признаков","Презумпция трудового правоотношения","Бремя доказывания отсутствия трудовых отношений"],{final:"Работодатель"})}
+  <p class="lede" style="margin-top:10px;"><b>При фактическом допуске к работе трудовое право не оставляет работника без защиты только из-за отсутствия бумаги.</b></p>`},
+// 74. Признаки МОТ №198: процесс труда
+{kicker:"Признаки МОТ: процесс труда", render:()=>`
+  <h2 class="section-title">Признаки по Рекомендации МОТ №198: процесс труда</h2>
+  ${numList(["указания и контроль другой стороны","интеграция в организационную структуру","работа в интересах другого лица","личное выполнение","график или рабочее место","продолжительность и преемственность","присутствие работника","инструменты, материалы и механизмы заказчика"])}`},
+// 75. Признаки МОТ №198: финансовые условия
+{kicker:"Признаки МОТ: финансы", render:()=>`
+  <h2 class="section-title">Признаки по Рекомендации МОТ №198: финансовые условия</h2>
+  ${numList(["периодическая выплата вознаграждения","вознаграждение как единственный или основной источник дохода","натуральная оплата","еженедельные выходные и отпуск","оплата поездок для выполнения работы","работник не несёт финансового риска"])}`},
+// 76. Зарубежный опыт: США
+{kicker:"Зарубежный опыт: США", render:()=>`
+  <h2 class="section-title">Работник или независимый подрядчик? (тест IRS США)</h2>
+  ${numList(["обязанность выполнять указания работодателя","обучение работника","обучение за счёт работодателя","интеграция в общий технологический процесс","личный характер услуг","продолжающиеся отношения","режим рабочего времени","отчётность перед работодателем","заработная плата","право увольняться без дополнительных обязательств"])}
+  <p class="lede" style="margin-top:10px;"><b>Даже в разных правовых системах ключевой вопрос похож: кто контролирует процесс труда и несёт организационный риск?</b></p>`},
+// 77. Зарубежный опыт: Россия, Германия, Испания
+{kicker:"Россия, Германия, Испания", render:()=>`
+  <h2 class="section-title">Зарубежный опыт: Россия, Германия, Испания</h2>
+  <div class="grid cols-3">
+    ${infoCard("Россия","презумпция трудовых отношений при неустранимых сомнениях; запрет ГПХ, фактически регулирующих трудовые отношения")}
+    ${infoCard("Германия","лица, схожие с работниками: нет личной зависимости, но есть экономическая зависимость и нуждаемость в социальной защите")}
+    ${infoCard("Испания","экономически зависимые самозанятые: работа лично и преимущественно для одного клиента, не менее 75% дохода от него")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Мир ищет промежуточные модели защиты между классическим работником и полностью самостоятельным предпринимателем.</b></p>`},
+// 78. Традиционная триада статьи 27 ТК РК
+{kicker:"Триада статьи 27 ТК РК", render:()=>`
+  <h2 class="section-title">Традиционная триада статьи 27 ТК РК</h2>
+  <div class="grid cols-3">
+    ${infoCard("1. Личностный признак","работник выполняет работу только лично")}
+    ${infoCard("2. Организационный признак","подчинение трудовому распорядку и выполнение трудовой функции по квалификации, специальности, профессии или должности")}
+    ${infoCard("3. Имущественный признак","получение заработной платы за труд")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Это основной фильтр для разграничения трудового договора и ГПХ.</b></p>`},
+// 79. Трудовая функция или результат услуги
+{kicker:"Функция или результат?", render:()=>`
+  <h2 class="section-title">Трудовая функция или результат услуги?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Трудовая функция</h4><ul><li>бухгалтер</li><li>охранник</li><li>модератор</li><li>переводчик</li><li>врач</li><li>секретарь</li><li>менеджер</li></ul></div>
+    <div class="branch right"><h4>Результат услуги</h4><ul><li>подготовить один отчёт</li><li>сделать один перевод</li><li>выполнить ремонт</li><li>создать сайт</li><li>доставить конкретный груз</li><li>оказать разовую консультацию</li></ul></div>
+  </div>
+  <p class="note" style="margin-top:10px;">Что является предметом отношений: процесс труда или конечный результат?</p>`},
+// 80. Личное выполнение и подчинение
+{kicker:"Личное выполнение и подчинение", render:()=>`
+  <h2 class="section-title">Личное выполнение и подчинение</h2>
+  <p class="lede">Личное выполнение само по себе может быть и в ГПХ. Решающим становится сочетание: личное выполнение + подчинение трудовому распорядку + контроль работодателя.</p>
+  ${numList(["график","сменность","табель","рабочее место","инструкции","поручения руководителя","контроль рабочего времени"])}`},
+// 81. Заработная плата или вознаграждение
+{kicker:"Зарплата или вознаграждение?", render:()=>`
+  <h2 class="section-title">Заработная плата или вознаграждение?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Заработная плата</h4><ul><li>периодическая</li><li>ежемесячная</li><li>постоянная основная часть</li><li>зависит от квалификации, сложности, количества, качества и условий труда</li><li>выплачивается за процесс труда</li></ul></div>
+    <div class="branch right"><h4>Вознаграждение по ГПХ</h4><ul><li>за конкретный результат</li><li>может выплачиваться после акта</li><li>может быть разовым или этапным</li><li>связано с выполненной услугой или работой</li></ul></div>
+  </div>`},
+// 82. Сравнительная таблица: трудовой договор и ГПХ
+{kicker:"Трудовой договор vs ГПХ", render:()=>`
+  <h2 class="section-title">Сравнительная таблица: трудовой договор и ГПХ</h2>
+  ${comparisonTable(["Элемент","Трудовой договор","Договор ГПХ"],[
+    ["Стороны","работник и работодатель","заказчик и исполнитель"],
+    ["Предмет договора","трудовая функция (процесс труда)","результат услуги или работы"],
+    ["Возмездность","заработная плата за процесс труда","вознаграждение за результат"],
+    ["Премии и бонусы","часть системы оплаты труда","обычно не предусмотрены, если не оговорены отдельно"],
+    ["Порядок расчётов","периодически, не реже установленного законом срока","по акту, разово или поэтапно"],
+    ["Рабочее место","предоставляется работодателем","определяет исполнитель"],
+    ["Ответственность","дисциплинарная и ограниченная материальная","гражданско-правовая (в т.ч. полная, неустойка)"],
+    ["Режим рабочего времени","подчинён правилам трудового распорядка","определяет исполнитель самостоятельно"],
+    ["Подчинение распорядку и поручениям","да","нет — только техническое задание"],
+    ["Неустойка","не применяется (только дисциплинарная/материальная ответственность в пределах ТК)","может быть предусмотрена договором"],
+    ["Привлечение третьих лиц","не допускается — только лично","возможно, если не запрещено договором"],
+  ])}
+  <p class="lede" style="margin-top:12px;"><b>При разграничении важны не только слова договора, но и вся модель отношений.</b></p>`},
+// 83. Толкование договора ГПХ: алгоритм
+{kicker:"Толкование договора ГПХ", render:()=>`
+  <h2 class="section-title">Толкование договора ГПХ: алгоритм</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Установление буквального значения условий договора")}
+    ${timelineStep(2,"Установление действительной общей воли сторон")}
+    ${timelineStep(3,"Выбор применимой нормы и её толкование применительно к условиям договора")}
+    ${timelineStep(4,"Квалификация правоотношений и возможная переквалификация договора")}
+  </div>`},
+// 84. Скрытые трудовые отношения
+{kicker:"Скрытые трудовые отношения", render:()=>`
+  <h2 class="section-title">Скрытые трудовые отношения</h2>
+  <div class="card navy"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Скрытые трудовые отношения — это отношения, которым придана видимость, отличающаяся от объективной реальности, с целью ликвидации или ослабления защиты, предоставляемой законом, или уклонения от налоговых и социальных обязательств.</p></div>
+  ${verticalFlow(["Трудовое отношение"],{final:"Маскируется под ГПХ / коммерческие отношения / самозанятость / партнёрство / посредническую модель"})}`},
+// 85. Виды споров о признании трудовых отношений
+{kicker:"Виды споров", render:()=>`
+  <h2 class="section-title">Виды споров о признании трудовых отношений</h2>
+  <div class="grid cols-1" style="gap:14px;">
+    ${infoCard("1. Признание трудовыми отношений при фактическом допуске","без надлежащего оформления трудового договора")}
+    ${infoCard("2. Признание трудовыми отношений на основании ГПХ","связанных с использованием личного труда")}
+    ${infoCard("3. Возложение на работодателя обязанности оформить трудовой договор","")}
+  </div>`},
+// 86. Статья 33 ТК РК и НП ВС №1 от 2024 года
+{kicker:"Ст. 33 ТК РК и НП ВС №1", render:()=>`
+  <h2 class="section-title">Статья 33 ТК РК и НП ВС №1 от 2024 года</h2>
+  ${infoCard("Статья 33 ТК РК","при отсутствии или ненадлежащем оформлении трудового договора по вине работодателя трудовые отношения считаются возникшими с того дня, когда работник фактически приступил к работе")}
+  <div style="margin-top:12px;">${infoCard("НП ВС РК №1 от 2024 года","спор о наличии или отсутствии трудовых отношений может разрешаться судом без обращения в согласительную комиссию")}</div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Отсутствие письменного договора не блокирует судебную защиту.</div>`},
+// 87. Презумпция при фактическом допуске
+{kicker:"Презумпция при допуске", render:()=>`
+  <h2 class="section-title">Презумпция при фактическом допуске</h2>
+  ${verticalFlow(["Работник приступил к работе","+ с ведома или по поручению работодателя","+ в интересах работодателя","+ под контролем и управлением работодателя"],{final:"Наличие трудового правоотношения презюмируется"})}
+  <p class="note" style="margin-top:10px;">Доказательства отсутствия трудовых отношений должен представить работодатель.</p>`},
+// 88. Доказательственная карта
+{kicker:"Доказательственная карта", render:()=>`
+  <h2 class="section-title">Доказательственная карта</h2>
+  <div class="grid cols-2">
+    ${infoCard("1. Письменные документы","")}${infoCard("2. Свидетельские показания","")}
+    ${infoCard("3. Аудио- и видеозаписи","")}${infoCard("4. Переписка и цифровые следы","")}
+    ${infoCard("5. Банковские переводы","")}${infoCard("6. Документы по охране труда","")}
+    ${infoCard("7. Табели, графики, журналы","")}${infoCard("8. Пропуск, доступы, корпоративная почта, чаты","")}
+  </div>`},
+// 89. Относимость, допустимость, достоверность
+{kicker:"Оценка доказательств", render:()=>`
+  <h2 class="section-title">Относимость, допустимость, достоверность</h2>
+  <div class="grid cols-3">
+    ${infoCard("Относимость","доказательство относится к спору и подтверждает признак трудовых отношений")}
+    ${infoCard("Допустимость","доказательство получено законным путём")}
+    ${infoCard("Достоверность","доказательство соответствует действительности")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Суд оценивает не одно доказательство, а совокупность доказательств.</b></p>`},
+// 90. Субъекты толкования договора ГПХ
+{kicker:"Субъекты толкования ГПХ", render:()=>`
+  <h2 class="section-title">Субъекты толкования договора ГПХ</h2>
+  <div class="grid cols-3">${infoCard("1. Суд","")}${infoCard("2. Государственная инспекция труда","")}${infoCard("3. Налоговые органы","")}</div>
+  <p class="note" style="margin-top:10px;">Переквалификация может возникнуть не только в споре с работником, но и в результате инспекционной или налоговой проверки.</p>`},
+// 91. Последствия переквалификации
+{kicker:"Последствия переквалификации", render:()=>`
+  <h2 class="section-title">Последствия переквалификации</h2>
+  ${numList(["признание отношений трудовыми","обязанность оформить трудовой договор","заработная плата","компенсация за отпуск","обязательные пенсионные и социальные отчисления","ОСМС","ответственность за допуск к работе без трудового договора","налоговые доначисления","ответственность за нарушение законодательства о социальном страховании и ОСМС","ответственность работодателя при несчастном случае"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">ГПХ вместо трудового договора создаёт риски не только для работника, но и для работодателя.</div>`},
+// 92. Судебный кейс: Caspian Engineering & Research / переводчик
+{kicker:"Кейс: Caspian / переводчик", render:()=>`
+  <h2 class="section-title">Судебный кейс: Caspian Engineering & Research / переводчик</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Компания заключила с физическим лицом договор оказания услуг. Формально это были услуги переводчика. Однако договор предусматривал выполнение работы по определённой профессии, нахождение на рабочем месте или территории оказания услуг в течение всей рабочей смены, расчётный период и фиксированную оплату».</i></p></div>
+  ${revealBox('case92','Какие признаки трудового договора спрятаны внутри договора оказания услуг?','Название договора не является решающим; работа переводчиком указывает на трудовую функцию; нахождение на рабочем месте в течение смены указывает на подчинение режиму; фиксированная оплата за расчётный период похожа на заработную плату; инспекция труда может выявить признаки скрытого трудового отношения.')}`},
+// 93. Caspian: урок для юриста
+{kicker:"Caspian: урок для юриста", render:()=>`
+  <h2 class="section-title">Caspian: урок для юриста</h2>
+  ${numList(["название договора не является решающим","работа переводчиком указывает на трудовую функцию","нахождение на рабочем месте в течение смены указывает на подчинение режиму","фиксированная оплата за расчётный период похожа на заработную плату","инспекция труда может выявить признаки скрытого трудового отношения"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Иногда сам гражданско-правовой договор содержит трудовые признаки.</div>`},
+// 94. Судебный кейс: медработники ВКО
+{kicker:"Кейс: медработники ВКО", render:()=>`
+  <h2 class="section-title">Судебный кейс: медработники ВКО</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«КГУ заключило договоры возмездного оказания услуг с 15 медработниками. Они проводили медицинское освидетельствование в призывной комиссии. Медработники обратились в инспекцию труда по вопросу непредоставления отпусков и неоплаты работы в выходные дни. Инспекция провела проверку и вынесла предписание. КГУ оспорило предписание».</i></p></div>
+  ${revealBox('case94','Это услуги или трудовые отношения?','Дело прошло три инстанции с разными выводами — смотрите следующие слайды: «судебная лестница» первая инстанция → апелляция → Верховный Суд.')}`},
+// 95. Медработники ВКО: первая инстанция
+{kicker:"Медработники: первая инстанция", render:()=>`
+  <h2 class="section-title">Медработники ВКО: первая инстанция</h2>
+  <div class="timeline">${timelineStep(1,"Первая инстанция признала предписание незаконным")}</div>
+  ${numList(["были договоры возмездного оказания услуг","были акты оказанных услуг","оплата проводилась как «прочие услуги»","медработники не состояли в штате","формально трудовые договоры не заключались"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Какой риск есть в таком подходе?</p>`},
+// 96. Медработники ВКО: апелляция
+{kicker:"Медработники: апелляция", render:()=>`
+  <h2 class="section-title">Медработники ВКО: апелляция</h2>
+  <div class="timeline">${timelineStep(2,"Апелляция поддержала первую инстанцию")}</div>
+  ${numList(["договоры ГПХ не признаны недействительными","акты оказанных услуг подтверждали гражданско-правовую модель","оплата оформлялась как услуги","структура и штатная численность КГУ использовались как аргумент против трудовых отношений"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Достаточно ли формальных документов, чтобы исключить трудовые отношения?</p>`},
+// 97. Медработники ВКО: Верховный Суд
+{kicker:"Медработники: Верховный Суд", render:()=>`
+  <h2 class="section-title">Медработники ВКО: Верховный Суд</h2>
+  <div class="timeline">${timelineStep(3,"Верховный Суд изменил перспективу анализа")}</div>
+  ${numList(["медработники выполняли работу по специальности","работа выполнялась лично","функции нельзя было свободно передать третьим лицам","было регламентированное время","велись табели учёта рабочего времени","медработникам присвоены табельные номера","в трудовые книжки внесены записи","оплата имела повременный характер","доводы об оплате по специфике «услуги» и отсутствии лицензии не исключают трудовые отношения, а могут быть следствием неправильной классификации"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Верховный Суд вернул анализ от формы договора к фактическому содержанию отношений.</div>`},
+// 98. Медработники ВКО: карта различий между инстанциями
+{kicker:"Карта различий между инстанциями", render:()=>`
+  <h2 class="section-title">Медработники ВКО: карта различий между инстанциями</h2>
+  ${comparisonTable(["Вопрос","Первая инстанция","Апелляция","Верховный Суд"],[
+    ["Договоры услуг","гражданско-правовые, отношения не трудовые","договоры не признаны недействительными, вывод поддержан","название договора не исключает трудовые признаки"],
+    ["Акты оказанных услуг","подтверждают модель ГПХ","подтверждают модель ГПХ","не исключают трудовую функцию при её фактическом выполнении"],
+    ["Табели учёта времени","не оценивались как решающие","не оценивались как решающие","признаны ключевым признаком подчинения распорядку"],
+    ["Личное выполнение","не в фокусе анализа","не в фокусе анализа","признано решающим — функцию нельзя передать третьему лицу"],
+    ["Профессиональная функция","не в фокусе анализа","аргумент против — нет в штате","признана прямым признаком трудовой функции"],
+    ["Оплата","оформлена как услуги — довод против трудовых отношений","оформлена как услуги — довод против трудовых отношений","повременный характер оплаты — признак заработной платы"],
+    ["Вывод о предписании","признано незаконным","оставлено в силе","отношения признаны трудовыми"],
+    ["Методологическая ошибка","доверие форме договора без анализа фактов","то же самое, что и первая инстанция","исправлена — анализ вернулся к фактам"],
+  ])}
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(13px,1.8vw,15px);">Разные инстанции могут по-разному оценить одни и те же факты. Поэтому юрист должен строить аргументацию не вокруг названия договора, а вокруг признаков трудового правоотношения.</p></div>`},
+// 99. Судебный кейс: Glovo
+{kicker:"Кейс: Glovo", render:()=>`
+  <h2 class="section-title">Платформенная занятость: курьер, партнёр или работник?</h2>
+  <div style="text-align:center;margin-bottom:10px;">${appSVG(60)}</div>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Курьер сотрудничал с платформой Glovo. Отношения были оформлены не как трудовой договор. Спор поставил вопрос о том, может ли платформенная модель скрывать трудовые отношения».</i></p></div>
+  ${revealBox('case99','Может ли цифровая платформа быть фактическим работодателем?','Смотрите следующий слайд — признаки для анализа.')}`},
+// 100. Glovo: признаки для анализа
+{kicker:"Glovo: признаки для анализа", render:()=>`
+  <h2 class="section-title">Glovo: признаки для анализа</h2>
+  ${numList(["договор присоединения","доступ к платформе","курьерская функция интегрирована в логистическую цепочку","работа выполняется в интересах платформы","платформа контролирует качество и скорость","вознаграждение определяется через приложение","доступ к заказам зависит от правил платформы","привлечение третьих лиц ограничено необходимостью уведомления и согласия","курьер зависит от алгоритма, рейтинга и доступа к заказам"])}`},
+// 101. Glovo: главный урок
+{kicker:"Glovo: главный урок", render:()=>`
+  <h2 class="section-title">Glovo: главный урок</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">Алгоритм может выполнять функции работодательской власти.</div>
+  <p class="lede">Платформа может не давать классических приказов, но она распределяет заказы, контролирует скорость, определяет правила доступа, влияет на оплату и может ограничивать возможность заработка.</p>
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Цифровая форма организации труда не отменяет вопрос о фактической зависимости.</p></div>`},
+// 102. Подготовка к P2P
+{kicker:"Подготовка к P2P", render:()=>`
+  <h2 class="section-title">Теперь вы — стороны спора</h2>
+  <p class="lede">Мы разобрали признаки, доказательства и судебные дела. Теперь ваша задача — самим построить позицию по спору о природе отношений.</p>
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Переходите к P2P-тренажёру: «Трудовой договор или ГПХ?»</div>`},
+];
+
+/* ============================================================
+   ТРЕНАЖЁРЫ (24)
+   ============================================================ */
+const TRAINERS=[
+ {tag:"Тренажёр 1",title:"Какое правоотношение возникло?",desc:"Сортировка: трудовые, производные, коллективные, контрольно-надзорные, юрисдикционные."},
+ {tag:"Тренажёр 2",title:"Состав трудового правоотношения",desc:"Соберите схему: субъект — объект — содержание — права — обязанности."},
+ {tag:"Тренажёр 3",title:"Юридический факт",desc:"Определите вид юридического факта."},
+ {tag:"Тренажёр 4",title:"Субъект трудового правоотношения",desc:"Кто работник, работодатель, представитель работников, представитель работодателей?"},
+ {tag:"Тренажёр 5",title:"Возраст и трудовая правосубъектность",desc:"Мини-кейсы 15, 16, 18 лет."},
+ {tag:"Тренажёр 6",title:"Работник и дееспособность",desc:"Прекращается ли трудовая правосубъектность автоматически?"},
+ {tag:"Тренажёр 7",title:"Представители работников",desc:"Профсоюз, выборные представители, кворум 2/3."},
+ {tag:"Тренажёр 8",title:"Направляющая и принимающая сторона",desc:"Кто юридический работодатель, а кто организует труд?"},
+ {tag:"Тренажёр 9",title:"Множественность лиц на стороне работодателя",desc:"Кейс о холдинге."},
+ {tag:"Тренажёр 10",title:"Права и обязанности работника",desc:"Индивидуальные, коллективные, охранительные, обязанности."},
+ {tag:"Тренажёр 11",title:"Права и обязанности работодателя",desc:"Сопоставьте право и предел его реализации."},
+ {tag:"Тренажёр 12",title:"Трудовая функция или результат услуги?",desc:"Сортировка формулировок договора."},
+ {tag:"Тренажёр 13",title:"Где подчинение?",desc:"Найдите признаки подчинения трудовому распорядку."},
+ {tag:"Тренажёр 14",title:"Заработная плата или вознаграждение?",desc:"Определите модель оплаты."},
+ {tag:"Тренажёр 15",title:"Доказательственная карта",desc:"Соберите доказательства для работника и работодателя."},
+ {tag:"Тренажёр 16",title:"Судебный кейс: охранник",desc:"Выделите признаки трудовых отношений и доказательства."},
+ {tag:"Тренажёр 17",title:"Судебный кейс: бухгалтер",desc:"Какие факты показывают трудовую функцию?"},
+ {tag:"Тренажёр 18",title:"Судебный кейс: модератор сайта",desc:"Почему дистанционная работа может быть трудовой?"},
+ {tag:"Тренажёр 19",title:"Судебный кейс: Caspian / переводчик",desc:"Найдите трудовые признаки внутри договора оказания услуг."},
+ {tag:"Тренажёр 20",title:"Судебный кейс: медработники ВКО",desc:"Сравните первую инстанцию, апелляцию и Верховный Суд."},
+ {tag:"Тренажёр 21",title:"Судебный кейс: Glovo",desc:"Определите признаки платформенной зависимости."},
+ {tag:"Тренажёр 22",title:"P2P-тренажёр",desc:"Ролевая игра по разграничению трудовых и ГПХ отношений."},
+ {tag:"Тренажёр 23",title:"Проверь ответ искусственного интеллекта",desc:"AI-критика — найдите ошибки."},
+ {tag:"Тренажёр 24",title:"Финальная рефлексия",desc:"Открытые вопросы по всей теме."},
+];
+const TRAINER_BODIES=[
+() => `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Какое правоотношение возникло?</h2>
+  <p class="lede" style="margin-bottom:14px;">Распределите карточки по видам правоотношений.</p>
+  ${bucketSorter('t1',[
+    ["работник требует выплаты зарплаты","trud"],["стороны заключают трудовой договор","trud"],
+    ["организация проводит профессиональную переподготовку работника","proiz"],["профсоюз ведёт коллективные переговоры","kol"],
+    ["инспектор труда проводит проверку","control"],["суд рассматривает спор о признании отношений трудовыми","yur"],
+    ["стороны заключают коллективный договор","kol"],["служба занятости трудоустраивает гражданина","proiz"],
+  ],[
+    {key:"trud",label:"Трудовое"},{key:"proiz",label:"Производное"},{key:"kol",label:"Коллективное"},
+    {key:"control",label:"Контрольно-надзорное"},{key:"yur",label:"Юрисдикционное"},
+  ])}
+  <div class="note">Трудовое правоотношение — центральная категория, остальные обслуживают его возникновение, существование, защиту и прекращение.</div>`,
+() => `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Состав трудового правоотношения</h2>
+  <p class="lede" style="margin-bottom:14px;">Соберите схему, кликая элементы в правильном порядке.</p>
+  ${rankingExercise('t2',["Субъект","Объект","Содержание","Субъективные права","Субъективные обязанности"])}
+  <div class="note">Состав правоотношения раскрывается от участников (субъект) к предмету (объект) и далее к правам и обязанностям (содержание).</div>`,
+() => `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Юридический факт</h2>
+  <p class="lede" style="margin-bottom:14px;">Определите, к какому виду юридических фактов относится каждая карточка.</p>
+  ${bucketSorter('t3',[
+    ["трудовой договор","dog"],["акт работодателя о приёме на работу","akt_r"],
+    ["заявление работника об увольнении по собственному желанию","akt_w"],
+    ["решение суда о восстановлении на работе","sud"],
+    ["предписание государственного инспектора труда","adm"],
+    ["достижение работником пенсионного возраста","sobytie"],
+  ],[
+    {key:"dog",label:"Договор"},{key:"akt_r",label:"Работодательский акт"},{key:"akt_w",label:"Заявление работника"},
+    {key:"sud",label:"Судебный акт"},{key:"adm",label:"Административный акт"},{key:"sobytie",label:"Событие"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Субъект трудового правоотношения</h2>
+  <p class="lede" style="margin-bottom:14px;">Определите, кто есть кто.</p>
+  ${bucketSorter('t4',[
+    ["физическое лицо, лично выполняющее трудовую функцию","rab"],["ТОО с утверждённым штатным расписанием","rd"],
+    ["индивидуальный предприниматель, нанимающий продавца","rd"],["профсоюзный комитет организации","predr"],
+    ["выборный представитель, избранный на конференции работников","predr"],["объединение работодателей отрасли","predrd"],
+  ],[
+    {key:"rab",label:"Работник"},{key:"rd",label:"Работодатель"},
+    {key:"predr",label:"Профсоюз / представитель работников"},{key:"predrd",label:"Объединение работодателей"},
+  ])}
+  <div class="note">Государство не включено в этот список сознательно: оно не является стороной трудового правоотношения, кроме случаев, когда само выступает работодателем.</div>`,
+() => `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Возраст и трудовая правосубъектность</h2>
+  <div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin-bottom:10px;">1. Подростку 15 лет, он получает основное среднее образование. Может ли он заключить трудовой договор?</p>
+  ${choiceListFull('t5-1',["Нет, ни при каких условиях","Да, при получении основного среднего или общего среднего образования в организации среднего образования","Да, без всяких условий","Только с 16 лет"],1,"15 лет допускается именно при указанном условии обучения.")}</div>
+  <div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin-bottom:10px;">2. Подростку исполнилось 16 лет. Какое это правило?</p>
+  ${choiceListFull('t5-2',["Специальное исключение","Общее правило заключения трудового договора","Правило только для культуры и искусства","Минимальный возраст для тяжёлых работ"],1,"16 лет — общее правило.")}</div>
+  <div class="card"><p style="font-size:13.5px;margin-bottom:10px;">3. Работа тяжёлая, вредная, опасная. С какого возраста, как правило, допускается такая работа?</p>
+  ${choiceListFull('t5-3',["14 лет","15 лет","16 лет","18 лет"],3,"Для отдельных тяжёлых, вредных и опасных работ установлен повышенный возрастной порог — 18 лет.")}</div>`,
+() => `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Работник и дееспособность</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работник признан судом ограниченно дееспособным, но фактически может продолжать выполнять прежнюю работу».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Прекращаются ли трудовые отношения автоматически?</p>
+  ${choiceListFull('t6',["Да, признание ограниченно дееспособным всегда автоматически прекращает трудовые отношения","Нет, трудовые отношения прекращаются только если работник не имеет возможности продолжать их фактически"],1,"Гражданская дееспособность и трудовая правосубъектность не совпадают полностью: решающим является наличие фактической возможности продолжать трудовые отношения.")}`,
+() => `<div class="kicker">Тренажёр 7</div><h2 class="section-title">Представители работников</h2>
+  <p class="lede" style="margin-bottom:14px;">Отметьте верные утверждения о представительстве работников.</p>
+  ${multiSelectExercise('t7',[
+    {text:"Если в организации создан профсоюз, коллективные переговоры не должны вестись без его участия.",correct:true},
+    {text:"Выборные представители могут избираться при отсутствии профсоюза.",correct:true},
+    {text:"Кворум для избрания выборных представителей — не менее 2/3 работников.",correct:true},
+    {text:"Голосование обязательно должно быть только очным, дистанционное голосование запрещено.",correct:false},
+    {text:"Участие в дистанционном голосовании может подтверждаться ЭЦП или иным электронным способом.",correct:true},
+    {text:"Выборные представители могут использоваться работодателем для обхода профсоюза.",correct:false},
+    {text:"Представители работников участвуют в создании согласительной комиссии и производственного совета по охране труда.",correct:true},
+    {text:"Наличие представителей работников не имеет значения для процедуры увольнения при сокращении.",correct:false},
+  ])}`,
+() => `<div class="kicker">Тренажёр 8</div><h2 class="section-title">Направляющая и принимающая сторона</h2>
+  <p class="lede" style="margin-bottom:14px;">Определите, к какой стороне заёмного труда относится каждый признак.</p>
+  ${bucketSorter('t8',[
+    ["заключает трудовой договор с работником","dir"],["начисляет и выплачивает заработную плату","dir"],
+    ["предоставляет работу и оборудование","prin"],["фактически организует выполнение работы","prin"],
+    ["несёт обязанности по безопасности и охране труда на объекте","prin"],["выступает юридическим работодателем","dir"],
+  ],[
+    {key:"dir",label:"Направляющая сторона"},{key:"prin",label:"Принимающая сторона"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 9</div><h2 class="section-title">Множественность лиц на стороне работодателя</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работник заключил трудовой договор с одной компанией холдинга, но фактически получает задания, правила и контроль от другой компании группы».</i></p></div>
+  <label class="q">Кто является юридическим работодателем по документам?</label>${answerBox('t9-q1')}
+  <label class="q">Кто фактически организует труд и контролирует его?</label>${answerBox('t9-q2')}
+  <label class="q">Как юрист должен определить, кто реально выполняет функции работодателя?</label>${answerBox('t9-q3')}
+  ${revealBox('t9-model','Показать модельный вывод','Статус работодателя должен определяться не только по договору, но и по фактическому выполнению функций работодателя: кто ставит задачи, кто контролирует, кто вправе применять дисциплинарные меры. Корпоративная множественность не должна использоваться для уклонения от трудовых гарантий.')}`,
+() => `<div class="kicker">Тренажёр 10</div><h2 class="section-title">Права и обязанности работника</h2>
+  <p class="lede" style="margin-bottom:14px;">Распределите карточки.</p>
+  ${bucketSorter('t10',[
+    ["право на безопасные условия труда","ind"],["право на оплату труда","ind"],
+    ["право на объединение в профсоюз","kol"],["право на забастовку","kol"],
+    ["право на разрешение индивидуального трудового спора","ohr"],["отказ от работы при угрозе жизни и здоровью","ohr"],
+    ["соблюдать трудовую дисциплину","obr"],["бережно относиться к имуществу работодателя","obr"],
+  ],[
+    {key:"ind",label:"Индивидуальные права"},{key:"kol",label:"Коллективные права"},
+    {key:"ohr",label:"Охранительные права"},{key:"obr",label:"Обязанности"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 11</div><h2 class="section-title">Права и обязанности работодателя</h2>
+  <p class="lede" style="margin-bottom:14px;">Соотнесите право работодателя с пределом его реализации.</p>
+  ${bucketSorter('t11',[
+    ["издание актов работодателя","akt"],["дисциплинарное взыскание","disc"],
+    ["установление испытательного срока","isp"],["привлечение работника к материальной ответственности","mat"],
+  ],[
+    {key:"akt",label:"Акты не должны ухудшать положение работника по сравнению с ТК РК"},
+    {key:"disc",label:"Взыскание только в рамках закона и процедуры"},
+    {key:"isp",label:"Срок не может превышать установленный законом предел"},
+    {key:"mat",label:"Ответственность в пределах, установленных ТК РК"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 12</div><h2 class="section-title">Трудовая функция или результат услуги?</h2>
+  ${bucketSorter('t12',[
+    ["бухгалтер","func"],["охранник","func"],["модератор","func"],["переводчик (штатная должность)","func"],
+    ["подготовить один отчёт","result"],["сделать один перевод документа","result"],
+    ["выполнить ремонт помещения","result"],["доставить конкретный груз","result"],
+  ],[
+    {key:"func",label:"Трудовая функция"},{key:"result",label:"Результат услуги"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 13</div><h2 class="section-title">Где подчинение?</h2>
+  <p class="lede" style="margin-bottom:14px;">Отметьте признаки, которые указывают на подчинение трудовому распорядку.</p>
+  ${multiSelectExercise('t13',[
+    {text:"график сменности",correct:true},
+    {text:"табель учёта рабочего времени",correct:true},
+    {text:"поручения руководителя, обязательные к исполнению",correct:true},
+    {text:"инструкции по выполнению работы",correct:true},
+    {text:"исполнитель сам определяет объём и порядок работы",correct:false},
+    {text:"исполнитель вправе выполнять работу в любом месте по своему выбору",correct:false},
+    {text:"фиксация присутствия на рабочем месте",correct:true},
+    {text:"оплата производится только после подписания акта выполненных работ",correct:false},
+  ])}`,
+() => `<div class="kicker">Тренажёр 14</div><h2 class="section-title">Заработная плата или вознаграждение?</h2>
+  ${bucketSorter('t14',[
+    ["выплачивается периодически, ежемесячно","zp"],["постоянная основная часть","zp"],
+    ["зависит от квалификации, сложности, количества, качества и условий труда","zp"],
+    ["выплачивается за конкретный результат","vozn"],["выплачивается после подписания акта","vozn"],
+    ["может быть разовой или поэтапной","vozn"],
+  ],[
+    {key:"zp",label:"Заработная плата"},{key:"vozn",label:"Вознаграждение по ГПХ"},
+  ])}`,
+() => `<div class="kicker">Тренажёр 15</div><h2 class="section-title">Доказательственная карта</h2>
+  <p class="lede" style="margin-bottom:14px;">Соберите доказательства, которые могли бы использовать стороны спора.</p>
+  <label class="q">Какие доказательства усилят позицию работника?</label>${answerBox('t15-q1')}
+  <label class="q">Какие доказательства могли бы использовать работодатель / заказчик?</label>${answerBox('t15-q2')}
+  ${revealBox('t15-model','Показать модельный список доказательств','Письменные документы (пропуск, журнал прихода-ухода, графики сменности и отпусков, договор о материальной ответственности, расчётные листы, ведомости), банковские переводы, накладные, счета-фактуры, путевые листы, акты, журнал посетителей, переписка, документы по охране труда, свидетельские показания, аудио- и видеозаписи. Суд оценивает относимость, допустимость и достоверность каждого доказательства в совокупности.')}`,
+() => `<div class="kicker">Тренажёр 16</div><h2 class="section-title">Судебный кейс: охранник</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Лицо работало охранником на объекте без письменного трудового договора. Работодатель отрицал трудовые отношения и ссылался на краткосрочный гражданско-правовой характер работ».</i></p></div>
+  <label class="q">Какие признаки трудовых отношений вы видите?</label>${answerBox('t16-q1')}
+  <label class="q">Какие доказательства вы бы запросили?</label>${answerBox('t16-q2')}
+  ${revealBox('t16-model','Показать модельный ответ','Журнал службы охраны, графики сменности, рапорты, банковские переводы и расчёт оплаты за смену подтверждают выполнение функции охранника и подчинение режиму объекта. Обязанность оформить трудовой договор лежит на работодателе, поэтому отсутствие письменного договора не исключает трудовые отношения.')}
+  <div class="note">Полное дело — в разделе «Судебная практика» (Дело 2).</div>`,
+() => `<div class="kicker">Тренажёр 17</div><h2 class="section-title">Судебный кейс: бухгалтер</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Истец выполняла обязанности бухгалтера без трудового договора, имея доверенность на подписание документов и получение криптоключей, с ежемесячной оплатой».</i></p></div>
+  <label class="q">Какие факты показывают трудовую функцию, а не разовую услугу?</label>${answerBox('t17-q1')}
+  <label class="q">Какие последствия наступают при признании отношений трудовыми?</label>${answerBox('t17-q2')}
+  ${revealBox('t17-model','Показать модельный ответ','Постоянное выполнение профессиональной функции бухгалтера, доверенность с указанием этой функции и регулярная ежемесячная оплата указывают на трудовую природу отношений. Последствия: зарплата, компенсация за отпуск, пенсионные и медицинские отчисления.')}
+  <div class="note">Полное дело — в разделе «Судебная практика» (Дело 3).</div>`,
+() => `<div class="kicker">Тренажёр 18</div><h2 class="section-title">Судебный кейс: модератор сайта</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Истец дистанционно выполняла обязанности модератора сайта и сетей ТОО, получала регулярную оплату, трудовой договор представлен не был».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Почему дистанционная работа может быть трудовой?</p>
+  ${answerBox('t18-q1')}
+  ${revealBox('t18-model','Показать модельный ответ','Дистанционная работа — это особая форма осуществления трудового процесса, а не основание для исключения трудовых отношений. Решающими остаются длительность отношений, выполнение работы по определённой функции, регулярная оплата и включённость в организацию (переписка, чаты, свидетельские показания, банковские переводы).')}
+  <div class="note">Полное дело — в разделе «Судебная практика» (Дело 4).</div>`,
+() => `<div class="kicker">Тренажёр 19</div><h2 class="section-title">Судебный кейс: Caspian / переводчик</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Договор оказания услуг переводчика предусматривал профессию, нахождение на рабочем месте в течение смены, расчётный период и фиксированную оплату».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Найдите трудовые признаки внутри договора оказания услуг.</p>
+  ${answerBox('t19-q1')}
+  ${revealBox('t19-model','Показать модельный ответ','Работа по определённой профессии (переводчик), нахождение на рабочем месте в течение всей смены (подчинение режиму) и фиксированная периодическая оплата за расчётный период (похожа на зарплату) — все три признака указывают на трудовое, а не гражданско-правовое отношение, несмотря на название договора.')}
+  <div class="note">Полное дело — в разделе «Судебная практика» (Дело 5).</div>`,
+() => `<div class="kicker">Тренажёр 20</div><h2 class="section-title">Судебный кейс: медработники ВКО</h2>
+  <p class="lede" style="margin-bottom:14px;">Сравните подходы трёх инстанций.</p>
+  <label class="q">Как первая инстанция и апелляция оценили договоры возмездного оказания услуг?</label>${answerBox('t20-q1')}
+  <label class="q">Какие факты Верховный Суд счёл решающими?</label>${answerBox('t20-q2')}
+  <label class="q">В чём заключалась методологическая ошибка первых двух инстанций?</label>${answerBox('t20-q3')}
+  ${revealBox('t20-model','Показать модельный ответ','Первая инстанция и апелляция доверились формальной гражданско-правовой оболочке (договоры и акты оказанных услуг), не анализируя фактическое содержание. Верховный Суд перешёл к фактам: личное выполнение работы по специальности, табели учёта времени, табельные номера, повременная оплата — и признал отношения трудовыми.')}
+  <div class="note">Полная судебная лестница — в разделе «Судебная практика» (Дело 6).</div>`,
+() => `<div class="kicker">Тренажёр 21</div><h2 class="section-title">Судебный кейс: Glovo</h2>
+  <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Курьер сотрудничал с платформой Glovo по договору присоединения, не оформленному как трудовой договор».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Определите признаки платформенной зависимости и алгоритмического контроля.</p>
+  ${answerBox('t21-q1')}
+  ${revealBox('t21-model','Показать модельный ответ','Курьерская функция интегрирована в логистическую цепочку платформы; платформа контролирует качество и скорость; вознаграждение определяется через приложение; доступ к заказам зависит от рейтинга и правил платформы. Алгоритм может выполнять функции работодательской власти, даже без классических приказов.')}
+  <div class="note">Полное дело — в разделе «Судебная практика» (Дело 7).</div>`,
+() => `<div class="kicker">Тренажёр 22</div><h2 class="section-title">P2P-тренажёр</h2>
+  <p class="lede">Центральный финальный блок темы — ролевая игра по разграничению трудовых и гражданско-правовых отношений: работник, работодатель, инспекция труда, суд первой инстанции, апелляция и Верховный Суд.</p>
+  <div style="margin-top:16px;"><button class="btn btn-red" onclick="goTo('p2p')">Перейти к P2P-тренажёру →</button></div>`,
+() => `<div class="kicker">Тренажёр 23</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+  <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:13.5px;">${T15_ANSWER_AI}</p></div>
+  <p class="lede" style="margin-bottom:12px;"><b>Задание:</b> найдите минимум 8 ошибок в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+  ${T15_ERRORS_AI.map((e,i)=>`<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;"><input type="checkbox" ${state.ai15[i]?'checked':''} onchange="state.ai15[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}</label>`).join("")}
+  <div class="explain-box ok" style="margin-top:12px;">ИИ смешал частную автономию, форму договора и принцип верховенства фактов. Юрист должен видеть, что название договора не решает вопрос о природе отношений, а платформенная занятость требует анализа фактической зависимости.</div>`,
+() => {
+  const qs=[["r1","Почему государственное регулирование трудовых отношений начинается с понятия правоотношения?"],["r2","Из каких элементов состоит трудовое правоотношение?"],["r3","Кто может быть субъектом трудового права и почему государство обычно не является стороной трудового правоотношения?"],["r4","Что такое трудовая правосубъектность и из чего она складывается?"],["r5","Какие права и обязанности возникают у работника и работодателя после установления трудового правоотношения?"],["r6","В чём заключаются пределы работодательской власти?"],["r7","Зачем организации нужны представители работников?"],["r8","Чем направляющая сторона отличается от принимающей в модели заёмного труда?"],["r9","Почему множественность лиц на стороне работодателя усложняет анализ трудового правоотношения?"],["r10","Что означает принцип верховенства фактов по Рекомендации МОТ №198?"],["r11","Какие признаки трудового правоотношения закреплены в статье 27 ТК РК?"],["r12","Как статья 33 ТК РК защищает работника при фактическом допуске к работе?"],["r13","Какие доказательства помогают установить трудовой характер отношений?"],["r14","Какой урок дало дело медработников ВКО о разных судебных инстанциях?"],["r15","Почему платформенная занятость требует такого же анализа, как классический спор о ГПХ?"]];
+  return `<div class="kicker">Тренажёр 24</div><h2 class="section-title">Финальная рефлексия</h2>
+  <p class="lede" style="margin-bottom:14px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия всей темы.</p>
+  ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+  <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+    <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+    <span class="note" id="export-status" style="margin:0;"></span>
+  </div>
+  <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+},
+];
+function trainerBody(idx){ return TRAINER_BODIES[idx] ? TRAINER_BODIES[idx]() : ''; }
+
+/* ============================================================
+   СУДЕБНАЯ ПРАКТИКА
+   ============================================================ */
+function caseDetail(id, opts){
+  return `<div class="kicker">${opts.tag}</div><h2 class="section-title">${opts.title}</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>${opts.facts}</i></p></div>
+  <div class="grid cols-2" style="margin-bottom:14px;">
+    ${infoCard("Позиция работника / исполнителя",opts.employeePosition)}
+    ${infoCard("Позиция работодателя / заказчика",opts.employerPosition)}
+  </div>
+  ${revealBox('case-decide-'+id, 'Вопрос суда: '+opts.question+' Как бы вы решили это дело?', '<b>Ключевые признаки:</b> '+opts.signs+'<br><br><b>Доказательства:</b> '+opts.evidence+'<br><br><b>Решение суда:</b> '+opts.decision)}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">${opts.lesson}</div>`;
+}
+
+const CASES=[
+ {tag:"Дело 1",title:"Газорезчик / рабочий на демонтаже здания",desc:"Отсутствие договора и несчастный случай."},
+ {tag:"Дело 2",title:"Охранник",desc:"Отсутствие письменного трудового договора."},
+ {tag:"Дело 3",title:"Бухгалтер",desc:"Постоянная бухгалтерская функция под видом услуг."},
+ {tag:"Дело 4",title:"Модератор сайта",desc:"Дистанционная работа."},
+ {tag:"Дело 5",title:"Caspian Engineering & Research / переводчик",desc:"Договор оказания услуг с признаками трудового договора."},
+ {tag:"Дело 6",title:"Медработники ВКО",desc:"Разные инстанции и ошибка формального подхода — судебная лестница."},
+ {tag:"Дело 7",title:"Glovo",desc:"Платформенная занятость."},
+];
+const CASE_BODIES=[
+() => caseDetail(0, {
+  tag:"Дело 1 · Газорезчик", title:"Газорезчик / рабочий на демонтаже здания",
+  facts:"Рабочий выполнял работы на объекте демонтажа здания без письменного трудового договора. Во время работы получил травму. Ответчик отрицал трудовые отношения и ссылался на гражданско-правовой характер работ.",
+  employeePosition:"Работал ежедневно, использовал инструменты и указания организатора работ, требует признания трудовых отношений и компенсации вреда.",
+  employerPosition:"Письменного трудового договора нет, отношения носят гражданско-правовой (разовый) характер, трудовые гарантии не применяются.",
+  question:"Является ли выполнение работ на объекте демонтажа трудовым правоотношением при отсутствии письменного договора?",
+  signs:"кто организовал работу; кто предоставил инструменты; был ли режим; была ли оплата; были ли свидетельские показания; связан ли несчастный случай с трудовой деятельностью.",
+  evidence:"свидетельские показания, факт предоставления инструментов работодателем, организация работ третьим лицом, обстоятельства несчастного случая.",
+  decision:"Решение Лисаковского городского суда Костанайской области (2017): отсутствие договора не исключает трудовые отношения; свидетельские показания подтвердили факт работы; предоставление инструментов и организация труда были признаны значимыми для квалификации.",
+  lesson:"Квалификация правоотношения определяет доступ работника к трудовым гарантиям и защите при несчастном случае.",
+}),
+() => caseDetail(1, {
+  tag:"Дело 2 · Охранник", title:"Охранник без трудового договора",
+  facts:"Лицо работало охранником на объекте без письменного трудового договора. Работодатель отрицал трудовые отношения и ссылался на краткосрочный гражданско-правовой характер работ.",
+  employeePosition:"Выполнял функцию охранника по графику сменности, подчинялся режиму объекта, требует признания трудовых отношений.",
+  employerPosition:"Договор не заключался, отношения носят разовый гражданско-правовой характер.",
+  question:"Какие доказательства могут подтвердить трудовой характер отношений при отсутствии договора?",
+  signs:"журнал службы охраны; графики сменности; рапорты; банковские переводы; расчёт оплаты за смену; подчинение режиму объекта.",
+  evidence:"журналы службы охраны, графики сменности, рапорты, банковские переводы, оплата за смену.",
+  decision:"Обязанность оформить трудовой договор лежит на работодателе; отсутствие письменного договора не исключает трудовые отношения; работодатель не может ссылаться на собственную недобросовестность для уклонения от зарплаты и гарантий.",
+  lesson:"Фактический допуск и доказательства выполнения функции могут быть сильнее отсутствия договора.",
+}),
+() => caseDetail(2, {
+  tag:"Дело 3 · Бухгалтер", title:"Бухгалтер под видом услуг",
+  facts:"Истец выполняла обязанности бухгалтера без трудового договора: вела бухгалтерский учёт, сдавала налоговую и статистическую отчётность, занималась авансовыми отчётами, начислением и выдачей зарплаты. Ей была выдана доверенность на подписание документов и получение криптоключей. Оплата производилась ежемесячно.",
+  employeePosition:"Выполняла постоянную профессиональную функцию бухгалтера в интересах организации, получала регулярную ежемесячную оплату.",
+  employerPosition:"Договор не заключался; отношения не были оформлены как трудовые; бухгалтерские услуги оказывались эпизодически.",
+  question:"Свидетельствует ли постоянное выполнение бухгалтерской функции о трудовом правоотношении?",
+  signs:"выполнение работы по определённой профессии; доверенность с указанием функции бухгалтера; регулярная ежемесячная оплата; работа в интересах организации.",
+  evidence:"доверенность, регулярные платежи, отсутствие договора с бухгалтерской организацией или профессиональным бухгалтером.",
+  decision:"Регулируемая профессиональная функция внутри организации, подтверждённая доверенностью и регулярной оплатой, усиливает вывод о трудовой природе отношений; при признании — зарплата, компенсация за отпуск, пенсионные и медицинские отчисления.",
+  lesson:"Постоянная штатная функция под видом разовых услуг — классический признак скрытого трудового отношения.",
+}),
+() => caseDetail(3, {
+  tag:"Дело 4 · Модератор сайта", title:"Модератор сайта",
+  facts:"Истец выполняла обязанности модератора сайта и сетей ТОО, размещала рекламу, объявления и новости, работала дистанционно, получала оплату. Трудовой договор не был представлен. Ответчик не отрицал выполнение определённых работ, но отрицал трудовой характер отношений.",
+  employeePosition:"Работала дистанционно на постоянной основе, была включена в общий корпоративный чат, получала регулярную оплату.",
+  employerPosition:"Дистанционный и удалённый характер работы исключает трудовые отношения; выполнялись разовые задания.",
+  question:"Исключает ли дистанционный характер работы трудовое правоотношение?",
+  signs:"длительность отношений; выполнение работы по определённой функции; регулярная оплата; включённость в общий чат организации.",
+  evidence:"переписка, аудиозаписи, банковские переводы, свидетельские показания.",
+  decision:"Дистанционная работа является особой формой осуществления трудового процесса и сама по себе не исключает трудовое правоотношение, если сохраняются трудовая функция, оплата, контроль и включённость в организацию работодателя.",
+  lesson:"Цифровой/удалённый формат работы не является аргументом против трудовых отношений.",
+}),
+() => caseDetail(4, {
+  tag:"Дело 5 · Caspian", title:"Caspian Engineering & Research / переводчик",
+  facts:"Компания заключила с физическим лицом договор оказания услуг. Формально это были услуги переводчика. Однако договор предусматривал выполнение работы по определённой профессии, нахождение на рабочем месте или территории оказания услуг в течение всей рабочей смены, расчётный период и фиксированную оплату.",
+  employeePosition:"Договор фактически содержит признаки трудового договора: профессию, смену, фиксированную периодическую оплату.",
+  employerPosition:"Заключён гражданско-правовой договор оказания услуг, стороны сами выбрали такую форму.",
+  question:"Какие признаки трудового договора спрятаны внутри договора оказания услуг?",
+  signs:"работа по определённой профессии (переводчик); нахождение на рабочем месте в течение смены (подчинение режиму); фиксированная оплата за расчётный период (похожа на зарплату).",
+  evidence:"текст самого договора оказания услуг, в котором указаны профессия, смена и расчётный период.",
+  decision:"Название договора не является решающим — инспекция труда может выявить признаки скрытого трудового отношения непосредственно из текста договора оказания услуг.",
+  lesson:"Иногда сам гражданско-правовой договор содержит трудовые признаки — их не нужно искать «за пределами» текста.",
+}),
+() => `<div class="kicker">Дело 6 · Медработники ВКО</div><h2 class="section-title">Медработники ВКО: судебная лестница</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«КГУ заключило договоры возмездного оказания услуг с 15 медработниками. Они проводили медицинское освидетельствование в призывной комиссии. Медработники обратились в инспекцию труда по вопросу непредоставления отпусков и неоплаты работы в выходные дни. Инспекция провела проверку и вынесла предписание. КГУ оспорило предписание».</i></p></div>
+  ${revealBox('case-decide-5','Вопрос суда: это услуги или трудовые отношения? Как бы вы решили это дело?','Смотрите судебную лестницу ниже — три инстанции пришли к разным выводам.')}
+  <div class="timeline" style="margin-top:16px;">
+    ${timelineStep(1,"Первая инстанция","Признала предписание незаконным: были договоры возмездного оказания услуг и акты оказанных услуг, оплата проводилась как «прочие услуги», медработники не состояли в штате.")}
+    ${timelineStep(2,"Апелляция","Поддержала первую инстанцию: договоры ГПХ не признаны недействительными, структура и штатная численность КГУ использовались как аргумент против трудовых отношений.")}
+    ${timelineStep(3,"Верховный Суд","Изменил перспективу анализа: медработники лично выполняли работу по специальности, функции нельзя было передать третьим лицам, велись табели учёта времени и присвоены табельные номера, оплата имела повременный характер. Доводы об «услугах» и отсутствии лицензии не исключают трудовые отношения.")}
+  </div>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Методологическая ошибка первой инстанции и апелляции — доверие формальной оболочке договора без анализа фактов. Верховный Суд вернул анализ от формы договора к фактическому содержанию отношений.</p></div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Разные инстанции могут по-разному оценить одни и те же факты — юрист должен строить аргументацию вокруг признаков трудового правоотношения, а не названия договора.</div>`,
+() => caseDetail(6, {
+  tag:"Дело 7 · Glovo", title:"Glovo: платформенная занятость",
+  facts:"Курьер сотрудничал с платформой Glovo. Отношения были оформлены не как трудовой договор. Спор поставил вопрос о том, может ли платформенная модель скрывать трудовые отношения.",
+  employeePosition:"Курьер зависел от алгоритма, рейтинга и доступа к заказам; платформа контролировала скорость и качество — фактически трудовое правоотношение.",
+  employerPosition:"Курьер сам выбирает время работы и может отказаться от заказа — самозанятый партнёр, а не работник.",
+  question:"Может ли цифровая платформа быть фактическим работодателем?",
+  signs:"договор присоединения; курьерская функция интегрирована в логистическую цепочку; платформа контролирует качество и скорость; вознаграждение определяется через приложение; доступ к заказам зависит от правил платформы; ограничение на привлечение третьих лиц.",
+  evidence:"условия договора присоединения, данные платформы о рейтинге и доступе к заказам, алгоритмические правила распределения заказов и оплаты.",
+  decision:"Алгоритм может выполнять функции работодательской власти: платформа не даёт классических приказов, но распределяет заказы, контролирует скорость, определяет правила доступа и влияет на оплату — это признаки фактической зависимости.",
+  lesson:"Цифровая форма организации труда не отменяет вопрос о фактической зависимости — платформенная занятость требует такого же анализа фактов, как и любой другой спор о ГПХ.",
+}),
+];
+function caseBody(idx){ return CASE_BODIES[idx] ? CASE_BODIES[idx]() : ''; }
+
+const T15_ANSWER_AI = "«Если стороны назвали договор гражданско-правовым, то трудовых отношений быть не может. Работник сам согласился, значит Трудовой кодекс не применяется. Если трудовой договор не оформлен, работник не может требовать зарплату, отпуск и социальные отчисления. Платформенный курьер всегда является самозанятым, потому что сам выбирает время работы».";
+const T15_ERRORS_AI=[
+ "Название договора не является решающим.",
+ "Факты имеют приоритет над формой (принцип верховенства фактов).",
+ "Трудовые отношения могут возникнуть при фактическом допуске к работе.",
+ "При наличии признаков статьи 27 ТК РК отношения могут быть признаны трудовыми независимо от названия договора.",
+ "Работник не лишается защиты только из-за отсутствия письменного договора (ст. 33 ТК РК).",
+ "Подписание ГПХ не всегда исключает трудовые гарантии — возможна переквалификация.",
+ "Работодатель несёт ответственность за ненадлежащее оформление трудового договора.",
+ "Платформенная занятость требует анализа фактической зависимости, контроля, оплаты и доступа к заказам, а не автоматического признания самозанятости.",
+ "Суд должен оценивать совокупность доказательств, а не только текст договора.",
+ "При признании отношений трудовыми работник может требовать заработную плату, компенсацию за отпуск и обязательные отчисления.",
+];
+
+function buildAnswersText(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Тема 6. Трудовое правоотношение\nКурс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Финальная рефлексия —\n";
+  for(let i=1;i<=15;i++){ const id='r'+i; out += (state.refl[id]||"(нет ответа)")+"\n"; }
+  return out;
+}
+window.exportAnswers=async function(){
+  const out = buildAnswersText();
+  const status = document.getElementById('export-status');
+  if(window.claude && window.claude.use){
+    try{
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:"otvety-tema6-trudovoe-pravootnoshenie.txt", data: out});
+        if(status) status.textContent = 'Файл сохранён.';
+        return;
+      }
+    }catch(e){ /* fall through */ }
+  }
+  try{
+    const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "otvety-tema6-trudovoe-pravootnoshenie.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    if(status) status.textContent = 'Файл сохранён.';
+  }catch(e){
+    try{ await navigator.clipboard.writeText(out); if(status) status.textContent = 'Ответы скопированы в буфер обмена.'; }
+    catch(e2){ if(status) status.textContent = 'Не удалось сохранить — выделите текст ответов вручную.'; }
+  }
+};
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{}, rankings:{}, rankChecked:{}, multiSel:{}, multiSelChecked:{}, ai15:{}, refl:{}, currentCase:null};
+if(!state.sorters) state.sorters={};
+if(!state.rankings) state.rankings={};
+if(!state.rankChecked) state.rankChecked={};
+if(!state.multiSel) state.multiSel={};
+if(!state.multiSelChecked) state.multiSelChecked={};
+if(!state.ai15) state.ai15={};
+if(!state.refl) state.refl={};
+function save(){try{localStorage.setItem('mnu_labor_law_topic6',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_topic6');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openCase(i){ currentScreen='cases'; state.currentCase=i; save(); render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goTo61(){ currentScreen='presentation'; currentTrainer=null; goSlide(5,'full'); }
+function goTo62(){ currentScreen='presentation'; currentTrainer=null; goSlide(38,'full'); }
+function goTo63(){ currentScreen='presentation'; currentTrainer=null; goSlide(69,'full'); }
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Тема 6 · Трудовое правоотношение</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Тема 6. Трудовое правоотношение — единый модуль на 3 занятия</p>
+      <p class="cover-question">Как отличить реальное трудовое отношение от гражданско-правовой оболочки?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать тему →</button>
+        <button class="btn btn-outline" onclick="goTo61()">Занятие 6.1</button>
+        <button class="btn btn-outline" onclick="goTo62()">Занятие 6.2</button>
+        <button class="btn btn-outline" onclick="goTo63()">Занятие 6.3</button>
+        <button class="btn btn-outline" onclick="goTo('cases')">Судебная практика</button>
+        <button class="btn btn-outline" onclick="goTo('p2p')">P2P-тренажёр</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта признаков</button>
+        <button class="btn btn-outline" onclick="openTrainer(23)">Финальная рефлексия</button>
+        <button class="btn btn-outline" onclick="goTo('after')">Самостоятельная работа</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика трёх занятий</div>
+    <h2 class="section-title">Все предыдущие темы помогают ответить на один практический вопрос</h2>
+    <p class="lede" style="margin-bottom:24px;">Находится ли человек под защитой трудового права? Трудовое правоотношение — центральная категория, через которую студент видит систему субъектов, прав, обязанностей и судебной квалификации фактических отношений.</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo61()">Перейти к занятию 6.1 →</button></div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('p2p')">К P2P-тренажёру →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. Занятие 6.1 — слайды 6–38. Занятие 6.2 — слайды 39–69. Занятие 6.3 — слайды 70–102.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 6</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:24px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, работать с доказательствами и разграничивать трудовой договор и ГПХ.</p>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+function screenCases(){
+  if(state.currentCase===null || state.currentCase===undefined){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 5</div>
+      <h2 class="section-title">Судебная практика по признанию трудовых отношений</h2>
+      <p class="lede" style="margin-bottom:24px;">Семь дел из разных сфер: от газорезчика без договора до платформенного курьера Glovo. В каждом деле — факты, позиции сторон, признаки, доказательства, решение суда и урок для юриста.</p>
+      <div class="trainer-grid">${CASES.map((c,i)=>`<div class="case-card" onclick="openCase(${i})"><span class="tag">${c.tag}</span><h3>${c.title}</h3><p>${c.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="openCase(null)" style="margin-bottom:18px;">← Все дела</button>${caseBody(state.currentCase)}</div>`;
+}
+window.openCaseNull = function(){ state.currentCase=null; save(); render(); };
+function screenP2P(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 4 · Центральный финальный блок темы</div>
+    <h2 class="section-title">P2P-тренажёр: трудовой договор или ГПХ?</h2>
+    <p class="subtitle">Судебная квалификация фактических отношений — работа в группах с ролями</p>
+    <div class="card accent-left" style="margin:18px 0;"><p style="font-size:13.5px;"><i>«Организация заключила с физическим лицом договор оказания услуг. В договоре указано, что исполнитель не является работником и не имеет права на трудовые гарантии. Однако фактически он ежедневно выполняет работу по определённой функции, получает регулярную оплату, использует оборудование и цифровые системы организации, получает задания от руководителя, фиксируется в табелях и корпоративных чатах, не может свободно передать выполнение работы другому лицу. После прекращения отношений он требует признать отношения трудовыми, взыскать заработную плату, компенсацию за отпуск и обязательные отчисления».</i></p></div>
+
+    <h3 style="color:var(--navy);margin-bottom:12px;">Роли</h3>
+    <div class="grid cols-3" style="margin-bottom:24px;">
+      <div class="role-card"><h4>1. Юристы работника / исполнителя</h4><ul><li>отношения являются трудовыми</li><li>договор ГПХ скрывает трудовые отношения</li><li>есть трудовая функция, личное выполнение, подчинение</li><li>есть регулярная оплата и контроль</li><li>есть включённость в организацию</li><li>работник имеет право на гарантии</li></ul></div>
+      <div class="role-card"><h4>2. Юристы работодателя / заказчика</h4><ul><li>отношения являются гражданско-правовыми</li><li>стороны свободно выбрали форму договора</li><li>важен результат услуги</li><li>исполнитель обладал самостоятельностью</li><li>акты оказанных услуг подписаны</li><li>трудовой договор и штатная единица отсутствовали</li></ul></div>
+      <div class="role-card"><h4>3. Государственная инспекция труда</h4><ul><li>была ли компетенция рассматривать обращение</li><li>какие признаки трудовых отношений выявлены</li><li>какие документы запрошены</li><li>может ли быть вынесено предписание</li><li>есть ли основания для административной ответственности</li><li>баланс защиты работника и законности контроля</li></ul></div>
+      <div class="role-card"><h4>4. Суд первой инстанции</h4><ul><li>установить факты</li><li>оценить доказательства</li><li>определить правовую природу отношений</li><li>мотивировать решение</li><li>указать последствия признания или непризнания трудовых отношений</li></ul></div>
+      <div class="role-card"><h4>5. Апелляционная инстанция</h4><ul><li>проверить доводы жалобы</li><li>оценить, правильно ли установлены обстоятельства</li><li>проверить применение норм материального и процессуального права</li><li>определить основания для отмены или изменения решения</li></ul></div>
+      <div class="role-card"><h4>6. Верховный Суд / кассация</h4><ul><li>выявить существенные нарушения</li><li>проверить правильность правовой квалификации</li><li>оценить, не заслонила ли форма договора фактические признаки труда</li><li>сформулировать правовую позицию для будущей практики</li></ul></div>
+    </div>
+    <div class="role-card" style="margin-bottom:24px;"><h4>7. Наблюдатели-эксперты</h4><ul><li>отслеживают, какие признаки статьи 27 ТК РК и Рекомендации МОТ №198 использует каждая группа</li><li>оценивают качество аргументации и работу с доказательствами</li></ul></div>
+
+    <h3 style="color:var(--navy);margin-bottom:10px;">Критерии оценки P2P</h3>
+    ${numList(["Правильное выделение фактов","Использование признаков статьи 27 ТК РК","Применение принципа верховенства фактов","Разграничение трудовой функции и результата услуги","Анализ личного выполнения","Анализ подчинения и контроля","Анализ оплаты","Работа с доказательствами","Учёт судебной практики","Способность отвечать на аргументы оппонентов","Баланс интересов работника и работодателя","Культура юридической дискуссии"])}
+
+    <h3 style="color:var(--navy);margin:20px 0 10px;">Вопросы после P2P</h3>
+    <label class="q">1. Какой признак оказался самым сильным?</label>${answerBox('p2p-q1')}
+    <label class="q">2. Какой признак оказался спорным?</label>${answerBox('p2p-q2')}
+    <label class="q">3. Какие доказательства были решающими?</label>${answerBox('p2p-q3')}
+    <label class="q">4. Где была слабость позиции работника?</label>${answerBox('p2p-q4')}
+    <label class="q">5. Где была слабость позиции работодателя?</label>${answerBox('p2p-q5')}
+    <label class="q">6. Как могла ошибиться первая инстанция?</label>${answerBox('p2p-q6')}
+    <label class="q">7. Что могла исправить апелляция?</label>${answerBox('p2p-q7')}
+    <label class="q">8. Какую правовую позицию должен сформулировать Верховный Суд?</label>${answerBox('p2p-q8')}
+    <label class="q">9. Что показывает этот кейс о границе между свободой договора и защитой работника?</label>${answerBox('p2p-q9')}
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('cases')">К судебной практике →</button></div>
+  </div>`;
+}
+function screenMap(){
+  const nodes=["Рынок труда","Наёмный труд","Правоотношения в сфере труда","Трудовое правоотношение как центральная категория","Производные отношения","Состав: субъект + объект + содержание","Юридические факты: договоры + акты + решения суда + фактический допуск","Субъекты: работник + работодатель + представители","Трудовая правосубъектность: правоспособность + дееспособность + деликтоспособность","Правовой статус: общий + специальный + индивидуальный","Права и обязанности работника","Права и обязанности работодателя","Работодательская власть и её пределы","Заёмный труд + множественность лиц на стороне работодателя + цифровые платформы","Признаки ст. 27 ТК РК: функция + личное выполнение и подчинение + зарплата","Рекомендация МОТ №198: верховенство фактов","Доказательства: табели + графики + переписка + выплаты + свидетели","Судебная практика","P2P-квалификация"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 7</div>
+    <h2 class="section-title">Карта понимания: трудовое правоотношение</h2>
+    ${verticalFlow(nodes,{final:"Факты → признаки → доказательства → квалификация → гарантии"})}
+    <div class="quote-slide" style="margin-top:22px;padding:28px 22px;"><blockquote style="font-size:clamp(14px,1.9vw,17px);">«Трудовое правоотношение — это юридическая форма зависимого труда, через которую работник получает доступ к системе трудовых гарантий».</blockquote></div>
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('after')">К самостоятельной работе →</button></div>
+  </div>`;
+}
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 8</div>
+    <h2 class="section-title">После темы</h2>
+    <p class="lede" style="margin-bottom:22px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:18px;">
+      <div class="card"><h3>1. Повторить</h3><p>Понятие правоотношения · правоотношения в сфере труда · трудовые и производные правоотношения · материальные и процедурно-процессуальные правоотношения · индивидуальные, коллективные, контрольно-надзорные и юрисдикционные отношения · состав трудового правоотношения · юридические факты · договоры в сфере труда · сложный юридический состав · субъекты трудовых правоотношений · основные и производные субъекты · правовой статус сторон · трудовую правосубъектность · возраст работника · ограничение трудовой правосубъектности · права и обязанности работника · права и обязанности работодателя · трудовой коллектив · представителей работников · профсоюзное и непрофсоюзное представительство · направляющую и принимающую сторону · множественность лиц на стороне работодателя · Рекомендацию МОТ №198 · признаки статьи 27 ТК РК · статью 33 ТК РК · фактический допуск к работе · скрытые трудовые отношения · доказательства наличия трудовых отношений · разграничение трудового договора и ГПХ · последствия переквалификации договора ГПХ · судебную практику · платформенную занятость.</p></div>
+      <div class="card"><h3>2. Подумать</h3><p>Почему трудовое правоотношение является юридической дверью в систему трудовых гарантий?</p></div>
+      <div class="card"><h3>3. Практическое задание</h3><p>Выберите одно судебное дело из модуля и заполните таблицу: факты, признаки трудового отношения, доказательства, позиция суда, последствия признания отношений трудовыми, урок для юриста.</p></div>
+      <div class="card"><h3>4. Сравнительное задание</h3><p>Сравните трудовой договор и договор ГПХ по 10 критериям: стороны, предмет, оплата, рабочее место, режим времени, подчинение, ответственность, результат, возможность привлечения третьих лиц, гарантии.</p></div>
+      <div class="card"><h3>5. Судебное задание</h3><p>По делу медработников ВКО объясните, в чём различались подходы первой инстанции, апелляции и Верховного Суда. Какую методологическую ошибку исправил Верховный Суд?</p></div>
+      <div class="card"><h3>6. Платформенное задание</h3><p>Проанализируйте кейс платформенного курьера: какие признаки указывают на самостоятельность, а какие — на зависимость, контроль, интеграцию в организацию и возможное трудовое правоотношение?</p></div>
+      <div class="card"><h3>7. Задание по субъектам</h3><p>В организации нет профсоюза и не избраны выборные представители работников. Какие трудоправовые процедуры становятся проблемными? Объясните значение представителей работников для согласительной комиссии, аттестации, коллективных переговоров, производственного совета по безопасности и охране труда и коллективных трудовых споров.</p></div>
+      <div class="card"><h3>8. Задание по заёмному труду</h3><p>Работник заключил трудовой договор с направляющей стороной, но фактически работает у принимающей стороны. Определите: кто является юридическим работодателем, кто фактически организует труд, какие обязанности несёт принимающая сторона и почему такая модель усложняет классическое понимание трудового правоотношения.</p></div>
+      <div class="card"><h3>9. Задание по множественности работодателей</h3><p>Работник оформлен в одной компании холдинга, но фактически получает задания, правила и контроль от другой компании. Проанализируйте, как юрист должен определить, кто реально выполняет функции работодателя.</p></div>
+      <div class="card"><h3>10. AI-задание</h3><p>Спросите ИИ: «Как отличить трудовой договор от договора оказания услуг в Казахстане?» Затем критически проверьте ответ: указана ли ст. 27 ТК РК, есть ли трудовая функция, личное выполнение, подчинение распорядку, зарплата; учтена ли ст. 33 ТК РК, принцип верховенства фактов, Рекомендация МОТ №198, доказательства, последствия переквалификации, представители работников, направляющая/принимающая сторона и множественность лиц на стороне работодателя.</p></div>
+    </div>
+    ${qrZone("canvas6","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="margin-top:16px;">${qrZone("tkrk6","Ссылка на Трудовой кодекс РК","https://")}</div>
+    <div style="margin-top:16px;">${qrZone("np6","Нормативное постановление ВС РК №1 от 2024 года","https://")}</div>
+    <div style="text-align:center;margin-top:26px;"><button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button></div>
+  </div>`;
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'cases': html=screenCases(); break;
+    case 'p2p': html=screenP2P(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','cases','p2p','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 10 + (state.slide/(SLIDES.length-1))*55; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,7,10,72,80,88,94,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
