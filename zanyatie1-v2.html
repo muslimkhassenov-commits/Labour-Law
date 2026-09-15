@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Занятие №1. Миссия трудового права</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU: презентация, тренажёры юридического мышления и лендинг для занятия «Миссия трудового права»." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340;
+  --navy-2:#123058;
+  --graphite:#2b2e33;
+  --graphite-soft:#585c63;
+  --burgundy:#7c1327;
+  --red:#c8102e;
+  --red-soft:#e3d2d5;
+  --paper:#f7f5f1;
+  --paper-2:#efece5;
+  --white:#ffffff;
+  --line:#dfdbd2;
+  --ok:#1f6f43;
+  --shadow:0 12px 30px -14px rgba(12,35,64,.28);
+  --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--graphite);
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;}
+button{font-family:inherit;}
+img{max-width:100%;}
+
+/* ---------- layout shells ---------- */
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .35s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,245,241,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;gap:14px;
+  padding:10px 20px;
+}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.topbar .nav-scroll::-webkit-scrollbar{height:6px;}
+.navbtn{
+  border:1px solid var(--line);background:var(--white);color:var(--navy);
+  padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;
+  cursor:pointer;white-space:nowrap;transition:.15s;
+}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1080px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:820px;}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--burgundy);font-weight:700;margin-bottom:14px;
+}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(22px,3vw,30px);color:var(--navy);margin:0 0 10px;line-height:1.18;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:15px;color:var(--graphite-soft);line-height:1.7;max-width:720px;}
+
+/* ---------- logo / photo placeholders ---------- */
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+
+.hero-photo-wrap{
+  position:relative;border-radius:var(--radius);overflow:hidden;
+  background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);
+  min-height:340px;
+}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+/* ---------- cover ---------- */
+.cover{
+  background:var(--navy);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+.cover::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));
+  z-index:1;
+}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:980px;margin:0 auto;padding:64px 24px 72px;text-align:left;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:64px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:18px;}
+.cover h1{font-size:clamp(34px,5.5vw,58px);line-height:1.06;margin:0 0 16px;}
+.cover .cover-sub{font-size:clamp(17px,2.2vw,22px);font-weight:600;color:#dfe6ef;margin:0 0 22px;}
+.cover .cover-question{
+  font-size:16px;line-height:1.6;max-width:640px;color:#c9d3e0;
+  border-left:3px solid var(--red);padding-left:16px;margin-bottom:36px;
+}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px;}
+.btn{
+  border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14.5px;
+  cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;
+}
+.btn-red{background:var(--red);color:#fff;}
+.btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);}
+.btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;}
+.btn-navy:hover{background:var(--navy-2);}
+.cover-author{
+  display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13.5px;
+  border-top:1px solid rgba(255,255,255,.18);padding-top:20px;max-width:520px;
+}
+.cover-author b{color:#fff;display:block;font-size:14.5px;}
+
+/* ---------- cards / grids ---------- */
+.grid{display:grid;gap:18px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;}
+.grid.cols-3{grid-template-columns:repeat(3,1fr);}
+.grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+
+.card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px;box-shadow:var(--shadow);
+}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:17px;}
+.card p{margin:0;font-size:14px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);}
+.card.navy h3{color:#fff;}
+.card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);}
+.card.burgundy p{color:#ecd8dc;}
+
+.stat-card{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius);
+  padding:26px 20px;text-align:center;box-shadow:var(--shadow);
+}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(28px,4vw,40px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13.5px;color:var(--graphite-soft);}
+
+/* ---------- roadmap / timeline ---------- */
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{
+  flex:1 1 150px;background:var(--white);border:1px solid var(--line);border-radius:14px;
+  padding:16px 14px;text-align:center;font-size:13px;font-weight:600;color:var(--navy);
+  position:relative;box-shadow:var(--shadow);
+}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:20px;flex:0 0 32px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:26px;}
+.timeline-step::before{
+  content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;
+  background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;
+}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:15px;}
+.timeline-step p{margin:0;font-size:13.5px;color:var(--graphite-soft);}
+
+/* ---------- fork / branches ---------- */
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:22px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;}
+.branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:14px;color:var(--graphite-soft);line-height:1.7;}
+
+/* ---------- scale (весы) ---------- */
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:14px;padding:20px 0;}
+.scale-cap{font-size:13px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+/* ---------- ship ---------- */
+.ship-labels{display:flex;justify-content:space-between;gap:24px;margin-top:14px;flex-wrap:wrap;}
+.ship-col{flex:1 1 220px;}
+.ship-col h4{margin:0 0 8px;font-size:14px;color:var(--navy);}
+.ship-col ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+/* ---------- quote ---------- */
+.quote-slide{
+  background:var(--navy);color:#fff;border-radius:var(--radius);padding:56px 48px;text-align:center;
+  position:relative;overflow:hidden;
+}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:160px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 18px;max-width:680px;font-family:'Fraunces',serif;font-size:clamp(20px,3vw,28px);line-height:1.4;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:14px;letter-spacing:.05em;}
+
+/* ---------- video placeholder ---------- */
+.video-box{
+  border:2px dashed #b9b2a1;border-radius:var(--radius);background:#efece3;
+  padding:50px 20px;text-align:center;color:var(--graphite-soft);
+}
+.video-box .play{
+  width:56px;height:56px;border-radius:50%;background:var(--navy);color:#fff;
+  display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:20px;
+}
+.video-box b{display:block;color:var(--navy);font-size:15px;margin-bottom:4px;}
+
+/* ---------- qr zone ---------- */
+.qr-zone{
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap;
+  border:1.5px dashed #c7bfae;border-radius:14px;padding:16px;background:#fbfaf7;
+}
+.qr-box{width:96px;height:96px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;}
+.qr-meta b{display:block;font-size:14px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{
+  width:100%;border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:13px;margin-bottom:6px;
+}
+.qr-meta button{
+  border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;
+  padding:6px 12px;font-size:12.5px;font-weight:600;cursor:pointer;
+}
+
+/* ---------- slide shell ---------- */
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:40px clamp(22px,5vw,56px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--graphite-soft);margin-bottom:18px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:28px;gap:10px;}
+.dot-row{display:flex;gap:5px;flex-wrap:wrap;justify-content:center;max-width:420px;}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:18px;border-radius:4px;}
+
+/* ---------- choice list ---------- */
+.choice{
+  display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;
+  border-radius:12px;padding:13px 16px;margin-bottom:10px;cursor:pointer;font-size:14.5px;color:var(--graphite);
+  transition:.15s;
+}
+.choice:hover{border-color:var(--navy);}
+.choice.selected{border-color:var(--navy);background:#eef2f7;}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;}
+.choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+
+.explain-box{
+  margin-top:14px;border-radius:12px;padding:14px 16px;font-size:13.5px;line-height:1.6;
+}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;}
+.explain-box.no{background:#fbeceb;color:#8c2a26;}
+
+/* ---------- trainer cards ---------- */
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+@media (max-width:900px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;cursor:pointer;
+  box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:10px;
+}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:26px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:16.5px;}
+.trainer-card p{margin:0;font-size:13px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+/* ---------- sorting buckets ---------- */
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+@media (max-width:760px){.sort-layout{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:60px;}
+.chip{
+  border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-size:13px;
+  cursor:pointer;color:var(--graphite);transition:.15s;
+}
+.chip:hover{border-color:var(--navy);}
+.bucket{
+  border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;min-height:120px;background:#fbfaf7;
+}
+.bucket h4{margin:0 0 10px;font-size:14px;color:var(--navy);}
+.bucket.wrong-drop{border-color:var(--red);}
+
+/* ---------- textarea ---------- */
+textarea.answer{
+  width:100%;border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px;
+  font-family:inherit;min-height:80px;resize:vertical;
+}
+label.q{display:block;font-size:14px;font-weight:600;color:var(--navy);margin:16px 0 6px;}
+
+/* ---------- final map ---------- */
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{
+  background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:14px 22px;
+  font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:520px;width:100%;
+}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:17px;}
+.map-arrow{color:var(--red);font-size:22px;line-height:1;padding:4px 0;}
+
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid var(--line);padding:28px 24px;text-align:center;font-size:12.5px;color:var(--graphite-soft);}
+
+.pill{display:inline-block;background:#eef2f7;color:var(--navy);border-radius:999px;padding:3px 10px;font-size:11.5px;font-weight:700;margin-right:6px;}
+.note{font-size:12.5px;color:var(--graphite-soft);font-style:italic;margin-top:10px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:26px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главная</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика занятия</button>
+    <button class="navbtn primary" onclick="goTo('presentation')">К презентации</button>
+    <button class="navbtn" onclick="goTo('trainers')">К тренажёрам</button>
+    <button class="navbtn" onclick="goTo('map')">Карта понимания</button>
+    <button class="navbtn" onclick="goTo('after')">После занятия</button>
+    <button class="navbtn ghost" onclick="openTrainer(6)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+
+<div id="app"></div>
+
+<div class="site-footer">
+  Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Хасенов Муслим Ханатович, PhD, Associate Professor
+</div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ ЗАНЯТИЯ — весь контент вынесен сюда, логика ниже не трогается
+   ============================================================ */
+
+const ROADMAP_NODES = ["Рынок труда","Труд как материальная категория","Труд и капитал","Прибавочная стоимость","Наёмный труд","Миссия трудового права","История","Платформенная занятость","Финальная рефлексия"];
+
+const SLIDES = [
+// 1
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:30px 0;">
+    <div class="logo-wrap" style="width:64px;height:64px;margin:0 auto 22px;"><img src="assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Занятие №1</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое право Республики Казахстан</h1>
+    <p class="subtitle" style="margin:0 auto 20px;text-align:center;">Миссия трудового права</p>
+    <p class="lede" style="margin:0 auto;text-align:center;font-style:italic;">Формальная свобода договора и фактическое неравенство сторон</p>
+    ${scaleSVG(58,42)}
+  </div>`},
+// 2
+{kicker:"Мысленный эксперимент", render:()=>`
+  <h2 class="section-title">Мир без трудового права</h2>
+  <p class="lede">Если есть только свобода договора, будет ли этого достаточно?</p>
+  ${videoBox("«Мир, в котором нет трудового права»","Посмотрите ролик и ответьте: какие гарантии исчезают первыми?")}`},
+// 3
+{kicker:"Обсуждение", render:()=>`
+  <h2 class="section-title">Обсуждение после ролика</h2>
+  ${numList(["Что исчезло первым?","Почему работник оказался уязвим?","Кто в таком мире сильнее — работник или работодатель?","Зачем государству вмешиваться в трудовые отношения?"])}`},
+// 4
+{kicker:"Рынок труда", render:()=>`
+  <h2 class="section-title">Рынок труда: масштаб вопроса</h2>
+  <div class="grid cols-3" style="margin-bottom:22px;">
+    ${statCard("9,8 млн","человек — рабочая сила")}
+    ${statCard("7,3 млн","человек — наёмные работники")}
+    ${statCard("75%","рабочей силы — наёмные работники")}
+  </div>
+  <p class="lede"><b>Если большинство экономически активного населения работает по найму, можно ли оставить их положение только на усмотрение свободы договора?</b></p>`},
+// 5
+{kicker:"Три опции", render:()=>`
+  <h2 class="section-title">Три опции трудоспособного человека</h2>
+  <div class="grid cols-3" style="margin-bottom:22px;">
+    ${infoCard("Наёмные работники","75%")}
+    ${infoCard("Предприниматели / самозанятые","20%")}
+    ${infoCard("Безработные","5%")}
+  </div>
+  <p class="lede"><b>Почему именно наёмный труд становится центральным объектом трудового права?</b></p>`},
+// 6
+{kicker:"Природа труда", render:()=>`
+  <h2 class="section-title">Труд как многомерное явление</h2>
+  <div class="grid cols-3" style="margin-bottom:20px;">
+    ${infoCard("Исторический аспект","Труд как фундаментальный способ человеческой жизни")}
+    ${infoCard("Социальный аспект","Труд как сознательная целесообразная деятельность")}
+    ${infoCard("Экономический аспект","Труд как фактор производства и основа стоимости")}
+  </div>
+  <p class="lede" style="border-left:3px solid var(--red);padding-left:14px;"><b>Трудовое право находится на пересечении права, экономики, социологии, философии и политики.</b></p>`},
+// 7
+{kicker:"Вопрос в аудиторию", render:()=>`
+  <h2 class="section-title">Что регулирует право, когда человек работает?</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(20px,3vw,28px);color:var(--navy);line-height:1.4;">Результат? Процесс? Время? Дисциплину? Личность? Власть? Стоимость?</p>
+  <p class="note">Обсуждение в аудитории — 2 минуты</p>`},
+// 8
+{kicker:"Политэкономия труда", render:()=>`
+  <h2 class="section-title">Почему политэкономия важна для юриста?</h2>
+  <p class="lede">Трудовое отношение — это не просто обмен «работа — заработная плата». Это связь экономической зависимости, организации производства, распределения результата труда и власти работодателя над процессом труда.</p>
+  ${flowRow(["Работник","Труд","Продукт / услуга","Стоимость","Зарплата + прибыль"])}`},
+// 9
+{kicker:"Стоимость и оплата", render:()=>`
+  <h2 class="section-title">Заработная плата ≠ стоимость продукта</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.2vw,19px);margin-bottom:16px;">
+    Стоимость продукта, созданного трудом − заработная плата = прибавочная стоимость / прибыль предпринимателя
+  </div>
+  <p class="lede">Работник получает заработную плату, но его труд может создавать бо́льшую стоимость, чем та, которая возвращается ему в форме оплаты труда.</p>`},
+// 10
+{kicker:"Прибавочная стоимость", render:()=>`
+  <h2 class="section-title">Прибавочная стоимость простыми словами</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Работник заинтересован в:</h4><ul><li>большей оплате</li><li>меньшем рабочем времени</li><li>безопасных условиях</li><li>стабильности</li><li>уважении достоинства</li></ul></div>
+    <div class="branch right"><h4>Работодатель заинтересован в:</h4><ul><li>прибыли</li><li>производительности</li><li>управляемости</li><li>снижении издержек</li><li>гибкости бизнеса</li></ul></div>
+  </div>
+  <p class="lede" style="text-align:center;margin:18px auto 0;"><b>Материальное напряжение труда и капитала</b></p>`},
+// 11
+{kicker:"Труд и капитал", render:()=>`
+  <h2 class="section-title">Единство и противоречие</h2>
+  <p class="lede">Работник и работодатель нужны друг другу, но их интересы не совпадают.</p>
+  <div class="card navy" style="margin-top:16px;"><p style="color:#fff;font-size:16px;font-family:'Fraunces',serif;">Трудовое право не выдумывает конфликт. Оно переводит его в правовую форму.</p></div>`},
+// 12
+{kicker:"Генетический код", render:()=>`
+  <h2 class="section-title">Генетический код трудовых отношений</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:18px;font-family:'Fraunces',serif;">Общность интересов + противоречие интересов = природа трудового отношения</div>
+  <div class="grid cols-2">
+    ${infoCard("Производственное начало","организация труда, дисциплина, эффективность, прибыль")}
+    ${infoCard("Социальное начало","зарплата, отдых, безопасность, достоинство, защита")}
+  </div>`},
+// 13
+{kicker:"Развилка", render:()=>`
+  <h2 class="section-title">Самостоятельный и несамостоятельный труд</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Самостоятельный труд</h4><ul><li>сам организует процесс</li><li>сам несёт риск</li><li>отвечает за результат</li><li>ближе к гражданскому праву</li></ul></div>
+    <div class="branch right"><h4>Наёмный труд</h4><ul><li>лично выполняет работу</li><li>включён в организацию работодателя</li><li>подчиняется порядку</li><li>получает оплату за процесс труда</li><li>регулируется трудовым правом</li></ul></div>
+  </div>`},
+// 14
+{kicker:"Мини-упражнение", render:()=>`
+  <h2 class="section-title">Самостоятельный труд, наёмный труд или пограничная ситуация?</h2>
+  ${numList(["Официант работает по графику ресторана.","Ремонтник разово чинит кондиционер.","Курьер работает через приложение.","Репетитор сам ищет учеников и определяет цену.","SMM-специалист работает удалённо, но ежедневно с 9:00 до 18:00 под контролем руководителя."])}
+  <p class="note">Определите тип труда и объясните критерий.</p>`},
+// 15
+{kicker:"Mentimeter", render:()=>`
+  <h2 class="section-title">А теперь: с чем у вас ассоциируется трудовое право?</h2>
+  <p class="lede">После разговора о рынке труда, труде, капитале и наёмном труде напишите 5 слов, которые теперь ассоциируются у вас с трудовым правом.</p>
+  ${qrZone("menti","Mentimeter — облако слов","https://menti.com")}`},
+// 16
+{kicker:"Обсуждение", render:()=>`
+  <h2 class="section-title">Обсуждение облака слов</h2>
+  ${numList(["Какие слова оказались самыми крупными?","Есть ли слова про власть?","Есть ли слова про зависимость?","Есть ли слова про баланс?","Есть ли слова про гарантии?","Почему трудовое право — это больше, чем трудовой договор?"])}`},
+// 17
+{kicker:"Миссия", render:()=>`
+  <h2 class="section-title">Миссия трудового права</h2>
+  <div class="card burgundy" style="font-family:'Fraunces',serif;font-size:clamp(16px,2.4vw,20px);margin-bottom:14px;">Миссия трудового права — достижение баланса интересов работника и работодателя.</div>
+  <p class="lede">Но этот баланс не означает механическое равенство сторон. Он достигается с учётом приоритета защиты работника как экономически более слабой стороны.</p>`},
+// 18
+{kicker:"Цитата", render:()=>`
+  <div class="quote-slide">
+    <div class="kicker" style="color:#f2c9c9;justify-content:center;">Право как мера цивилизованности</div>
+    <blockquote>«Только Право способно слабого уравнять с сильным и дать им равные возможности. Потому что Право есть мера цивилизованности общества».</blockquote>
+    <cite>Н. А. Шайкенов</cite>
+  </div>`},
+// 19
+{kicker:"Весы", render:()=>`
+  <h2 class="section-title">Формальное равенство ≠ фактическое равновесие</h2>
+  ${scaleSVG(30,70,"Работник","Работодатель")}
+  <p class="scale-cap">За работодателем — капитал, организация производства, власть управления и контроль.</p>`},
+// 20
+{kicker:"Пауза", render:()=>`
+  <p style="font-family:'Fraunces',serif;font-size:clamp(22px,3.4vw,32px);color:var(--navy);line-height:1.35;text-align:center;margin:60px 0;">Если стороны фактически неравны, что делает трудовое право?</p>
+  <p class="note" style="text-align:center;">Пауза для ответа аудитории</p>`},
+// 21
+{kicker:"Гарантии как гири", render:()=>`
+  <h2 class="section-title">Государственные гарантии — гири на чаше работника</h2>
+  <div class="pool" style="margin-top:16px;">${GUARANTEES.map(g=>`<span class="chip" style="cursor:default;">⚖️ ${g}</span>`).join("")}</div>`},
+// 22
+{kicker:"Правовой баланс", render:()=>`
+  <h2 class="section-title">Трудовое право не устраняет различие — оно компенсирует слабость</h2>
+  <p class="lede">Трудовое право не отменяет капитал и не уничтожает интерес работодателя. Оно юридически компенсирует фактическую слабость работника и делает противоречие труда и капитала управляемым.</p>
+  <div class="card navy" style="margin-top:16px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Баланс интересов через защиту более слабой стороны.</p></div>`},
+// 23
+{kicker:"Корабль", render:()=>`
+  <h2 class="section-title">Социальная функция — руль. Производственная функция — паруса</h2>
+  ${shipSVG()}
+  <div class="ship-labels">
+    <div class="ship-col"><h4>Паруса — производственная функция</h4><ul><li>организация труда</li><li>дисциплина</li><li>производительность</li><li>эффективность</li></ul></div>
+    <div class="ship-col"><h4>Руль — социальная функция</h4><ul><li>защита работника</li><li>рабочее время</li><li>отдых</li><li>охрана труда</li><li>достоинство</li></ul></div>
+  </div>
+  <p class="lede" style="text-align:center;margin-top:16px;"><b>Без парусов корабль не движется. Без руля — разбивается о рифы.</b></p>
+  ${videoBox("Корабль рыночной экономики","Иллюстрация метафоры")}`},
+// 24
+{kicker:"История", render:()=>`
+  <h2 class="section-title">Почему гражданского права стало недостаточно?</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Римское частное право","locatio-conductio operarum")}
+    ${timelineStep(2,"Доиндустриальный период","")}
+    ${timelineStep(3,"Промышленная революция","")}
+    ${timelineStep(4,"Массовый наёмный труд и фабричная дисциплина","")}
+    ${timelineStep(5,"XIX–XX вв.","формирование трудового права")}
+    ${timelineStep(6,"Коллективный договор","профсоюзы, социальное партнёрство")}
+    ${timelineStep(7,"Законодательное регулирование трудовых отношений","")}
+  </div>`},
+// 25
+{kicker:"Кейс страны", render:()=>`
+  <h2 class="section-title">Родина трудового права и профсоюзов — Англия</h2>
+  ${numList(["Промышленная революция","Переход от ручного труда к машинному","Фабричная дисциплина","Детский труд","Длинный рабочий день","Первые акты фабричного законодательства","Появление профсоюзного движения"],true)}
+  <p class="lede" style="margin-top:14px;"><b>Почему именно индустриализация сделала трудовое право неизбежным?</b></p>`},
+// 26
+{kicker:"Цифровая эпоха", render:()=>`
+  <h2 class="section-title">Старое противоречие в новой цифровой форме</h2>
+  <div class="grid cols-3" style="margin-bottom:16px;">
+    ${infoCard("Платформенная занятость","")}${infoCard("Дистанционная работа","")}${infoCard("Алгоритмическое управление","")}
+    ${infoCard("Цифровой контроль","")}${infoCard("ИИ в HR","")}${infoCard("Автоматизация труда","")}
+  </div>
+  <p class="lede"><b>Платформенная занятость показывает, что противоречие труда и капитала не исчезло. Оно просто стало цифровым.</b></p>`},
+// 27
+{kicker:"Кейс", render:()=>`
+  <h2 class="section-title">Кейс: платформенный курьер</h2>
+  <p class="lede">Курьер формально самозанятый. Он сам выбирает время выхода, но приложение распределяет заказы, устанавливает рейтинг, контролирует скорость, рассчитывает оплату и может ограничить доступ к заказам.</p>
+  ${numList(["Где здесь самостоятельность?","Где здесь зависимость?","Где здесь капитал?","Где здесь власть?","Может ли алгоритм быть формой работодательской власти?"])}
+  ${choiceList("courier27",["Это трудовые отношения.","Это гражданско-правовые отношения.","Это пограничная ситуация.","Недостаточно данных."],2,"Верно то, что требует анализа фактических признаков — но здесь нет единственно верного варианта без обсуждения: главное — аргумент.")}`},
+// 28
+{kicker:"Финальный эксперимент", render:()=>`
+  <h2 class="section-title">Что происходит с рынком труда, если убрать трудовое право?</h2>
+  ${videoBox("«Мир, в котором нет трудового права»","Финальный мысленный эксперимент")}
+  <p class="lede" style="margin-top:14px;"><b>Почему свобода договора без трудового права может стать свободой сильного?</b></p>`},
+// 29
+{kicker:"Exit ticket", render:()=>`
+  <h2 class="section-title">Exit ticket</h2>
+  ${numList(["Почему трудовое право нельзя понимать только через договор?","Что является материальной основой трудового права?","Почему трудовое отношение содержит противоречие труда и капитала?","Какие «гири» трудовое право добавляет на сторону работника?","Почему платформенная занятость возвращает нас к фундаментальному вопросу о наёмном труде?"])}
+  ${qrZone("exit","Exit ticket — форма ответа","https://forms.gle/")}`},
+// 30
+{kicker:"Главная идея", render:()=>`
+  <h2 class="section-title">Главная идея занятия</h2>
+  <div class="card burgundy" style="font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,22px);margin-bottom:16px;">Трудовое право возникает как правовой ответ на материальное противоречие труда и капитала.</div>
+  <p class="lede">Работодатель обладает капиталом, организационной властью и интересом в прибыли. Работник обладает способностью к труду и зависит от заработной платы. Поэтому трудовое право переводит это противоречие в правовую форму: гарантии, процедуры, ограничения власти работодателя, коллективные права и механизмы защиты.</p>
+  <div class="card navy" style="margin-top:18px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(18px,2.6vw,24px);">«Трудовое право — это право, которое очеловечивает рынок труда».</p></div>`},
+];
+
+const GUARANTEES = ["минимальная заработная плата","ограничение рабочего времени","время отдыха и отпуск","охрана труда","защита от увольнения","запрет дискриминации","коллективные права","процедуры разрешения трудовых споров"];
+const DISTRACTORS = ["право работодателя на прибыль","право работодателя организовывать производство","свобода предпринимательства","коммерческий риск","управление бизнесом"];
+const SHIP_RUDDER = ["защита работника","рабочее время","отдых","охрана труда","достоинство","недискриминация"];
+const SHIP_SAILS = ["организация труда","дисциплина","производительность","эффективность","управляемость","прибыль"];
+
+const QUIZ1 = [
+ {q:"Работник и работодатель подписали договор оказания услуг. Работник ежедневно работает с 9:00 до 18:00 в офисе работодателя, подчиняется руководителю и получает ежемесячную оплату. Что важнее для квалификации?",
+  opts:["Название договора.","Фактическое содержание отношений.","Желание работодателя.","Наличие печати."],correct:1,
+  explain:"В трудовом праве важно не только название договора, а реальные признаки зависимости, подчинения, личного труда и включённости в организацию работодателя."},
+ {q:"Почему трудовое право ограничивает свободу договора?",
+  opts:["Потому что работник всегда прав.","Потому что работодатель не имеет законных интересов.","Потому что стороны формально равны, но фактически могут быть неравны.","Потому что договоры в трудовой сфере не нужны."],correct:2,
+  explain:"Формальное равенство сторон не отменяет фактического неравенства экономических позиций."},
+ {q:"Что является материальной основой трудового права?",
+  opts:["Только текст Трудового кодекса.","Наёмный труд, зависимость от заработной платы и противоречие труда и капитала.","Только кадровое делопроизводство.","Только судебные споры."],correct:1,
+  explain:"Материальная основа отрасли — это экономическая реальность наёмного труда, а не сами по себе тексты норм."},
+ {q:"Что означает баланс в трудовом праве?",
+  opts:["Полное равенство работника и работодателя.","Полную защиту работника без учёта интересов работодателя.","Согласование интересов сторон с учётом защиты более слабой стороны.","Полную свободу работодателя."],correct:2,
+  explain:"Баланс — это не механическое равенство, а согласование интересов с приоритетом защиты слабой стороны."},
+ {q:"Почему платформенная занятость является вызовом для трудового права?",
+  opts:["Потому что там нет труда.","Потому что алгоритм может выполнять функцию контроля и управления.","Потому что курьеры всегда являются предпринимателями.","Потому что цифровые платформы не нуждаются в праве."],correct:1,
+  explain:"Алгоритмическое управление воспроизводит функции работодательской власти в цифровой форме."},
+];
+
+const QUAL_CARDS = [
+ {text:"Официант работает в ресторане по графику, носит форму, подчиняется администратору, получает фиксированную оплату два раза в месяц.",
+  opts:["Трудовые отношения","Гражданско-правовые отношения","Пограничная ситуация","Недостаточно данных"],correct:0,
+  explain:"Есть личное выполнение труда, подчинение внутреннему порядку, график, включённость в организацию работодателя и регулярная оплата."},
+ {text:"Мастер разово починил кондиционер в офисе компании, сам принёс инструменты, сам определил способ ремонта и получил оплату за результат.",
+  opts:["Трудовые отношения","Гражданско-правовые отношения","Пограничная ситуация","Недостаточно данных"],correct:1,
+  explain:"Самостоятельная организация процесса, разовый характер, оплата за результат — признаки гражданско-правового договора."},
+ {text:"Курьер подключён к приложению, сам выбирает время выхода, но приложение распределяет заказы, устанавливает рейтинг, контролирует скорость и может ограничить доступ к заказам.",
+  opts:["Трудовые отношения","Гражданско-правовые отношения","Пограничная ситуация","Недостаточно данных"],correct:2,
+  explain:"Формально есть признаки самостоятельности, но фактически присутствуют элементы зависимости, контроля и алгоритмического управления."},
+ {text:"SMM-специалист работает удалённо, но ежедневно с 9:00 до 18:00 должен быть онлайн, получает задания от руководителя и ежемесячную оплату.",
+  opts:["Трудовые отношения","Гражданско-правовые отношения","Пограничная ситуация","Недостаточно данных"],correct:0,
+  explain:"Удалённый формат сам по себе не исключает трудовые отношения. Нужно анализировать контроль, режим, подчинение, включённость в организацию и оплату процесса труда — здесь эти признаки присутствуют, поэтому базовый ответ A, но при иных обстоятельствах возможна пограничная ситуация (C)."},
+];
+
+const AI_ANSWER = "«Трудовое право не нужно как самостоятельная отрасль, потому что работник и работодатель могут заключить гражданско-правовой договор. Если работник согласился на условия, значит они справедливы».";
+const AI_ERRORS = [
+ "Игнорируется фактическое неравенство сторон.",
+ "Смешиваются гражданско-правовая и трудоправовая логика.",
+ "Не учитывается зависимость работника от заработной платы.",
+ "Не учитывается власть работодателя над процессом труда.",
+ "Не учитывается публичное значение трудовых отношений.",
+ "Игнорируются социальная и производственная функции трудового права.",
+ "Не учитывается миссия трудового права как баланса интересов через защиту слабой стороны.",
+];
+
+const TRAINERS = [
+ {tag:"Тренажёр 1",title:"Свобода договора или трудовое право?",desc:"Быстрая диагностика — 5 вопросов с вариантами ответа."},
+ {tag:"Тренажёр 2",title:"Работник, подрядчик или пограничная ситуация?",desc:"Квалификация отношений по карточкам-ситуациям."},
+ {tag:"Тренажёр 3",title:"Весы трудового права",desc:"Какие гарантии уравновешивают работника?"},
+ {tag:"Тренажёр 4",title:"Руль и паруса",desc:"Сортировка функций трудового права по двум колонкам."},
+ {tag:"Тренажёр 5",title:"Может ли алгоритм быть работодателем?",desc:"Мини-кейс о платформенном курьере."},
+ {tag:"Тренажёр 6",title:"Проверь ответ искусственного интеллекта",desc:"Найдите ошибки в поверхностном AI-ответе."},
+ {tag:"Тренажёр 7",title:"Главный вывод занятия",desc:"Финальная рефлексия — открытые вопросы."},
+];
+
+/* ============================================================
+   ВСПОМОГАТЕЛЬНЫЕ РЕНДЕРЫ
+   ============================================================ */
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items,ordered){return `<ol style="padding-left:20px;font-size:14.5px;color:var(--graphite-soft);line-height:1.9;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function videoBox(title,caption){return `<div class="video-box"><div class="play">▶</div><b>${title}</b><div>${caption}</div></div>`;}
+function qrZone(id,label,placeholderUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta">
+      <b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div>
+  </div>`;
+}
+function choiceList(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D","E"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoice('${id}',${i},${correctIdx})" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoice=function(id,i,correctIdx){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(!el)continue;el.classList.remove('selected','correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(!el)return;
+  if(i===correctIdx){el.classList.add('correct');}else{el.classList.add('wrong');const c=document.getElementById(`choice-${id}-${correctIdx}`);if(c)c.classList.add('correct');}
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ex.style.display='block';}
+};
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt = (rightPct-leftPct)/8;
+  return `<div class="scale-wrap">
+  <svg viewBox="0 0 320 180" width="280" height="160">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <path d="M40 66 Q60 96 80 66 Z" fill="none" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <path d="M240 66 Q260 100 280 66 Z" fill="#7c1327" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:280px;font-size:13px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div>
+  </div>`;
+}
+function shipSVG(){
+  return `<svg viewBox="0 0 400 220" style="width:100%;max-width:520px;display:block;margin:0 auto;">
+    <path d="M60 170 Q200 210 340 170 L320 190 Q200 220 80 190 Z" fill="#0c2340"/>
+    <line x1="200" y1="170" x2="200" y2="40" stroke="#585c63" stroke-width="4"/>
+    <path d="M200 45 L270 150 L200 150 Z" fill="#efece5" stroke="#c9c3b6"/>
+    <path d="M200 70 L145 150 L200 150 Z" fill="#f7f5f1" stroke="#c9c3b6"/>
+    <path d="M186 220 L186 170 Q200 150 214 170 L214 220 Z" fill="#7c1327"/>
+    <text x="200" y="52" text-anchor="middle" font-size="11" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">паруса</text>
+    <text x="200" y="212" text-anchor="middle" font-size="11" fill="#fff" font-family="Inter,sans-serif" font-weight="700">руль</text>
+  </svg>`;
+}
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, quiz1:{}, qual:{}, sortA:{}, sortB:{}, ai6:{}, refl7:{}};
+function save(){try{localStorage.setItem('mnu_labor_law_v2',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_v2');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){
+  currentScreen=screen; currentTrainer=null;
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function openTrainer(i){
+  currentScreen='trainers'; currentTrainer=i;
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function goSlide(i){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  save();
+  render();
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:96, height:96, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   SCREEN TEMPLATES
+   ============================================================ */
+function screenCover(){
+  return `
+  <section class="cover">
+    <div class="hero-photo-wrap"><img src="assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Занятие №1 · Миссия трудового права</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Занятие №1. Миссия трудового права</p>
+      <p class="cover-question">Почему трудовое право возникает там, где формальная свобода договора сталкивается с фактическим неравенством сторон?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">Перейти к тренажёрам</button>
+        <button class="btn btn-outline" onclick="openTrainer(6)">Финальная рефлексия</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/>
+    <rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/>
+    <rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика занятия</div>
+    <h2 class="section-title">Сегодня мы начнём не с определения</h2>
+    <p class="lede" style="margin-bottom:26px;">Сначала мы посмотрим на реальность рынка труда и материальную основу наёмного труда, а уже затем выйдем к вопросу: зачем существует трудовое право?</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:40px;text-align:center;">
+      <button class="btn btn-red" onclick="goTo('presentation')">Перейти к презентации →</button>
+    </div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i];
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render()}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="goSlide(${i-1})" ${i===0?'disabled style="opacity:.35;"':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d})"></span>`).join("")}</div>
+        ${i===SLIDES.length-1
+          ? `<button class="navbtn primary" onclick="goTo('map')">К карте понимания →</button>`
+          : `<button class="navbtn primary" onclick="goSlide(${i+1})">Далее →</button>`}
+      </div>
+    </div>
+  </div>`;
+}
+
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 4</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:26px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, аргументировать и делать вывод.</p>
+      <div class="trainer-grid">
+        ${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}
+      </div>
+    </div>`;
+  }
+  const wrap = html => `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:20px;">← Все тренажёры</button>${html}</div>`;
+  switch(currentTrainer){
+    case 0: return wrap(trainer1());
+    case 1: return wrap(trainer2());
+    case 2: return wrap(trainer3());
+    case 3: return wrap(trainer4());
+    case 4: return wrap(trainer5());
+    case 5: return wrap(trainer6());
+    case 6: return wrap(trainer7());
+    default: return wrap('');
+  }
+}
+
+function trainer1(){
+  return `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Свобода договора или трудовое право?</h2>
+  <p class="lede" style="margin-bottom:20px;">5 коротких вопросов с вариантами ответа. Цель — проверить, понимаете ли вы, почему одной свободы договора недостаточно.</p>
+  ${QUIZ1.map((q,i)=>`
+    <div class="card" style="margin-bottom:16px;">
+      <h3 style="font-size:15px;">${i+1}. ${q.q}</h3>
+      ${choiceListFull('t1-'+i,q.opts,q.correct,q.explain)}
+    </div>`).join("")}`;
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  const html = `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${explain.replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+  return html;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<4;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('selected','correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+explain; }
+  state.quiz1[id]=i; save();
+};
+
+function trainer2(){
+  return `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Работник, подрядчик или пограничная ситуация?</h2>
+  <p class="lede" style="margin-bottom:20px;">Прочитайте карточку с ситуацией, выберите вариант и посмотрите на критерий квалификации.</p>
+  ${QUAL_CARDS.map((c,i)=>`
+    <div class="card" style="margin-bottom:16px;">
+      <p style="font-size:14.5px;color:var(--graphite);margin-bottom:12px;"><i>«${c.text}»</i></p>
+      ${choiceListFull('t2-'+i,c.opts,c.correct,c.explain)}
+    </div>`).join("")}`;
+}
+
+function trainer3(){
+  const placed = state.sortA;
+  const pool = [...GUARANTEES,...DISTRACTORS].filter(g=>!(g in placed));
+  return `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Весы трудового права</h2>
+  <p class="lede" style="margin-bottom:16px;">Перетащите (кликните), какие гарантии компенсируют фактическую слабость работника — они должны лечь на чашу работника.</p>
+  ${scaleSVG(30+Object.values(placed).filter(v=>v==='ok').length*6, 70-Object.values(placed).filter(v=>v==='ok').length*6)}
+  <div class="sort-layout" style="margin-top:18px;">
+    <div><h4 style="font-size:13px;color:var(--navy);margin-bottom:8px;">Карточки</h4><div class="pool">${pool.map(g=>`<span class="chip" onclick="sortPick('sortA','${g.replace(/'/g,"\\'")}',${GUARANTEES.includes(g)})">${g}</span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div></div>
+    <div><h4 style="font-size:13px;color:var(--navy);margin-bottom:8px;">Чаша работника (гарантии)</h4>
+      <div class="bucket" id="bucket-sortA">${Object.entries(placed).map(([g,v])=>`<span class="chip" style="border-color:${v==='ok'?'#1f6f43':'#c8102e'};background:${v==='ok'?'#e9f5ee':'#fbeceb'};" onclick="unSort('sortA','${g.replace(/'/g,"\\'")}')">${v==='ok'?'✓':'✕'} ${g}</span>`).join("")}</div>
+    </div>
+  </div>
+  <div class="note">Государственные гарантии не уничтожают интерес работодателя, а компенсируют фактическую слабость работника и создают правовой баланс.</div>`;
+}
+window.sortPick=function(bucketKey,item,isCorrect){
+  state[bucketKey][item]= isCorrect?'ok':'bad';
+  save(); render();
+};
+window.unSort=function(bucketKey,item){
+  delete state[bucketKey][item];
+  save(); render();
+};
+
+function trainer4(){
+  const placed = state.sortB;
+  const pool = [...SHIP_RUDDER,...SHIP_SAILS].filter(g=>!(g in placed));
+  const rudder = Object.entries(placed).filter(([g,v])=>v==='rudder'||v==='rudder-wrong');
+  const sails = Object.entries(placed).filter(([g,v])=>v==='sail'||v==='sail-wrong');
+  return `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Руль и паруса</h2>
+  <p class="lede" style="margin-bottom:16px;">Распределите карточки по двум колонкам: социальная функция (руль) или производственная функция (паруса).</p>
+  <div style="margin-bottom:14px;"><h4 style="font-size:13px;color:var(--navy);margin-bottom:8px;">Карточки</h4><div class="pool">${pool.map(g=>{
+    const isRudder=SHIP_RUDDER.includes(g);
+    return `<span class="chip">${g}
+      <button style="border:none;background:none;color:var(--navy);cursor:pointer;font-size:11px;margin-left:6px;" onclick="shipPick('${g.replace(/'/g,"\\'")}','rudder',${isRudder})">→руль</button>
+      <button style="border:none;background:none;color:var(--burgundy);cursor:pointer;font-size:11px;" onclick="shipPick('${g.replace(/'/g,"\\'")}','sail',${!isRudder})">→паруса</button>
+    </span>`;
+  }).join("")||'<span class="note">Все карточки распределены.</span>'}</div></div>
+  <div class="sort-layout">
+    <div class="bucket"><h4>Социальная функция — руль</h4>${rudder.map(([g,v])=>`<span class="chip" style="border-color:${v==='rudder'?'#1f6f43':'#c8102e'};" onclick="unSort('sortB','${g.replace(/'/g,"\\'")}')">${v==='rudder'?'✓':'✕'} ${g}</span>`).join("")}</div>
+    <div class="bucket"><h4>Производственная функция — паруса</h4>${sails.map(([g,v])=>`<span class="chip" style="border-color:${v==='sail'?'#1f6f43':'#c8102e'};" onclick="unSort('sortB','${g.replace(/'/g,"\\'")}')">${v==='sail'?'✓':'✕'} ${g}</span>`).join("")}</div>
+  </div>
+  <div class="note">Без парусов корабль не движется. Без руля — разбивается о рифы. Трудовое право должно соединять социальную и производственную функции.</div>`;
+}
+window.shipPick=function(item,target,isCorrect){
+  state.sortB[item]= isCorrect?target:(target+'-wrong');
+  save(); render();
+};
+
+function trainer5(){
+  return `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Может ли алгоритм быть работодателем?</h2>
+  <div class="card accent-left" style="margin-bottom:18px;"><p style="font-size:14.5px;color:var(--graphite);"><i>«Курьер формально самозанятый. Он сам выбирает время выхода, но приложение распределяет заказы, устанавливает рейтинг, контролирует скорость доставки, рассчитывает оплату и может ограничить доступ к заказам».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Как квалифицировать эти отношения?</p>
+  ${choiceListFull('t5-main',["Это точно трудовые отношения.","Это точно гражданско-правовые отношения.","Это пограничная ситуация, требующая анализа фактических признаков зависимости.","Право здесь не применяется."],2,"Платформенная занятость показывает, что старое противоречие труда и капитала не исчезло, а стало цифровым.")}
+  <hr class="sep">
+  <label class="q">Где здесь самостоятельность?</label>${answerBox('t5-q1')}
+  <label class="q">Где зависимость?</label>${answerBox('t5-q2')}
+  <label class="q">Где контроль?</label>${answerBox('t5-q3')}
+  <label class="q">Где капитал?</label>${answerBox('t5-q4')}
+  <label class="q">Может ли алгоритм быть формой работодательской власти?</label>${answerBox('t5-q5')}`;
+}
+function answerBox(id){
+  const val = state.refl7[id]||'';
+  return `<textarea class="answer" oninput="state.refl7['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+function trainer6(){
+  return `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+  <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:14.5px;">${AI_ANSWER}</p></div>
+  <p class="lede" style="margin-bottom:14px;"><b>Задание:</b> найдите минимум 4 ошибки в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+  ${AI_ERRORS.map((e,i)=>{
+    const checked = state.ai6[i]?'checked':'';
+    return `<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;font-size:14px;color:var(--graphite);cursor:pointer;">
+      <input type="checkbox" ${checked} onchange="state.ai6[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}
+    </label>`;
+  }).join("")}
+  <div class="explain-box ok" style="margin-top:14px;">ИИ может дать формально логичный, но юридически поверхностный ответ. Задача юриста — видеть скрытые предпосылки, фактическое неравенство, социальную функцию права и пределы свободы договора.</div>`;
+}
+
+function trainer7(){
+  const qs=[
+    ["r1","Почему трудовое право нельзя понимать только через договор?"],
+    ["r2","Что является материальной основой трудового права?"],
+    ["r3","Почему работник считается экономически более слабой стороной?"],
+    ["r4","Какие гарантии компенсируют эту слабость?"],
+    ["r5","Почему трудовое право очеловечивает рынок труда?"],
+  ];
+  return `<div class="kicker">Тренажёр 7</div><h2 class="section-title">Главный вывод занятия</h2>
+  <p class="lede" style="margin-bottom:16px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия занятия.</p>
+  ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+  <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap;">
+    <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+  </div>
+  <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+}
+window.exportAnswers=function(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Занятие №1. Миссия трудового права\n";
+  out += "Курс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Тренажёр 5 (кейс курьера) —\n";
+  ["t5-q1","t5-q2","t5-q3","t5-q4","t5-q5"].forEach(id=>{out += (state.refl7[id]||"(нет ответа)")+"\n";});
+  out += "\n— Тренажёр 7 (финальная рефлексия) —\n";
+  ["r1","r2","r3","r4","r5"].forEach(id=>{out += (state.refl7[id]||"(нет ответа)")+"\n";});
+  const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = "otvety-zanyatie1-trudovoe-pravo.txt";
+  document.body.appendChild(a); a.click(); a.remove();
+};
+
+function screenMap(){
+  const nodes = ["Рынок труда","Наёмный труд","Зависимость работника от заработной платы","Власть работодателя над процессом труда","Противоречие труда и капитала","Фактическое неравенство сторон","Государственные гарантии","Баланс интересов"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 5</div>
+    <h2 class="section-title">Карта понимания: миссия трудового права</h2>
+    <div class="map-flow">
+      ${nodes.map(n=>`<div class="map-node">${n}</div><div class="map-arrow">↓</div>`).join("")}
+      <div class="map-node final">Трудовое право как право, которое очеловечивает рынок труда</div>
+    </div>
+    <div style="text-align:center;margin-top:34px;">
+      <button class="btn btn-red" onclick="goTo('after')">К странице «После занятия» →</button>
+    </div>
+  </div>`;
+}
+
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 6</div>
+    <h2 class="section-title">После занятия</h2>
+    <p class="lede" style="margin-bottom:26px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:20px;">
+      <div class="card">
+        <h3>1. Повторить</h3>
+        <p>Миссия трудового права · признаки наёмного труда · отличие трудового договора от гражданско-правового · социальная и производственная функции · роль государственных гарантий.</p>
+      </div>
+      <div class="card">
+        <h3>2. Подумать</h3>
+        <p>Где в современном мире появляются новые формы зависимости работника?</p>
+      </div>
+      <div class="card">
+        <h3>3. Мини-задание</h3>
+        <p>Найдите один пример платформенной занятости и объясните, какие признаки самостоятельности и зависимости в нём есть.</p>
+      </div>
+      <div class="card">
+        <h3>4. AI-задание</h3>
+        <p>Спросите ИИ: «Почему трудовое право не нужно?» Затем критически разберите его ответ с позиции фундаментальной логики курса.</p>
+      </div>
+    </div>
+    ${qrZone("canvas","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="text-align:center;margin-top:30px;">
+      <button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button>
+    </div>
+  </div>`;
+}
+
+/* ============================================================
+   MAIN RENDER
+   ============================================================ */
+function render(){
+  const app = document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){
+    pct = 15 + (state.slide/(SLIDES.length-1))*55;
+  } else {
+    const idx=order.indexOf(currentScreen);
+    pct = [3,10,15,78,90,100][idx] ?? 0;
+  }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+
+render();
+</script>
+</body>
+</html>
