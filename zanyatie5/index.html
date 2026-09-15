@@ -197,6 +197,13 @@ label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:
 
 .msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
 
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.8px;background:#fff;min-width:560px;}
+table.cmp th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;}
+table.cmp td{padding:10px 12px;border-top:1px solid var(--line);color:var(--graphite-soft);vertical-align:top;}
+table.cmp tr:nth-child(even) td{background:#faf9f6;}
+table.cmp td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+
 .risk-scale{display:flex;height:34px;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
 .risk-scale div{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;}
 
@@ -363,6 +370,10 @@ function pyramidWidget(levels){
     return `<div class="level" style="width:${width}%;background:${colors[Math.min(i,colors.length-1)]};">${l.title}${l.sub?`<small>${l.sub}</small>`:''}</div>`;
   }).join("")}</div>`;
 }
+function comparisonTable(headers, rows){
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
 
 /* stepped reveal helper */
 function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
@@ -504,6 +515,16 @@ const SLIDES = [
   <div class="card accent-left" style="margin-bottom:12px;"><p style="font-size:13.5px;"><i>«В сфере социально-трудовых отношений отсутствует единый программный документ, определяющий долгосрочное планирование развития данной сферы».</i></p></div>
   <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Что происходит с трудовым законодательством, если нет долгосрочной концепции?</p>
   <div class="card navy"><p style="color:#fff;">Без долгосрочной концепции возрастает риск фрагментарных реформ, нестабильности законодательства и несогласованности государственных решений.</p></div>`},
+// 11a. Нестабильность Трудового кодекса РК
+{kicker:"Нестабильность Трудового кодекса РК", render:()=>`
+  <h2 class="section-title">Нестабильность Трудового кодекса РК</h2>
+  ${comparisonTable(["","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","Итого"],[
+    ["Кол-во законов, вносящих поправки","1","4","6","2","5","8","4","8","4","7","12","<b>61</b>"],
+    ["Кол-во поправок","10","5","27","6","113","33","13","70","28","6","87","<b>418</b>"],
+  ])}
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:clamp(13px,1.9vw,15.5px);">За 10,5 лет внесено 418 поправок 61 законом, что в общей сложности превышает объём Трудового кодекса РК на 947%.</div>
+  <p class="lede" style="margin-top:10px;">За 2023–2025 годы внесено 124 поправки 19 законами (½ ТК РК). В 2026 году внесено 87 поправок 12 законами.</p>
+  <p class="note">Статистика поправок — наглядное подтверждение риска, о котором говорит предыдущий слайд: без долгосрочной концепции законодательство меняется фрагментарно и непредсказуемо.</p>`},
 // 12. Национальный доклад о труде
 {kicker:"Национальный доклад о труде", render:()=>`
   <h2 class="section-title">Национальный доклад о труде: зачем он нужен?</h2>
@@ -1092,10 +1113,10 @@ let currentTrainer=null;
 function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function goToPolicy(){ currentScreen='presentation'; currentTrainer=null; goSlide(6,'full'); }
-function goToOrgans(){ currentScreen='presentation'; currentTrainer=null; goSlide(16,'full'); }
-function goToInspection(){ currentScreen='presentation'; currentTrainer=null; goSlide(20,'full'); }
-function goToControlForms(){ currentScreen='presentation'; currentTrainer=null; goSlide(33,'full'); }
-function goToRisk(){ currentScreen='presentation'; currentTrainer=null; goSlide(40,'full'); }
+function goToOrgans(){ currentScreen='presentation'; currentTrainer=null; goSlide(17,'full'); }
+function goToInspection(){ currentScreen='presentation'; currentTrainer=null; goSlide(21,'full'); }
+function goToControlForms(){ currentScreen='presentation'; currentTrainer=null; goSlide(34,'full'); }
+function goToRisk(){ currentScreen='presentation'; currentTrainer=null; goSlide(41,'full'); }
 
 function goSlide(i, revealMode){
   state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
