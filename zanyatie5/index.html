@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Занятие №5. Государственное регулирование и контроль в сфере труда</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU: презентация на 45 слайдов и 16 тренажёров юридического мышления для занятия «Государственное регулирование в области трудовых отношений. Контроль за соблюдением трудового законодательства»." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-node.zone{border-color:var(--burgundy);}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.ladder{display:flex;flex-direction:column-reverse;gap:8px;max-width:520px;margin:0 auto;}
+.ladder .rung{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+.ladder .rung .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.85;font-weight:700;}
+
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.pyramid .level{border-radius:10px;padding:11px 14px;text-align:center;color:#fff;font-size:12.5px;font-weight:600;box-shadow:var(--shadow);}
+.pyramid .level small{display:block;font-weight:500;font-size:11px;opacity:.85;margin-top:3px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.rank-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:13.5px;}
+.rank-item .pos{color:var(--red);font-weight:700;margin-right:8px;}
+.rank-item.correct{border-color:var(--ok);background:#e9f5ee;}
+.rank-item.wrong{border-color:var(--red);background:#fbeceb;}
+
+.msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.8px;background:#fff;min-width:560px;}
+table.cmp th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;}
+table.cmp td{padding:10px 12px;border-top:1px solid var(--line);color:var(--graphite-soft);vertical-align:top;}
+table.cmp tr:nth-child(even) td{background:#faf9f6;}
+table.cmp td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+
+.risk-scale{display:flex;height:34px;border-radius:8px;overflow:hidden;box-shadow:var(--shadow);}
+.risk-scale div{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Занятие 5</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главная</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика занятия</button>
+    <button class="navbtn primary" onclick="goTo('presentation')">К презентации</button>
+    <button class="navbtn" onclick="goToPolicy()">К гос. политике</button>
+    <button class="navbtn" onclick="goToOrgans()">К системе органов</button>
+    <button class="navbtn" onclick="goToInspection()">К инспекции труда</button>
+    <button class="navbtn" onclick="goToControlForms()">К формам контроля</button>
+    <button class="navbtn" onclick="goToRisk()">К риск-подходу</button>
+    <button class="navbtn" onclick="goTo('trainers')">К тренажёрам</button>
+    <button class="navbtn" onclick="goTo('map')">Карта понимания</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+    <button class="navbtn ghost" onclick="openTrainer(15)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Занятие №5 · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ ЗАНЯТИЯ №5 — ГОСУДАРСТВЕННОЕ РЕГУЛИРОВАНИЕ И КОНТРОЛЬ В СФЕРЕ ТРУДА
+   ============================================================ */
+const ROADMAP_NODES = ["Миссия трудового права","Защита слабой стороны","Метод и принципы","Источники и формула","Международные стандарты","Государственная политика","Государственное регулирование","Система органов","Государственная инспекция труда","Межд. стандарты инспекции","Формы контроля","Риск-ориентированный подход","Акты инспектора","Защита прав работников","Баланс с интересами бизнеса","Тренажёры"];
+
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function riskCard(title,body,level){
+  const border={high:'#c8102e',medium:'#123058',low:'#585c63'}[level]||'#dfdbd2';
+  const bg={high:'#fbeceb',medium:'#eef2f7',low:'#f2f1ec'}[level]||'#fff';
+  return `<div class="card" style="border-left:4px solid ${border};background:${bg};"><h3>${title}</h3><p>${body}</p></div>`;
+}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node ${opts.zoneIdx&&opts.zoneIdx.includes(i)?'zone':''}">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть эталонный ответ':'Показать эталонный ответ'}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt=(rightPct-leftPct)/8;
+  return `<div class="scale-wrap"><svg viewBox="0 0 320 180" width="260" height="150">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:260px;font-size:12.5px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div></div>`;
+}
+function compassSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#dfdbd2" stroke-width="1"/>
+    <polygon points="50,14 58,50 50,86 42,50" fill="#c8102e"/>
+    <polygon points="14,50 50,42 86,50 50,58" fill="#0c2340"/>
+    <circle cx="50" cy="50" r="4" fill="#7c1327"/>
+    <text x="50" y="10" text-anchor="middle" font-size="8" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">N</text>
+  </svg>`;
+}
+function shieldSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 110" width="${size}" height="${Math.round(size*110/100)}">
+    <path d="M50 6 L92 22 V52 C92 78 74 96 50 106 C26 96 8 78 8 52 V22 Z" fill="none" stroke="#0c2340" stroke-width="4"/>
+    <path d="M50 6 L92 22 V52 C92 78 74 96 50 106 Z" fill="#7c1327" opacity="0.1"/>
+    <path d="M32 54 L45 68 L70 38" fill="none" stroke="#c8102e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>`;
+}
+function triangleSVG(labels,size){
+  size=size||260;
+  labels=labels||["Государство","Работник","Работодатель"];
+  return `<svg viewBox="0 0 300 210" width="${size}" height="${Math.round(size*210/300)}">
+    <polygon points="150,34 55,182 245,182" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="150" cy="34" r="8" fill="#7c1327"/>
+    <circle cx="55" cy="182" r="8" fill="#c8102e"/>
+    <circle cx="245" cy="182" r="8" fill="#123058"/>
+    <text x="150" y="18" text-anchor="middle" font-size="13" font-weight="700" fill="#7c1327" font-family="Inter,sans-serif">${labels[0]}</text>
+    <text x="55" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#c8102e" font-family="Inter,sans-serif">${labels[1]}</text>
+    <text x="245" y="202" text-anchor="middle" font-size="13" font-weight="700" fill="#123058" font-family="Inter,sans-serif">${labels[2]}</text>
+  </svg>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function ladderWidget(rungs){
+  const colors=["#0c2340","#123058","#585c63","#7c1327","#c8102e"];
+  return `<div class="ladder">${rungs.map((r,i)=>`<div class="rung" style="background:${colors[i%colors.length]};"><span>${r}</span></div>`).join("")}</div>`;
+}
+function pyramidWidget(levels){
+  const n=levels.length;
+  const colors=["#0c2340","#123058","#1a3a63","#585c63","#7c1327","#93172c","#a91d31","#c8102e"];
+  return `<div class="pyramid">${levels.map((l,i)=>{
+    const width = 100 - i*(60/Math.max(n-1,1));
+    return `<div class="level" style="width:${width}%;background:${colors[Math.min(i,colors.length-1)]};">${l.title}${l.sub?`<small>${l.sub}</small>`:''}</div>`;
+  }).join("")}</div>`;
+}
+function comparisonTable(headers, rows){
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+/* stepped reveal helper */
+function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
+function stepHint(stage,max){ return stage<max ? `<div class="step-hint">Нажмите «Далее» / клавишу клика, чтобы показать ещё (${stage}/${max})</div>` : ""; }
+
+/* ranking exercise (сортировка по порядку кликом, без drag-and-drop) */
+function rankingExercise(key, items){
+  const chosen = state.rankings[key] || [];
+  const pool = items.filter(x=>!chosen.includes(x));
+  const checked = state.rankChecked[key];
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(x=>`<span class="chip" onclick="pickRank('${key}','${x.replace(/'/g,"\\'")}',${items.length})">${x}</span>`).join("")||'<span class="note">Все карточки расставлены.</span>'}</div>
+  <div class="bucket" style="min-height:100px;"><h4>Ваша последовательность</h4>
+    ${chosen.map((x,i)=>{
+      let cls='';
+      if(checked) cls = (items[i]===x) ? 'correct' : 'wrong';
+      return `<div class="rank-item ${cls}"><span><span class="pos">${i+1}.</span>${x}</span><button class="navbtn" style="padding:3px 10px;font-size:11px;" onclick="unRank('${key}','${x.replace(/'/g,"\\'")}')">убрать</button></div>`;
+    }).join("")}
+  </div>
+  ${chosen.length===items.length ? `<button class="btn btn-navy" style="margin-top:12px;" onclick="checkRank('${key}')">Проверить порядок</button>` : ''}
+  ${checked?`<div class="explain-box ${chosen.every((x,i)=>items[i]===x)?'ok':'no'}" style="margin-top:12px;">${chosen.every((x,i)=>items[i]===x)?'✓ Порядок верный.':'✕ Есть ошибки — красным отмечены позиции не на своём месте.'}</div>`:''}`;
+}
+window.pickRank=function(key,item,total){
+  if(!state.rankings[key]) state.rankings[key]=[];
+  state.rankings[key].push(item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.unRank=function(key,item){
+  state.rankings[key]=(state.rankings[key]||[]).filter(x=>x!==item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.checkRank=function(key){ state.rankChecked[key]=true; save(); render(); };
+
+/* multi-select exercise (выбор нескольких верных карточек из списка) */
+function multiSelectExercise(key, items){
+  const picked = state.multiSel[key] || {};
+  const checked = state.multiSelChecked[key];
+  return `${items.map((it,i)=>{
+    let style='';
+    if(checked){
+      if(it.correct) style = picked[i] ? 'border-color:#1f6f43;background:#e9f5ee;' : 'border-color:#c8102e;background:#fbeceb;';
+      else style = picked[i] ? 'border-color:#c8102e;background:#fbeceb;' : '';
+    }
+    return `<label class="msel-item" style="${style}"><input type="checkbox" ${picked[i]?'checked':''} onchange="toggleMultiSel('${key}',${i})"> ${it.text}</label>`;
+  }).join("")}
+  <button class="btn btn-navy" style="margin-top:6px;" onclick="checkMultiSel('${key}')">Проверить</button>
+  ${checked?`<div class="explain-box ${items.every((it,i)=>!!picked[i]===!!it.correct)?'ok':'no'}" style="margin-top:12px;">${items.every((it,i)=>!!picked[i]===!!it.correct)?'✓ Все выбраны верно.':'✕ Есть ошибки — зелёным отмечены верные, красным — неверно отмеченные или пропущенные позиции.'}</div>`:''}`;
+}
+window.toggleMultiSel=function(key,i){
+  if(!state.multiSel[key]) state.multiSel[key]={};
+  state.multiSel[key][i]=!state.multiSel[key][i];
+  state.multiSelChecked[key]=false;
+  save(); render();
+};
+window.checkMultiSel=function(key){ state.multiSelChecked[key]=true; save(); render(); };
+
+/* ============================================================
+   СЛАЙДЫ (45)
+   ============================================================ */
+const SLIDES = [
+// 1. Титульный слайд
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:26px 0;">
+    <div class="logo-wrap" style="width:60px;height:60px;margin:0 auto 20px;"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Занятие №5</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое право Республики Казахстан</h1>
+    <p class="subtitle" style="margin:0 auto 18px;text-align:center;">Государственное регулирование в области трудовых отношений. Контроль за соблюдением трудового законодательства</p>
+    <p class="lede" style="margin:0 auto 20px;text-align:center;font-style:italic;">От трудовых гарантий — к механизму их реального исполнения</p>
+    <div style="display:flex;justify-content:center;gap:28px;">${shieldSVG(70)}${compassSVG(70)}</div>
+  </div>`},
+// 2. Связь с предыдущими занятиями
+{kicker:"Связь с предыдущими занятиями", render:()=>`
+  <h2 class="section-title">От миссии трудового права — к государственному контролю</h2>
+  <div class="grid cols-2">
+    ${infoCard("Занятие 1. Миссия трудового права","Зачем существует трудовое право?")}
+    ${infoCard("Занятие 2. Метод и принципы","Как трудовое право регулирует зависимый труд?")}
+    ${infoCard("Занятие 3. Источники и формула","Где искать нормы и как проверять законность?")}
+    ${infoCard("Занятие 4. Международные стандарты","Какой минимум защиты труда признаётся на глобальном уровне?")}
+  </div>
+  <div class="grid" style="margin-top:14px;">${infoCard("Занятие 5. Государственное регулирование и контроль","Как обеспечить реальное соблюдение трудовых прав?")}</div>
+  <p class="lede" style="margin-top:12px;"><b>Сегодня мы увидим, что право на труд, оплату, отдых и безопасность требует не только текста закона, но и работающего публичного механизма контроля.</b></p>`},
+// 3. Проблемный кейс
+{kicker:"Проблемный кейс занятия", render:()=>`
+  <h2 class="section-title">Кодекс есть. Права нарушены. Что дальше?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«В компании систематически задерживают заработную плату, работники работают сверхурочно без оплаты, часть работников не ознакомлена с правилами охраны труда, а после жалобы одного работника работодатель требует заранее предупредить его о любой проверке и говорит: “Это частный бизнес, государство не должно вмешиваться”».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Где проходит граница между свободой предпринимательства и обязанностью государства защищать трудовые права?</p>
+  ${choiceListFull("case5",["Государство не должно вмешиваться в частный бизнес.","Государство может вмешиваться всегда и без ограничений.","Государственный контроль нужен для защиты трудовых прав, но он должен осуществляться в пределах закона и с соблюдением процедур.","Всё зависит только от желания работодателя."],2,"Государственный контроль необходим, потому что трудовые гарантии должны реально исполняться. Но контроль должен быть законным, процедурным, обоснованным и соразмерным.")}`},
+// 4. Главный вопрос
+{kicker:"Главный вопрос", render:()=>`
+  <h2 class="section-title">Главный вопрос занятия</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(16px,2.2vw,21px);color:var(--navy);line-height:1.4;">«Как государство должно регулировать и контролировать сферу труда так, чтобы одновременно защищать работников, не разрушать предпринимательскую инициативу и обеспечивать реальное соблюдение трудового законодательства?»</p>
+  <p class="lede" style="margin-top:10px;"><b>Это вопрос о балансе публичной власти, прав работника и свободы предпринимательства.</b></p>
+  <div style="display:flex;justify-content:center;margin-top:10px;">${triangleSVG(["Государство","Работник","Работодатель"],200)}</div>`},
+// 5. Почему тема важна
+{kicker:"Почему эта тема важна", render:()=>`
+  <h2 class="section-title">Норма без контроля может остаться декларацией</h2>
+  ${numList(["право на оплату труда","право на отдых","право на безопасные условия труда","запрет дискриминации","право на защиту","государственный контроль"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Качество трудового законодательства не имеет значения, если оно не соблюдается на практике.</div>
+  <p class="lede" style="margin-top:10px;"><b>Государственный контроль — это мост между нормой и реальной защитой работника.</b></p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin:14px 0 10px;">С чем у вас ассоциируется государственный контроль в сфере труда?</p>
+  ${qrZone("menti-control","Mentimeter / Word Cloud — ассоциации с государственным контролем","https://www.menti.com/…")}`},
+// 6. Трудовое или административное право
+{kicker:"Тема на границе отраслей", render:()=>`
+  <h2 class="section-title">Государственное регулирование: трудовое или административное право?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Трудовое право</h4><ul><li>права работника</li><li>обязанности работодателя</li><li>гарантии</li><li>охрана труда</li><li>трудовые отношения</li></ul></div>
+    <div class="branch right"><h4>Административное право</h4><ul><li>государственные органы</li><li>полномочия</li><li>проверки</li><li>предписания</li><li>административные процедуры</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Государственное регулирование и контроль относятся к сфере государственного управления, но для трудового права они необходимы как механизм реализации гарантий.</b></p>`},
+// 7. Государственная политика в области труда
+{kicker:"Государственная политика", render:()=>`
+  <h2 class="section-title">Государственная политика: не только законы</h2>
+  <p class="lede">Государственная политика в области труда — это система целей, мер, задач, программ, установок и действий государства, направленных на развитие и регулирование социально-трудовых отношений.</p>
+  ${flowRow(["Цели","Принципы","Приоритеты","Стратегии","Программы","Нормы","Органы","Контроль","Результаты"])}
+  <p class="lede" style="margin-top:12px;"><b>Политика показывает, куда движется государство в сфере труда.</b></p>`},
+// 8. Гос. политика в ТК РК
+{kicker:"Кто отвечает за политику?", render:()=>`
+  <h2 class="section-title">Государственная политика в ТК РК</h2>
+  ${verticalFlow(["Правительство РК — разрабатывает основные направления и обеспечивает реализацию государственной политики в области труда","Уполномоченный государственный орган по труду и местные исполнительные органы — осуществляют реализацию государственной политики","Социальное партнёрство — вырабатывает предложения по реализации государственной политики в области социально-трудовых отношений"])}
+  <p class="lede" style="margin-top:12px;"><b>Государственная политика в сфере труда формируется не только сверху, но и через участие социальных партнёров.</b></p>`},
+// 9. Статические и динамические средства
+{kicker:"Политика — это идеи + действия", render:()=>`
+  <h2 class="section-title">Статические и динамические средства политики</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Статические средства</h4><ul><li>идеи</li><li>принципы</li><li>цели</li><li>задачи</li><li>направления</li><li>приоритеты</li><li>концепции</li></ul></div>
+    <div class="branch right"><h4>Динамические средства</h4><ul><li>деятельность органов</li><li>контроль</li><li>надзор</li><li>программы</li><li>отчёты</li><li>проверки</li><li>меры реагирования</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Политика существует не только в документах, но и в реальных действиях органов власти.</b></p>`},
+// 10. Стратегические документы
+{kicker:"Где выражается трудовая политика?", render:()=>`
+  <h2 class="section-title">Стратегические документы</h2>
+  ${numList(["Конституция РК","Стратегия «Казахстан-2050»","Национальный план развития РК до 2029 года","Концепция социального развития РК до 2030 года","Концепция правовой политики до 2030 года","государственные программы","дорожные карты","комплексные планы"])}
+  <p class="lede" style="margin-top:10px;"><b>Стратегические документы задают направление, но должны превращаться в конкретные меры и устойчивое законодательство.</b></p>`},
+// 11. Проблема отсутствия единого документа
+{kicker:"Есть ли цельная трудовая политика?", render:()=>`
+  <h2 class="section-title">Проблема отсутствия единого документа</h2>
+  <div class="card accent-left" style="margin-bottom:12px;"><p style="font-size:13.5px;"><i>«В сфере социально-трудовых отношений отсутствует единый программный документ, определяющий долгосрочное планирование развития данной сферы».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Что происходит с трудовым законодательством, если нет долгосрочной концепции?</p>
+  <div class="card navy"><p style="color:#fff;">Без долгосрочной концепции возрастает риск фрагментарных реформ, нестабильности законодательства и несогласованности государственных решений.</p></div>`},
+// 11a. Нестабильность Трудового кодекса РК
+{kicker:"Нестабильность Трудового кодекса РК", render:()=>`
+  <h2 class="section-title">Нестабильность Трудового кодекса РК</h2>
+  ${comparisonTable(["","2016","2017","2018","2019","2020","2021","2022","2023","2024","2025","2026","Итого"],[
+    ["Кол-во законов, вносящих поправки","1","4","6","2","5","8","4","8","4","7","12","<b>61</b>"],
+    ["Кол-во поправок","10","5","27","6","113","33","13","70","28","6","87","<b>418</b>"],
+  ])}
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:clamp(13px,1.9vw,15.5px);">За 10,5 лет внесено 418 поправок 61 законом, что в общей сложности превышает объём Трудового кодекса РК на 947%.</div>
+  <p class="lede" style="margin-top:10px;">За 2023–2025 годы внесено 124 поправки 19 законами (½ ТК РК). В 2026 году внесено 87 поправок 12 законами.</p>
+  <p class="note">Статистика поправок — наглядное подтверждение риска, о котором говорит предыдущий слайд: без долгосрочной концепции законодательство меняется фрагментарно и непредсказуемо.</p>`},
+// 12. Национальный доклад о труде
+{kicker:"Национальный доклад о труде", render:()=>`
+  <h2 class="section-title">Национальный доклад о труде: зачем он нужен?</h2>
+  ${verticalFlow(["Национальный доклад о труде в Республике Казахстан","Консолидирующий документ","Достоверный источник принятия решений","Анализ рынка труда","Оценка трудовых отношений","Выявление проблем","Рекомендации"],{final:"Совместный результат социальных партнёров"})}
+  <p class="lede" style="margin-top:12px;"><b>Национальный доклад может стать интеллектуальной и аналитической основой государственной политики в сфере труда.</b></p>`},
+// 13. Почему доклад готовят социальные партнёры
+{kicker:"Не монолог государства", render:()=>`
+  <h2 class="section-title">Почему доклад должен готовиться социальными партнёрами?</h2>
+  <div style="display:flex;justify-content:center;margin:10px 0;">${triangleSVG(["Государство","Работники / профсоюзы","Работодатели"],200)}</div>
+  <p class="q" style="font-weight:700;color:var(--navy);text-align:center;">Почему анализ труда должен учитывать позицию всех трёх сторон?</p>
+  <div class="card burgundy" style="margin-top:10px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Трудовая политика должна строиться на социальном диалоге, иначе она рискует не отражать реальное положение работников и работодателей.</div>`},
+// 14. Гос. регулирование как инструмент политики
+{kicker:"От политики — к правилам", render:()=>`
+  <h2 class="section-title">Государственное регулирование как инструмент политики</h2>
+  <p class="lede">Государственное регулирование — это главный инструмент реализации государственной политики, связанный с установлением и санкционированием общеобязательных правил поведения.</p>
+  ${flowRow(["Политика","Регулирование","Нормы","Органы","Контроль","Ответственность","Защита прав"])}
+  <p class="lede" style="margin-top:12px;"><b>Политика отвечает на вопрос «куда?», регулирование — «какими правилами?», контроль — «исполняются ли они?»</b></p>`},
+// 15. Государство и рынок труда
+{kicker:"Границы вмешательства", render:()=>`
+  <h2 class="section-title">Государство не заменяет рынок, а устанавливает его социальные границы</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Без регулирования</h4><ul><li>эксплуатация</li><li>невыплата зарплаты</li><li>опасные условия</li><li>дискриминация</li><li>произвол работодателя</li></ul></div>
+    <div class="branch right"><h4>Чрезмерное регулирование</h4><ul><li>давление на бизнес</li><li>бюрократия</li><li>формализм</li><li>коррупционные риски</li><li>снижение гибкости рынка труда</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Задача государства — не уничтожить свободу рынка, а установить справедливые и безопасные правила труда.</b></p>`},
+// 16. Минимальные социальные стандарты
+{kicker:"Красная линия государства", render:()=>`
+  <h2 class="section-title">Минимальные социальные стандарты</h2>
+  ${numList(["минимальный размер месячной заработной платы","продолжительность ежедневной работы","основной оплачиваемый ежегодный трудовой отпуск","безопасность и охрана труда","социальные гарантии"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Минимальные социальные стандарты проявляют публично-правовой характер трудового законодательства.</div>
+  <p class="note" style="margin-top:8px;">Связь с занятием 3: эти стандарты нельзя снижать даже по соглашению с работником.</p>`},
+// 17. Система государственных органов
+{kicker:"Кто регулирует сферу труда?", render:()=>`
+  <h2 class="section-title">Система государственных органов в сфере труда</h2>
+  ${verticalFlow(["Правительство Республики Казахстан","Уполномоченный государственный орган по труду — Министерство труда и социальной защиты населения РК","Территориальные органы по инспекции труда","Государственные инспекторы труда"])}
+  <p class="lede" style="margin-top:12px;"><b>Система органов показывает, как государственная политика превращается в конкретные полномочия.</b></p>`},
+// 18. Правительство РК
+{kicker:"Правительство: стратегический уровень", render:()=>`
+  <h2 class="section-title">Правительство РК</h2>
+  ${numList(["разрабатывает основные направления государственной политики в области труда","обеспечивает реализацию государственной политики","определяет общую рамку регулирования труда, занятости, безопасности и охраны труда"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin:10px 0;">Почему трудовая политика не может быть только задачей одного министерства?</p>
+  <div class="card navy"><p style="color:#fff;">Трудовая политика связана с экономикой, образованием, миграцией, социальной защитой, здравоохранением и промышленной безопасностью.</p></div>`},
+// 19. МТСЗН
+{kicker:"МТСЗН: центр трудовой политики", render:()=>`
+  <h2 class="section-title">Уполномоченный государственный орган по труду</h2>
+  ${numList(["реализует государственную политику в области труда","реализует политику в области безопасности и охраны труда","организует государственный контроль за соблюдением трудового законодательства","координирует работу в сфере труда, занятости и социальной защиты"])}
+  <p class="lede" style="margin-top:10px;"><b>Уполномоченный орган связывает стратегию, регулирование и контроль.</b></p>`},
+// 20. Комитет государственной инспекции труда
+{kicker:"Отдельный комитет инспекции труда", render:()=>`
+  <h2 class="section-title">Комитет государственной инспекции труда</h2>
+  ${verticalFlow(["Комитет труда и социальной защиты (переименование)","Комитет регулирования и контроля в сфере социальной защиты населения"])}
+  <div class="card burgundy" style="margin:14px 0;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Комитет государственной инспекции труда → департаменты в регионах</div>
+  <p class="note">Создание отдельного Комитета государственной инспекции труда связано с совершенствованием безопасных условий труда и защитой трудовых прав работников.</p>
+  <p class="lede" style="margin-top:8px;"><b>Институциональное усиление инспекции труда — это попытка сделать контроль более специализированным и эффективным.</b></p>`},
+// 21. Зачем нужна инспекция труда
+{kicker:"Инспекция труда — оперативная защита", render:()=>`
+  <h2 class="section-title">Зачем нужна инспекция труда?</h2>
+  <div style="text-align:center;margin-bottom:12px;">${shieldSVG(64)}</div>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">Даже самый хороший закон не защищает, если его никто не проверяет.</div>
+  ${numList(["проверка соблюдения законодательства","защита оплаты труда","охрана труда","расследование несчастных случаев","предупреждение нарушений","предписания","административные меры"])}
+  <p class="lede" style="margin-top:10px;"><b>Инспекция труда — один из ключевых механизмов превращения трудовых прав в реальность.</b></p>`},
+// 22. Международные обязательства РК
+{kicker:"Конвенции МОТ №81 и №129", render:()=>`
+  <h2 class="section-title">Международные обязательства Казахстана</h2>
+  ${numList(["Конвенция МОТ №81 об инспекции труда в промышленности и торговле","Конвенция МОТ №129 об инспекции труда в сельском хозяйстве","ратифицированы Казахстаном в 2001 году","относятся к четырём приоритетным конвенциям МОТ","требуют подробной отчётности каждые 2 года","входят в состав действующего права РК и имеют приоритет перед законами"])}
+  <p class="lede" style="margin-top:10px;"><b>Инспекция труда — это не только национальный институт, но и международное обязательство Казахстана.</b></p>
+  ${qrZone("conv81","Ссылка на Конвенцию МОТ №81","https://normlex.ilo.org/…","https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_norm/@normes/documents/normativeinstrument/wcms_c081_ru.htm")}
+  <div style="margin-top:14px;">${qrZone("conv129","Ссылка на Конвенцию МОТ №129","https://normlex.ilo.org/…","https://www.ilo.org/sites/default/files/wcmsp5/groups/public/@ed_norm/@normes/documents/normativeinstrument/wcms_c129_ru.htm")}</div>`},
+// 23. Задачи инспекции труда по МОТ
+{kicker:"Три задачи инспекции труда", maxStep:3, render:(stage)=>{
+  const items=[
+    infoCard("1. Обеспечение применения законодательства","рабочее время, заработная плата, безопасность труда, здравоохранение, благосостояние, труд детей и подростков"),
+    infoCard("2. Техническая информация и советы","помощь работодателям и работникам в эффективном соблюдении законодательства"),
+    infoCard("3. Сигнал о пробелах и злоупотреблениях","доведение до компетентного органа фактов бездействия или злоупотреблений, не охваченных действующими нормами"),
+  ];
+  return `<h2 class="section-title">Задачи инспекции труда по стандартам МОТ</h2>
+  <div class="grid cols-3">${steps(stage,items)}</div>
+  ${stepHint(stage,3)}
+  ${stage>=3?`<p class="lede" style="margin-top:12px;"><b>Инспекция труда — не только карательный орган, но и профилактический, аналитический и консультационный институт.</b></p>`:""}`;
+}},
+// 24. Стандарты работы инспекции труда
+{kicker:"Что требует МОТ?", render:()=>`
+  <h2 class="section-title">Стандарты работы инспекции труда</h2>
+  ${numList(["контроль центральной власти","беспрепятственный доступ без предварительного уведомления","право входа на предприятие в любое время суток","право проверять документы","право опрашивать работодателя и работников","право брать образцы материалов","конфиденциальность источника жалобы","полномочия требовать устранения угроз здоровью и безопасности"])}
+  <p class="lede" style="margin-top:10px;"><b>Эффективная инспекция труда должна быть независимой, оперативной и способной выявлять реальные нарушения.</b></p>`},
+// 25. Проблема предварительного уведомления
+{kicker:"Уведомление снижает внезапность?", render:()=>`
+  <h2 class="section-title">Можно ли эффективно проверять, если заранее предупредить?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Международный стандарт</h4><p style="font-size:13.5px;color:var(--graphite-soft);">Доступ без предварительного уведомления.</p></div>
+    <div class="branch right"><h4>Национальная модель контроля</h4><p style="font-size:13.5px;color:var(--graphite-soft);">Извещение субъекта контроля до начала проверки или профилактического контроля.</p></div>
+  </div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:12px;">Как предварительное уведомление влияет на возможность выявить реальные нарушения?</p>
+  <div class="card navy" style="margin-top:10px;"><p style="color:#fff;">Слишком жёсткие процедурные ограничения могут снижать эффективность защиты трудовых прав.</p></div>`},
+// 26. Ослабление инспекции труда
+{kicker:"Регуляторная нагрузка или риск?", render:()=>`
+  <h2 class="section-title">Где граница между защитой бизнеса и защитой работника?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Логика снижения регуляторной нагрузки</h4><ul><li>меньше проверок</li><li>меньше давления на бизнес</li><li>меньше административных барьеров</li></ul></div>
+    <div class="branch right"><h4>Логика защиты труда</h4><ul><li>риски невыплаты зарплаты</li><li>производственный травматизм</li><li>опасные условия</li><li>слабая позиция работника</li><li>страх жаловаться</li></ul></div>
+  </div>
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Снижение регуляторной нагрузки не должно превращаться в снижение трудовых гарантий.</div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin:14px 0 10px;">Что важнее для эффективной инспекции труда: независимость, доступ без уведомления, достаточное число инспекторов, цифровизация или риск-ориентированный подход?</p>
+  ${qrZone("menti-inspection","Мини-опрос: что важнее для эффективной инспекции труда?","https://www.menti.com/…")}`},
+// 27. Правовой статус гос. инспекции труда
+{kicker:"Что делает инспекция труда?", render:()=>`
+  <h2 class="section-title">Правовой статус государственной инспекции труда</h2>
+  ${numList(["государственный контроль за соблюдением трудового законодательства","контроль требований безопасности и охраны труда","мониторинг коллективных договоров","анализ причин производственного травматизма","расследование несчастных случаев","рассмотрение обращений работников и работодателей","мониторинг аттестации производственных объектов","мониторинг коллективных трудовых споров","декларирование деятельности работодателя"])}
+  <p class="lede" style="margin-top:10px;"><b>Инспекция труда работает не только с жалобами, но и с системными рисками в сфере труда.</b></p>`},
+// 28. Права инспектора труда
+{kicker:"Инструменты инспектора", maxStep:9, render:(stage)=>{
+  const items=["беспрепятственно посещать работодателей","запрашивать документы, объяснения и информацию","выдавать обязательные предписания","составлять протоколы и постановления об административных правонарушениях","налагать административные взыскания","давать разъяснения","приостанавливать деятельность производств, цехов, участков, рабочих мест и оборудования при угрозе жизни и здоровью","запрещать использование некачественных средств защиты","направлять материалы в правоохранительные органы и суды"];
+  return `<h2 class="section-title">Права государственного инспектора труда</h2>
+  ${numList(items.slice(0,stage))}
+  ${stepHint(stage,9)}
+  ${stage>=9?`<p class="lede" style="margin-top:10px;"><b>Полномочия инспектора — это инструменты оперативного реагирования на нарушение трудовых прав.</b></p>`:""}`;
+}},
+// 29. Обязанности инспектора труда
+{kicker:"Контроль тоже должен быть законным", render:()=>`
+  <h2 class="section-title">Обязанности государственного инспектора труда</h2>
+  ${numList(["своевременно и качественно проводить проверки","информировать работодателей о выявленных нарушениях","своевременно рассматривать обращения","выявлять причины нарушений","давать рекомендации","собирать, анализировать и обобщать причины нарушений","не разглашать охраняемую законом тайну","проводить разъяснительную работу"])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Государственный инспектор защищает трудовые права, но сам обязан действовать законно, объективно и профессионально.</p></div>`},
+// 30. Акты гос. инспектора труда
+{kicker:"Чем заканчивается проверка?", render:()=>`
+  <h2 class="section-title">Акты государственного инспектора труда</h2>
+  <div class="grid cols-2">
+    ${infoCard("1. Предписание","")}
+    ${infoCard("2. Протокол об административном правонарушении","")}
+    ${infoCard("3. Постановление о прекращении производства","по делу об административном правонарушении")}
+    ${infoCard("4. Постановление по делу об административном правонарушении","")}
+    ${infoCard("5. Заключение государственного инспектора труда","")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Акты инспектора — это правовые меры воздействия на нарушения трудового законодательства.</b></p>`},
+// 31. Предписание инспектора
+{kicker:"Предписание: восстановить законность", render:()=>`
+  <h2 class="section-title">Предписание инспектора</h2>
+  ${numList(["об устранении нарушений трудового законодательства","о проведении профилактических работ по безопасности и охране труда","о приостановлении деятельности производств, цехов, участков, рабочих мест, оборудования или деятельности в целом","о выплате работодателем заработной платы"])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin:10px 0;">Что важнее в предписании: наказать работодателя или восстановить нарушенное право?</p>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;">Предписание направлено прежде всего на устранение нарушения и восстановление трудовых прав.</div>`},
+// 32. Статистика контроля
+{kicker:"Контроль в цифрах", render:()=>`
+  <h2 class="section-title">Статистика контроля: что показывают цифры?</h2>
+  <div class="grid cols-4">
+    ${statCard("6 632","проверок в 2025 году")}
+    ${statCard("8 720","нарушений (в сфере труда — 7 089; по безопасности труда — 1 585; занятости — 46)")}
+    ${statCard("4 258","предписаний")}
+    ${statCard("2 594","штрафов на сумму 536,6 млн тенге")}
+  </div>
+  <div class="grid cols-2" style="margin-top:16px;">
+    ${statCard("62,8 тыс.","работников, чьи права защищены")}
+    ${statCard("1 345 / 188","пострадало на предприятиях / из них погибло")}
+  </div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin:14px 0 10px;">Что эти цифры говорят о реальном состоянии трудовых прав?</p>
+  <div class="card navy"><p style="color:#fff;">Государственный контроль нужен не абстрактно: за каждой цифрой стоят конкретные работники, зарплаты, травмы и жизни.</p></div>`},
+// 33. Задолженность по зарплате
+{kicker:"Невыплата зарплаты — тест эффективности", render:()=>`
+  <h2 class="section-title">Задолженность по заработной плате</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>2024 год</h3><p>296 предприятий · 18,8 тыс. работников · более 4,5 млрд тенге задолженности · 251 предписание · 51 млн тенге штрафов · защищены права более 17,7 тыс. работников · выплачено 3,7 млрд тенге.</p></div>
+    <div class="card"><h3>2025 год</h3><p>629 предприятий · 11,9 тыс. работников · более 3,1 млрд тенге задолженности · 4245 предписаний · 524,3 млн тенге штрафов · защищены права более 11,8 тыс. работников · выплачено 2,85 млрд тенге.</p></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Задолженность по зарплате показывает, что контроль — это не бюрократия, а механизм возвращения работнику заработанного.</b></p>`},
+// 34. Формы гос. контроля
+{kicker:"Две формы контроля", render:()=>`
+  <h2 class="section-title">Формы государственного контроля</h2>
+  ${verticalFlow(["Государственный контроль за соблюдением трудового законодательства","1. Проверки (внеплановые проверки)","2. Профилактический контроль с посещением субъекта контроля"])}
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Государственная инспекция труда наделена только функциями государственного контроля и действует через внеплановую проверку и профилактический контроль с посещением.</div>`},
+// 35. Проверка vs профилактический контроль
+{kicker:"Наказать или предупредить?", render:()=>`
+  <h2 class="section-title">Проверка и профилактический контроль: в чём отличие?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Проверка</h4><ul><li>проводится по конкретным основаниям</li><li>может завершиться административным производством</li><li>возможен протокол и постановление по делу</li><li>направлена на устранение и ответственность</li></ul></div>
+    <div class="branch right"><h4>Профилактический контроль с посещением</h4><ul><li>направлен на профилактику</li><li>даёт рекомендации и выявляет причины нарушений</li><li>по результатам составляется предписание</li><li>дело об административном правонарушении не возбуждается</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Профилактический контроль — это попытка предупредить нарушение до наступления серьёзного вреда.</b></p>`},
+// 36. Основания внеплановой проверки
+{kicker:"Когда инспектор может прийти?", maxStep:9, render:(stage)=>{
+  const items=["неисполнение предписания по результатам профилактического контроля","обращения физических и юридических лиц о конкретных фактах нарушений","причинение вреда жизни, здоровью или законным интересам","информация о смерти","поручения органов прокуратуры","обращения государственных органов","встречная проверка","повторная проверка","поручение органа уголовного преследования"];
+  return `<h2 class="section-title">Основания внеплановой проверки</h2>
+  ${numList(items.slice(0,stage))}
+  ${stepHint(stage,9)}
+  ${stage>=9?`<div class="card navy" style="margin-top:10px;"><p style="color:#fff;">Важно: анонимные обращения не являются основанием для внеплановой проверки.</p></div><p class="lede" style="margin-top:8px;"><b>Внеплановая проверка должна иметь конкретный факт, предмет и основание.</b></p>`:""}`;
+}},
+// 37. Пределы проверки
+{kicker:"Инспектор проверяет предмет, а не всё", render:()=>`
+  <h2 class="section-title">Пределы проверки</h2>
+  ${numList(["основание проверки","предмет проверки","конкретный субъект","конкретный объект","конкретные факты","акт о назначении проверки"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Инспектор не вправе выходить за пределы предмета проверки.</div>
+  <p class="note" style="margin-top:8px;">Почему это важно для защиты бизнеса от произвольного вмешательства? Законность контроля защищает не только работника, но и работодателя.</p>`},
+// 38. Порядок проведения проверки
+{kicker:"Процедура имеет значение", render:()=>`
+  <h2 class="section-title">Порядок проведения проверки</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Возникновение основания")}
+    ${timelineStep(2,"Акт о назначении проверки или профилактического контроля")}
+    ${timelineStep(3,"Регистрация акта в органе правовой статистики и специальных учётов")}
+    ${timelineStep(4,"Извещение субъекта контроля")}
+    ${timelineStep(5,"Проведение проверки в пределах предмета")}
+    ${timelineStep(6,"Запрос документов и объяснений")}
+    ${timelineStep(7,"Акт о результатах проверки")}
+    ${timelineStep(8,"Предписание / протокол / постановление / заключение")}
+    ${timelineStep(9,"Возможность обжалования")}
+  </div>
+  <p class="lede" style="margin-top:6px;"><b>Даже благородная цель защиты работников не отменяет необходимости соблюдать процедуру.</b></p>`},
+// 39. Сроки проверки
+{kicker:"Сколько может длиться проверка?", render:()=>`
+  <h2 class="section-title">Сроки проверки</h2>
+  <div class="grid cols-3">
+    ${infoCard("Микропредпринимательство","не более 5 рабочих дней с возможностью продления до 5 рабочих дней")}
+    ${infoCard("Малый, средний и крупный бизнес","внеплановая проверка — не более 10 рабочих дней с возможностью продления до 10 рабочих дней")}
+    ${infoCard("Профилактический контроль с посещением","не более 15 рабочих дней с возможностью продления до 15 рабочих дней")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Сроки проверки ограничивают вмешательство государства и дисциплинируют сам контрольный орган.</b></p>`},
+// 40. Недействительность и обжалование
+{kicker:"Если проверка проведена незаконно", render:()=>`
+  <h2 class="section-title">Недействительность проверки и обжалование</h2>
+  ${numList(["грубые нарушения порядка проверки","признание проверки недействительной","отмена акта проверки","отмена предписания","обжалование действий или бездействия инспектора","обращение к вышестоящему инспектору","обращение в суд"])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Государственный контроль должен быть эффективным, но не произвольным.</div>`},
+// 41. Риск-ориентированный подход
+{kicker:"Контроль идёт туда, где выше риск", render:()=>`
+  <h2 class="section-title">Риск-ориентированный подход</h2>
+  ${verticalFlow(["Критерии оценки степени риска","1. Объективные критерии","2. Субъективные критерии"])}
+  <div class="risk-scale" style="margin-top:16px;">
+    <div style="flex:31;background:#585c63;">0–30 · низкий</div>
+    <div style="flex:40;background:#123058;">31–70 · средний</div>
+    <div style="flex:30;background:#c8102e;">71–100 · высокий</div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Риск-ориентированный подход должен концентрировать контроль там, где нарушения наиболее вероятны и опасны.</b></p>`},
+// 42. Объективные критерии риска
+{kicker:"Какие сферы высокорисковые?", maxStep:3, render:(stage)=>{
+  const items=[
+    riskCard("Высокий риск","горнодобывающая промышленность и разработка карьеров · электроснабжение, газ, пар, кондиционирование · обрабатывающая промышленность · транспорт и складирование · строительство · водоснабжение, канализация, отходы · информация и связь · сельское, лесное и рыбное хозяйство · привлечение иностранной рабочей силы свыше 30 человек","high"),
+    riskCard("Средний риск","здравоохранение · образование · культура · спорт · социальное обеспечение · торговля · проживание и питание","medium"),
+    riskCard("Низкий риск","непроизводственная офисная сфера","low"),
+  ];
+  return `<h2 class="section-title">Объективные критерии риска</h2>
+  ${steps(stage,items)}
+  ${stepHint(stage,3)}
+  ${stage>=3?`<p class="lede" style="margin-top:10px;"><b>Риск связан не только с количеством работников, но и с характером деятельности, угрозами жизни и здоровью, отраслевой спецификой.</b></p>`:""}`;
+}},
+// 43. Виды нарушений
+{kicker:"Не все нарушения одинаковы", render:()=>`
+  <h2 class="section-title">Виды нарушений</h2>
+  <div class="grid cols-3">${infoCard("1. Грубые нарушения","")}${infoCard("2. Значительные нарушения","")}${infoCard("3. Незначительные нарушения","")}</div>
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Для субъектов с высокой степенью риска выделяется 41 вид нарушений: 8 незначительных, 18 значительных, 15 грубых.</p></div>
+  <p class="lede" style="margin-top:10px;"><b>Одно грубое нарушение может приравнять показатель риска к 100.</b></p>
+  <p class="note">Риск-ориентированный контроль должен отличать техническую ошибку от угрозы жизни, здоровью и базовым трудовым правам.</p>`},
+// 43a. Виды нарушений трудового законодательства по санкциям
+{kicker:"Виды нарушений по санкциям", render:()=>`
+  <h2 class="section-title">Виды нарушений трудового законодательства по санкциям</h2>
+  <div class="grid cols-3">
+    <div class="card">
+      <h3>1. Без санкций по УК РК и КоАП</h3>
+      ${verticalFlow(["Государственный контроль за соблюдением трудового законодательства","Предписание"])}
+      <p style="font-size:12px;color:var(--burgundy);font-weight:600;margin-top:10px;">В случае неисполнения — переход к административной ответственности →</p>
+    </div>
+    <div class="card">
+      <h3>2. Санкции по КоАП РК</h3>
+      ${verticalFlow(["ГИТ составляет: 1. Протокол об административном правонарушении","2. Постановление по делу об административном правонарушении"])}
+      <p class="note" style="margin-top:10px;">Пример: ст. 462 КоАП — воспрепятствование должностным лицам государственных инспекций и органов государственного контроля и надзора в выполнении ими служебных обязанностей, невыполнение постановлений, предписаний и иных требований.</p>
+    </div>
+    <div class="card">
+      <h3>3. Санкции по УК РК</h3>
+      ${numList(["Дела частного обвинения → суд","Дела частно-публичного обвинения → ОВД + суд","Дела публичного обвинения"])}
+    </div>
+  </div>
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Чем серьёзнее нарушение трудового законодательства, тем выше уровень публично-правовой ответственности: от предписания — к административному производству — и к уголовному преследованию.</div>`},
+// 44. Кейс: что должен сделать юрист
+{kicker:"Юрист между работодателем и инспекцией", render:()=>`
+  <h2 class="section-title">Кейс: что должен сделать юрист?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«В компанию пришло уведомление о внеплановой проверке по жалобе работника о невыплате заработной платы и нарушении правил охраны труда. Руководитель просит юриста “не пускать инспектора”, “не показывать документы” и “сказать, что все это вмешательство в бизнес”».</i></p></div>
+  ${revealBox('case-lawyer','Что должен сделать профессиональный юрист?','Проверить основание и предмет проверки; проверить акт о назначении и регистрацию; установить сроки и полномочия инспектора; подготовить документы; не препятствовать законной проверке; защитить процессуальные права работодателя; одновременно оценить реальные нарушения; предложить меры устранения; обеспечить выплату задолженности и безопасность работников; при незаконных действиях инспектора — обжаловать.')}
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;">Юрист по трудовому праву не должен быть юристом сокрытия нарушений. Он должен быть юристом законности, баланса и предупреждения рисков.</div>`},
+// 45. Главная идея занятия
+{kicker:"Главная идея занятия", render:()=>`
+  <h2 class="section-title">Главная идея занятия</h2>
+  <div class="card burgundy" style="font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);margin-bottom:14px;">«Права работников требуют не только норм, но и институтов реализации».</div>
+  <p class="lede">Государственная политика задаёт направление, государственное регулирование устанавливает правила, государственный контроль проверяет их соблюдение, а государственная инспекция труда обеспечивает оперативную защиту трудовых прав.</p>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(13.5px,1.9vw,16px);">Без эффективного контроля трудовое право рискует остаться декларацией. Но без законной процедуры сам контроль может превратиться в произвол. Поэтому задача юриста — удерживать баланс защиты работника, прав работодателя и публичного интереса.</p></div>
+  ${qrZone("exit5","Exit ticket — форма ответа","https://forms.gle/")}`},
+];
+
+/* ============================================================
+   ТРЕНАЖЁРЫ (16)
+   ============================================================ */
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey];
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+const SORT_T2_ITEMS=[
+  ["Стратегия развития трудовых отношений","policy"],["Концепция социального развития","policy"],["разработка приоритетов занятости","policy"],["Национальный доклад о труде","policy"],
+  ["установление минимальной заработной платы","reg"],["нормы о рабочем времени","reg"],
+  ["проведение проверки","control"],["выдача предписания","control"],["анализ причин производственного травматизма","control"],["проверочный лист","control"],["административный штраф","control"],
+];
+const SORT_T2_BUCKETS=[{key:"policy",label:"Государственная политика"},{key:"reg",label:"Государственное регулирование"},{key:"control",label:"Государственный контроль"}];
+
+const SORT_T3_ITEMS=[
+  ["Правительство РК","gov"],
+  ["Министерство труда и социальной защиты населения РК","mtszn"],
+  ["Комитет государственной инспекции труда","committee"],
+  ["местные исполнительные органы","local"],
+  ["местные органы по инспекции труда","localinsp"],
+  ["государственный инспектор труда","inspector"],
+];
+const SORT_T3_BUCKETS=[
+  {key:"gov",label:"Разрабатывает основные направления политики"},
+  {key:"mtszn",label:"Реализует государственную политику в области труда"},
+  {key:"committee",label:"Организует государственный контроль"},
+  {key:"local",label:"Осуществляет государственный контроль на местах"},
+  {key:"localinsp",label:"Рассматривает обращения работников и работодателей"},
+  {key:"inspector",label:"Выдаёт обязательные предписания"},
+];
+
+const MSEL_T4=[
+  {text:"инспекция должна обеспечивать применение трудового законодательства",correct:true},
+  {text:"инспекция должна давать техническую информацию и советы",correct:true},
+  {text:"инспекция должна сообщать о пробелах и злоупотреблениях",correct:true},
+  {text:"инспектор всегда обязан заранее предупредить работодателя",correct:false},
+  {text:"инспектор должен сохранять конфиденциальность источника жалобы",correct:true},
+  {text:"инспектор может проверять документы",correct:true},
+  {text:"инспекция должна находиться под контролем центральной власти",correct:true},
+  {text:"инспектор не может задавать вопросы работникам",correct:false},
+  {text:"инспектор может требовать устранения угроз здоровью и безопасности",correct:true},
+];
+
+const T5_SITUATIONS=[
+  {q:"По жалобе работника выявлена невыплата заработной платы.",a:"Возможна внеплановая проверка, потому что есть конкретный факт нарушения прав работника."},
+  {q:"Орган инспекции труда проводит профилактическое мероприятие для предупреждения нарушений.",a:"Профилактический контроль с посещением, если он проводится в установленном порядке и по критериям риска."},
+  {q:"По результатам профилактического контроля выявлены нарушения, но административное дело не возбуждено.",a:"Это соответствует логике профилактического контроля: по его итогам выносится предписание без возбуждения дела об административном правонарушении."},
+  {q:"По результатам проверки составлен протокол об административном правонарушении.",a:"Это возможно по результатам проверки."},
+];
+
+const SORT_T6_ITEMS=[
+  ["анонимное обращение","no"],
+  ["жалоба работника о невыплате зарплаты","yes"],
+  ["информация о несчастном случае со смертельным исходом","yes"],
+  ["поручение прокуратуры","yes"],
+  ["желание инспектора проверить компанию без конкретного факта","no"],
+  ["повторная проверка по жалобе субъекта контроля","yes"],
+  ["обращение госоргана о фактах угрозы жизни и здоровью","yes"],
+  ["встречная проверка","yes"],
+];
+const SORT_T6_BUCKETS=[{key:"yes",label:"Может быть основанием"},{key:"no",label:"Не может быть основанием"}];
+
+const SORT_T8_ITEMS=[
+  ["работодатель не предоставляет документы","request"],
+  ["выявлена угроза жизни и здоровью работников","suspend"],
+  ["работникам выдают некачественные средства защиты","forbid"],
+  ["работники не прошли инструктаж по охране труда","order"],
+  ["есть признаки административного правонарушения","protocol"],
+  ["работодатель не исполняет предписание","court"],
+];
+const SORT_T8_BUCKETS=[
+  {key:"request",label:"Запросить документы и объяснения"},
+  {key:"suspend",label:"Приостановить участок или оборудование"},
+  {key:"forbid",label:"Запретить использование средств защиты"},
+  {key:"order",label:"Выдать предписание"},
+  {key:"protocol",label:"Составить протокол"},
+  {key:"court",label:"Направить материалы в суд"},
+];
+
+const MSEL_T9=[
+  {text:"своевременно и качественно проводить проверки",correct:true},
+  {text:"информировать работодателя о выявленных нарушениях",correct:true},
+  {text:"рассматривать обращения работников и работодателей",correct:true},
+  {text:"выявлять причины нарушений",correct:true},
+  {text:"не разглашать коммерческую тайну",correct:true},
+  {text:"проводить разъяснительную работу",correct:true},
+  {text:"действовать за пределами предмета проверки",correct:false},
+  {text:"раскрывать работодателю источник жалобы",correct:false},
+  {text:"требовать документы, не относящиеся к предмету проверки",correct:false},
+];
+
+const SORT_T10_ITEMS=[
+  ["нужно обязать работодателя выплатить заработную плату","predpisanie"],
+  ["выявлены признаки административного правонарушения","protocol"],
+  ["производство по делу прекращается","stop"],
+  ["по делу назначается административное взыскание","postanovlenie"],
+  ["требуется правовая позиция инспектора по трудовому вопросу","zakluchenie"],
+];
+const SORT_T10_BUCKETS=[
+  {key:"predpisanie",label:"Предписание"},
+  {key:"protocol",label:"Протокол об административном правонарушении"},
+  {key:"stop",label:"Постановление о прекращении производства"},
+  {key:"postanovlenie",label:"Постановление по делу об административном правонарушении"},
+  {key:"zakluchenie",label:"Заключение государственного инспектора труда"},
+];
+
+const SORT_T11_ITEMS=[
+  ["шахта","high"],["строительная компания","high"],["офисная юридическая фирма","low"],["IT-компания","high"],
+  ["школа","medium"],["больница","medium"],["ресторан","medium"],["транспортная компания","high"],
+  ["предприятие с иностранной рабочей силой более 30 человек","high"],["магазин одежды","medium"],
+];
+const SORT_T11_BUCKETS=[{key:"high",label:"Высокий риск"},{key:"medium",label:"Средний риск"},{key:"low",label:"Низкий риск"}];
+
+const T15_ANSWER="«Государственная инспекция труда не имеет большого значения, потому что трудовые отношения являются частным делом работника и работодателя. Если работник подписал трудовой договор, государство не должно вмешиваться. Проверки всегда незаконны, если работодатель против. Инспектор может проверять любые вопросы без ограничений и всегда сразу штрафовать работодателя. Международные конвенции МОТ об инспекции труда для Казахстана значения не имеют».";
+const T15_ERRORS=[
+ "Трудовые отношения не являются только частным делом сторон.",
+ "Трудовое право имеет частно-публичную природу.",
+ "Государственный контроль нужен для обеспечения трудовых гарантий.",
+ "Подписание трудового договора не отменяет обязанности соблюдать трудовое законодательство.",
+ "Проверки могут быть законными при наличии оснований и соблюдении процедуры.",
+ "Работодатель не может просто своим несогласием запретить законную проверку.",
+ "Инспектор не может проверять любые вопросы вне предмета проверки.",
+ "Инспектор не всегда сразу штрафует: профилактический контроль проводится без возбуждения административного производства.",
+ "Конвенции МОТ №81 и №129 имеют значение для Казахстана как ратифицированные международные договоры.",
+ "Государственный контроль должен быть одновременно эффективным и процедурно законным.",
+];
+
+const TRAINERS=[
+ {tag:"Тренажёр 1",title:"Зачем нужен государственный контроль?",desc:"Кейс с выбором и объяснением."},
+ {tag:"Тренажёр 2",title:"Политика, регулирование или контроль?",desc:"Сортировка карточек по трём видам воздействия."},
+ {tag:"Тренажёр 3",title:"Система органов",desc:"Кто за что отвечает — сопоставление."},
+ {tag:"Тренажёр 4",title:"Международный стандарт инспекции труда",desc:"Что требует МОТ — множественный выбор."},
+ {tag:"Тренажёр 5",title:"Проверка или профилактический контроль?",desc:"Сравнение четырёх ситуаций."},
+ {tag:"Тренажёр 6",title:"Основания внеплановой проверки",desc:"Может ли это быть основанием?"},
+ {tag:"Тренажёр 7",title:"Пределы проверки",desc:"Можно ли проверять всё?"},
+ {tag:"Тренажёр 8",title:"Права инспектора труда",desc:"Что может инспектор — сопоставление."},
+ {tag:"Тренажёр 9",title:"Обязанности инспектора труда",desc:"Кто контролирует контролёра?"},
+ {tag:"Тренажёр 10",title:"Акты государственного инспектора",desc:"Какой акт нужен — сопоставление."},
+ {tag:"Тренажёр 11",title:"Риск-ориентированный подход",desc:"Кого проверять в первую очередь?"},
+ {tag:"Тренажёр 12",title:"Проверка зарплатной задолженности",desc:"Как вернуть заработанное?"},
+ {tag:"Тренажёр 13",title:"Несчастный случай и угроза жизни",desc:"Когда контроль должен быть немедленным?"},
+ {tag:"Тренажёр 14",title:"Баланс контроля и предпринимательства",desc:"Защита работника или давление на бизнес?"},
+ {tag:"Тренажёр 15",title:"Проверь ответ искусственного интеллекта",desc:"AI-критика — найдите ошибки."},
+ {tag:"Тренажёр 16",title:"Главный вывод занятия",desc:"Финальная рефлексия — 15 открытых вопросов."},
+];
+
+function trainerBody(idx){
+  switch(idx){
+    case 0: return `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Зачем нужен государственный контроль?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«В организации работникам систематически задерживают заработную плату, но работодатель утверждает, что это внутреннее дело компании, поскольку работники сами согласились продолжать работу».</i></p></div>
+      <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Почему государственный контроль необходим в такой ситуации?</p>
+      ${choiceListFull("t1",["Потому что государство должно управлять всеми решениями работодателя.","Потому что без контроля трудовые гарантии могут остаться только на бумаге.","Потому что трудовой договор всегда недействителен.","Потому что работник не имеет никаких самостоятельных прав."],1,"Государственный контроль нужен для реального исполнения трудового законодательства, восстановления нарушенных прав и предупреждения дальнейших нарушений.")}`;
+    case 1: return `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Политика, регулирование или контроль?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по трём видам государственного воздействия.</p>
+      ${bucketSorter('t2', SORT_T2_ITEMS, SORT_T2_BUCKETS)}
+      <div class="note">Политика задаёт цели, регулирование устанавливает правила, контроль проверяет соблюдение этих правил.</div>`;
+    case 2: return `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Система органов</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите орган с его функцией.</p>
+      ${bucketSorter('t3', SORT_T3_ITEMS, SORT_T3_BUCKETS)}
+      <div class="note">Юрист должен понимать не только норму, но и компетенцию органа: кто вправе принять решение, провести проверку, выдать предписание или наложить взыскание.</div>`;
+    case 3: return `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Международный стандарт инспекции труда</h2>
+      <p class="lede" style="margin-bottom:14px;">Отметьте положения, которые соответствуют международным стандартам инспекции труда.</p>
+      ${multiSelectExercise('t4', MSEL_T4)}
+      <div class="explain-box info" style="margin-top:12px;">Международные стандарты делают инспекцию труда не формальным контролёром, а институтом эффективной защиты работников.</div>`;
+    case 4: return `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Проверка или профилактический контроль?</h2>
+      <p class="lede" style="margin-bottom:14px;">Определите, какая форма контроля применима в каждой ситуации.</p>
+      ${T5_SITUATIONS.map((s,i)=>revealBox('t5-'+i, `${i+1}. ${s.q}`, s.a)).join("")}
+      <div class="explain-box info">Главное различие между проверкой и профилактическим контролем — возможность возбуждения административного производства.</div>`;
+    case 5: return `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Основания внеплановой проверки</h2>
+      <p class="lede" style="margin-bottom:14px;">Разделите карточки: может быть основанием / не может быть основанием.</p>
+      ${bucketSorter('t6', SORT_T6_ITEMS, SORT_T6_BUCKETS)}
+      <div class="note">Внеплановая проверка должна быть связана с конкретными фактами и обстоятельствами. Анонимные обращения и произвольное желание проверить компанию не являются достаточным основанием.</div>`;
+    case 6: return `<div class="kicker">Тренажёр 7</div><h2 class="section-title">Пределы проверки</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Инспектор пришёл по жалобе о невыплате заработной платы, но дополнительно решил проверить все вопросы охраны труда, миграционного учёта, персональных данных и налоговой отчётности».</i></p></div>
+      <label class="q">Как определяется предмет внеплановой проверки?</label>${answerBox('t7-q1')}
+      <label class="q">Может ли инспектор выходить за пределы основания проверки?</label>${answerBox('t7-q2')}
+      <label class="q">Почему пределы проверки важны?</label>${answerBox('t7-q3')}
+      <label class="q">Как должен действовать юрист работодателя?</label>${answerBox('t7-q4')}
+      <label class="q">Как не превратить защиту процедуры в сокрытие реальных нарушений?</label>${answerBox('t7-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Инспектор должен действовать в пределах предмета проверки. Но если реальные нарушения есть, юрист должен не только защищать процессуальные права работодателя, но и организовать устранение нарушений.</div>`;
+    case 7: return `<div class="kicker">Тренажёр 8</div><h2 class="section-title">Права инспектора труда</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите ситуацию с полномочием инспектора.</p>
+      ${bucketSorter('t8', SORT_T8_ITEMS, SORT_T8_BUCKETS)}
+      <div class="note">Полномочия инспектора должны быть соразмерны нарушению и направлены на восстановление законности и предотвращение вреда.</div>`;
+    case 8: return `<div class="kicker">Тренажёр 9</div><h2 class="section-title">Обязанности инспектора труда</h2>
+      <p class="lede" style="margin-bottom:14px;">Отметьте, какие из перечисленного являются обязанностями государственного инспектора труда.</p>
+      ${multiSelectExercise('t9', MSEL_T9)}
+      <div class="explain-box info" style="margin-top:12px;">Контроль должен быть не только эффективным, но и законным. Инспектор защищает трудовые права, но его собственные действия также ограничены законом.</div>`;
+    case 9: return `<div class="kicker">Тренажёр 10</div><h2 class="section-title">Акты государственного инспектора</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите ситуацию с нужным актом инспектора.</p>
+      ${bucketSorter('t10', SORT_T10_ITEMS, SORT_T10_BUCKETS)}
+      <div class="note">Акты инспектора — это разные юридические инструменты. Юрист должен понимать их правовую природу, последствия и порядок обжалования.</div>`;
+    case 10: return `<div class="kicker">Тренажёр 11</div><h2 class="section-title">Риск-ориентированный подход</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите субъектов по степени риска.</p>
+      ${bucketSorter('t11', SORT_T11_ITEMS, SORT_T11_BUCKETS)}
+      <div class="note">Риск-ориентированный подход должен направлять ограниченные ресурсы инспекции туда, где выше вероятность вреда жизни, здоровью и трудовым правам.</div>`;
+    case 11: return `<div class="kicker">Тренажёр 12</div><h2 class="section-title">Проверка зарплатной задолженности</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работодатель задерживает заработную плату 50 работникам в течение двух месяцев. Работники боятся обращаться в суд, но один из них подал обращение в инспекцию труда».</i></p></div>
+      <label class="q">Почему невыплата заработной платы является основанием для вмешательства государства?</label>${answerBox('t12-q1')}
+      <label class="q">Какую форму контроля может использовать инспекция?</label>${answerBox('t12-q2')}
+      <label class="q">Какие документы может запросить инспектор?</label>${answerBox('t12-q3')}
+      <label class="q">Какой акт может быть вынесен?</label>${answerBox('t12-q4')}
+      <label class="q">Что должен сделать HR-юрист работодателя?</label>${answerBox('t12-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Невыплата заработной платы затрагивает базовое трудовое право работника. Инспекция может провести проверку, запросить документы, вынести предписание о выплате заработной платы и при наличии оснований применить меры административного реагирования.</div>`;
+    case 12: return `<div class="kicker">Тренажёр 13</div><h2 class="section-title">Несчастный случай и угроза жизни</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«На производстве произошёл несчастный случай. Есть риск повторной травмы, оборудование неисправно, часть работников не прошла инструктаж».</i></p></div>
+      <label class="q">Какие трудовые права и гарантии затронуты?</label>${answerBox('t13-q1')}
+      <label class="q">Какие полномочия есть у инспектора?</label>${answerBox('t13-q2')}
+      <label class="q">Может ли инспектор приостановить участок или оборудование?</label>${answerBox('t13-q3')}
+      <label class="q">Почему здесь важна оперативность?</label>${answerBox('t13-q4')}
+      <label class="q">Как соотносятся права бизнеса и защита жизни работников?</label>${answerBox('t13-q5')}
+      <div class="explain-box info" style="margin-top:12px;">При угрозе жизни и здоровью работников государственный контроль должен быть оперативным. Инспектор может требовать устранения нарушений, приостанавливать опасные участки или оборудование и выдавать обязательные предписания.</div>`;
+    case 13: return `<div class="kicker">Тренажёр 14</div><h2 class="section-title">Баланс контроля и предпринимательства</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работодатель утверждает, что любые проверки вредят бизнесу. Работники утверждают, что без проверок работодатель не соблюдает нормы об оплате труда и охране труда».</i></p></div>
+      <label class="q">Сформулируйте сбалансированную правовую позицию.</label>${answerBox('t14-q1')}
+      <div class="explain-box info" style="margin-top:12px;">Сильная правовая позиция не сводится к лозунгу «за работников» или «за бизнес». Она удерживает законность, эффективность контроля и реальную защиту трудовых прав: контроль необходим, но не должен быть произвольным; должны соблюдаться основания, предмет, сроки и процедура проверки; работодатель имеет право на обжалование; работник — на эффективную защиту; государство должно концентрировать контроль на рисках.</div>`;
+    case 14: return `<div class="kicker">Тренажёр 15</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+      <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:13.5px;">${T15_ANSWER}</p></div>
+      <p class="lede" style="margin-bottom:12px;"><b>Задание:</b> найдите минимум 8 ошибок в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+      ${T15_ERRORS.map((e,i)=>`<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;"><input type="checkbox" ${state.ai15[i]?'checked':''} onchange="state.ai15[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}</label>`).join("")}
+      <div class="explain-box ok" style="margin-top:12px;">ИИ смешал частную автономию, публичный контроль и полномочия инспектора. Юрист должен видеть баланс: трудовые права требуют контроля, но сам контроль должен осуществляться в пределах закона.</div>`;
+    case 15: {
+      const qs=[["r1","Почему государственное регулирование необходимо в сфере труда?"],["r2","Чем государственная политика отличается от государственного регулирования?"],["r3","Почему государственный контроль важен для защиты трудовых прав?"],["r4","Какие органы входят в систему государственного регулирования в сфере труда?"],["r5","Почему инспекция труда является важнейшим элементом системы трудового права?"],["r6","Какие международные обязательства Казахстана связаны с инспекцией труда?"],["r7","В чём значение Конвенций МОТ №81 и №129?"],["r8","Какие задачи выполняет инспекция труда по международным стандартам?"],["r9","Чем проверка отличается от профилактического контроля с посещением?"],["r10","Почему предварительное уведомление может снижать эффективность контроля?"],["r11","Какие акты может выносить государственный инспектор труда?"],["r12","Что такое риск-ориентированный подход?"],["r13","Почему контроль должен быть одновременно эффективным и законным?"],["r14","Как юрист должен действовать при проверке работодателя?"],["r15","Как государственный контроль связан с миссией трудового права?"]];
+      return `<div class="kicker">Тренажёр 16</div><h2 class="section-title">Главный вывод занятия</h2>
+      <p class="lede" style="margin-bottom:14px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия занятия.</p>
+      ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+      <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+        <span class="note" id="export-status" style="margin:0;"></span>
+      </div>
+      <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+    }
+    default: return '';
+  }
+}
+function buildAnswersText(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Занятие №5. Государственное регулирование и контроль в сфере труда\nКурс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Тренажёр 12 (задолженность по зарплате) —\n";
+  ["t12-q1","t12-q2","t12-q3","t12-q4","t12-q5"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  out += "\n— Тренажёр 16 (финальная рефлексия) —\n";
+  ["r1","r2","r3","r4","r5","r6","r7","r8","r9","r10","r11","r12","r13","r14","r15"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  return out;
+}
+window.exportAnswers=async function(){
+  const out = buildAnswersText();
+  const status = document.getElementById('export-status');
+  if(window.claude && window.claude.use){
+    try{
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:"otvety-zanyatie5-trudovoe-pravo.txt", data: out});
+        if(status) status.textContent = 'Файл сохранён.';
+        return;
+      }
+    }catch(e){ /* fall through */ }
+  }
+  try{
+    const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "otvety-zanyatie5-trudovoe-pravo.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    if(status) status.textContent = 'Файл сохранён.';
+  }catch(e){
+    try{ await navigator.clipboard.writeText(out); if(status) status.textContent = 'Ответы скопированы в буфер обмена.'; }
+    catch(e2){ if(status) status.textContent = 'Не удалось сохранить — выделите текст ответов вручную.'; }
+  }
+};
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{}, rankings:{}, rankChecked:{}, multiSel:{}, multiSelChecked:{}, ai15:{}, refl:{}};
+if(!state.sorters) state.sorters={};
+['t2','t3','t6','t8','t10','t11'].forEach(k=>{ if(!state.sorters[k]) state.sorters[k]={}; });
+if(!state.rankings) state.rankings={};
+if(!state.rankChecked) state.rankChecked={};
+if(!state.multiSel) state.multiSel={};
+if(!state.multiSelChecked) state.multiSelChecked={};
+if(!state.ai15) state.ai15={};
+function save(){try{localStorage.setItem('mnu_labor_law_lesson5',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_lesson5');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goToPolicy(){ currentScreen='presentation'; currentTrainer=null; goSlide(6,'full'); }
+function goToOrgans(){ currentScreen='presentation'; currentTrainer=null; goSlide(17,'full'); }
+function goToInspection(){ currentScreen='presentation'; currentTrainer=null; goSlide(21,'full'); }
+function goToControlForms(){ currentScreen='presentation'; currentTrainer=null; goSlide(34,'full'); }
+function goToRisk(){ currentScreen='presentation'; currentTrainer=null; goSlide(41,'full'); }
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Занятие №5 · Государственное регулирование и контроль в сфере труда</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Занятие №5. Государственное регулирование в области трудовых отношений. Контроль за соблюдением трудового законодательства</p>
+      <p class="cover-question">Как государство превращает трудовые права из текста закона в реально работающие гарантии?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goToPolicy()">К государственной политике</button>
+        <button class="btn btn-outline" onclick="goToOrgans()">К системе органов</button>
+        <button class="btn btn-outline" onclick="goToInspection()">К инспекции труда</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">К тренажёрам</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта занятия</button>
+        <button class="btn btn-outline" onclick="openTrainer(15)">Финальная рефлексия</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика занятия</div>
+    <h2 class="section-title">Сегодня мы изучаем публичный механизм защиты трудовых прав</h2>
+    <p class="lede" style="margin-bottom:24px;">Государственное регулирование задаёт правила, а государственный контроль проверяет, работают ли эти правила в реальной организации труда.</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo('presentation')">Перейти к презентации →</button></div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('map')">К карте понимания →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. «Система органов» — слайды 17–20. «Инспекция труда» — слайды 21–33. «Формы контроля» — слайды 34–40. «Риск-подход» — слайды 41–43.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 4</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:24px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, аргументировать и делать вывод о государственном регулировании и контроле в сфере труда.</p>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+function screenMap(){
+  const nodes=["Миссия трудового права","Защита слабой стороны","Частно-публичная природа трудового права","Государственная политика в области труда","Стратегии + концепции + программы + Национальный доклад о труде","Государственное регулирование","Минимальные социальные стандарты","Система государственных органов","Правительство РК","МТСЗН РК","Комитет государственной инспекции труда","Местные органы по инспекции труда","Государственные инспекторы труда","Международные стандарты инспекции труда","Конвенции МОТ №81 и №129","Государственный контроль","Внеплановые проверки + профилактический контроль с посещением","Критерии оценки степени риска","Права и обязанности инспектора","Акты инспектора","Восстановление нарушенных трудовых прав"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 5</div>
+    <h2 class="section-title">Карта понимания: государственное регулирование и контроль в сфере труда</h2>
+    ${verticalFlow(nodes,{final:"Баланс защиты работника, прав работодателя и публичного интереса"})}
+    <div class="quote-slide" style="margin-top:22px;padding:28px 22px;"><blockquote style="font-size:clamp(14px,1.9vw,17px);">«Государственное регулирование устанавливает минимальные правила, государственный контроль обеспечивает их реальное соблюдение, а юрист удерживает баланс между защитой трудовых прав и законностью публичного вмешательства».</blockquote></div>
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('after')">К самостоятельной работе →</button></div>
+  </div>`;
+}
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 6</div>
+    <h2 class="section-title">После занятия</h2>
+    <p class="lede" style="margin-bottom:22px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:18px;">
+      <div class="card"><h3>1. Повторить</h3><p>Понятие государственной политики в области труда · государственную политику как комплекс целей, мер, задач и программ · статические и динамические средства политики · стратегические документы в сфере труда · проблему отсутствия единого программного документа · идею Концепции развития социально-трудовых отношений · Национальный доклад о труде · систему государственных органов в сфере труда · Правительство РК · уполномоченный государственный орган по труду · местные исполнительные органы · Комитет государственной инспекции труда · местные органы по инспекции труда · государственную инспекцию труда · международные обязательства Казахстана по Конвенциям МОТ №81 и №129 · задачи инспекции труда по международным стандартам · стандарты работы инспекции труда · противоречия между международными стандартами и национальными ограничениями проверок · правовой статус государственной инспекции труда · права и обязанности государственных инспекторов труда · акты государственного инспектора труда · формы государственного контроля · внеплановую проверку · профилактический контроль с посещением · основания внеплановой проверки · пределы проверки · порядок проведения проверки · сроки проверки · основания недействительности проверки · обжалование действий и актов инспектора труда · критерии оценки степени риска · объективные и субъективные критерии · грубые, значительные и незначительные нарушения · проверочные листы · статистику государственного контроля · проблему задолженности по заработной плате · баланс защиты работников и прав работодателей.</p></div>
+      <div class="card"><h3>2. Подумать</h3><p>Почему трудовое право не может ограничиваться установлением гарантий, если государство не создаёт эффективный механизм контроля за их соблюдением?</p></div>
+      <div class="card"><h3>3. Мини-задание</h3><p>Составьте схему системы государственных органов в сфере труда: Правительство РК, МТСЗН РК, Комитет государственной инспекции труда, местные органы по инспекции труда, государственные инспекторы труда. Для каждого элемента укажите одну ключевую функцию.</p></div>
+      <div class="card"><h3>4. Практическое задание</h3><p>Работник подал жалобу о невыплате заработной платы. Определите: какая форма контроля возможна, какие документы должен запросить инспектор, какой акт может быть вынесен и какие действия должен предпринять HR-юрист работодателя.</p></div>
+      <div class="card"><h3>5. Международное задание</h3><p>Сравните международный стандарт Конвенции МОТ №81 о доступе инспектора без предварительного уведомления с национальными требованиями о предварительном извещении субъекта контроля. Сформулируйте правовую проблему и возможный баланс интересов.</p></div>
+      <div class="card"><h3>6. Аналитическое задание</h3><p>Оцените идею Национального доклада о труде. Какие данные он должен включать, кто должен участвовать в его подготовке и как он может повлиять на качество государственной политики в области труда?</p></div>
+      <div class="card"><h3>7. AI-задание</h3><p>Спросите ИИ: «Может ли государственная инспекция труда прийти к работодателю с проверкой и какие права есть у инспектора?» Затем критически проверьте ответ с позиции ТК РК, Предпринимательского кодекса, Конвенций МОТ №81 и №129, а также принципа баланса защиты работника и законности контроля.</p></div>
+    </div>
+    ${qrZone("canvas5","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="margin-top:16px;">${qrZone("tkrk5","Ссылка на Трудовой кодекс РК","https://")}</div>
+    <div style="margin-top:16px;">${qrZone("predprk5","Ссылка на Предпринимательский кодекс РК","https://")}</div>
+    <div style="margin-top:16px;">${qrZone("task5","Ссылка на самостоятельное задание","https://")}</div>
+    <div style="text-align:center;margin-top:26px;"><button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button></div>
+  </div>`;
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 12 + (state.slide/(SLIDES.length-1))*58; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,8,12,78,90,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
