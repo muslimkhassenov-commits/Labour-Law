@@ -1955,7 +1955,7 @@ function screenPresentation(){
         ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('cases')">К судебной практике →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
       </div>
     </div>
-    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. Занятие 8.1 — слайды 7–38. Занятие 8.2 — слайды 39–62. Занятие 8.3 — слайды 63–81. Занятие 8.4 — слайды 82–112.</p>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. Занятие 8.1 — слайды 1–38. Занятие 8.2 — слайды 39–62. Занятие 8.3 — слайды 63–81. Занятие 8.4 — слайды 82–112.</p>
   </div>`;
 }
 function screenTrainers(){
@@ -2209,7 +2209,7 @@ let currentTrainer=null;
 function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
 function openCase(i){ currentScreen='cases'; state.currentCase=i; save(); render(); window.scrollTo({top:0,behavior:'smooth'}); }
-function goTo81(){ currentScreen='presentation'; currentTrainer=null; goSlide(6,'full'); }
+function goTo81(){ currentScreen='presentation'; currentTrainer=null; goSlide(0,'full'); }
 function goTo82(){ currentScreen='presentation'; currentTrainer=null; goSlide(38,'full'); }
 function goTo83(){ currentScreen='presentation'; currentTrainer=null; goSlide(62,'full'); }
 function goTo84(){ currentScreen='presentation'; currentTrainer=null; goSlide(81,'full'); }
