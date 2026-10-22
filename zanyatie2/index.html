@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Занятие №2. Метод и принципы трудового права</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU: презентация на 35 слайдов, 11 тренажёров юридического мышления и лендинг для занятия «Метод и принципы трудового права»." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.video-box{border:2px dashed #b9b2a1;border-radius:var(--radius);background:#efece3;padding:44px 20px;text-align:center;color:var(--graphite-soft);}
+.video-box .play{width:52px;height:52px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:19px;}
+.video-box b{display:block;color:var(--navy);font-size:14.5px;margin-bottom:4px;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.ladder{display:flex;flex-direction:column-reverse;gap:8px;max-width:520px;margin:0 auto;}
+.ladder .rung{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+.ladder .rung .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.85;font-weight:700;}
+
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.pyramid .level{border-radius:10px;padding:12px 14px;text-align:center;color:#fff;font-size:13px;font-weight:600;box-shadow:var(--shadow);}
+.pyramid .level small{display:block;font-weight:500;font-size:11.5px;opacity:.85;margin-top:3px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Занятие 2</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главная</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика занятия</button>
+    <button class="navbtn primary" onclick="goTo('presentation')">К презентации</button>
+    <button class="navbtn" onclick="goTo('trainers')">К тренажёрам</button>
+    <button class="navbtn" onclick="goTo('map')">Карта понимания</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+    <button class="navbtn ghost" onclick="openTrainer(10)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Занятие №2 · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ ЗАНЯТИЯ №2 — МЕТОД И ПРИНЦИПЫ ТРУДОВОГО ПРАВА
+   ============================================================ */
+const ROADMAP_NODES = ["Миссия трудового права","Фактическое неравенство","Метод правового регулирования","Предписание / запрет / дозволение","Императивность и диспозитивность","Централизованное и локальное регулирование","Договорное регулирование","Социальное партнёрство","Единство и дифференциация","Принципы трудового права","Применение в кейсах","Цифровые вызовы","Тренажёры"];
+
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function videoBox(title,caption){return `<div class="video-box"><div class="play">▶</div><b>${title}</b><div>${caption}</div></div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть эталонный ответ':'Показать эталонный ответ'}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt=(rightPct-leftPct)/8;
+  return `<div class="scale-wrap"><svg viewBox="0 0 320 180" width="260" height="150">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:260px;font-size:12.5px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div></div>`;
+}
+function compassSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#dfdbd2" stroke-width="1"/>
+    <polygon points="50,14 58,50 50,86 42,50" fill="#c8102e"/>
+    <polygon points="14,50 50,42 86,50 50,58" fill="#0c2340"/>
+    <circle cx="50" cy="50" r="4" fill="#7c1327"/>
+    <text x="50" y="10" text-anchor="middle" font-size="8" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">N</text>
+  </svg>`;
+}
+function mechanismSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <g fill="none" stroke="#0c2340" stroke-width="3">
+      <circle cx="38" cy="42" r="20"/>
+      <circle cx="70" cy="66" r="13"/>
+    </g>
+    <g fill="#7c1327">
+      <rect x="35" y="10" width="6" height="10"/><rect x="35" y="64" width="6" height="10"/>
+      <rect x="8" y="39" width="10" height="6"/><rect x="58" y="39" width="10" height="6"/>
+      <rect x="67" y="46" width="6" height="8" transform="rotate(45 70 66)"/>
+    </g>
+    <circle cx="38" cy="42" r="6" fill="#0c2340"/><circle cx="70" cy="66" r="4" fill="#0c2340"/>
+  </svg>`;
+}
+function trafficLightSVG(){
+  return `<svg viewBox="0 0 120 220" width="120" height="220" style="display:block;margin:0 auto;">
+    <rect x="20" y="10" width="80" height="200" rx="18" fill="#0c2340"/>
+    <circle cx="60" cy="55" r="26" fill="#c8102e"/>
+    <circle cx="60" cy="110" r="26" fill="#e8b23d"/>
+    <circle cx="60" cy="165" r="26" fill="#1f6f43"/>
+  </svg>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function ladderWidget(rungs){
+  const colors=["#0c2340","#123058","#585c63","#7c1327","#c8102e"];
+  return `<div class="ladder">${rungs.map((r,i)=>`<div class="rung" style="background:${colors[i%colors.length]};"><span>${r}</span><span class="tag">${i===0?'минимум':i===rungs.length-1?'может быть лучше':'≥ закона'}</span></div>`).join("")}</div>`;
+}
+function pyramidWidget(levels){
+  const widths=[100,80,60,42];
+  const colors=["#0c2340","#123058","#7c1327","#c8102e"];
+  return `<div class="pyramid">${levels.map((l,i)=>`<div class="level" style="width:${widths[i]||40}%;background:${colors[i]||'#585c63'};">${l.title}<small>${l.sub}</small></div>`).join("")}</div>`;
+}
+
+/* stepped reveal helper */
+function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
+function stepHint(stage,max){ return stage<max ? `<div class="step-hint">Нажмите «Далее» / клавишу клика, чтобы показать ещё (${stage}/${max})</div>` : ""; }
+
+/* ============================================================
+   СЛАЙДЫ (35)
+   ============================================================ */
+const SLIDES = [
+// 1
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:26px 0;">
+    <div class="logo-wrap" style="width:60px;height:60px;margin:0 auto 20px;"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Занятие №2</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое право Республики Казахстан</h1>
+    <p class="subtitle" style="margin:0 auto 18px;text-align:center;">Метод и принципы трудового права</p>
+    <p class="lede" style="margin:0 auto 20px;text-align:center;font-style:italic;">Как трудовое право регулирует зависимый труд?</p>
+    <div style="display:flex;justify-content:center;gap:28px;">${mechanismSVG(70)}${compassSVG(70)}</div>
+  </div>`},
+// 2
+{kicker:"Связь с занятием 1", render:()=>`
+  <h2 class="section-title">На первом занятии мы ответили на вопрос «зачем?»</h2>
+  ${numList(["Трудовое право возникает из фактического неравенства работника и работодателя.","Его миссия — баланс интересов через защиту более слабой стороны.","Оно очеловечивает рынок труда."])}
+  ${scaleSVG(30,70)}
+  <p class="lede" style="text-align:center;margin-top:10px;"><b>Сегодня вопрос другой: как именно право достигает этого баланса?</b></p>`},
+// 3
+{kicker:"Проблемный кейс", render:()=>`
+  <h2 class="section-title">Можно ли добровольно отказаться от трудовых гарантий?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Работник подписал трудовой договор, где указано: он согласен работать сверх нормальной продолжительности рабочего времени без дополнительной оплаты, не использовать ежегодный отпуск в первые два года и быть уволенным без объяснения причин по уведомлению работодателя за один день».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Если работник сам согласился, почему право может не признать такие условия?</p>
+  ${choiceListFull("case3",["Потому что трудовое право полностью запрещает договор.","Потому что в трудовом праве свобода договора ограничена государственными гарантиями.","Потому что работодатель всегда неправ.","Потому что письменный договор не имеет значения."],1,"Свобода договора есть, но она действует внутри императивных гарантий и принципа защиты более слабой стороны.")}`},
+// 4
+{kicker:"Главный вопрос", render:()=>`
+  <h2 class="section-title">Главный вопрос занятия</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(18px,2.6vw,24px);color:var(--navy);line-height:1.4;">«Как трудовое право регулирует отношения, в которых стороны формально равны при заключении договора, но работник затем оказывается в подчинении работодателю?»</p>
+  <p class="lede" style="margin-top:10px;"><b>Это вопрос о методе трудового права.</b></p>
+  <div class="fork" style="margin-top:16px;">
+    <div class="branch left"><h4>1. Заключение договора</h4><ul><li>формальное равенство сторон</li></ul></div>
+    <div class="branch right"><h4>2. Исполнение договора</h4><ul><li>организационное подчинение работника</li></ul></div>
+  </div>`},
+// 5
+{kicker:"Понятие метода", render:()=>`
+  <h2 class="section-title">Метод отвечает на вопрос «как?»</h2>
+  <p class="lede">Метод правового регулирования — это обусловленные предметом правового регулирования приёмы, способы и средства воздействия права на общественные отношения.</p>
+  <div class="grid cols-2" style="margin-top:14px;">${infoCard("Предмет","ЧТО регулируется?")}${infoCard("Метод","КАК регулируется?")}</div>`},
+// 6
+{kicker:"Предмет и метод отрасли", render:()=>`
+  <h2 class="section-title">Почему метод важен для самостоятельности отрасли?</h2>
+  <p class="lede">Каждая отрасль права обладает своим предметом и методом правового регулирования.</p>
+  ${flowRow(["Предмет","Метод","Принципы","Источники","Система институтов"])}
+  <p class="lede" style="margin-top:12px;"><b>Метод трудового права показывает, почему трудовое право нельзя полностью растворить ни в гражданском, ни в административном праве.</b></p>`},
+// 7
+{kicker:"Общерегулятивный метод", render:()=>`
+  <h2 class="section-title">Три базовых способа воздействия права</h2>
+  <div class="two-col" style="align-items:center;">
+    ${trafficLightSVG()}
+    <div class="grid" style="gap:10px;">
+      ${infoCard("Запрет","обязан воздержаться от действия")}
+      ${infoCard("Предписание","обязан совершить действие")}
+      ${infoCard("Дозволение","вправе совершить действие или воздержаться")}
+    </div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Эти способы реализуются через убеждение и принуждение.</b></p>`},
+// 8
+{kicker:"Предписание", render:()=>`
+  <h2 class="section-title">Предписание: право требует действия</h2>
+  ${numList(["Работодатель обязан заключить трудовой договор.","Работодатель обязан обеспечить безопасные условия труда.","Работодатель обязан вести учёт рабочего времени.","Работодатель обязан выплачивать заработную плату.","Работник обязан соблюдать трудовую дисциплину."])}
+  <p class="lede" style="margin-top:10px;"><b>Почему предписание особенно важно там, где одна сторона организационно сильнее другой?</b></p>`},
+// 9
+{kicker:"Запрет", render:()=>`
+  <h2 class="section-title">Запрет: право устанавливает красную линию</h2>
+  ${numList(["Запрет дискриминации.","Запрет принудительного труда.","Запрет наихудших форм детского труда.","Запрет ухудшать положение работника по сравнению с законодательством.","Запрет увольнения без законного основания и процедуры."])}
+  <p class="lede" style="margin-top:10px;"><b>Какие запреты в трудовом праве защищают не только работника, но и общественный порядок?</b></p>`},
+// 10
+{kicker:"Дозволение", render:()=>`
+  <h2 class="section-title">Дозволение: право оставляет пространство выбора</h2>
+  ${numList(["Стороны вправе согласовать дополнительные условия трудового договора.","Работники вправе объединяться.","Стороны вправе вести коллективные переговоры.","Работодатель вправе принимать локальные акты в пределах закона.","Стороны вправе улучшать положение работника по сравнению с законом."])}
+  <p class="lede" style="margin-top:10px;"><b>Почему трудовое право не может состоять только из запретов и обязанностей?</b></p>`},
+// 11
+{kicker:"Императивность / диспозитивность", render:()=>`
+  <h2 class="section-title">Два полюса регулирования</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Императивный метод</h4><ul><li>обязательные правила</li><li>минимальные гарантии</li><li>запреты</li><li>государственный контроль</li><li>защита слабой стороны</li></ul></div>
+    <div class="branch right"><h4>Диспозитивный метод</h4><ul><li>договорённость сторон</li><li>локальные правила</li><li>коллективные договоры</li><li>улучшение условий</li><li>гибкость</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Где граница между свободой договора и обязательными гарантиями?</b></p>`},
+// 12
+{kicker:"Недостаточность гражданского метода", render:()=>`
+  <h2 class="section-title">Почему нельзя оставить только свободу договора?</h2>
+  ${numList(["Работник зависит от заработной платы.","Работодатель контролирует организацию труда.","Стороны формально равны, но фактически различны.","Труд связан с личностью, временем, здоровьем и достоинством работника.","Договор может стать инструментом ухудшения положения слабой стороны."])}
+  <p class="lede" style="margin-top:10px;"><b>Диспозитивность нужна, но в трудовом праве она не может быть абсолютной.</b></p>`},
+// 13
+{kicker:"Недостаточность административного метода", render:()=>`
+  <h2 class="section-title">Почему нельзя регулировать труд только приказом государства?</h2>
+  ${numList(["Трудовые отношения возникают на основе договора.","Работник свободен распоряжаться способностями к труду.","Работодатель имеет законный интерес в организации производства.","Условия труда различаются по профессиям, отраслям и организациям.","Локальное и договорное регулирование позволяют учитывать специфику труда."])}
+  <p class="lede" style="margin-top:10px;"><b>Императивность нужна, но трудовое право не является чисто административным правом.</b></p>`},
+// 14
+{kicker:"Частно-публичная природа", render:()=>`
+  <h2 class="section-title">Трудовое право — частно-публичная отрасль</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Частное начало</h4><ul><li>договор</li><li>автономия воли</li><li>соглашение сторон</li><li>локальные условия</li><li>коллективные переговоры</li></ul></div>
+    <div class="branch right"><h4>Публичное начало</h4><ul><li>государственные гарантии</li><li>минимальные стандарты</li><li>запреты</li><li>контроль и надзор</li><li>защита прав</li></ul></div>
+  </div>
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;">Трудовое право соединяет договорную свободу и публичные гарантии.</div>`},
+// 15
+{kicker:"Конструкция метода", render:()=>`
+  <h2 class="section-title">Равенство при входе — подчинение в процессе</h2>
+  <div class="fork">
+    <div class="branch left"><h4>1. Возникновение отношения</h4><ul><li>работник и работодатель формально равны и свободно заключают договор</li></ul></div>
+    <div class="branch right"><h4>2. Исполнение отношения</h4><ul><li>работник включается в организацию труда и подчиняется внутреннему трудовому распорядку работодателя</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Метод трудового права должен одновременно учитывать договорное равенство и организационное подчинение.</b></p>`},
+// 16 — stepped
+{kicker:"Метод как система сочетаний", maxStep:4, render:(stage)=>`
+  <h2 class="section-title">Метод трудового права — это система сочетаний</h2>
+  <div class="grid cols-2" style="margin-top:8px;">${steps(stage,[
+    infoCard("1. Централизованное + локальное","регулирование"),
+    infoCard("2. Нормативное + договорное","регулирование"),
+    infoCard("3. Индивидуальное + коллективное","регулирование"),
+    infoCard("4. Единство + дифференциация","регулирования")
+  ])}</div>
+  ${stepHint(stage,4)}
+  ${stage>=4?`<div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;">В центре — баланс интересов.</p></div>`:""}`},
+// 17
+{kicker:"Централизованное / локальное", render:()=>`
+  <h2 class="section-title">Где устанавливаются правила труда?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Централизованное регулирование</h4><ul><li>Конституция</li><li>Трудовой кодекс</li><li>законы</li><li>подзаконные акты</li><li>международные стандарты</li></ul></div>
+    <div class="branch right"><h4>Локальное регулирование</h4><ul><li>акты работодателя</li><li>правила внутреннего трудового распорядка</li><li>положения об оплате труда</li><li>графики сменности</li><li>внутренние политики</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Государство задаёт рамку, организация конкретизирует её с учётом своей специфики.</b></p>
+  <p class="note">Интерактив: какие вопросы должны регулироваться законом, а какие — локальным актом работодателя?</p>`},
+// 18
+{kicker:"Нормативное / договорное", render:()=>`
+  <h2 class="section-title">Закон задаёт минимум, договор может улучшать</h2>
+  <div class="grid cols-2">${infoCard("Нормативное регулирование","общие обязательные правила для всех")}${infoCard("Договорное регулирование","индивидуальный трудовой договор, коллективный договор, соглашения социального партнёрства")}</div>
+  <div class="card burgundy" style="margin-top:14px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Договор в трудовом праве свободен только в пределах закона и принципа in favorem.</div>
+  <p class="lede" style="margin-top:10px;"><b>Может ли трудовой договор ухудшать положение работника по сравнению с законом?</b></p>`},
+// 19
+{kicker:"Принцип in favorem", render:()=>`
+  <h2 class="section-title">In favorem: только в сторону улучшения</h2>
+  <p class="lede" style="margin-bottom:14px;"><b>Акт работодателя, трудовой договор и коллективный договор не должны ухудшать положение работника по сравнению с трудовым законодательством.</b></p>
+  ${ladderWidget(["Закон = минимум","Соглашение","Коллективный договор","Трудовой договор","Локальный акт = может быть лучше"])}
+  <p class="note" style="text-align:center;margin-top:10px;">Отпуск больше минимального — можно. Отпуск меньше минимального — нельзя. Доплата выше минимальной — можно. Отказ от гарантий — нельзя.</p>`},
+// 20
+{kicker:"Участие работников", render:()=>`
+  <h2 class="section-title">Работники не только адресаты норм, но и участники регулирования</h2>
+  ${numList(["Представители работников.","Профсоюзы.","Коллективные переговоры.","Коллективный договор.","Участие в регулировании условий труда.","Контроль за соблюдением прав.","Защита трудовых прав."])}
+  <p class="lede" style="margin-top:10px;"><b>Коллективное участие — это способ компенсировать индивидуальную слабость работника.</b></p>
+  <p class="note">Почему один работник слабее в переговорах, чем коллектив работников?</p>`},
+// 21
+{kicker:"Единство и дифференциация", render:()=>`
+  <h2 class="section-title">Единство и дифференциация: одинаковое и разное регулирование</h2>
+  <div class="grid cols-2">${infoCard("Единство","общие гарантии для всех работников")}${infoCard("Дифференциация","особые правила для отдельных категорий работников, отраслей, условий труда, возраста, пола, состояния здоровья, характера работы")}</div>
+  ${numList(["Несовершеннолетние работники.","Беременные женщины и лица с семейными обязанностями.","Работники с вредными условиями труда.","Дистанционные работники.","Сезонные работники.","Государственные служащие.","Платформенная занятость."])}
+  <p class="note">Когда различное регулирование является справедливостью, а когда дискриминацией?</p>`},
+// 22
+{kicker:"Итоговая формула метода", render:()=>`
+  <h2 class="section-title">Метод трудового права</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);margin-bottom:14px;">Метод трудового права — это комплексный способ регулирования наёмного труда, основанный на сочетании частноправовых и публично-правовых начал.</div>
+  ${flowRow(["Дозволение + предписание + запрет","Договор + закон + локальный акт + соглашение","Единство + дифференциация","Баланс интересов"])}`},
+// 23
+{kicker:"Переход к принципам", render:()=>`
+  <h2 class="section-title">Метод показывает «как», принципы показывают «ради чего»</h2>
+  <p class="lede">Метод — это юридический механизм регулирования. Принципы — это исходные идеи, которые задают смысл, направление и пределы этого механизма.</p>
+  <div style="display:flex;justify-content:center;gap:40px;align-items:center;margin-top:16px;">
+    <div style="text-align:center;">${mechanismSVG(80)}<div style="font-weight:700;color:var(--navy);margin-top:6px;">Метод = механизм</div></div>
+    <div style="text-align:center;">${compassSVG(80)}<div style="font-weight:700;color:var(--navy);margin-top:6px;">Принципы = компас</div></div>
+  </div>`},
+// 24
+{kicker:"Понятие принципов", render:()=>`
+  <h2 class="section-title">Принципы — это не украшение закона</h2>
+  <p class="lede">Принципы трудового права — это исходные руководящие начала правового регулирования трудовых и иных непосредственно связанных с ними отношений, определяющие содержание норм трудового права и их применение.</p>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">«Принципы — это душа закона».</p></div>`},
+// 25
+{kicker:"Зачем нужны принципы", render:()=>`
+  <h2 class="section-title">Что делают принципы?</h2>
+  ${numList(["Выражают сущность трудового права.","Обеспечивают внутреннее единство отрасли.","Направляют правотворчество.","Помогают толковать нормы.","Восполняют пробелы и помогают разрешать коллизии."])}
+  <p class="note">Может ли суд применить принцип, если конкретная норма сформулирована неясно?</p>`},
+// 26 — stepped pyramid
+{kicker:"Классификация принципов", maxStep:4, render:(stage)=>{
+  const levels=[
+    {title:"Общеправовые принципы",sub:"справедливость, гуманизм, равенство, законность, добросовестность"},
+    {title:"Межотраслевые принципы",sub:"судебная защита, социальная защита, охрана здоровья, свобода объединения"},
+    {title:"Отраслевые принципы трудового права",sub:"свобода труда, защита слабой стороны, in favorem, соц. партнёрство, недискриминация, безопасность труда"},
+    {title:"Специальные принципы институтов",sub:"оплата труда, охрана труда, разрешение споров, коллективные переговоры"},
+  ];
+  return `<h2 class="section-title">Уровни принципов</h2>
+  ${pyramidWidget(levels.slice(0,stage))}
+  ${stepHint(stage,4)}`;
+}},
+// 27
+{kicker:"Свобода, равенство, справедливость", render:()=>`
+  <h2 class="section-title">Три базовые идеи трудового права</h2>
+  <div class="grid cols-3">${infoCard("Свобода","человек свободен распоряжаться своими способностями к труду")}${infoCard("Равенство","работники имеют равные права и возможности")}${infoCard("Социальная справедливость","право должно учитывать фактическое неравенство и защищать человеческое достоинство в труде")}</div>
+  <p class="lede" style="margin-top:12px;text-align:center;"><b>Трудовое право соединяет свободу договора с социальной справедливостью.</b></p>`},
+// 28
+{kicker:"Формальное и фактическое равенство", render:()=>`
+  <h2 class="section-title">Почему равенство не всегда означает одинаковое регулирование?</h2>
+  <p class="lede">Право должно равным образом относиться к равному, но к существенно неравному справедливость может требовать различного подхода.</p>
+  ${scaleSVG(50,50,"формально","формально")}
+  ${scaleSVG(30,70,"Работник","Работодатель")}
+  <p class="scale-cap">Работник и работодатель формально равны как стороны договора, но работник экономически и организационно слабее — поэтому трудовое право вводит специальные гарантии.</p>`},
+// 29
+{kicker:"Социальная справедливость", render:()=>`
+  <h2 class="section-title">Социальная справедливость — фундамент миссии трудового права</h2>
+  <p class="lede">Социальная справедливость означает поиск баланса прав и интересов участников трудовых отношений.</p>
+  ${flowRow(["Интересы работника","Интересы работодателя","Интересы общества","Интересы государства"])}
+  <p class="lede" style="margin-top:10px;"><b>Социальная справедливость не отменяет экономику, но требует человеческого измерения рынка труда.</b></p>`},
+// 30
+{kicker:"Защита слабой стороны", render:()=>`
+  <h2 class="section-title">Защита слабой стороны</h2>
+  <p class="lede">Экономическая несамостоятельность работника порождает необходимость защиты работника как более слабой стороны трудового отношения.</p>
+  ${numList(["Минимальная заработная плата.","Пределы рабочего времени.","Право на отдых.","Охрана труда.","Защита от увольнения.","Запрет ухудшения положения работника.","Коллективные права."])}
+  <p class="note">Почему защита слабой стороны не нарушает равенство, а восстанавливает справедливость?</p>`},
+// 31
+{kicker:"Добросовестность", render:()=>`
+  <h2 class="section-title">Добросовестность: предел формальной законности</h2>
+  <p class="lede">Злоупотребление правом — это внешне правомерное поведение, которое используется недобросовестно и нарушает назначение права.</p>
+  <div class="fork">
+    <div class="branch left"><h4>Работодатель может злоупотреблять правом</h4><ul><li>маскировать трудовые отношения гражданско-правовым договором</li><li>использовать увольнение как давление</li><li>обходить гарантии через локальные акты</li></ul></div>
+    <div class="branch right"><h4>Работник может злоупотреблять правом</h4><ul><li>скрывать обстоятельства, влияющие на процедуру увольнения</li><li>использовать формальные гарантии недобросовестно</li><li>создавать видимость нарушения</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Принцип добросовестности защищает право от превращения в инструмент манипуляции.</b></p>`},
+// 32 — stepped
+{kicker:"Принципы МОТ", maxStep:5, render:(stage)=>`
+  <h2 class="section-title">Международный фундамент трудового права</h2>
+  <div class="grid cols-2" style="margin-top:8px;">${steps(stage,[
+    infoCard("1. Свобода объединения","и действенное признание права на коллективные переговоры"),
+    infoCard("2. Упразднение принудительного труда","всех форм принудительного или обязательного труда"),
+    infoCard("3. Действенное запрещение детского труда",""),
+    infoCard("4. Недопущение дискриминации","в области труда и занятий"),
+    infoCard("5. Безопасность и гигиена труда","безопасная и здоровая производственная среда — принцип, добавленный МОТ в 2022 году")
+  ])}</div>
+  ${stepHint(stage,5)}
+  ${stage>=5?`<p class="lede" style="margin-top:10px;"><b>Эти принципы показывают, что трудовые права являются частью универсальных прав человека.</b></p>`:""}`},
+// 33
+{kicker:"Ст. 4 ТК РК", render:()=>`
+  <h2 class="section-title">Как принципы закреплены в Трудовом кодексе РК?</h2>
+  <p class="lede">Статья 4 ТК РК закрепляет принципы трудового законодательства Республики Казахстан.</p>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Всегда ли то, что названо принципом в законе, действительно является принципом в доктринальном смысле?</p></div>`},
+// 34
+{kicker:"Критический анализ ст. 4 ТК РК", render:()=>`
+  <h2 class="section-title">Принципы, права и методы: что смешано?</h2>
+  <div class="grid cols-3">
+    ${infoCard("Настоящие принципы","недискриминация; запрет принудительного труда; свобода объединения; социальное партнёрство; защита слабой стороны; добросовестность")}
+    ${infoCard("Права работников","право на отдых; право на безопасные условия труда; право на вознаграждение не ниже МЗП")}
+    ${infoCard("Методы регулирования","государственное регулирование безопасности и охраны труда")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Юрист должен уметь отличать принцип, субъективное право и метод регулирования.</b></p>`},
+// 35
+{kicker:"Финальная карта", render:()=>`
+  <h2 class="section-title">Метод и принципы: карта понимания</h2>
+  ${flowRow(["Миссия трудового права","Баланс интересов","Метод трудового права","Предписание+запрет+дозволение","Принципы трудового права"])}
+  <div class="card navy" style="margin-top:16px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(17px,2.4vw,21px);">«Метод даёт трудовому праву юридический механизм. Принципы дают ему смысл и направление».</p></div>`},
+];
+
+/* ============================================================
+   ТРЕНАЖЁРЫ (11)
+   ============================================================ */
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey];
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+const SORT_T1_ITEMS=[
+  ["работодатель обязан выплачивать заработную плату","predpisanie"],
+  ["работодатель обязан обеспечить безопасные условия труда","predpisanie"],
+  ["работник обязан соблюдать трудовую дисциплину","predpisanie"],
+  ["запрещается дискриминация в сфере труда","zapret"],
+  ["запрещается принудительный труд","zapret"],
+  ["работодатель не вправе ухудшать положение работника локальным актом","zapret"],
+  ["работник вправе расторгнуть трудовой договор","dozvolenie"],
+  ["стороны вправе согласовать дополнительные условия","dozvolenie"],
+  ["работники вправе объединяться в профсоюзы","dozvolenie"],
+  ["коллективный договор может улучшать положение работников","dozvolenie"],
+];
+const SORT_T1_BUCKETS=[{key:"predpisanie",label:"Предписание"},{key:"zapret",label:"Запрет"},{key:"dozvolenie",label:"Дозволение"}];
+
+const T2_CASE1={q:"Работник согласился работать без ежегодного оплачиваемого отпуска.",opts:["Допустимо, потому что есть согласие.","Недопустимо, потому что отпуск является гарантией.","Допустимо, если это указано в договоре.","Вопрос не регулируется трудовым правом."],correct:1};
+const T2_OPEN=[
+ {id:"t2-open-1",text:"Работодатель установил дополнительный оплачиваемый день отдыха сверх минимальных гарантий.",answer:"Допустимо, потому что это улучшает положение работника."},
+ {id:"t2-open-2",text:"В коллективном договоре предусмотрена повышенная оплата ночной работы.",answer:"Допустимо, договорное регулирование может улучшать положение работников."},
+ {id:"t2-open-3",text:"Локальный акт работодателя ограничил право работников на обращение в суд.",answer:"Недопустимо, локальный акт не может ухудшать правовое положение работника и ограничивать право на защиту."},
+];
+
+const SORT_T3_ITEMS=[
+  ["минимальная заработная плата","central"],["максимальная продолжительность рабочего времени","central"],
+  ["основные гарантии охраны труда","central"],["запрет дискриминации","central"],
+  ["правила внутреннего трудового распорядка","local"],["график сменности","local"],
+  ["порядок премирования","local"],["форма внутреннего заявления работника","local"],
+  ["порядок работы отдела","local"],["внутренняя политика удалённой работы","local"],
+];
+const SORT_T3_BUCKETS=[{key:"central",label:"Централизованное регулирование"},{key:"local",label:"Локальное регулирование"}];
+
+const T4_SITUATIONS=[
+ {text:"Трудовой договор даёт работнику дополнительный отпуск сверх закона.",opts:["Действует","Не действует"],correct:0},
+ {text:"Трудовой договор уменьшает продолжительность ежегодного отпуска ниже минимума.",opts:["Действует","Не действует"],correct:1},
+ {text:"Коллективный договор устанавливает дополнительную выплату.",opts:["Действует","Не действует"],correct:0},
+ {text:"Акт работодателя запрещает работникам обсуждать условия труда с представителями работников.",opts:["Действует","Не действует"],correct:1},
+ {text:"Работник письменно согласился отказаться от компенсации за сверхурочную работу.",opts:["Действует","Не действует"],correct:1},
+];
+
+const SORT_T5_ITEMS=[
+  ["право на оплату труда","unity"],["запрет дискриминации","unity"],["право на безопасные условия труда","unity"],["право на отдых","unity"],
+  ["сокращённое рабочее время для несовершеннолетних","diff"],["специальные гарантии беременным женщинам","diff"],
+  ["особенности труда государственных служащих","diff"],["особенности дистанционной работы","diff"],
+  ["дополнительные гарантии работникам с вредными условиями труда","diff"],["специальные правила для сезонных работников","diff"],
+];
+const SORT_T5_BUCKETS=[{key:"unity",label:"Единство регулирования"},{key:"diff",label:"Дифференциация регулирования"}];
+
+const SORT_T6_ITEMS=[
+  ["запрещение дискриминации","princip"],["свобода труда","princip"],["социальное партнёрство","princip"],["запрещение принудительного труда","princip"],["равенство прав и возможностей","princip"],["свобода объединения","princip"],
+  ["право на отдых","pravo"],["право на условия труда, отвечающие требованиям безопасности","pravo"],["право на вознаграждение не ниже минимальной заработной платы","pravo"],
+  ["государственное регулирование безопасности и охраны труда","metod"],
+];
+const SORT_T6_BUCKETS=[{key:"princip",label:"Принцип"},{key:"pravo",label:"Субъективное право"},{key:"metod",label:"Метод / способ регулирования"}];
+
+const SORT_T7_ITEMS=[
+  ["работника увольняют за вступление в профсоюз","p1"],["работники требуют коллективных переговоров","p1"],["работодатель создаёт «карманный профсоюз»","p1"],
+  ["работника принуждают работать под угрозой наказания","p2"],
+  ["несовершеннолетнего привлекают к опасной работе","p3"],
+  ["кандидату отказывают в работе из-за пола, возраста или инвалидности","p4"],
+  ["работодатель не выдаёт средства индивидуальной защиты на опасном производстве","p5"],["работников не инструктируют по технике безопасности перед допуском к работе","p5"],
+];
+const SORT_T7_BUCKETS=[{key:"p1",label:"1. Свобода объединения"},{key:"p2",label:"2. Запрет принудительного труда"},{key:"p3",label:"3. Запрет детского труда"},{key:"p4",label:"4. Недискриминация"},{key:"p5",label:"5. Безопасность и гигиена труда"}];
+
+const T8_CASES=[
+ {text:"Работодатель заключает с работником гражданско-правовой договор, но фактически устанавливает график, подчинение и регулярную оплату.",q:"Есть ли риск злоупотребления правом?",answer:"Да, может быть обход трудового законодательства и подмена трудовых отношений."},
+ {text:"Работник скрывает обстоятельство, которое влияет на процедуру увольнения, а затем требует восстановления на работе только по формальному основанию.",q:"Как это оценивать?",answer:"Нужно оценивать добросовестность поведения работника."},
+ {text:"Работодатель принимает локальный акт, который формально называется «политикой эффективности», но фактически ограничивает право работников на отдых.",q:"Как это оценивать?",answer:"Нужно проверить соответствие локального акта закону, принципам и запрету ухудшения положения работников."},
+];
+
+const TRAINERS=[
+ {tag:"Тренажёр 1",title:"Как право воздействует на поведение?",desc:"Предписание, запрет или дозволение — сортировка."},
+ {tag:"Тренажёр 2",title:"Где свобода, а где обязательная гарантия?",desc:"Императивность или диспозитивность — кейсы."},
+ {tag:"Тренажёр 3",title:"Где должно быть установлено правило?",desc:"Централизованное или локальное регулирование."},
+ {tag:"Тренажёр 4",title:"Можно улучшать, нельзя ухудшать",desc:"Принцип in favorem — 5 ситуаций."},
+ {tag:"Тренажёр 5",title:"Одинаковые правила или специальные гарантии?",desc:"Единство или дифференциация — сортировка."},
+ {tag:"Тренажёр 6",title:"Разбери ст. 4 ТК РК критически",desc:"Принцип, право или метод — сортировка."},
+ {tag:"Тренажёр 7",title:"Международный фундамент",desc:"Принципы МОТ — сопоставление."},
+ {tag:"Тренажёр 8",title:"Формально законно — но добросовестно ли?",desc:"Добросовестность и злоупотребление правом."},
+ {tag:"Тренажёр 9",title:"Как регулировать алгоритмическое управление?",desc:"Метод и цифровая занятость — мини-кейс."},
+ {tag:"Тренажёр 10",title:"Проверь ответ искусственного интеллекта",desc:"AI-критика — найдите ошибки."},
+ {tag:"Тренажёр 11",title:"Главный вывод занятия",desc:"Финальная рефлексия — 9 открытых вопросов."},
+];
+
+const AI_ANSWER="«Метод трудового права полностью совпадает с гражданско-правовым методом, потому что трудовой договор заключается добровольно. Если работник подписал договор, значит любые условия являются законными. Принципы трудового права имеют только декларативное значение и не нужны для решения практических споров».";
+const AI_ERRORS=[
+ "Метод трудового права не совпадает полностью с гражданско-правовым методом.",
+ "Трудовое право имеет частно-публичную природу.",
+ "Свобода договора ограничена императивными гарантиями.",
+ "Работник находится в фактической и организационной зависимости от работодателя.",
+ "Условия договора, ухудшающие положение работника, могут быть недействительными.",
+ "Принципы трудового права имеют значение для толкования, восполнения пробелов и разрешения коллизий.",
+ "Метод трудового права включает сочетание централизованного, локального, нормативного и договорного регулирования.",
+ "Трудовое право учитывает единство и дифференциацию регулирования.",
+ "Принципы не являются только декларациями; они выражают сущность отрасли.",
+ "Игнорируется защита слабой стороны и социальная справедливость.",
+];
+
+function trainerBody(idx){
+  switch(idx){
+    case 0: return `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Как право воздействует на поведение?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по трём колонкам.</p>
+      ${bucketSorter('t1', SORT_T1_ITEMS, SORT_T1_BUCKETS)}
+      <div class="note">Трудовое право использует все три способа воздействия: предписание, запрет и дозволение. Его специфика не в одном способе, а в их сочетании.</div>`;
+    case 1: return `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Где свобода, а где обязательная гарантия?</h2>
+      <div class="card" style="margin-bottom:14px;"><p style="font-size:13.5px;margin-bottom:10px;">${T2_CASE1.q}</p>${choiceListFull('t2-case1',T2_CASE1.opts,T2_CASE1.correct,"Отпуск является обязательной государственной гарантией, а не предметом свободного отказа.")}</div>
+      ${T2_OPEN.map(c=>revealBox(c.id,'«'+c.text+'»',c.answer)).join("")}
+      <div class="explain-box info">Диспозитивность в трудовом праве действует внутри императивных пределов.</div>`;
+    case 2: return `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Где должно быть установлено правило?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по двум колонкам.</p>
+      ${bucketSorter('t3', SORT_T3_ITEMS, SORT_T3_BUCKETS)}
+      <div class="note">Централизованное регулирование задаёт обязательную рамку, локальное регулирование конкретизирует её в организации.</div>`;
+    case 3: return `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Можно улучшать, нельзя ухудшать</h2>
+      <p class="lede" style="margin-bottom:14px;">Определите, действует ли условие трудового договора или локального акта.</p>
+      ${T4_SITUATIONS.map((s,i)=>`<div class="card" style="margin-bottom:14px;"><p style="font-size:13.5px;margin-bottom:10px;">${i+1}. ${s.text}</p>${choiceListFull('t4-'+i,s.opts,s.correct,"")}</div>`).join("")}
+      <div class="explain-box info">В трудовом праве договор не может быть инструментом отказа от минимальных гарантий.</div>`;
+    case 4: return `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Одинаковые правила или специальные гарантии?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по двум колонкам.</p>
+      ${bucketSorter('t5', SORT_T5_ITEMS, SORT_T5_BUCKETS)}
+      <div class="note">Единство обеспечивает общую рамку трудовых прав, дифференциация позволяет учитывать существенные различия труда и работников.<br><b>Когда дифференциация является справедливой, а когда превращается в дискриминацию?</b></div>`;
+    case 5: return `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Разбери ст. 4 ТК РК критически</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по трём колонкам.</p>
+      ${bucketSorter('t6', SORT_T6_ITEMS, SORT_T6_BUCKETS)}
+      <div class="note">Не всё, что названо в законе принципом, является принципом в строгом доктринальном смысле. Юрист должен различать принципы, права и методы.</div>`;
+    case 6: return `<div class="kicker">Тренажёр 7</div><h2 class="section-title">Международный фундамент</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите принцип МОТ с примером.</p>
+      ${bucketSorter('t7', SORT_T7_ITEMS, SORT_T7_BUCKETS)}
+      <div class="note">Основополагающие принципы МОТ показывают, что трудовое право является частью системы прав человека.</div>`;
+    case 7: return `<div class="kicker">Тренажёр 8</div><h2 class="section-title">Формально законно — но добросовестно ли?</h2>
+      ${T8_CASES.map((c,i)=>revealBox('t8-'+i,(i+1)+'. «'+c.text+'» — '+c.q,c.answer)).join("")}
+      <div class="explain-box info">Добросовестность — это юридический предел формального использования права.</div>`;
+    case 8: return `<div class="kicker">Тренажёр 9</div><h2 class="section-title">Как регулировать алгоритмическое управление?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Платформенный курьер формально является самозанятым. Он сам выбирает время выхода, но приложение распределяет заказы, устанавливает рейтинг, контролирует скорость, определяет оплату и может заблокировать доступ к заказам».</i></p></div>
+      <label class="q">Какие признаки дозволения здесь есть?</label>${answerBox('t9-q1')}
+      <label class="q">Какие признаки контроля и подчинения здесь есть?</label>${answerBox('t9-q2')}
+      <label class="q">Какие императивные гарантии могут потребоваться?</label>${answerBox('t9-q3')}
+      <label class="q">Может ли локальный цифровой алгоритм фактически выполнять функцию акта работодателя?</label>${answerBox('t9-q4')}
+      <label class="q">Какие принципы трудового права помогают анализировать этот кейс?</label>${answerBox('t9-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Свобода выхода на платформу не всегда означает реальную автономию. Алгоритмический контроль может создавать зависимость. Принципы защиты слабой стороны, недискриминации, добросовестности и социальной справедливости помогают увидеть проблему.</div>`;
+    case 9: return `<div class="kicker">Тренажёр 10</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+      <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:13.5px;">${AI_ANSWER}</p></div>
+      <p class="lede" style="margin-bottom:12px;"><b>Задание:</b> найдите минимум 6 ошибок в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+      ${AI_ERRORS.map((e,i)=>`<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;"><input type="checkbox" ${state.ai10[i]?'checked':''} onchange="state.ai10[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}</label>`).join("")}
+      <div class="explain-box ok" style="margin-top:12px;">ИИ может дать формально гладкий, но юридически неверный ответ. Задача юриста — видеть метод, принципы, пределы свободы договора и фактическое неравенство сторон.</div>`;
+    case 10: {
+      const qs=[["r1","Чем метод трудового права отличается от гражданско-правового метода?"],["r2","Почему трудовое право является частно-публичной отраслью?"],["r3","Что означает сочетание императивного и диспозитивного регулирования?"],["r4","Почему локальное регулирование не может ухудшать положение работника?"],["r5","В чём смысл принципа in favorem?"],["r6","Почему принципы трудового права называют ценностным каркасом отрасли?"],["r7","Как принципы помогают решать пробелы и коллизии?"],["r8","Почему защита слабой стороны не нарушает, а восстанавливает справедливость?"],["r9","Как метод и принципы трудового права работают в цифровой занятости?"]];
+      return `<div class="kicker">Тренажёр 11</div><h2 class="section-title">Главный вывод занятия</h2>
+      <p class="lede" style="margin-bottom:14px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия занятия.</p>
+      ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+      <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+        <span class="note" id="export-status" style="margin:0;"></span>
+      </div>
+      <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+    }
+    default: return '';
+  }
+}
+function buildAnswersText(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Занятие №2. Метод и принципы трудового права\nКурс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Тренажёр 9 (цифровая занятость) —\n";
+  ["t9-q1","t9-q2","t9-q3","t9-q4","t9-q5"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  out += "\n— Тренажёр 11 (финальная рефлексия) —\n";
+  ["r1","r2","r3","r4","r5","r6","r7","r8","r9"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  return out;
+}
+window.exportAnswers=async function(){
+  const out = buildAnswersText();
+  const status = document.getElementById('export-status');
+  if(window.claude && window.claude.use){
+    try{
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:"otvety-zanyatie2-trudovoe-pravo.txt", data: out});
+        if(status) status.textContent = 'Файл сохранён.';
+        return;
+      }
+    }catch(e){ /* fall through */ }
+  }
+  try{
+    const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "otvety-zanyatie2-trudovoe-pravo.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    if(status) status.textContent = 'Файл сохранён.';
+  }catch(e){
+    try{ await navigator.clipboard.writeText(out); if(status) status.textContent = 'Ответы скопированы в буфер обмена.'; }
+    catch(e2){ if(status) status.textContent = 'Не удалось сохранить — выделите текст ответов вручную.'; }
+  }
+};
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{t1:{},t3:{},t5:{},t6:{},t7:{}}, ai10:{}, refl:{}};
+if(!state.sorters) state.sorters={};
+['t1','t3','t5','t6','t7'].forEach(k=>{ if(!state.sorters[k]) state.sorters[k]={}; });
+if(!state.ai10) state.ai10={};
+function save(){try{localStorage.setItem('mnu_labor_law_v2_lesson2',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_v2_lesson2');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Занятие №2 · Метод и принципы трудового права</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Занятие №2. Метод и принципы трудового права</p>
+      <p class="cover-question">Если миссия трудового права отвечает на вопрос «зачем?», то метод и принципы отвечают на вопрос «как и ради чего регулируется труд?»</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">Перейти к тренажёрам</button>
+        <button class="btn btn-outline" onclick="openTrainer(10)">Финальная рефлексия</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта занятия</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика занятия</div>
+    <h2 class="section-title">Сегодня мы изучаем не список терминов, а механизм регулирования</h2>
+    <p class="lede" style="margin-bottom:24px;">Метод показывает, какими юридическими средствами трудовое право регулирует отношения. Принципы показывают, какие ценности и пределы должны направлять это регулирование.</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo('presentation')">Перейти к презентации →</button></div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('map')">К карте понимания →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 4</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:24px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, аргументировать и делать вывод.</p>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+function screenMap(){
+  const nodes=["Миссия трудового права","Баланс интересов","Формальное равенство + фактическое неравенство","Метод трудового права","Предписание + запрет + дозволение","Императивность + диспозитивность","Централизованное + локальное регулирование","Нормативное + договорное регулирование","Участие работников и представителей","Единство + дифференциация","Принципы трудового права","Юридическое мышление в сфере труда"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 5</div>
+    <h2 class="section-title">Карта понимания: метод и принципы трудового права</h2>
+    <div class="map-flow">${nodes.map(n=>`<div class="map-node">${n}</div><div class="map-arrow">↓</div>`).join("")}<div class="map-node final">Метод — механизм регулирования. Принципы — смысл и направление регулирования.</div></div>
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('after')">К самостоятельной работе →</button></div>
+  </div>`;
+}
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 6</div>
+    <h2 class="section-title">После занятия</h2>
+    <p class="lede" style="margin-bottom:22px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:18px;">
+      <div class="card"><h3>1. Повторить</h3><p>Понятие метода правового регулирования · предписание, запрет и дозволение · императивный и диспозитивный метод · частно-публичную природу трудового права · сочетание централизованного и локального регулирования · сочетание нормативного и договорного регулирования · участие работников и представителей · единство и дифференциацию · понятие принципов · классификацию принципов · принцип социальной справедливости · принцип защиты слабой стороны · принцип in favorem · добросовестность · принципы МОТ · критический анализ ст. 4 ТК РК.</p></div>
+      <div class="card"><h3>2. Подумать</h3><p>Почему в трудовом праве нельзя полностью довериться только свободе договора?</p></div>
+      <div class="card"><h3>3. Мини-задание</h3><p>Найдите в ТК РК один пример предписания, один пример запрета и один пример дозволения. Объясните, какую функцию выполняет каждая норма.</p></div>
+      <div class="card"><h3>4. Практическое задание</h3><p>Найдите пример локального акта работодателя или типового условия трудового договора. Проверьте, не ухудшает ли оно положение работника по сравнению с трудовым законодательством.</p></div>
+      <div class="card" style="grid-column:1/-1;"><h3>5. AI-задание</h3><p>Спросите ИИ: «Почему принципы трудового права не имеют практического значения?» Затем критически разберите ответ с позиции темы занятия.</p></div>
+    </div>
+    ${qrZone("canvas","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="margin-top:16px;">${qrZone("tkrk","Ссылка на Трудовой кодекс РК","https://")}</div>
+    <div style="margin-top:16px;">${qrZone("assignment","Ссылка на самостоятельное задание","https://")}</div>
+    <div style="text-align:center;margin-top:26px;"><button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button></div>
+  </div>`;
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 12 + (state.slide/(SLIDES.length-1))*58; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,8,12,78,90,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>

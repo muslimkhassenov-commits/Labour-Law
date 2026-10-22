@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Занятие №3. Источники и формула трудового права</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU: презентация на 40 слайдов, судебные кейсы и 12 тренажёров юридического мышления для занятия «Источники и формула трудового права»." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-node.zone{border-color:var(--burgundy);}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.ladder{display:flex;flex-direction:column-reverse;gap:8px;max-width:520px;margin:0 auto;}
+.ladder .rung{border-radius:12px;padding:12px 16px;font-size:13px;font-weight:600;color:#fff;display:flex;justify-content:space-between;align-items:center;}
+.ladder .rung .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;opacity:.85;font-weight:700;}
+
+.pyramid{display:flex;flex-direction:column;align-items:center;gap:6px;}
+.pyramid .level{border-radius:10px;padding:11px 14px;text-align:center;color:#fff;font-size:12.5px;font-weight:600;box-shadow:var(--shadow);}
+.pyramid .level small{display:block;font-weight:500;font-size:11px;opacity:.85;margin-top:3px;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.rank-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:13.5px;}
+.rank-item .pos{color:var(--red);font-weight:700;margin-right:8px;}
+.rank-item.correct{border-color:var(--ok);background:#e9f5ee;}
+.rank-item.wrong{border-color:var(--red);background:#fbeceb;}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Занятие 3</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главная</button>
+    <button class="navbtn" onclick="goTo('roadmap')">Логика занятия</button>
+    <button class="navbtn primary" onclick="goTo('presentation')">К презентации</button>
+    <button class="navbtn" onclick="goToCases()">Судебные кейсы</button>
+    <button class="navbtn" onclick="goTo('trainers')">К тренажёрам</button>
+    <button class="navbtn" onclick="goTo('map')">Карта понимания</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+    <button class="navbtn ghost" onclick="openTrainer(11)">Финальная рефлексия</button>
+  </div>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Занятие №3 · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ДАННЫЕ ЗАНЯТИЯ №3 — ИСТОЧНИКИ И ФОРМУЛА ТРУДОВОГО ПРАВА
+   ============================================================ */
+const ROADMAP_NODES = ["Миссия трудового права","Метод и принципы","Источники трудового права","Действующее право РК","Международные договоры","НПА","Соглашения соц. партнёрства","Коллективные договоры","Акты работодателя","Трудовые договоры","Судебная практика","Формула трудового права","In favorem","Судебные кейсы","Тренажёры"];
+
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node ${opts.zoneIdx&&opts.zoneIdx.includes(i)?'zone':''}">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть эталонный ответ':'Показать эталонный ответ'}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function scaleSVG(leftPct,rightPct,leftLabel,rightLabel){
+  leftLabel=leftLabel||"Работник"; rightLabel=rightLabel||"Работодатель";
+  const tilt=(rightPct-leftPct)/8;
+  return `<div class="scale-wrap"><svg viewBox="0 0 320 180" width="260" height="150">
+    <line x1="160" y1="20" x2="160" y2="140" stroke="#0c2340" stroke-width="6" stroke-linecap="round"/>
+    <rect x="140" y="140" width="40" height="14" rx="3" fill="#0c2340"/>
+    <g transform="rotate(${tilt} 160 30)">
+      <line x1="40" y1="30" x2="280" y2="30" stroke="#2b2e33" stroke-width="4" stroke-linecap="round"/>
+      <line x1="60" y1="30" x2="60" y2="66" stroke="#8a8f98" stroke-width="2"/>
+      <ellipse cx="60" cy="66" rx="20" ry="7" fill="#dfe3ea" stroke="#8a8f98" stroke-width="1.5"/>
+      <line x1="260" y1="30" x2="260" y2="66" stroke="#7c1327" stroke-width="2"/>
+      <ellipse cx="260" cy="66" rx="20" ry="7" fill="#c8102e" stroke="#7c1327" stroke-width="1.5"/>
+    </g>
+    <circle cx="160" cy="30" r="6" fill="#c8102e"/>
+  </svg>
+  <div style="display:flex;justify-content:space-between;width:260px;font-size:12.5px;font-weight:600;">
+    <span style="color:var(--navy);">${leftLabel}</span><span style="color:var(--burgundy);">${rightLabel}</span>
+  </div></div>`;
+}
+function compassSVG(size){
+  size=size||64;
+  return `<svg viewBox="0 0 100 100" width="${size}" height="${size}">
+    <circle cx="50" cy="50" r="46" fill="none" stroke="#0c2340" stroke-width="3"/>
+    <circle cx="50" cy="50" r="38" fill="none" stroke="#dfdbd2" stroke-width="1"/>
+    <polygon points="50,14 58,50 50,86 42,50" fill="#c8102e"/>
+    <polygon points="14,50 50,42 86,50 50,58" fill="#0c2340"/>
+    <circle cx="50" cy="50" r="4" fill="#7c1327"/>
+    <text x="50" y="10" text-anchor="middle" font-size="8" fill="#0c2340" font-family="Inter,sans-serif" font-weight="700">N</text>
+  </svg>`;
+}
+function filterSVG(size){
+  size=size||70;
+  return `<svg viewBox="0 0 100 110" width="${size}" height="${size*1.1}">
+    <polygon points="10,10 90,10 58,58 58,95 42,95 42,58" fill="none" stroke="#0c2340" stroke-width="4" stroke-linejoin="round"/>
+    <circle cx="30" cy="20" r="4" fill="#c8102e"/><circle cx="60" cy="16" r="4" fill="#7c1327"/><circle cx="75" cy="24" r="4" fill="#c8102e"/>
+    <circle cx="50" cy="80" r="4" fill="#1f6f43"/>
+  </svg>`;
+}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function ladderWidget(rungs){
+  const colors=["#0c2340","#123058","#585c63","#7c1327","#c8102e"];
+  return `<div class="ladder">${rungs.map((r,i)=>`<div class="rung" style="background:${colors[i%colors.length]};"><span>${r}</span><span class="tag">${i===0?'минимум':i===rungs.length-1?'может быть лучше':'≥ закона'}</span></div>`).join("")}</div>`;
+}
+function pyramidWidget(levels){
+  const n=levels.length;
+  const colors=["#0c2340","#123058","#1a3a63","#585c63","#7c1327","#93172c","#a91d31","#c8102e"];
+  return `<div class="pyramid">${levels.map((l,i)=>{
+    const width = 100 - i*(60/Math.max(n-1,1));
+    return `<div class="level" style="width:${width}%;background:${colors[Math.min(i,colors.length-1)]};">${l.title}${l.sub?`<small>${l.sub}</small>`:''}</div>`;
+  }).join("")}</div>`;
+}
+
+/* stepped reveal helper */
+function steps(stage, items){ return items.filter((_,i)=>stage>=i+1).join(""); }
+function stepHint(stage,max){ return stage<max ? `<div class="step-hint">Нажмите «Далее» / клавишу клика, чтобы показать ещё (${stage}/${max})</div>` : ""; }
+
+/* ranking exercise (сортировка по иерархии кликом, без drag-and-drop) */
+function rankingExercise(key, items){
+  const chosen = state.rankings[key] || [];
+  const pool = items.filter(x=>!chosen.includes(x));
+  const checked = state.rankChecked[key];
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(x=>`<span class="chip" onclick="pickRank('${key}','${x.replace(/'/g,"\\'")}',${items.length})">${x}</span>`).join("")||'<span class="note">Все карточки расставлены.</span>'}</div>
+  <div class="bucket" style="min-height:100px;"><h4>Ваш порядок (от высшей силы к низшей)</h4>
+    ${chosen.map((x,i)=>{
+      let cls='';
+      if(checked) cls = (items[i]===x) ? 'correct' : 'wrong';
+      return `<div class="rank-item ${cls}"><span><span class="pos">${i+1}.</span>${x}</span><button class="navbtn" style="padding:3px 10px;font-size:11px;" onclick="unRank('${key}','${x.replace(/'/g,"\\'")}')">убрать</button></div>`;
+    }).join("")}
+  </div>
+  ${chosen.length===items.length ? `<button class="btn btn-navy" style="margin-top:12px;" onclick="checkRank('${key}')">Проверить порядок</button>` : ''}
+  ${checked?`<div class="explain-box ${chosen.every((x,i)=>items[i]===x)?'ok':'no'}" style="margin-top:12px;">${chosen.every((x,i)=>items[i]===x)?'✓ Порядок верный.':'✕ Есть ошибки — красным отмечены позиции не на своём месте.'}</div>`:''}`;
+}
+window.pickRank=function(key,item,total){
+  if(!state.rankings[key]) state.rankings[key]=[];
+  state.rankings[key].push(item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.unRank=function(key,item){
+  state.rankings[key]=(state.rankings[key]||[]).filter(x=>x!==item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.checkRank=function(key){ state.rankChecked[key]=true; save(); render(); };
+
+/* ============================================================
+   СЛАЙДЫ (40)
+   ============================================================ */
+const SLIDES = [
+// 1
+{kicker:"Титульный слайд", render:()=>`
+  <div style="text-align:center;padding:26px 0;">
+    <div class="logo-wrap" style="width:60px;height:60px;margin:0 auto 20px;"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+    <div class="kicker" style="justify-content:center;">Занятие №3</div>
+    <h1 class="page-title" style="text-align:center;margin:0 auto 10px;">Трудовое право Республики Казахстан</h1>
+    <p class="subtitle" style="margin:0 auto 18px;text-align:center;">Источники и формула трудового права</p>
+    <p class="lede" style="margin:0 auto 20px;text-align:center;font-style:italic;">Где находится трудовое право и как проверить предел дозволенного?</p>
+    <div style="display:flex;justify-content:center;gap:28px;">${compassSVG(70)}${filterSVG(70)}</div>
+  </div>`},
+// 2
+{kicker:"Связь с занятиями 1–2", render:()=>`
+  <h2 class="section-title">От миссии и метода — к источникам и формуле</h2>
+  <div class="grid cols-3">
+    ${infoCard("Занятие 1. Миссия","Зачем существует трудовое право?")}
+    ${infoCard("Занятие 2. Метод и принципы","Как трудовое право регулирует зависимый труд?")}
+    ${infoCard("Занятие 3. Источники и формула","Где искать нормы и как проверять законность?")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Сегодня мы учимся мыслить как юрист-практик: найти источник, определить его силу, проверить условие и сделать вывод.</b></p>`},
+// 3
+{kicker:"Проблемный кейс", render:()=>`
+  <h2 class="section-title">Работник подписал. Значит ли это, что условие законно?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«В трудовом договоре указано: за опоздание работник платит штраф 10 000 тенге; при увольнении по собственному желанию до истечения срока договора работник выплачивает работодателю компенсацию 100 МРП; если работник прошёл обучение за счёт работодателя, он возмещает все расходы полностью независимо от отработанного срока».</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-bottom:10px;">Можно ли применять такие условия, если работник сам подписал договор?</p>
+  ${choiceListFull("case3",["Да, потому что договор подписан добровольно.","Нет, любые условия трудового договора запрещены.","Нужно проверить условие через источники трудового права и формулу in favorem.","Всё зависит только от локального акта работодателя."],2,"Подписание договора не означает автоматическую законность условия. Нужно проверить, предусмотрено ли условие трудовым законодательством и не ухудшает ли оно положение работника.")}`},
+// 4
+{kicker:"Главный вопрос", render:()=>`
+  <h2 class="section-title">Главный вопрос занятия</h2>
+  <p style="font-family:'Fraunces',serif;font-size:clamp(18px,2.6vw,24px);color:var(--navy);line-height:1.4;">«Где находится трудовое право и как юрист определяет, допустимо ли конкретное условие трудового договора, коллективного договора или акта работодателя?»</p>
+  <p class="lede" style="margin-top:10px;"><b>Это вопрос об источниках и формуле трудового права.</b></p>
+  <p class="note">Юрист смотрит на документ через фильтр: источник → юридическая сила → не ухудшает ли положение работника?</p>`},
+// 5
+{kicker:"Понятие источника права", render:()=>`
+  <h2 class="section-title">Источник права — резервуар правовых норм</h2>
+  <p class="lede">Источники права — это установленные или санкционированные государством формы выражения и закрепления норм права.</p>
+  <div class="grid cols-3" style="margin-top:12px;">${infoCard("1. Нормативный правовой акт","")}${infoCard("2. Нормативный договор","")}${infoCard("3. Правовой обычай","")}</div>
+  <div class="grid cols-2" style="margin-top:14px;">${infoCard("4. Судебный прецедент","")}${infoCard("5. Правовая доктрина","")}</div>
+  <p class="lede" style="margin-top:12px;"><b>Источник права отвечает на вопрос: в какой форме норма получила юридическое значение?</b></p>`},
+// 6
+{kicker:"Источник трудового права", render:()=>`
+  <h2 class="section-title">Что такое источник трудового права?</h2>
+  <p class="lede">Источники трудового права — это формы выражения и закрепления норм, регулирующих трудовые и непосредственно связанные с ними отношения.</p>
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Не всякий документ в организации — источник трудового права. Но некоторые документы работодателя могут быть регуляторами трудовых отношений.</p></div>
+  <p class="note">Является ли график сменности источником трудового права? А трудовой договор? А коллективный договор?</p>`},
+// 7
+{kicker:"Источники в правовых семьях", render:()=>`
+  <h2 class="section-title">Континентальная система: почему важен закон?</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Романо-германская семья</h4><ul><li>нормативный правовой акт</li><li>нормативный договор</li><li>правовой обычай</li><li>судебная практика — особая, но не классический прецедент</li></ul></div>
+    <div class="branch right"><h4>Англо-саксонская семья</h4><ul><li>судебный прецедент</li><li>нормативные акты</li><li>правовой обычай</li><li>доктрина</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Казахстан относится к континентальной правовой системе, но роль судебной практики в трудовом праве возрастает.</b></p>`},
+// 8
+{kicker:"Особая система источников", render:()=>`
+  <h2 class="section-title">Трудовое право не живёт только в кодексе</h2>
+  <p class="lede">Своеобразие источников трудового права связано со спецификой предмета, метода и субъектного состава трудовых отношений.</p>
+  ${flowRow(["Предмет → зависимый труд","Метод → централиз. + договор. + локальное","Субъекты → работник, работодатель, представители, государство","Источники → многоуровневая система"])}
+  <p class="lede" style="margin-top:12px;"><b>Трудовое право регулируется не одним источником, а системой источников и регуляторов.</b></p>`},
+// 9
+{kicker:"Действующее право РК", render:()=>`
+  <h2 class="section-title">Первый уровень: действующее право РК</h2>
+  ${pyramidWidget([
+    {title:"1. Конституция Республики Казахстан"},
+    {title:"2. Законы и иные нормативные правовые акты"},
+    {title:"3. Международные договорные и иные обязательства РК"},
+    {title:"4. Нормативные постановления Конституционного и Верховного Судов"},
+    {title:"5. Трудовое законодательство"},
+  ])}
+  <p class="lede" style="margin-top:12px;text-align:center;"><b>Действующее право задаёт централизованную рамку регулирования труда.</b></p>`},
+// 10
+{kicker:"Конституция", render:()=>`
+  <h2 class="section-title">Конституция — фундамент трудовых прав</h2>
+  ${numList(["Право на труд.","Свободный выбор рода деятельности и профессии.","Право на условия труда, отвечающие требованиям безопасности и гигиены.","Право на вознаграждение за труд.","Право на отдых.","Право на судебную защиту.","Равенство перед законом и судом."])}
+  <p class="note">Почему трудовой спор может начинаться с трудового договора, но доходить до конституционных прав?</p>`},
+// 11
+{kicker:"Международные договоры", render:()=>`
+  <h2 class="section-title">Международный уровень трудового права</h2>
+  ${numList(["Ратифицированные международные договоры.","Конвенции МОТ.","Международные трудовые стандарты.","Международные обязательства РК.","Приоритет ратифицированных международных договоров в системе действующего права."])}
+  <p class="note">Почему юрист по трудовому праву не может ограничиваться только Трудовым кодексом?</p>`},
+// 12
+{kicker:"Нормативные правовые акты", render:()=>`
+  <h2 class="section-title">Нормативный правовой акт — классический источник</h2>
+  ${flowRow(["Конституция","Кодексы","Законы","Постановления","Приказы","Иные НПА"])}
+  <p class="lede" style="margin-top:12px;">Нормативный правовой акт содержит общеобязательные правила поведения, рассчитанные на неоднократное применение и неопределённый круг лиц.</p>
+  <p class="note">Чем нормативный правовой акт отличается от индивидуального приказа работодателя о приёме на работу?</p>`},
+// 13
+{kicker:"Трудовой кодекс", render:()=>`
+  <h2 class="section-title">Трудовой кодекс — ядро трудового законодательства</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:15px;margin-bottom:12px;">ТК РК регулирует трудовые отношения, отношения социального партнёрства и охраны труда.</div>
+  <p class="lede">Другие законы могут регулировать трудовые отношения только в случаях, предусмотренных Трудовым кодексом.</p>
+  <p class="lede" style="margin-top:10px;"><b>ТК РК — главный нормативный ориентир при проверке законности условий труда.</b></p>`},
+// 14
+{kicker:"Ст. 10 ТК РК", render:()=>`
+  <h2 class="section-title">Статья 10 ТК РК: не только законы</h2>
+  ${numList(["Трудовое законодательство Республики Казахстан.","— водораздел между централизованным и децентрализованным регулированием —","Соглашения сторон социального партнёрства.","Коллективные договоры.","Трудовые договоры.","Акты работодателя."])}
+  <p class="lede" style="margin-top:10px;"><b>Трудовое право сочетает нормативное, договорное и локальное регулирование.</b></p>
+  <p class="note">Почему трудовой договор и акт работодателя тоже участвуют в регулировании труда?</p>`},
+// 15 — vertical map
+{kicker:"Карта регуляторов", render:()=>`
+  <h2 class="section-title">Карта регуляторов трудовых отношений</h2>
+  ${verticalFlow(["Конституция","Ратифицированные международные договоры","Нормативные правовые акты","Соглашения о социальном партнёрстве","Коллективные договоры","Трудовые договоры","Акты работодателя"],{zoneIdx:[3]})}
+  <p class="lede" style="margin-top:14px;"><b>Юрист должен видеть всю карту регулирования, а не только один документ.</b></p>`},
+// 16
+{kicker:"Централизованное регулирование", render:()=>`
+  <h2 class="section-title">Централизованное регулирование: государственная рамка</h2>
+  ${numList(["Конституция.","Трудовой кодекс.","Законы.","Подзаконные акты.","Международные договоры.","Нормативные постановления Конституционного и Верховного Судов."])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Централизованное регулирование устанавливает минимально допустимый уровень защиты работника — «ниже нельзя».</p></div>`},
+// 17
+{kicker:"Коллективно-договорное регулирование", render:()=>`
+  <h2 class="section-title">Коллективные соглашения и договоры: право через согласование интересов</h2>
+  ${numList(["Генеральное соглашение.","Отраслевое соглашение.","Региональное соглашение.","Коллективный договор."])}
+  <p class="lede" style="margin-top:10px;">Коллективно-договорное регулирование позволяет учитывать интересы работников и работодателей через переговоры и социальное партнёрство.</p>
+  <p class="lede"><b>Коллективный договор должен улучшать или конкретизировать гарантии, но не ухудшать положение работников.</b></p>`},
+// 18
+{kicker:"Уровни социального партнёрства", render:()=>`
+  <h2 class="section-title">Уровни коллективно-договорного регулирования</h2>
+  ${ladderWidget(["Локальный: организация → коллективный договор","Региональный: региональная комиссия → региональное соглашение","Отраслевой: отраслевая комиссия → отраслевое соглашение","Республиканский: республиканская комиссия → генеральное соглашение"])}
+  <p class="note" style="text-align:center;margin-top:10px;">Почему условия труда нельзя эффективно регулировать только на уровне государства?</p>`},
+// 19
+{kicker:"Локальное регулирование", render:()=>`
+  <h2 class="section-title">Акты работодателя: власть внутри правовой рамки</h2>
+  ${numList(["Правила внутреннего трудового распорядка.","Положение об оплате труда.","Графики сменности.","Инструкции.","Политики удалённой работы.","Политики по персональным данным.","Правила охраны труда.","Приказы работодателя."])}
+  <div class="card burgundy" style="margin-top:12px;text-align:center;font-family:'Fraunces',serif;font-size:15px;">Работодатель может принимать акты, но не может снижать гарантированный законом уровень защиты работника.</div>
+  <p class="note">Что делать, если локальный акт работодателя противоречит ТК РК?</p>`},
+// 20
+{kicker:"Трудовой договор как регулятор", render:()=>`
+  <h2 class="section-title">Трудовой договор: соглашение внутри трудоправовой рамки</h2>
+  ${numList(["Трудовая функция.","Место работы.","Условия оплаты.","Режим труда.","Права и обязанности.","Гарантии.","Ответственность.","Дополнительные условия."])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;">Трудовой договор может конкретизировать и улучшать, но не ухудшать.</p></div>
+  <p class="note">Почему подпись работника не делает любое условие законным?</p>`},
+// 21
+{kicker:"Тенденции источников", render:()=>`
+  <h2 class="section-title">Как меняется система источников?</h2>
+  <div class="grid cols-3">${infoCard("1. Разный удельный вес источников","")}${infoCard("2. Рост значения договоров","в рыночной экономике")}${infoCard("3. Усиление судебной практики","")}</div>
+  <p class="lede" style="margin-top:12px;">С развитием рынка труда возрастает роль коллективных договоров, локальных актов, судебных позиций и гибких регуляторов.</p>
+  <p class="lede"><b>Источники трудового права становятся более сложными и многоуровневыми.</b></p>`},
+// 22
+{kicker:"Судебная практика", render:()=>`
+  <h2 class="section-title">Судебная практика: источник или ориентир?</h2>
+  ${numList(["Суд разрешает конкретный спор.","Высшие судебные инстанции обеспечивают единообразие.","Нормативные постановления Верховного Суда имеют особую роль.","Судебная практика выявляет пробелы и проблемы законодательства.","Практика помогает понять, как формула трудового права работает в реальных спорах."])}
+  <p class="note">Почему юрист по трудовому праву должен читать судебные решения, а не только нормы?</p>`},
+// 23
+{kicker:"Правовой обычай", render:()=>`
+  <h2 class="section-title">Обычай: источник или кадровая привычка?</h2>
+  ${numList(["Заявление при приёме на работу.","Обходной лист при увольнении.","Внутренние формы заявлений.","Кадровые шаблоны.","Корпоративные процедуры."])}
+  <div class="card navy" style="margin-top:12px;"><p style="color:#fff;">Не всякая устойчивая кадровая практика является источником права.</p></div>
+  <p class="note">Может ли работодатель требовать обходной лист при увольнении, если это превращается в препятствие для прекращения трудового договора?</p>`},
+// 24
+{kicker:"Юридическая сила", maxStep:8, render:(stage)=>{
+  const levels=[
+    {title:"Конституция"},{title:"Международные договоры и обязательства"},{title:"Трудовой кодекс и законы"},{title:"Подзаконные НПА"},
+    {title:"Соглашения социального партнёрства"},{title:"Коллективный договор"},{title:"Трудовой договор"},{title:"Акты работодателя"},
+  ];
+  return `<h2 class="section-title">Все документы разные по юридической силе</h2>
+  ${pyramidWidget(levels.slice(0,stage))}
+  ${stepHint(stage,8)}
+  ${stage>=8?`<p class="lede" style="margin-top:10px;text-align:center;"><b>Чем ниже документ, тем сильнее нужно проверять, не ухудшает ли он положение работника.</b></p>`:""}`;
+}},
+// 25
+{kicker:"Переход к формуле", render:()=>`
+  <h2 class="section-title">Как проверить законность условия?</h2>
+  <p class="lede">Знание источников отвечает на вопрос, где искать норму. Но юристу нужен ещё один инструмент: формула трудового права.</p>
+  <div style="display:flex;justify-content:center;gap:40px;align-items:center;margin-top:16px;">
+    <div style="text-align:center;">${compassSVG(80)}<div style="font-weight:700;color:var(--navy);margin-top:6px;">Источники = карта</div></div>
+    <div style="text-align:center;">${filterSVG(80)}<div style="font-weight:700;color:var(--navy);margin-top:6px;">Формула = фильтр</div></div>
+  </div>`},
+// 26
+{kicker:"Формула частного права", render:()=>`
+  <h2 class="section-title">Частное право: разрешено всё, что не запрещено</h2>
+  ${numList(["Равенство субъектов.","Автономия воли.","Свобода договора.","Отношения по горизонтали.","Частная инициатива."])}
+  <div class="card accent-left" style="margin-top:12px;"><p style="font-size:13.5px;"><i>В гражданском праве стороны могут заключать договоры, прямо не предусмотренные законом, если они не нарушают запреты.</i></p></div>
+  <p class="lede" style="margin-top:10px;"><b>Частное право даёт широкое пространство свободы.</b></p>`},
+// 27
+{kicker:"Формула публичного права", render:()=>`
+  <h2 class="section-title">Публичное право: запрещено всё, что не разрешено</h2>
+  ${numList(["Государство.","Власть.","Полномочия.","Субординация.","Отношения по вертикали."])}
+  <div class="card accent-left" style="margin-top:12px;"><p style="font-size:13.5px;"><i>Государственный орган может действовать только в пределах прямо предоставленных полномочий.</i></p></div>
+  <p class="lede" style="margin-top:10px;"><b>Публичное право ограничивает власть, чтобы предотвратить произвол.</b></p>`},
+// 28
+{kicker:"Дуализм трудового права", render:()=>`
+  <h2 class="section-title">Трудовое право между частным и публичным</h2>
+  <div class="fork">
+    <div class="branch left"><h4>Частноправовое начало</h4><ul><li>свобода труда</li><li>трудовой договор</li><li>вступление в трудовые отношения</li><li>соглашение сторон</li></ul></div>
+    <div class="branch right"><h4>Публично-правовое начало</h4><ul><li>минимальные стандарты</li><li>государственные гарантии</li><li>запреты</li><li>ограничения свободы работодателя</li><li>защита слабой стороны</li></ul></div>
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>В трудовом праве есть свобода договора, но она ограничена минимальным уровнем защиты работника.</b></p>`},
+// 29
+{kicker:"Формула трудового права", render:()=>`
+  <h2 class="section-title">Формула трудового права</h2>
+  <div class="card burgundy" style="text-align:center;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);margin-bottom:14px;">Разрешено всё, что не запрещено, если это не ухудшает положение работников по сравнению с трудовым законодательством.</div>
+  <div class="grid cols-2">${infoCard("«Разрешено всё, что не запрещено»","частноправовое начало")}${infoCard("«Если это не ухудшает положение работников»","трудоправовая защита")}</div>
+  <p class="note" style="text-align:center;margin-top:10px;">Принцип наибольшего благоприятствования правам работников — in favorem.</p>`},
+// 30
+{kicker:"In favorem", render:()=>`
+  <h2 class="section-title">In favorem: можно лучше, нельзя хуже</h2>
+  ${ladderWidget(["Трудовое законодательство = минимум","Соглашение","Коллективный договор","Трудовой договор","Акт работодателя = конкретизирует, не ухудшает"])}
+  <p class="note" style="text-align:center;margin-top:10px;">Лучше закона — можно. Как минимум закона — можно. Хуже закона — недействительно и не применяется.</p>`},
+// 31
+{kicker:"Ст. 10 ТК РК — красная линия", render:()=>`
+  <h2 class="section-title">Статья 10 ТК РК: ниже гарантии нельзя</h2>
+  <p class="lede">Положения соглашений сторон социального партнёрства, коллективных, трудовых договоров, актов работодателей, ухудшающие положение работников по сравнению с трудовым законодательством Республики Казахстан, признаются недействительными и не подлежат применению.</p>
+  <div class="card navy" style="margin-top:12px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Даже если работник подписал документ, ухудшающее условие не должно применяться.</p></div>`},
+// 32
+{kicker:"Алгоритм проверки", maxStep:7, render:(stage)=>{
+  const items=[
+    "Определить документ: закон, договор, коллективный договор, акт работодателя.",
+    "Определить источник и его юридическую силу.",
+    "Найти норму ТК РК или другого применимого акта.",
+    "Проверить, предусмотрено ли такое условие законом.",
+    "Проверить, улучшает или ухудшает оно положение работника.",
+    "Проверить соответствие принципам трудового права.",
+    "Сделать вывод: действует / не действует / требует изменения / есть риск спора.",
+  ];
+  return `<h2 class="section-title">Алгоритм юриста: как проверить условие?</h2>
+  ${numList(items.slice(0,stage))}
+  ${stepHint(stage,7)}
+  ${stage>=7?`<p class="lede" style="margin-top:10px;"><b>Не спрашивай только «подписал ли работник». Спрашивай: «не ухудшает ли это его положение?»</b></p>`:""}`;
+}},
+// 33 — case 1
+{kicker:"Кейс 1: штрафы", render:()=>`
+  <h2 class="section-title">Может ли работодатель штрафовать работника?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Работодатель установил в акте работодателя штрафы за опоздание, нарушение трудовой дисциплины и увольнение по собственному желанию».</i></p></div>
+  ${revealBox('case-fine','Можно ли применять такие штрафы?','Штраф является формой ответственности; ТК РК предусматривает дисциплинарную и материальную ответственность работника с установленным перечнем и привязкой к прямому действительному ущербу. Штраф как самостоятельная санкция работодателя ухудшает положение работника — такое условие не должно применяться. Если ТК РК не предусматривает штраф как форму ответственности работника, работодатель не может создать его локальным актом или договором.')}`},
+// 34 — case 2
+{kicker:"Кейс 2: компенсация за увольнение", render:()=>`
+  <h2 class="section-title">100 МРП за увольнение: свобода договора или ухудшение положения?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«В трудовом договоре было условие: если работник увольняется досрочно по собственной инициативе, он обязан выплатить работодателю компенсацию в размере 100 МРП».</i></p></div>
+  ${revealBox('case-comp','Можно ли взыскать такую компенсацию?','Работник имеет право расторгнуть трудовой договор по своей инициативе; договор может устанавливать более длительный срок уведомления, но не может фактически лишать работника свободы увольнения. Компенсация 100 МРП ограничивает свободу труда и ухудшает положение работника — судебная практика отказала во взыскании такой компенсации. Трудовой договор не может превращать право работника на увольнение в финансовое наказание.')}`},
+// 35 — case 3
+{kicker:"Кейс 3: договор обучения", render:()=>`
+  <h2 class="section-title">Обучение за счёт работодателя: когда возмещение законно?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>«Работодатель направил работника на обучение. В договоре обучения указано, что работник обязан отработать определённый срок, а при увольнении возместить расходы на обучение».</i></p></div>
+  ${revealBox('case-study','Всегда ли работник обязан вернуть всю сумму?','Работодатель имеет право на возмещение затрат, связанных с обучением, в соответствии с ТК РК. Договор обучения должен содержать специальность, квалификацию или курс, права и обязанности сторон, срок обучения, срок отработки, порядок и случаи возмещения. Возмещение должно быть пропорционально недоработанному сроку отработки — взыскание полной суммы независимо от отработанного периода может противоречить трудовому законодательству. Договор обучения допустим, но возмещение должно соответствовать ТК РК и принципу пропорциональности.')}`},
+// 36
+{kicker:"Разные исходы", render:()=>`
+  <h2 class="section-title">Почему похожие дела решаются по-разному?</h2>
+  <div class="grid" style="gap:12px;">
+    ${infoCard("1. Компенсация за увольнение по собственному желанию","отказ во взыскании — условие ограничивает свободу труда и ухудшает положение работника")}
+    ${infoCard("2. Договор обучения с пропорциональным возмещением","частичное взыскание допустимо, если обучение доказано, договор содержит необходимые условия, расчёт пропорционален недоработанному сроку")}
+    ${infoCard("3. Полное возмещение или пеня","может быть снижено или изменено судом при нарушении принципов пропорциональности, разумности, добросовестности и требований ТК РК")}
+  </div>
+  <p class="note">Какой источник и какая формула помогают объяснить эти различия?</p>`},
+// 37
+{kicker:"Как читать судебное решение", render:()=>`
+  <h2 class="section-title">Как читать судебное решение по трудовому спору?</h2>
+  ${numList(["Кто истец и ответчик?","Какие требования заявлены?","Какой документ стал причиной спора?","Какая норма ТК РК применялась?","Какой источник имеет приоритет?","Ухудшает ли условие положение работника?","Как суд применил принцип in favorem?","Что можно вынести для правовой практики?"])}
+  <p class="note">Судебное решение → юридический фильтр → практический вывод.</p>`},
+// 38
+{kicker:"Система фильтров", render:()=>`
+  <h2 class="section-title">Проверка законности в трудовом праве</h2>
+  <div class="grid cols-2">
+    ${infoCard("Фильтр 1. Источник","Где закреплено правило?")}
+    ${infoCard("Фильтр 2. Юридическая сила","Какой документ выше?")}
+    ${infoCard("Фильтр 3. In favorem","Не ухудшает ли положение работника?")}
+    ${infoCard("Фильтр 4. Миссия трудового права","Сохраняется ли баланс интересов и защита слабой стороны?")}
+  </div>
+  <p class="lede" style="margin-top:12px;"><b>Юрист по трудовому праву не просто читает документ. Он пропускает его через систему источников, принципов и формулу трудового права.</b></p>`},
+// 39
+{kicker:"Exit ticket", render:()=>`
+  <h2 class="section-title">Exit ticket</h2>
+  ${numList(["Почему трудовое право не ограничивается только Трудовым кодексом?","Чем источник права отличается от регулятора трудовых отношений?","Какие документы входят в систему регуляторов трудовых отношений по ст. 10 ТК РК?","Почему трудовой договор не может ухудшать положение работника?","В чём смысл формулы трудового права?","Как принцип in favorem помогает проверять локальные акты работодателя?","Почему штраф работника может быть незаконным?","Когда договор обучения может быть основанием для взыскания затрат?","Почему судебная практика важна для юриста по трудовому праву?"])}
+  ${qrZone("exit","Exit ticket — форма ответа","https://forms.gle/")}`},
+// 40
+{kicker:"Главная идея", render:()=>`
+  <h2 class="section-title">Главная идея занятия</h2>
+  <div class="card burgundy" style="font-family:'Fraunces',serif;font-size:clamp(16px,2.4vw,20px);margin-bottom:14px;">Источники дают карту. Формула даёт фильтр.</div>
+  <p class="lede">Трудовое право находится не только в кодексе. Оно выражается в Конституции, международных договорах, нормативных правовых актах, соглашениях социального партнёрства, коллективных договорах, трудовых договорах, актах работодателя и судебной практике.</p>
+  <div class="card navy" style="margin-top:14px;text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2.2vw,18px);">«Разрешено всё, что не запрещено, если это не ухудшает положение работников по сравнению с трудовым законодательством».</p></div>
+  <p class="lede" style="margin-top:12px;text-align:center;"><b>Юрист по трудовому праву должен уметь не только найти норму, но и проверить, не снижает ли конкретный документ гарантированный уровень защиты работника.</b></p>`},
+];
+
+/* ============================================================
+   ТРЕНАЖЁРЫ (12)
+   ============================================================ */
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey];
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+const SORT_T1_ITEMS=[
+  ["право на свободу труда","Конституция"],["право на судебную защиту","Конституция"],
+  ["запрет дискриминации","ТК"],["порядок расторжения трудового договора","ТК"],
+  ["генеральное соглашение","Согл"],["отраслевое соглашение","Согл"],
+  ["коллективный договор организации","КД"],
+  ["положение об оплате труда","Акт"],["график сменности","Акт"],
+  ["условие о трудовой функции","ТД"],
+  ["нормативное постановление Верховного Суда","Суд"],["судебное решение по спору о договоре обучения","Суд"],
+];
+const SORT_T1_BUCKETS=[{key:"Конституция",label:"Конституция"},{key:"ТК",label:"Трудовой кодекс"},{key:"Согл",label:"Соглашение соц. партнёрства"},{key:"КД",label:"Коллективный договор"},{key:"ТД",label:"Трудовой договор"},{key:"Акт",label:"Акт работодателя"},{key:"Суд",label:"Судебная практика"}];
+
+const T2_ITEMS=["трудовой договор","коллективный договор","акт работодателя","график сменности","приказ о приёме на работу","обходной лист","заявление работника","положение об оплате труда","устная кадровая традиция","соглашение социального партнёрства"];
+const T2_REGULATORS=new Set(["трудовой договор","коллективный договор","акт работодателя","график сменности","положение об оплате труда","соглашение социального партнёрства"]);
+
+const RANK_T3=["Конституция","ратифицированный международный договор","Трудовой кодекс","подзаконный нормативный правовой акт","соглашение социального партнёрства","коллективный договор","трудовой договор","акт работодателя"];
+
+const SORT_T4_ITEMS=[
+  ["«Разрешено всё, что не запрещено»","private"],
+  ["«Запрещено всё, что не разрешено»","public"],
+  ["«Разрешено всё, что не запрещено, если это не ухудшает положение работников»","labor"],
+];
+const SORT_T4_BUCKETS=[{key:"private",label:"Частное право"},{key:"public",label:"Публичное право"},{key:"labor",label:"Трудовое право"}];
+
+const T5_SITUATIONS=[
+ {text:"Трудовой договор устанавливает дополнительный оплачиваемый отпуск сверх закона.",opts:["Действует","Не действует"],correct:0},
+ {text:"Акт работодателя сокращает ежегодный отпуск ниже минимального уровня.",opts:["Действует","Не действует"],correct:1},
+ {text:"Коллективный договор устанавливает повышенную оплату ночной работы.",opts:["Действует","Не действует"],correct:0},
+ {text:"Трудовой договор запрещает работнику увольняться до окончания срока договора под угрозой компенсации 100 МРП.",opts:["Действует","Не действует"],correct:1},
+ {text:"Акт работодателя вводит штраф за опоздание.",opts:["Действует","Не действует"],correct:1},
+];
+
+const T11_ANSWER="«Если работник подписал трудовой договор или акт работодателя, любые условия являются законными. Трудовой кодекс не может ограничивать свободу договора, потому что в частном праве разрешено всё, что не запрещено. Работодатель вправе устанавливать штрафы, компенсации и любые правила, если они нужны бизнесу».";
+const T11_ERRORS=[
+ "Подписание трудового договора не означает законность любого условия.",
+ "Трудовое право не является чистым частным правом.",
+ "Свобода договора в трудовом праве ограничена государственными гарантиями.",
+ "Нельзя ухудшать положение работника по сравнению с трудовым законодательством.",
+ "Акты работодателя не могут противоречить ТК РК.",
+ "Штрафы работников не могут вводиться произвольно.",
+ "Ответ игнорирует ст. 10 ТК РК и принцип in favorem.",
+ "Ответ игнорирует работника как более слабую сторону.",
+ "Ответ смешивает гражданско-правовую и трудоправовую формулы.",
+ "Бизнес-интерес работодателя не отменяет трудовые гарантии.",
+];
+
+const TRAINERS=[
+ {tag:"Тренажёр 1",title:"Где искать норму?",desc:"Найди источник — сортировка по 7 источникам."},
+ {tag:"Тренажёр 2",title:"Документ регулирует или только сопровождает?",desc:"Регулятор или кадровая практика?"},
+ {tag:"Тренажёр 3",title:"Что выше?",desc:"Иерархия источников — расставьте по порядку."},
+ {tag:"Тренажёр 4",title:"Частное, публичное или трудовое?",desc:"Формулы права — сопоставление."},
+ {tag:"Тренажёр 5",title:"Можно лучше, нельзя хуже",desc:"In favorem — 5 ситуаций."},
+ {tag:"Тренажёр 6",title:"Можно ли штрафовать работника?",desc:"Кейс о штрафах — открытые вопросы."},
+ {tag:"Тренажёр 7",title:"100 МРП за увольнение",desc:"Кейс о компенсации — открытые вопросы."},
+ {tag:"Тренажёр 8",title:"Когда обучение нужно возмещать?",desc:"Кейс о договоре обучения."},
+ {tag:"Тренажёр 9",title:"Прочитай судебное решение как юрист",desc:"Работа с фрагментом решения суда."},
+ {tag:"Тренажёр 10",title:"Локальный акт под фильтром законности",desc:"Проверьте акт работодателя по алгоритму."},
+ {tag:"Тренажёр 11",title:"Проверь ответ искусственного интеллекта",desc:"AI-критика — найдите ошибки."},
+ {tag:"Тренажёр 12",title:"Главный вывод занятия",desc:"Финальная рефлексия — 10 открытых вопросов."},
+];
+
+function trainerBody(idx){
+  switch(idx){
+    case 0: return `<div class="kicker">Тренажёр 1</div><h2 class="section-title">Где искать норму?</h2>
+      <p class="lede" style="margin-bottom:14px;">Распределите карточки по источникам.</p>
+      ${bucketSorter('t1', SORT_T1_ITEMS, SORT_T1_BUCKETS)}
+      <div class="note">Юрист должен сначала определить, из какого источника происходит правило, и только потом оценивать его юридическую силу и применимость.</div>`;
+    case 1: {
+      const picked = state.t2picked||{};
+      return `<div class="kicker">Тренажёр 2</div><h2 class="section-title">Документ регулирует или только сопровождает?</h2>
+      <p class="lede" style="margin-bottom:14px;">Что из перечисленного является регулятором трудовых отношений? Кликните на карточку, чтобы отметить выбор.</p>
+      <div class="pool">${T2_ITEMS.map(x=>{
+        const state_ = picked[x];
+        const isReg = T2_REGULATORS.has(x);
+        let cls='';
+        if(state_==='yes') cls = isReg?'style="border-color:#1f6f43;background:#e9f5ee;"':'style="border-color:#c8102e;background:#fbeceb;"';
+        return `<span class="chip" ${cls} onclick="pickT2('${x.replace(/'/g,"\\'")}')">${state_==='yes'?(isReg?'✓ ':'✕ '):''}${x}</span>`;
+      }).join("")}</div>
+      <div class="explain-box info" style="margin-top:14px;">Регуляторами могут быть трудовой договор, коллективный договор, акты работодателя, соглашения социального партнёрства и трудовое законодательство. Заявление и обходной лист чаще являются кадровыми документами или практиками, но сами по себе не должны ухудшать положение работника. Не каждый документ кадрового делопроизводства является источником права.</div>`;
+    }
+    case 2: return `<div class="kicker">Тренажёр 3</div><h2 class="section-title">Что выше?</h2>
+      <p class="lede" style="margin-bottom:14px;">Кликайте карточки в порядке убывания юридической силы (от высшей к низшей).</p>
+      ${rankingExercise('t3', RANK_T3)}
+      <div class="note">Чем ниже документ в системе регулирования, тем внимательнее нужно проверять, не ухудшает ли он положение работника по сравнению с трудовым законодательством.</div>`;
+    case 3: return `<div class="kicker">Тренажёр 4</div><h2 class="section-title">Частное, публичное или трудовое?</h2>
+      <p class="lede" style="margin-bottom:14px;">Соотнесите формулу со сферой права.</p>
+      ${bucketSorter('t4', SORT_T4_ITEMS, SORT_T4_BUCKETS)}
+      <div class="note">Трудовое право использует частноправовую свободу, но ограничивает её трудоправовой защитой работника.</div>`;
+    case 4: return `<div class="kicker">Тренажёр 5</div><h2 class="section-title">Можно лучше, нельзя хуже</h2>
+      <p class="lede" style="margin-bottom:14px;">Определите, действует ли условие.</p>
+      ${T5_SITUATIONS.map((s,i)=>`<div class="card" style="margin-bottom:14px;"><p style="font-size:13.5px;margin-bottom:10px;">${i+1}. ${s.text}</p>${choiceListFull('t5-'+i,s.opts,s.correct,"")}</div>`).join("")}
+      <div class="explain-box info">Ключевой вопрос трудового права: не просто «согласился ли работник?», а «не снижает ли документ гарантированный уровень защиты?»</div>`;
+    case 5: return `<div class="kicker">Тренажёр 6</div><h2 class="section-title">Можно ли штрафовать работника?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работодатель принял локальный акт, по которому за опоздание работник платит штраф 10 000 тенге, за невыполнение KPI — 20 000 тенге, а за увольнение по собственному желанию — компенсацию работодателю».</i></p></div>
+      <label class="q">Является ли штраф формой ответственности?</label>${answerBox('t6-q1')}
+      <label class="q">Какие виды ответственности работника предусмотрены трудовым законодательством?</label>${answerBox('t6-q2')}
+      <label class="q">Может ли работодатель создать новый вид ответственности локальным актом?</label>${answerBox('t6-q3')}
+      <label class="q">Ухудшает ли штраф положение работника?</label>${answerBox('t6-q4')}
+      <label class="q">Какой вывод по формуле трудового права?</label>${answerBox('t6-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Штраф как самостоятельная санкция работодателя не должен применяться, если он не предусмотрен трудовым законодательством и ухудшает положение работника.</div>`;
+    case 6: return `<div class="kicker">Тренажёр 7</div><h2 class="section-title">100 МРП за увольнение по собственному желанию</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работник заключил трудовой договор на три года. В договоре указано, что при увольнении по собственному желанию до окончания срока он обязан выплатить работодателю компенсацию 100 МРП».</i></p></div>
+      <label class="q">Какое право работника затрагивается?</label>${answerBox('t7-q1')}
+      <label class="q">Можно ли трудовым договором фактически ограничить свободу увольнения?</label>${answerBox('t7-q2')}
+      <label class="q">Улучшает или ухудшает это условие положение работника?</label>${answerBox('t7-q3')}
+      <label class="q">Как применить формулу трудового права?</label>${answerBox('t7-q4')}
+      <label class="q">Какой вывод должен сделать юрист?</label>${answerBox('t7-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Такое условие ухудшает положение работника и может рассматриваться как незаконное, поскольку превращает право работника на прекращение трудового договора в финансовую санкцию.</div>`;
+    case 7: return `<div class="kicker">Тренажёр 8</div><h2 class="section-title">Когда обучение нужно возмещать?</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Работодатель оплатил обучение работника. Работник обязался отработать два года, но уволился раньше. Работодатель требует вернуть всю сумму обучения».</i></p></div>
+      <label class="q">Имеет ли работодатель право на возмещение затрат на обучение?</label>${answerBox('t8-q1')}
+      <label class="q">Какие условия должен содержать договор обучения?</label>${answerBox('t8-q2')}
+      <label class="q">Можно ли взыскать всю сумму независимо от отработанного времени?</label>${answerBox('t8-q3')}
+      <label class="q">Почему важно пропорциональное возмещение?</label>${answerBox('t8-q4')}
+      <label class="q">Какой вывод по формуле трудового права?</label>${answerBox('t8-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Работодатель может требовать возмещения затрат на обучение, но в соответствии с ТК РК, условиями договора обучения и пропорционально недоработанному сроку отработки.</div>`;
+    case 8: return `<div class="kicker">Тренажёр 9</div><h2 class="section-title">Прочитай судебное решение как юрист</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>Фрагмент: работник обратился в суд с требованием отказать во взыскании компенсации 100 МРП за досрочное увольнение. Работодатель ссылался на условие трудового договора. Суд отказал в удовлетворении требований работодателя, указав на ограничение свободы труда и ухудшение положения работника.</i></p></div>
+      <label class="q">Какой документ стал причиной спора?</label>${answerBox('t9-q1')}
+      <label class="q">На какую норму ссылался работодатель?</label>${answerBox('t9-q2')}
+      <label class="q">Какой источник имел приоритет?</label>${answerBox('t9-q3')}
+      <label class="q">Как суд применил принцип пропорциональности или in favorem?</label>${answerBox('t9-q4')}
+      <label class="q">Какой практический урок получает HR-юрист?</label>${answerBox('t9-q5')}
+      <div class="explain-box info" style="margin-top:12px;">Судебная практика показывает, как абстрактная формула трудового права работает в реальном конфликте.</div>`;
+    case 9: return `<div class="kicker">Тренажёр 10</div><h2 class="section-title">Локальный акт под фильтром законности</h2>
+      <div class="card accent-left" style="margin-bottom:16px;"><p style="font-size:13.5px;"><i>«Компания утвердила внутреннюю политику, по которой работник обязан: отвечать на сообщения руководителя в любое время суток, не обсуждать зарплату с коллегами, компенсировать работодателю расходы при увольнении, проходить обучение за свой счёт, если не отработал три года».</i></p></div>
+      <p class="lede" style="margin-bottom:12px;">Проверьте каждое условие через алгоритм: источник → юридическая сила → норма ТК РК → ухудшение положения работника → правовой вывод.</p>
+      ${revealBox('t10-1','1. Обязанность отвечать на сообщения в любое время суток.','Может нарушать режим рабочего времени и отдыха.')}
+      ${revealBox('t10-2','2. Запрет обсуждать зарплату с коллегами.','Может затрагивать право на защиту и коллективные интересы.')}
+      ${revealBox('t10-3','3. Компенсация работодателю при увольнении.','Требует проверки законного основания — как правило, ухудшает положение работника.')}
+      ${revealBox('t10-4','4. Обучение за свой счёт при недоработке трёх лет.','Может возмещаться только при соблюдении требований договора обучения и пропорциональности.')}
+      <div class="explain-box info">Локальный акт не может ухудшать положение работника.</div>`;
+    case 10: return `<div class="kicker">Тренажёр 11</div><h2 class="section-title">Проверь ответ искусственного интеллекта</h2>
+      <div class="card navy" style="margin-bottom:18px;"><p style="color:#fff;font-size:13.5px;">${T11_ANSWER}</p></div>
+      <p class="lede" style="margin-bottom:12px;"><b>Задание:</b> найдите минимум 7 ошибок в этом ответе. Отметьте, какие из перечисленных ниже вы нашли сами, затем сверьтесь.</p>
+      ${T11_ERRORS.map((e,i)=>`<label style="display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;"><input type="checkbox" ${state.ai11[i]?'checked':''} onchange="state.ai11[${i}]=this.checked;save();" style="margin-top:3px;"> ${e}</label>`).join("")}
+      <div class="explain-box ok" style="margin-top:12px;">ИИ может дать формально убедительный, но юридически неверный ответ. Юрист должен проверить источник, юридическую силу документа и принцип недопустимости ухудшения положения работника.</div>`;
+    case 11: {
+      const qs=[["r1","Что такое источник трудового права?"],["r2","Почему трудовое право не ограничивается только Трудовым кодексом?"],["r3","Какие регуляторы трудовых отношений закреплены в ст. 10 ТК РК?"],["r4","Чем коллективный договор отличается от трудового договора?"],["r5","Почему акт работодателя не может ухудшать положение работника?"],["r6","В чём смысл формулы трудового права?"],["r7","Как принцип in favorem ограничивает свободу договора?"],["r8","Почему штраф работника может быть незаконным?"],["r9","Когда договор обучения может быть законным основанием для взыскания затрат?"],["r10","Как судебная практика помогает юристу понимать трудовое право?"]];
+      return `<div class="kicker">Тренажёр 12</div><h2 class="section-title">Главный вывод занятия</h2>
+      <p class="lede" style="margin-bottom:14px;">Открытый ответ. Отвечайте своими словами — это финальная рефлексия занятия.</p>
+      ${qs.map(([id,q])=>`<label class="q">${q}</label>${answerBox(id)}`).join("")}
+      <div style="margin-top:22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+        <button class="btn btn-navy" onclick="exportAnswers()">Отправить ответ преподавателю (скачать файл)</button>
+        <span class="note" id="export-status" style="margin:0;"></span>
+      </div>
+      <p class="note">Файл сохранится на ваше устройство — прикрепите его в Canvas LMS или отправьте преподавателю на email.</p>`;
+    }
+    default: return '';
+  }
+}
+window.pickT2=function(item){
+  if(!state.t2picked) state.t2picked={};
+  state.t2picked[item] = state.t2picked[item]==='yes' ? undefined : 'yes';
+  save(); render();
+};
+function buildAnswersText(){
+  let out = "ОТВЕТЫ СТУДЕНТА — Занятие №3. Источники и формула трудового права\nКурс: Трудовое право Республики Казахстан, MNU\n\n";
+  out += "— Тренажёр 7 (компенсация за увольнение) —\n";
+  ["t7-q1","t7-q2","t7-q3","t7-q4","t7-q5"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  out += "\n— Тренажёр 12 (финальная рефлексия) —\n";
+  ["r1","r2","r3","r4","r5","r6","r7","r8","r9","r10"].forEach(id=>{out += (state.refl[id]||"(нет ответа)")+"\n";});
+  return out;
+}
+window.exportAnswers=async function(){
+  const out = buildAnswersText();
+  const status = document.getElementById('export-status');
+  if(window.claude && window.claude.use){
+    try{
+      const downloads = await window.claude.use('downloads');
+      if(downloads){
+        await downloads.save({filename:"otvety-zanyatie3-trudovoe-pravo.txt", data: out});
+        if(status) status.textContent = 'Файл сохранён.';
+        return;
+      }
+    }catch(e){ /* fall through */ }
+  }
+  try{
+    const blob = new Blob([out], {type:"text/plain;charset=utf-8"});
+    const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = "otvety-zanyatie3-trudovoe-pravo.txt";
+    document.body.appendChild(a); a.click(); a.remove();
+    if(status) status.textContent = 'Файл сохранён.';
+  }catch(e){
+    try{ await navigator.clipboard.writeText(out); if(status) status.textContent = 'Ответы скопированы в буфер обмена.'; }
+    catch(e2){ if(status) status.textContent = 'Не удалось сохранить — выделите текст ответов вручную.'; }
+  }
+};
+
+/* ============================================================
+   STATE / NAVIGATION
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{t1:{},t4:{}}, rankings:{}, rankChecked:{}, t2picked:{}, ai11:{}, refl:{}};
+if(!state.sorters) state.sorters={};
+['t1','t4'].forEach(k=>{ if(!state.sorters[k]) state.sorters[k]={}; });
+if(!state.rankings) state.rankings={};
+if(!state.rankChecked) state.rankChecked={};
+if(!state.t2picked) state.t2picked={};
+if(!state.ai11) state.ai11={};
+function save(){try{localStorage.setItem('mnu_labor_law_lesson3',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_lesson3');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goToCases(){ currentScreen='presentation'; currentTrainer=null; goSlide(32,'full'); }
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Занятие №3 · Источники и формула трудового права</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Занятие №3. Источники и формула трудового права</p>
+      <p class="cover-question">Где искать трудовое право и как проверить предел дозволенного в сфере труда?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo('roadmap')">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">Перейти к тренажёрам</button>
+        <button class="btn btn-outline" onclick="openTrainer(11)">Финальная рефлексия</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта занятия</button>
+        <button class="btn btn-outline" onclick="goToCases()">Судебные кейсы</button>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenRoadmap(){
+  return `<div class="wrap">
+    <div class="kicker">Логика занятия</div>
+    <h2 class="section-title">Сегодня мы изучаем карту и фильтр трудового права</h2>
+    <p class="lede" style="margin-bottom:24px;">Источники показывают, где закреплены нормы трудового права. Формула показывает, как проверить, можно ли применять конкретное условие или действие работодателя.</p>
+    ${flowRow(ROADMAP_NODES)}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo('presentation')">Перейти к презентации →</button></div>
+  </div>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('map')">К карте понимания →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. «Судебные кейсы» в меню — слайды 33–35.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    return `<div class="wrap">
+      <div class="kicker">Раздел 4</div>
+      <h2 class="section-title">Тренажёры юридического мышления</h2>
+      <p class="lede" style="margin-bottom:24px;">Здесь вы не запоминаете нормы, а тренируетесь квалифицировать, сравнивать, аргументировать и делать вывод.</p>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+function screenMap(){
+  const nodes=["Миссия трудового права","Метод и принципы","Источники трудового права","Действующее право РК","Конституция + межд. договоры + ТК + НПА","Соглашения социального партнёрства","Коллективные договоры","Трудовые договоры","Акты работодателя","Судебная практика","Формулы права","Трудовое право: «разрешено всё, что не запрещено, если это не ухудшает положение работников»","In favorem","Алгоритм проверки законности"];
+  return `<div class="wrap narrow">
+    <div class="kicker">Раздел 5</div>
+    <h2 class="section-title">Карта понимания: источники и формула трудового права</h2>
+    ${verticalFlow(nodes,{final:"Профессиональное юридическое мышление"})}
+    <div style="text-align:center;margin-top:30px;"><button class="btn btn-red" onclick="goTo('after')">К самостоятельной работе →</button></div>
+  </div>`;
+}
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Раздел 6</div>
+    <h2 class="section-title">После занятия</h2>
+    <p class="lede" style="margin-bottom:22px;">Материалы для самостоятельного закрепления темы.</p>
+    <div class="grid cols-2" style="margin-bottom:18px;">
+      <div class="card"><h3>1. Повторить</h3><p>Понятие источников права · понятие источников трудового права · виды источников · действующее право РК · Конституцию · международные договоры · Трудовой кодекс · ст. 10 ТК РК · систему регуляторов · соглашения социального партнёрства · коллективные договоры · трудовые договоры · акты работодателя · роль судебной практики · правовые обычаи · формулу частного права · формулу публичного права · формулу трудового права · принцип in favorem · алгоритм проверки условий · судебные кейсы о штрафах, компенсации и договорах обучения.</p></div>
+      <div class="card"><h3>2. Подумать</h3><p>Почему трудовое право не может жить только в Трудовом кодексе, но при этом любые локальные и договорные регуляторы должны подчиняться минимальным гарантиям закона?</p></div>
+      <div class="card"><h3>3. Мини-задание</h3><p>Найдите в ТК РК статью 10 и объясните, какие документы являются регуляторами трудовых отношений. Для каждого документа приведите один пример.</p></div>
+      <div class="card"><h3>4. Практическое задание</h3><p>Найдите пример локального акта работодателя или условия трудового договора. Проверьте его по формуле трудового права: разрешено ли это, не запрещено ли это, не ухудшает ли это положение работника?</p></div>
+      <div class="card"><h3>5. Судебное задание</h3><p>Изучите одно судебное решение по договору обучения. Определите: какие нормы применил суд, почему взыскание было полным, частичным или отклонённым, и как проявился принцип пропорциональности.</p></div>
+      <div class="card"><h3>6. AI-задание</h3><p>Спросите ИИ: «Может ли работодатель установить штраф работнику в трудовом договоре?» Затем критически разберите ответ с позиции ст. 10 ТК РК, принципа in favorem и формулы трудового права.</p></div>
+    </div>
+    ${qrZone("canvas","Материалы курса в Canvas LMS","https://canvas.instructure.com")}
+    <div style="margin-top:16px;">${qrZone("tkrk","Ссылка на Трудовой кодекс РК","https://")}</div>
+    <div style="margin-top:16px;">${qrZone("court","Ссылка на судебное решение для разбора","https://")}</div>
+    <div style="text-align:center;margin-top:26px;"><button class="btn btn-outline" style="color:var(--navy);border-color:var(--navy);" onclick="goTo('cover')">Вернуться на главный экран</button></div>
+  </div>`;
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'roadmap': html=screenRoadmap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'map': html=screenMap(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+}
+function updateProgress(){
+  const order=['cover','roadmap','presentation','trainers','map','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 12 + (state.slide/(SLIDES.length-1))*58; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,8,12,78,90,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
