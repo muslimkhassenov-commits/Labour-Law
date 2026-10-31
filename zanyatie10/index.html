@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Тема 10. Нормирование и оплата труда</title>
+<meta name="description" content="Интерактивный образовательный модуль MNU на три занятия: нормирование труда, системы оплаты, оплата в условиях, отклоняющихся от нормальных, удержания, простой, гарантии, компенсации, профессиональная подготовка и дуальное обучение. 12 судебных дел, 17 тренажёров юридической лаборатории." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice,.case-card{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;flex-wrap:wrap;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn.ghost{background:transparent;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.mode-toggle{border:1.5px solid var(--navy);background:#fff;color:var(--navy);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.mode-toggle.student{background:var(--navy);color:#fff;}
+.teacher-note{border:1.5px dashed var(--navy);background:#eef2f7;border-radius:12px;padding:12px 14px;margin-top:10px;font-size:12.5px;color:var(--navy);line-height:1.6;}
+.teacher-note b{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);margin-bottom:6px;}
+.tab-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+.tab-row .navbtn.active{background:var(--navy);color:#fff;border-color:var(--navy);}
+.vote-tool{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfaf7;margin:12px 0;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h1.page-title{font-size:clamp(28px,4vw,44px);line-height:1.1;color:var(--navy);margin:0 0 12px;}
+h2.section-title{font-size:clamp(21px,2.7vw,29px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.menu-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:30px;}
+@media (max-width:860px){.menu-cards{grid-template-columns:1fr;}}
+.menu-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.22);border-radius:16px;padding:20px;cursor:pointer;transition:.18s;}
+.menu-card:hover{border-color:#fff;transform:translateY(-2px);background:rgba(255,255,255,.1);}
+.menu-card .mc-eyebrow{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:8px;}
+.menu-card h3{margin:0;color:#fff;font-size:16.5px;line-height:1.3;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.card.amber{background:#fff3e0;border-color:#e6c48a;} .card.amber p{color:#7a4c00;}
+.stat-card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:24px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat-card .num{font-family:'Fraunces',serif;font-size:clamp(24px,3.6vw,36px);color:var(--red);font-weight:700;line-height:1;}
+.stat-card .lbl{margin-top:8px;font-size:13px;color:var(--graphite-soft);}
+
+.roadmap{display:flex;flex-wrap:wrap;gap:0;align-items:stretch;}
+.roadmap .node{flex:1 1 130px;background:var(--white);border:1px solid var(--line);border-radius:14px;padding:14px 10px;text-align:center;font-size:12px;font-weight:600;color:var(--navy);box-shadow:var(--shadow);}
+.roadmap .arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-size:18px;flex:0 0 24px;}
+@media (max-width:760px){.roadmap{flex-direction:column;}.roadmap .arrow{transform:rotate(90deg);}}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.fork{grid-template-columns:1fr;}}
+.branch{border-radius:var(--radius);padding:20px;border:1.5px solid var(--line);}
+.branch.left{background:#f2f1ec;} .branch.right{background:#fff5f2;border-color:#f0c9c4;}
+.branch h4{margin:0 0 10px;color:var(--navy);}
+.branch ul{margin:0;padding-left:18px;font-size:13.5px;color:var(--graphite-soft);line-height:1.7;}
+
+.scale-wrap{display:flex;flex-direction:column;align-items:center;gap:12px;padding:16px 0;}
+.scale-cap{font-size:12.5px;color:var(--graphite-soft);max-width:520px;text-align:center;}
+
+.quote-slide{background:var(--navy);color:#fff;border-radius:var(--radius);padding:48px 40px;text-align:center;position:relative;overflow:hidden;}
+.quote-slide::before{content:"\201C";position:absolute;top:-10px;left:24px;font-family:'Fraunces',serif;font-size:140px;color:rgba(200,16,46,.35);line-height:1;}
+.quote-slide blockquote{margin:0 auto 16px;max-width:700px;font-family:'Fraunces',serif;font-size:clamp(17px,2.6vw,24px);line-height:1.42;position:relative;z-index:1;}
+.quote-slide cite{font-style:normal;color:#e3b9c1;font-size:13px;letter-spacing:.05em;}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+.step-hint{font-size:11.5px;color:var(--burgundy);text-align:center;margin-top:6px;font-style:italic;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+.trainer-card .lvl{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;display:inline-block;}
+.lvl-start{background:#eef2f7;color:var(--navy);} .lvl-confident{background:#e9f5ee;color:#1c5f3a;}
+.lvl-advanced{background:#fff3e0;color:#9a5b00;} .lvl-master{background:#fbeceb;color:var(--burgundy);}
+
+.case-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.case-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.case-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.case-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);}
+.case-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+.sort-layout.cols-5{grid-template-columns:1fr 1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4,.sort-layout.cols-5{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+p.q{font-size:14px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-node.zone{border-color:var(--burgundy);}
+.map-node.muted{opacity:.55;border-style:dashed;}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:700px){.two-col{grid-template-columns:1fr;}}
+
+.rank-item{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:7px;display:flex;justify-content:space-between;align-items:center;font-size:13.5px;}
+.rank-item .pos{color:var(--red);font-weight:700;margin-right:8px;}
+.rank-item.correct{border-color:var(--ok);background:#e9f5ee;}
+.rank-item.wrong{border-color:var(--red);background:#fbeceb;}
+
+.msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.8px;background:#fff;min-width:560px;}
+table.cmp th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-weight:600;}
+table.cmp td{padding:10px 12px;border-top:1px solid var(--line);color:var(--graphite-soft);vertical-align:top;}
+table.cmp tr:nth-child(even) td{background:#faf9f6;}
+table.cmp td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+
+.role-card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);}
+.role-card h4{margin:0 0 8px;color:var(--navy);font-size:14.5px;}
+.role-card ul{margin:0;padding-left:18px;font-size:12.8px;color:var(--graphite-soft);line-height:1.65;}
+
+.progress-badge{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:700;}
+.skill-row{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:8px;background:#fff;font-size:13px;}
+.skill-pill{font-size:10.5px;font-weight:700;padding:3px 10px;border-radius:999px;white-space:nowrap;}
+.skill-pill.done{background:#e9f5ee;color:#1c5f3a;} .skill-pill.todo{background:#eef2f7;color:var(--graphite-soft);}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+
+.formula-box{background:var(--navy);color:#fff;border-radius:14px;padding:16px 18px;text-align:center;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);margin:10px 0;}
+.risk-row{display:flex;gap:6px;flex-wrap:wrap;justify-content:space-between;margin:14px 0;}
+.risk-row span{flex:1 1 110px;text-align:center;font-size:11.5px;font-weight:600;color:var(--navy);border-bottom:3px solid var(--red);padding-bottom:8px;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Тема 10</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главный экран</button>
+    <button class="navbtn primary" onclick="goTo101()">10.1</button>
+    <button class="navbtn" onclick="goTo102()">10.2</button>
+    <button class="navbtn" onclick="goTo103()">10.3</button>
+    <button class="navbtn" onclick="goTo('trainers')">Юридическая лаборатория</button>
+    <button class="navbtn" onclick="openTrainer(16)">Final Payment Test</button>
+  </div>
+  <button class="mode-toggle" id="modeToggleBtn" onclick="toggleMode()">Режим преподавателя</button>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Тема 10. Нормирование труда. Оплата труда. Гарантии и компенсационные выплаты. Профессиональная подготовка, переподготовка и повышение квалификации · Хасенов Муслим Ханатович, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ХЕЛПЕРЫ
+   ============================================================ */
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function statCard(num,lbl){return `<div class="stat-card"><div class="num">${num}</div><div class="lbl">${lbl}</div></div>`;}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function flowRow(items){return `<div class="roadmap">${items.map((it,i)=>`<div class="node">${it}</div>${i<items.length-1?'<div class="arrow">→</div>':''}`).join("")}</div>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node ${opts.zoneIdx&&opts.zoneIdx.includes(i)?'zone':''} ${opts.mutedIdx&&opts.mutedIdx.includes(i)?'muted':''}">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<5;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function revealBox(id, question, answer, btnLabel){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть':(btnLabel||'Показать решение')}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function comparisonTable(headers, rows){
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+/* ranking exercise */
+function rankingExercise(key, items){
+  const chosen = state.rankings[key] || [];
+  const pool = items.filter(x=>!chosen.includes(x));
+  const checked = state.rankChecked[key];
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(x=>`<span class="chip" onclick="pickRank('${key}','${x.replace(/'/g,"\\'")}',${items.length})">${x}</span>`).join("")||'<span class="note">Все карточки расставлены.</span>'}</div>
+  <div class="bucket" style="min-height:100px;"><h4>Ваша последовательность</h4>
+    ${chosen.map((x,i)=>{
+      let cls='';
+      if(checked) cls = (items[i]===x) ? 'correct' : 'wrong';
+      return `<div class="rank-item ${cls}"><span><span class="pos">${i+1}.</span>${x}</span><button class="navbtn" style="padding:3px 10px;font-size:11px;" onclick="unRank('${key}','${x.replace(/'/g,"\\'")}')">убрать</button></div>`;
+    }).join("")}
+  </div>
+  ${chosen.length===items.length ? `<button class="btn btn-navy" style="margin-top:12px;" onclick="checkRank('${key}')">Проверить порядок</button>` : ''}
+  ${checked?`<div class="explain-box ${chosen.every((x,i)=>items[i]===x)?'ok':'no'}" style="margin-top:12px;">${chosen.every((x,i)=>items[i]===x)?'✓ Порядок верный.':'✕ Есть ошибки — красным отмечены позиции не на своём месте.'}</div>`:''}`;
+}
+window.pickRank=function(key,item,total){
+  if(!state.rankings[key]) state.rankings[key]=[];
+  state.rankings[key].push(item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.unRank=function(key,item){
+  state.rankings[key]=(state.rankings[key]||[]).filter(x=>x!==item);
+  state.rankChecked[key]=false;
+  save(); render();
+};
+window.checkRank=function(key){ state.rankChecked[key]=true; save(); render(); };
+
+/* multi-select exercise */
+function multiSelectExercise(key, items){
+  const picked = state.multiSel[key] || {};
+  const checked = state.multiSelChecked[key];
+  return `${items.map((it,i)=>{
+    let style='';
+    if(checked){
+      if(it.correct) style = picked[i] ? 'border-color:#1f6f43;background:#e9f5ee;' : 'border-color:#c8102e;background:#fbeceb;';
+      else style = picked[i] ? 'border-color:#c8102e;background:#fbeceb;' : '';
+    }
+    return `<label class="msel-item" style="${style}"><input type="checkbox" ${picked[i]?'checked':''} onchange="toggleMultiSel('${key}',${i})"> ${it.text}</label>`;
+  }).join("")}
+  <button class="btn btn-navy" style="margin-top:6px;" onclick="checkMultiSel('${key}')">Проверить</button>
+  ${checked?`<div class="explain-box ${items.every((it,i)=>!!picked[i]===!!it.correct)?'ok':'no'}" style="margin-top:12px;">${items.every((it,i)=>!!picked[i]===!!it.correct)?'✓ Все выбраны верно.':'✕ Есть ошибки — зелёным отмечены верные, красным — неверно отмеченные или пропущенные позиции.'}</div>`:''}`;
+}
+window.toggleMultiSel=function(key,i){
+  if(!state.multiSel[key]) state.multiSel[key]={};
+  state.multiSel[key][i]=!state.multiSel[key][i];
+  state.multiSelChecked[key]=false;
+  save(); render();
+};
+window.checkMultiSel=function(key){ state.multiSelChecked[key]=true; save(); render(); };
+
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey]||{};
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':cols>=5?'cols-5':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  if(!state.sorters[sortKey]) state.sorters[sortKey]={};
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ if(state.sorters[sortKey]) delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+/* --- инструменты из тем 8-9 --- */
+function teacherNote(html){
+  return state.teacherMode ? `<div class="teacher-note"><b>Заметка преподавателя</b>${html}</div>` : '';
+}
+function votingTool(id, labels){
+  const v = state.answers['vote-'+id];
+  const L = labels || {a:'Работник прав', b:'Работодатель прав', c:'Недостаточно данных'};
+  const conf = state.answers['conf-'+id];
+  return `<div class="vote-tool">
+    <p class="q" style="margin:0 0 10px;font-weight:700;color:var(--navy);">Как бы вы решили?</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+      <button class="navbtn ${v==='a'?'primary':''}" onclick="castVote('${id}','a')">${L.a}</button>
+      <button class="navbtn ${v==='b'?'primary':''}" onclick="castVote('${id}','b')">${L.b}</button>
+      <button class="navbtn ${v==='c'?'primary':''}" onclick="castVote('${id}','c')">${L.c}</button>
+    </div>
+    ${v?`<div>
+      <p class="note" style="margin-bottom:6px;">Насколько вы уверены в этой позиции?</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        ${['0–25%','26–50%','51–75%','76–100%'].map((l,i)=>`<button class="navbtn ${conf===i?'primary':''}" onclick="castConfidence('${id}',${i})">${l}</button>`).join("")}
+      </div>
+    </div>`:''}
+  </div>`;
+}
+window.castVote=function(id,v){ state.answers['vote-'+id]=v; save(); render(); };
+window.castConfidence=function(id,i){ state.answers['conf-'+id]=i; save(); render(); };
+function changeOneFactBox(id, changedFact, question, answer){
+  return revealBox('changefact-'+id, `<b>Изменённый факт:</b> ${changedFact}<br>${question}`, answer);
+}
+function evidenceSplit(workerTitle, workerBody, employerTitle, employerBody){
+  return `<div class="grid cols-2" style="margin:12px 0;">${infoCard(workerTitle,workerBody)}${infoCard(employerTitle,employerBody)}</div>`;
+}
+
+const SLIDES = [
+// ===================== ЗАНЯТИЕ 10.1. ОТ НОРМЫ ТРУДА К ЗАРАБОТНОЙ ПЛАТЕ =====================
+// 1. (10.1.1) Титул
+{kicker:"Занятие 10.1 · Титул", render:()=>`
+  <h2 class="section-title">Нормирование труда и оплата труда</h2>
+  <p class="subtitle">От меры труда к юридически защищённому праву на заработную плату</p>
+  <div class="card navy" style="text-align:center;margin:16px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);">Труд → Норма → Цена → Выплата</p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);">За что именно работодатель платит и как право определяет цену труда?</p>`},
+// 2. (10.1.2) Провокационный вход
+{kicker:"Кто выполнил норму труда?", render:()=>`
+  <h2 class="section-title">Кто из них выполнил норму труда?</h2>
+  <div class="grid cols-2" style="margin-bottom:14px;">
+    ${infoCard("Работник А","Изготовил 150 деталей.")}
+    ${infoCard("Работник Б","Отработал 160 часов.")}
+  </div>
+  ${choiceListFull('s2-norm',["Работник А","Работник Б","Оба","Недостаточно данных"],3,"Результат нельзя оценить без меры труда: не известны ни применимая норма, ни трудовая функция, ни система оплаты, ни показатель труда.")}
+  ${teacherNote("Спросите аудиторию: «Какой информации нам не хватает?» Ожидаемые ответы: какая норма, какая трудовая функция, какая система оплаты, какой показатель труда.")}`},
+// 3. (10.1.3) Мера труда
+{kicker:"Мера труда", render:()=>`
+  <h2 class="section-title">Мера труда</h2>
+  <p class="lede">Труд сам по себе нельзя непосредственно перевести в деньги. Между работой и заработком существует мера труда.</p>
+  ${verticalFlow(["Трудовая функция","Норма","Фактический результат"],{final:"Цена"})}`},
+// 4. (10.1.4) Понятие нормирования
+{kicker:"Понятие нормирования труда", render:()=>`
+  <h2 class="section-title">Нормирование труда</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Нормирование труда — установление необходимых затрат труда и результатов труда для выполнения конкретной работы в определённых организационно-технических условиях.</p></div>
+  ${numList(["сколько времени?","сколько продукции?","сколько объектов?","сколько работников?"])}`},
+// 5. (10.1.5) Зачем нужно нормирование
+{kicker:"Зачем нужно нормирование", render:()=>`
+  <h2 class="section-title">Зачем нужно нормирование</h2>
+  <div class="grid cols-4" style="margin-bottom:12px;">
+    ${infoCard("Организовать","")}${infoCard("Измерить","")}${infoCard("Планировать","")}${infoCard("Оплатить","")}
+  </div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Норма труда может непосредственно влиять на размер заработка.</p></div>`},
+// 6. (10.1.6) Основные нормы
+{kicker:"Основные нормы труда", render:()=>`
+  <h2 class="section-title">Основные нормы труда</h2>
+  <div class="grid cols-2">
+    ${infoCard("Норма времени","Время на единицу работы.")}
+    ${infoCard("Норма выработки","Объём работы за единицу времени.")}
+    ${infoCard("Норма обслуживания","Число обслуживаемых объектов.")}
+    ${infoCard("Норма численности","Необходимое количество работников.")}
+  </div>
+  <div style="margin-top:14px;">${infoCard("Нормированное задание","Объём работы за установленный период.")}</div>`},
+// 7. (10.1.7) Классификация — drag&drop
+{kicker:"Классификация норм", render:()=>`
+  <h2 class="section-title">Классифицируйте каждую норму</h2>
+  <p class="lede" style="margin-bottom:12px;">Распределите карточки по видам норм труда.</p>
+  ${bucketSorter('s7',[
+    ["30 минут на одну деталь","time"],
+    ["20 заявок за смену","output"],
+    ["15 станков на механика","service"],
+    ["6 операторов на участок","headcount"],
+    ["40 проверок за неделю","assignment"],
+  ],[
+    {key:"time",label:"Время (норма)"},
+    {key:"output",label:"Выработка (норма)"},
+    {key:"service",label:"Обслуживание (норма)"},
+    {key:"headcount",label:"Численность (норма)"},
+    {key:"assignment",label:"Нормированное задание"},
+  ])}`},
+// 8. (10.1.8) Взаимосвязь
+{kicker:"Взаимосвязь норм", render:()=>`
+  <h2 class="section-title">Взаимосвязь норм</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Если 30 минут на единицу, то 2 единицы в час.</p></div>
+  ${revealBox('s8','Это разные нормы, описывающие одну производственную реальность?','Да. Норма времени и норма выработки — две взаимно пересчитываемые формы одной и той же меры труда.')}`},
+// 9. (10.1.9) Сдельная расценка — formula
+{kicker:"Сдельная расценка", render:()=>`
+  <h2 class="section-title">Сдельная расценка</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Часовая ставка","1 000 ₸")}
+    ${infoCard("Норма выработки","2 изделия в час")}
+  </div>
+  ${revealBox('s9','Постройте формулу расценки за одно изделие.','1 000 ₸ / 2 = 500 ₸ за изделие.')}`},
+// 10. (10.1.10) Расчёт
+{kicker:"Расчёт заработка", render:()=>`
+  <h2 class="section-title">Расчёт заработка</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Изготовлено","150 изделий")}
+    ${infoCard("Расценка","500 ₸")}
+  </div>
+  ${revealBox('s10','Рассчитайте заработок.','150 × 500 ₸ = 75 000 ₸.')}
+  ${teacherNote("Спросите: «Это вся зарплата?» Ответ: не обязательно — могут добавляться доплаты, премии и иные выплаты.")}`},
+// 11. (10.1.11) Понятие оплаты труда
+{kicker:"Понятие оплаты труда", render:()=>`
+  <h2 class="section-title">Оплата труда</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Оплата труда — система отношений, связанных с регламентацией и реализацией выплат работодателем работнику за труд.</p></div>
+  <p class="lede">Источники:</p>
+  ${numList(["законодательство","соглашения","коллективный договор","трудовой договор","акты работодателя"])}`},
+// 12. (10.1.12) Оплата ≠ только оклад
+{kicker:"Оплата ≠ только оклад", render:()=>`
+  <h2 class="section-title">Оплата труда ≠ только оклад</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">«Мой оклад — 500 000 ₸»</p></div>
+  <p class="lede">Вокруг оклада: тариф, доплаты, премии, ночные, сверхурочные, праздничные, иные выплаты.</p>`},
+// 13. (10.1.13) Равная оплата
+{kicker:"Равная оплата за равный труд", render:()=>`
+  <h2 class="section-title">Равная оплата за равный труд</h2>
+  ${revealBox('s13','Одно название должности означает одинаковую зарплату?','Нет. Проверять нужно содержание функции, сложность, квалификацию, объём, ответственность, результаты.')}`},
+// 14. (10.1.14) Дифференциация
+{kicker:"Дифференциация оплаты", render:()=>`
+  <h2 class="section-title">Дифференциация оплаты</h2>
+  <p class="lede">Объективные факторы дифференциации:</p>
+  ${numList(["сложность","квалификация","опыт","трудовой вклад","результаты","условия труда"])}
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Где заканчивается дифференциация и начинается неравное обращение?</p></div>
+  ${teacherNote("Открытый вопрос для обсуждения — не давать единственно верный ответ, обсудить на конкретных примерах аудитории.")}`},
+// 15. (10.1.15) Автономия и государство
+{kicker:"Автономия и государство", render:()=>`
+  <h2 class="section-title">Автономия работодателя и государственные гарантии</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Автономия работодателя","Формирует систему оплаты труда.")}
+    ${infoCard("Государственные гарантии","Императивный минимум, который нельзя отменить.")}
+  </div>`},
+// 16. (10.1.16) Государственные гарантии
+{kicker:"Государственные гарантии в оплате труда", render:()=>`
+  <h2 class="section-title">Государственные гарантии</h2>
+  <p class="lede">Государство не назначает каждому индивидуальную зарплату, но устанавливает:</p>
+  ${numList(["минимальные стандарты","обязательные доплаты","порядок выплаты","ограничения удержаний","защитные механизмы"])}
+  <div class="card navy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Свобода вверх. Ограничения вниз.</p></div>`},
+// 17. (10.1.17) Система оплаты
+{kicker:"Система оплаты труда", render:()=>`
+  <h2 class="section-title">Система оплаты труда</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Система оплаты труда — способ установления соотношения между трудом, измеряемым по определённым показателям, и размером оплаты.</p></div>
+  ${verticalFlow(["Показатель","Цена","Факт"],{final:"Выплата"})}`},
+// 18. (10.1.18) Повременная
+{kicker:"Повременная система", render:()=>`
+  <h2 class="section-title">Повременная система</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Ставка × время</p></div>
+  <div class="formula-box">1 500 ₸ × 160 часов = 240 000 ₸</div>`},
+// 19. (10.1.19) Сдельная
+{kicker:"Сдельная система", render:()=>`
+  <h2 class="section-title">Сдельная система</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Расценка × объём</p></div>
+  <div class="formula-box">2 000 ₸ × 100 изделий = 200 000 ₸</div>`},
+// 20. (10.1.20) Сравнение
+{kicker:"Повременная vs сдельная", render:()=>`
+  <h2 class="section-title">Повременная и сдельная: сравнение</h2>
+  ${comparisonTable(["Вопрос","Повременная","Сдельная"],[
+    ["Что измеряется?","время","результат"],
+    ["Основной показатель","часы / дни","единицы"],
+    ["Базовая единица цены","ставка","расценка"],
+    ["Влияние производительности","косвенное","непосредственное"],
+  ])}`},
+// 21. (10.1.21) Премия
+{kicker:"Премия: подарок или элемент системы?", render:()=>`
+  <h2 class="section-title">Премия</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">✕ «Премия — это всегда подарок работодателя»</p></div>
+  <div class="grid cols-2">
+    ${infoCard("Премия как элемент системы оплаты","Предусмотрена заранее определёнными условиями и показателями.")}
+    ${infoCard("Разовая поощрительная выплата","Производится по усмотрению работодателя вне заранее установленной системы.")}
+  </div>`},
+// 22. (10.1.22) Premium test
+{kicker:"Premium test", render:()=>`
+  <h2 class="section-title">Premium test</h2>
+  ${numList(["Где предусмотрена?","За что платится?","Какие показатели?","Можно ли заранее определить условия?","Выполнены ли они?","Требуется ли решение?","Кто компетентен?","Сохраняется ли усмотрение работодателя?"])}`},
+// 23. (10.1.23) Дело №56 Фабула
+{kicker:"Дело №56 · Бактыгереев v ForteBank / Kaspi Bank", render:()=>`
+  <h2 class="section-title">100% заработной платы</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>На счёт работника поступила заработная плата — 265 323 ₸. Банк списал 100% в счёт кредитной задолженности.</i></p></div>
+  <p class="note" style="margin-top:10px;">Правовой вопрос: перестаёт ли заработная плата быть объектом трудоправовой защиты после зачисления на банковский счёт?</p>`},
+// 24. (10.1.24) Дело №56 Позиции
+{kicker:"Дело №56 · Бактыгереев v ForteBank / Kaspi Bank", render:()=>`
+  <h2 class="section-title">Позиции сторон</h2>
+  ${evidenceSplit("Работник","«Я не отрицаю задолженность. Но нельзя лишить меня всей заработной платы».","Банк","«Трудовой кодекс регулирует отношения с работодателем. Банк работодателем не является».")}
+  ${votingTool('s24-56',{a:'Прав работник',b:'Прав банк',c:'Зависит от содержания государственной гарантии'})}`},
+// 25. (10.1.25) Дело №56 Логика нижестоящих судов
+{kicker:"Дело №56 · Бактыгереев v ForteBank / Kaspi Bank", render:()=>`
+  <h2 class="section-title">Логика нижестоящих судов</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Первая инстанция","Отказала.")}
+    ${timelineStep(2,"Апелляция","Поддержала отказ.")}
+  </div>
+  <p class="lede">Логика: ограничение удержаний закреплено в трудовом законодательстве; оно адресовано прежде всего отношениям работник–работодатель; банк работодателем не является; банковский договор допускает списание.</p>
+  ${revealBox('s25','Что в этой логике может быть методологически неполным?','Суд сосредоточился на статусе субъекта, а не на содержании государственной гарантии.')}`},
+// 26. (10.1.26) Дело №56 ВС: гарантия важнее статуса
+{kicker:"Дело №56 · Бактыгереев v ForteBank / Kaspi Bank", render:()=>`
+  <h2 class="section-title">Верховный Суд: гарантия важнее формального статуса субъекта</h2>
+  <p class="lede">Центральный вопрос: может ли иной субъект своими действиями фактически обнулить государственную гарантию в области оплаты труда?</p>
+  <div class="card navy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">В логике дела — нет. 100%-ное списание признано неправомерным, применена защитная конструкция ограничения.</p></div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:13.5px;">Нормы ТК РК о государственных гарантиях в области оплаты труда имеют защитное значение не только в рамках классического правоотношения «работник — работодатель». Государственная гарантия защищает само право работника и не может быть нейтрализована только потому, что в правоотношении участвует иной субъект.</p></div>
+  ${teacherNote("Что важнее для защитной нормы — статус нарушителя или содержание гарантированного права?")}`},
+// 27. (10.1.27) Дело №56 Change one fact
+{kicker:"Дело №56 · Изменим один факт", render:()=>`
+  <h2 class="section-title">Изменим один факт</h2>
+  ${changeOneFactBox('56','На одном счёте находятся заработная плата, деньги от продажи автомобиля и перевод родственника. Банк списывает сумму.','Как доказать, какая часть средств имеет происхождение из заработной платы?','Гарантия защищает право, но фактическое происхождение средств может требовать доказывания.')}`},
+// 28. (10.1.28) Дело №57 Фабула
+{kicker:"Дело №57 · Калинин v ТОО «Казахтрансстрой»", render:()=>`
+  <h2 class="section-title">«Претензий не имею»</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>После прекращения трудового договора работник подписывает: «Расчёт получил полностью. Претензий по заработной плате не имею и иметь не буду». Позднее предъявляет требования о причитающихся трудовых выплатах.</i></p></div>
+  <p class="note" style="margin-top:10px;">Правовой вопрос: может ли работник распиской закрыть себе право на будущую защиту?</p>`},
+// 29. (10.1.29) Дело №57 Может/не может расписка
+{kicker:"Дело №57 · Калинин v ТОО «Казахтрансстрой»", render:()=>`
+  <h2 class="section-title">Что может и чего не может расписка</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>Может доказывать</h3>${numList(["получение конкретной суммы","дату передачи денег","факт подписания документа"])}</div>
+    <div class="card"><h3>Не может сама по себе</h3>${numList(["изменить законный размер зарплаты","отменить обязательную гарантию","лишить права на судебную защиту","навсегда исключить требование о выявленной задолженности","ограничить трудовую правоспособность работника"])}</div>
+  </div>`},
+// 30. (10.1.30) Дело №57 Конституционная идея
+{kicker:"Дело №57 · Конституционная идея", render:()=>`
+  <h2 class="section-title">Конституционная идея дела №57</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Права и свободы человека принадлежат каждому от рождения, признаются неотъемлемыми и неотчуждаемыми.</p></div>
+  <p class="lede">В трудовой сфере: никто не может быть ограничен в правах, кроме случаев и в порядке, предусмотренных законом.</p>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Человек сам себя ограничить в трудовой правоспособности не может. Расписка «претензий иметь не буду» в части попытки заранее отказаться от предусмотренного законом права не создаёт такого правового последствия.</p></div>`},
+// 31. (10.1.31) Дело №57 Факт или отказ от права
+{kicker:"Дело №57 · Факт или отказ от права", render:()=>`
+  <h2 class="section-title">Факт или отказ от права</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>А. «Получил 300 000 ₸»</h3><p>Это подтверждение факта.</p></div>
+    <div class="card"><h3>Б. «Навсегда отказываюсь от любой недополученной заработной платы и обращения в суд»</h3><p>Это попытка самоограничения.</p></div>
+  </div>
+  <div class="card burgundy" style="text-align:center;margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Добровольность подписи не делает законным самоограничение, которое закон не допускает.</p></div>`},
+// 32. (10.1.32) Дело №58 Фабула
+{kicker:"Дело №58 · Нурланова v АО «Семей Инжиниринг»", render:()=>`
+  <h2 class="section-title">Прибыль есть — премия есть?</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работница требует 6 643 008 ₸ за 2013 год и 2 428 000 ₸ за 2014 год плюс пеню. Аргументы: прибыль, выполненные KPI, другим управленческим работникам выплаты производились.</i></p></div>`},
+// 33. (10.1.33) Дело №58 Конструктор права на премию
+{kicker:"Дело №58 · Конструктор права на премию", render:()=>`
+  <h2 class="section-title">Конструктор права на премию</h2>
+  <p class="lede" style="margin-bottom:10px;">Отметьте, какие элементы обязательны по конкретной системе премирования.</p>
+  ${multiSelectExercise('s33-58',[
+    {text:"Корпоративные KPI",correct:true},
+    {text:"Индивидуальные KPI",correct:true},
+    {text:"Аудированная отчётность",correct:true},
+    {text:"Бюджет",correct:true},
+    {text:"Сформированный резерв на конкретного работника",correct:true},
+    {text:"Корпоративное решение",correct:true},
+    {text:"Продолжительность работы в отчётном периоде",correct:true},
+  ])}`},
+// 34. (10.1.34) Дело №58 Решающие факты
+{kicker:"Дело №58 · Решающие факты", render:()=>`
+  <h2 class="section-title">Решающие факты</h2>
+  <div class="grid cols-2">
+    ${infoCard("2013 год","Индивидуального резерва на работницу не сформировано, отдельная выплата не подтверждена.")}
+    ${infoCard("2014 год","Отработано 4 месяца 5 дней при условии «не менее 5 месяцев».")}
+  </div>`},
+// 35. (10.1.35) Дело №58 Результат
+{kicker:"Дело №58 · Результат", render:()=>`
+  <h2 class="section-title">Результат дела №58</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Суд в иске отказал.</p></div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Не «любая премия — усмотрение работодателя». Право на конкретную премию определяется полным юридическим механизмом её возникновения.</p></div>`},
+// 36. (10.1.36) Дело №59 Фабула и финал + итог занятия
+{kicker:"Дело №59 · Дюсенаков v АНПЗ", render:()=>`
+  <h2 class="section-title">Выговор + лишение премии</h2>
+  <p class="lede">Работник допустил нарушение требований безопасности. Работодатель одним приказом применил выговор и лишение премии на 3 месяца.</p>
+  <div class="grid cols-2" style="margin:12px 0;">
+    ${infoCard("Выговор","Законен.")}
+    ${infoCard("Лишение премии на 3 месяца как дополнительная дисциплинарная мера","Незаконно.")}
+  </div>
+  <div class="card burgundy" style="text-align:center;margin-bottom:16px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Невыполнение условий премирования ≠ «лишение премии» как дополнительное дисциплинарное наказание.</p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Если работник говорит «мне недоплатили», юрист проверяет:</p>
+  ${numList(["систему","норму","ставку","результат","премию","государственные гарантии","документы","доказательства"])}
+  <div class="card navy" style="text-align:center;margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">А что если работа выполнялась ночью, в праздник или сверх нормы?</p></div>`},
+
+// ===================== ЗАНЯТИЕ 10.2. ЦЕНА ТРУДА В УСЛОВИЯХ, ОТКЛОНЯЮЩИХСЯ ОТ НОРМАЛЬНЫХ =====================
+// 37. (10.2.1) Провокация
+{kicker:"Занятие 10.2 · Провокация", render:()=>`
+  <h2 class="section-title">Цена труда в условиях, отклоняющихся от нормальных</h2>
+  <p class="subtitle">Когда обычной ставки уже недостаточно?</p>
+  <div class="card accent-left" style="margin-top:12px;"><p style="font-size:13.5px;"><i>Работник работает 1 января с 22:00 до 02:00.</i></p></div>
+  ${revealBox('s37','Сколько юридически значимых характеристик имеют эти часы?','Минимум две: ночной статус (22:00–06:00) и праздничный статус (1 января). Каждая квалифицируется отдельно.')}`},
+// 38. (10.2.2) Карта специальных условий
+{kicker:"Карта специальных условий", render:()=>`
+  <h2 class="section-title">Карта специальных условий</h2>
+  ${numList(["сверхурочная","ночная","выходной","праздник","совмещение","расширение зоны обслуживания","замещение","простой"])}
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Каждая квалификация имеет своё основание.</p></div>`},
+// 39. (10.2.3) Сверхурочная работа
+{kicker:"Сверхурочная работа: квалификация", render:()=>`
+  <h2 class="section-title">Сверхурочная работа</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("По инициативе работодателя","")}
+    ${infoCard("Сверх установленной продолжительности","")}
+  </div>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">При повременной системе — не ниже 1,5 ставки.</p></div>`},
+// 40. (10.2.4) Ночная работа
+{kicker:"Ночная работа", render:()=>`
+  <h2 class="section-title">Ночная работа</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Каждый ночной час — повышенная оплата.</p></div>
+  <p class="lede">Не «за ночную смену вообще», а за конкретные ночные часы.</p>`},
+// 41. (10.2.5) Праздник / выходной
+{kicker:"Праздник / выходной", render:()=>`
+  <h2 class="section-title">Праздник / выходной</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Каждый соответствующий час — повышенная оплата.</p></div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Работа в выходной ≠ автоматически сверхурочная.</p></div>`},
+// 42. (10.2.6) Ночь + праздник
+{kicker:"Ночь + праздник", render:()=>`
+  <h2 class="section-title">Ночь + праздник</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Ночной статус","")}
+    ${infoCard("Праздничный статус","")}
+  </div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Один статус не уничтожает другой.</p></div>`},
+// 43. (10.2.7) Расчётный конструктор
+{kicker:"Расчётный конструктор", render:()=>`
+  <h2 class="section-title">Расчётный конструктор</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Часовая ставка","2 000 ₸")}
+    ${infoCard("Работа","1 января, 22:00–02:00")}
+  </div>
+  ${revealBox('s43','Сначала юридическая квалификация, потом формула, потом арифметика.','Квалификация: все 4 часа ночные (22:00–02:00), все 4 часа праздничные (1 января). Формула: 2 000 ₸ × (ночная доплата) × (праздничная доплата) за каждый час. Арифметика зависит от применимых размеров доплат — считать только после того, как установлен конкретный применимый размер каждой доплаты.')}`},
+// 44. (10.2.8) Суммированный учёт
+{kicker:"Суммированный учёт", render:()=>`
+  <h2 class="section-title">Суммированный учёт</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">12-часовая смена ≠ автоматически 4 часа сверхурочных.</p></div>
+  <p class="lede">Сначала: учётный период, индивидуальная норма, фактическое время.</p>`},
+// 45. (10.2.9) Индивидуальная норма
+{kicker:"Индивидуальная норма и периоды отсутствия", render:()=>`
+  <h2 class="section-title">Индивидуальная норма и периоды отсутствия</h2>
+  <p class="lede">Если работник болел, был в отпуске или находился в простое, необходимо учитывать влияние этих периодов на индивидуальную норму.</p>`},
+// 46. (10.2.10) Учебный расчёт
+{kicker:"Учебный расчёт", render:()=>`
+  <h2 class="section-title">Учебный расчёт</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Факт","187 часов")}
+    ${infoCard("Индивидуальная норма","168 часов")}
+  </div>
+  <p class="lede">Из них 11 часов — самостоятельная работа в праздник.</p>
+  ${revealBox('s46','187 − 168 − 11 = ?','8 часов.')}
+  ${teacherNote("Подчеркните: конкретный правовой расчёт зависит от применимых правил и квалификации каждого периода — это учебная иллюстрация метода, а не универсальная формула.")}`},
+// 47. (10.2.11) Совмещение
+{kicker:"Совмещение", render:()=>`
+  <h2 class="section-title">Совмещение</h2>
+  <p class="lede">Работник одновременно выполняет основную работу и дополнительную работу.</p>
+  <div class="card navy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Ключ: в то же рабочее время.</p></div>`},
+// 48. (10.2.12) Расширение зоны
+{kicker:"Расширение зоны обслуживания", render:()=>`
+  <h2 class="section-title">Расширение зоны обслуживания</h2>
+  <p class="lede">Та же работа, но больший объём.</p>`},
+// 49. (10.2.13) Замещение
+{kicker:"Замещение", render:()=>`
+  <h2 class="section-title">Замещение</h2>
+  <p class="lede">Работа за временно отсутствующего работника.</p>`},
+// 50. (10.2.14) Доплата
+{kicker:"Доплата за дополнительную работу", render:()=>`
+  <h2 class="section-title">Доплата за дополнительную работу</h2>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Размер — по соглашению сторон с учётом объёма дополнительной работы.</p></div>`},
+// 51. (10.2.15) Должностная инструкция
+{kicker:"Должностная инструкция и доплата", render:()=>`
+  <h2 class="section-title">Должностная инструкция и доплата</h2>
+  ${revealBox('s51','«В отсутствие руководителя специалист исполняет его обязанности» — это автоматически устраняет доплату?','Нет автоматически. Нужно установить реальное содержание трудовой функции.')}`},
+// 52. (10.2.16) Порядок выплаты
+{kicker:"Порядок выплаты заработной платы", render:()=>`
+  <h2 class="section-title">Порядок выплаты заработной платы</h2>
+  ${numList(["денежная форма","национальная валюта","не реже одного раза в месяц","не позднее первой декады следующего месяца","конкретная дата устанавливается трудовым договором"])}`},
+// 53. (10.2.17) Выходной/праздник
+{kicker:"Дата выплаты и нерабочий день", render:()=>`
+  <h2 class="section-title">Дата выплаты совпадает с нерабочим днём</h2>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Выплата производится накануне.</p></div>`},
+// 54. (10.2.18) Расчётный лист
+{kicker:"Расчётный лист", render:()=>`
+  <h2 class="section-title">Расчётный лист</h2>
+  <p class="lede">Показывает: составные части, выплаты, удержания, обязательные взносы, итоговую сумму.</p>`},
+// 55. (10.2.19) Удержания
+{kicker:"Удержания: три вопроса", render:()=>`
+  <h2 class="section-title">Удержания: три ключевых вопроса</h2>
+  ${verticalFlow(["Есть ли основание?","Кто принимает решение?"],{final:"Соблюдён ли предел?"})}`},
+// 56. (10.2.20) Предел 50%
+{kicker:"Предел 50%", render:()=>`
+  <h2 class="section-title">Предел удержаний</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Не более 50%</p></div>
+  <p class="lede">Важная защитная конструкция в предусмотренных законом случаях.</p>
+  ${teacherNote("Не выдавать эту цифру за универсальное правило для любого удержания без проверки конкретного основания.")}`},
+// 57. (10.2.21) Удержания в пользу работодателя
+{kicker:"Удержания в пользу работодателя", render:()=>`
+  <h2 class="section-title">Удержания в пользу работодателя</h2>
+  ${numList(["неиспользованный командировочный аванс","неподтверждённые расходы","расходы на обучение при соответствующем договоре","неотработанный аванс","отдельные отпускные ситуации","иные случаи при наличии предусмотренного основания"])}`},
+// 58. (10.2.22) Дело №60 Факт 1
+{kicker:"Дело №60 · Асылханов", render:()=>`
+  <h2 class="section-title">«Три месяца»</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работник трудится менее 3 месяцев. Внутренние правила: работникам, отработавшим менее трёх месяцев, премия не начисляется.</i></p></div>
+  ${votingTool('s58-60',{a:'Отказ законен',b:'Отказ незаконен',c:'Недостаточно данных'})}`},
+// 59. (10.2.23) Дело №60 Факт 2
+{kicker:"Дело №60 · Асылханов", render:()=>`
+  <h2 class="section-title">Новый факт</h2>
+  ${revealBox('s59','Какой премии касается правило о трёх месяцах?','Это правило относится к ежеквартальной премии. А спор — о праздничной премии.')}
+  ${votingTool('s59-60-2',{a:'Отказ законен',b:'Отказ незаконен',c:'Недостаточно данных'})}`},
+// 60. (10.2.24) Дело №60 Факт 3
+{kicker:"Дело №60 · Асылханов", render:()=>`
+  <h2 class="section-title">Отдельное распоряжение</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Постоянным работникам к празднику выплатить премию в размере оклада.</i></p></div>
+  <div class="card navy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Оклад — 150 000 ₸</p></div>`},
+// 61. (10.2.25) Дело №60 Суды
+{kicker:"Дело №60 · Результат", render:()=>`
+  <h2 class="section-title">Результат дела №60</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Первая инстанция","Отказала.")}
+    ${timelineStep(2,"Апелляция","Отменила решение. Взыскано 150 000 ₸.")}
+  </div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Нельзя переносить условия одного вида премии на другой.</p></div>`},
+// 62. (10.2.26) Дело №61 Фабула
+{kicker:"Дело №61 · «Процентов»", render:()=>`
+  <h2 class="section-title">«Премирую себя»</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Генеральный директор издаёт приказ: «Премировать генерального директора». Получатель — он сам.</i></p></div>
+  <p class="note" style="margin-top:10px;">Если организация прибыльна, достаточно ли этого?</p>`},
+// 63. (10.2.27) Дело №61 Проверка компетенции
+{kicker:"Дело №61 · Проверка компетенции", render:()=>`
+  <h2 class="section-title">Проверка компетенции</h2>
+  ${numList(["устав","систему премирования","орган, оценивающий директора","KPI","корпоративное решение","период полномочий"])}`},
+// 64. (10.2.28) Дело №61 Результат
+{kicker:"Дело №61 · Результат", render:()=>`
+  <h2 class="section-title">Результат дела №61</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Суд установил необоснованные выплаты.</p></div>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Взыскано 13 261 164 ₸ убытков.</p></div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Наличие системы премирования не означает права руководителя самостоятельно назначать себе любые выплаты.</p></div>`},
+// 65. (10.2.29) Дело №62 Фабула
+{kicker:"Дело №62 · Корчагина v Михеева", render:()=>`
+  <h2 class="section-title">Разбитое стекло</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работница автомойки повреждает стекло автомобиля клиента. Работодатель компенсирует ущерб клиенту, после этого удерживает деньги из зарплаты работницы.</i></p></div>
+  <p class="note" style="margin-top:10px;">Если ущерб есть, можно ли просто не выдать часть зарплаты?</p>`},
+// 66. (10.2.30) Дело №62 Два теста
+{kicker:"Дело №62 · Два юридических теста", render:()=>`
+  <h2 class="section-title">Два юридических теста</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>Тест А. Материальная ответственность</h3>${numList(["ущерб","противоправность","вина","причинная связь"])}</div>
+    <div class="card"><h3>Тест Б. Удержание</h3>${numList(["основание","компетенция","форма","согласие, где требуется","предел","процедура"])}</div>
+  </div>`},
+// 67. (10.2.31) Дело №62 Вывод
+{kicker:"Дело №62 · Вывод", render:()=>`
+  <h2 class="section-title">Вывод дела №62</h2>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">«Работник должен возместить ущерб» не равно «работодатель может произвольно удержать любую сумму из зарплаты».</p></div>`},
+// 68. (10.2.32) Дело №63 Вход
+{kicker:"Дело №63 · Исмагулов v ТОО «Жаикмунай»", render:()=>`
+  <h2 class="section-title">Простой одного работника</h2>
+  <p class="lede">Организация продолжает работать. Но одному работнику объявлен простой.</p>
+  <div class="card accent-left" style="margin:10px 0;"><p style="font-size:13.5px;"><i>Работник: «Простой одного человека невозможен».</i></p></div>
+  ${votingTool('s68-63',{a:'Работник прав',b:'Работодатель прав',c:'Недостаточно данных'})}`},
+// 69. (10.2.33) Дело №63 Запрет есть?
+{kicker:"Дело №63 · Запрет есть?", render:()=>`
+  <h2 class="section-title">Юридический тест</h2>
+  ${revealBox('s69a','Есть ли норма: «Простой допускается только в отношении двух и более работников»?','Нет.')}
+  ${revealBox('s69b','Есть ли норма: «Простой должен охватывать предприятие целиком»?','Нет.')}
+  <p class="note" style="margin-top:10px;">Следовательно: проверяется возможность предоставить работу конкретному работнику.</p>`},
+// 70. (10.2.34) Дело №63 Главная идея
+{kicker:"Дело №63 · Главная идея", render:()=>`
+  <h2 class="section-title">Главная идея дела №63</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Трудовое законодательство не содержит запретительных норм о том, что простой не может быть объявлен в отношении одного работника.</p></div>
+  <p class="lede">Следовательно, сам по себе тот факт, что предприятие или остальные работники продолжают работать, не делает простой конкретного работника незаконным. Установление простоя одному работнику является организационным правом работодателя при наличии фактических и правовых оснований.</p>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Но это не означает произвольного права объявить простой без причины. Проверяются: причина, временность, отсутствие возможности предоставить работу, оформление, оплата.</p>
+  ${teacherNote("Где в законе написано, что в простое обязательно должно быть минимум два человека?")}`},
+// 71. (10.2.35) Финал 10.2
+{kicker:"Финал занятия 10.2 · Paycheck audit", render:()=>`
+  <h2 class="section-title">Paycheck audit</h2>
+  ${numList(["система","ставка","фактическое время","специальные условия","доплаты","премия","удержания","основание","предел","срок выплаты"])}
+  <div class="card navy" style="text-align:center;margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">А что происходит, если работник готов работать, но работы нет?</p></div>`},
+
+// ===================== ЗАНЯТИЕ 10.3. ПРОСТОЙ, ГАРАНТИИ, КОМПЕНСАЦИИ И ПРОФЕССИОНАЛЬНОЕ РАЗВИТИЕ =====================
+// 72. (10.3.1) Провокация
+{kicker:"Занятие 10.3 · Провокация", render:()=>`
+  <h2 class="section-title">Простой, гарантии, компенсации и профессиональное развитие</h2>
+  <p class="subtitle">Почему трудовое право в некоторых случаях сохраняет доход, даже если обычная работа не выполняется?</p>
+  <div class="card accent-left" style="margin-top:12px;"><p style="font-size:13.5px;"><i>Работодатель: «Заказов нет. С понедельника все сотрудники идут в отпуск без сохранения заработной платы».</i></p></div>
+  ${revealBox('s72','Может ли работодатель так решить проблему отсутствия работы?','Нет — отсутствие работы по причинам экономического, технологического, организационного или производственного характера квалифицируется как простой со своим правовым режимом, а не как «отпуск без сохранения» по инициативе работодателя.')}`},
+// 73. (10.3.2) Понятие простоя
+{kicker:"Понятие простоя", render:()=>`
+  <h2 class="section-title">Простой</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Простой — временная приостановка работы по причинам экономического, технологического, организационного, производственного, природного или иного характера.</p></div>`},
+// 74. (10.3.3) Три элемента
+{kicker:"Три элемента простоя", render:()=>`
+  <h2 class="section-title">Три элемента простоя</h2>
+  <div class="grid cols-3">
+    ${infoCard("Временность","")}
+    ${infoCard("Приостановка работы","")}
+    ${infoCard("Юридически значимая причина","")}
+  </div>`},
+// 75. (10.3.4) Чья сфера риска?
+{kicker:"Чья сфера риска?", render:()=>`
+  <h2 class="section-title">Чья сфера риска?</h2>
+  <div class="risk-row"><span>Вина работника</span><span>Решение работодателя</span><span>Организационный / предпринимательский риск</span><span>Рынок</span><span>Объективное внешнее событие</span></div>
+  <p class="lede" style="margin-bottom:10px;">Разместите ситуации по шкале.</p>
+  ${bucketSorter('s75',[
+    ["Нет заказов","market"],
+    ["Поломка оборудования","orgrisk"],
+    ["Пожар","external"],
+    ["Стихийное бедствие","external"],
+    ["Решение остановить производство","employer"],
+    ["Действия работника","worker"],
+  ],[
+    {key:"worker",label:"Вина работника"},
+    {key:"employer",label:"Решение работодателя"},
+    {key:"orgrisk",label:"Организационный риск"},
+    {key:"market",label:"Рынок"},
+    {key:"external",label:"Объективное событие"},
+  ])}`},
+// 76. (10.3.5) Дело №64 Первый вопрос
+{kicker:"Дело №64 · Калдибаев", render:()=>`
+  <h2 class="section-title">Был ли экономический простой обоснован?</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работодатель утверждает: «Снизился объём работ».</i></p></div>
+  ${revealBox('s76','Достаточно ли только этой фразы в приказе?','Нет.')}`},
+// 77. (10.3.6) Дело №64 Главная идея
+{kicker:"Дело №64 · Главная идея", render:()=>`
+  <h2 class="section-title">Главная идея дела №64</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Основания простоя по причинам экономического характера должны подтверждаться экономическими показателями и соответствующими документами.</p></div>
+  <p class="lede">В зависимости от обстоятельств это могут быть: сведения об объёмах заказов, договоры, динамика производства, объём реализации, финансирование, производственные планы, экономические показатели, документы контрагентов, иные объективные данные.</p>
+  <div class="card navy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Приказ доказывает, что работодатель принял решение. Приказ не доказывает саму экономическую причину.</p></div>
+  ${teacherNote("Если работодатель говорит «работы стало меньше», какой документ вы попросите первым?")}`},
+// 78. (10.3.7) Дело №64 Хронология
+{kicker:"Дело №64 · Хронология", render:()=>`
+  <h2 class="section-title">Хронология дела №64</h2>
+  <div class="timeline">
+    ${timelineStep(1,"11 марта","Простой.")}
+    ${timelineStep(2,"27 мая","Работник отозван из простоя.")}
+    ${timelineStep(3,"30 мая","Перевод на другую работу.")}
+    ${timelineStep(4,"Далее","Отказ / отсутствие.")}
+    ${timelineStep(5,"29 июня","Увольнение.")}
+  </div>`},
+// 79. (10.3.8) Дело №64 Первая инстанция
+{kicker:"Дело №64 · Первая инстанция", render:()=>`
+  <h2 class="section-title">Первая инстанция</h2>
+  <p class="lede">Первая инстанция поддержала работодателя, исходя из сокращения объёма, режима простоя и последующих действий работодателя.</p>
+  <div class="grid cols-2" style="margin-top:10px;">
+    ${infoCard("Вопрос А","Был ли первоначальный простой надлежащим образом обоснован экономически?")}
+    ${infoCard("Вопрос Б","Существовал ли простой на момент последующего перевода?")}
+  </div>`},
+// 80. (10.3.9) Дело №64 Ключ апелляции
+{kicker:"Дело №64 · Ключ апелляции", render:()=>`
+  <h2 class="section-title">Ключ апелляции</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">27 мая работник отозван из простоя. Следовательно, специальный режим простоя закончился.</p></div>
+  <p class="lede">После этого работодатель не мог автоматически продолжать использовать полномочия, существующие именно в период простоя. Апелляция иначе оценила перевод и последующее увольнение. Работник восстановлен.</p>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Экономическое основание требует экономических доказательств, а каждое последующее действие работодателя требует собственного действующего правового основания.</p></div>`},
+// 81. (10.3.10) Дело №65 Фабула
+{kicker:"Дело №65 · «Казмунайгаз-Бурение»", render:()=>`
+  <h2 class="section-title">1163 работника</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Отсутствуют объёмы работ. Работодатель: «Экономический кризис. Это обстоятельство от нас не зависит». Инспекция: «Простой нельзя квалифицировать как полностью независимый от работодателя».</i></p></div>`},
+// 82. (10.3.11) Дело №65 «От нас не зависит»
+{kicker:"Дело №65 · «От нас не зависит» — достаточно ли?", render:()=>`
+  <h2 class="section-title">«От нас не зависит» — достаточно ли?</h2>
+  ${revealBox('s82','Достаточно ли установить, что работодатель не создал проблему намеренно?','Нет. Нужно исследовать: когда работодатель узнал об отсутствии объёмов; как долго продолжалась ситуация; какие меры принимались; можно ли было уменьшить длительность; предпринимались ли разумные действия.')}`},
+// 83. (10.3.12) Дело №65 Временная шкала
+{kicker:"Дело №65 · Временная шкала", render:()=>`
+  <h2 class="section-title">Временная шкала</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Месяц 1","Нет заказов. Работодатель знает.")}
+    ${timelineStep(2,"Месяц 2","Ситуация сохраняется.")}
+    ${timelineStep(3,"Месяц 3","Объёмов всё ещё нет.")}
+    ${timelineStep(4,"Месяц 4+","Работники продолжают находиться в простое.")}
+  </div>
+  <p class="note" style="margin-top:10px;">Может ли работодатель через несколько месяцев продолжать объяснять ситуацию только внешним событием?</p>`},
+// 84. (10.3.13) Дело №65 Главная идея
+{kicker:"Дело №65 · Главная идея", render:()=>`
+  <h2 class="section-title">Главная идея дела №65</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:13.5px;">Простой предприятия не может автоматически расцениваться как возникший по не зависящим от сторон обстоятельствам, если работодатель на протяжении нескольких месяцев знал об отсутствии объёмов работ и не предпринял разумных мер по устранению или минимизации простоя.</p></div>
+  <p class="lede">Судебная логика учитывает: первоначальную причину, осведомлённость, длительность, возможность реагирования, фактические меры.</p>`},
+// 85. (10.3.14) Дело №65 Результат
+{kicker:"Дело №65 · Результат", render:()=>`
+  <h2 class="section-title">Результат дела №65</h2>
+  <div class="timeline">
+    ${timelineStep(1,"Первая инстанция","Отказала работодателю.")}
+    ${timelineStep(2,"Апелляция","Оставила решение в силе.")}
+  </div>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Внешнее происхождение проблемы ≠ автоматическое отсутствие ответственности работодателя за её длительное сохранение.</p></div>`},
+// 86. (10.3.15) №63-65 Три вопроса
+{kicker:"Дела №63–65: три вопроса о простое", render:()=>`
+  <h2 class="section-title">Три вопроса о простое</h2>
+  ${comparisonTable(["Вопрос","Дело"],[
+    ["Может ли простой касаться одного работника?","№63"],
+    ["Чем доказать экономическую причину?","№64"],
+    ["Как поведение работодателя влияет на квалификацию причины?","№65"],
+  ])}
+  <div class="grid cols-3" style="margin-top:14px;">
+    ${infoCard("№63","Масштаб простоя.")}
+    ${infoCard("№64","Доказывание причины.")}
+    ${infoCard("№65","Динамика и поведение работодателя.")}
+  </div>`},
+// 87. (10.3.16) Universal простой test
+{kicker:"Universal простой test", render:()=>`
+  <h2 class="section-title">Universal простой test</h2>
+  ${numList(["Что приостановлено?","Кого касается?","Есть ли законодательный запрет на такой масштаб?","Какова причина?","Чем она доказана?","Если причина экономическая — какие экономические показатели?","Когда работодатель узнал?","Что он сделал?","Мог ли уменьшить длительность?","Как должен оплачиваться период?"])}`},
+// 88. (10.3.17) Дело №66 Фабула
+{kicker:"Дело №66 · Андреева / Ильенко v «Казчерметавтоматика»", render:()=>`
+  <h2 class="section-title">Отпуск или простой?</h2>
+  <p class="lede">У работодателя отсутствуют хозяйственные договоры, финансирование, объём работы. Работники находятся в отпуске без сохранения заработной платы.</p>
+  <div class="card accent-left" style="margin-top:10px;"><p style="font-size:13.5px;"><i>Работники: «Фактически это простой».</i></p></div>`},
+// 89. (10.3.18) Дело №66 Название или сущность?
+{kicker:"Дело №66 · Название или сущность?", render:()=>`
+  <h2 class="section-title">Название или сущность?</h2>
+  ${revealBox('s89','Можно ли назвать ситуацию «отпуском» и тем самым исключить правила о простое?','Нет. Но нужно доказать фактические обстоятельства.')}`},
+// 90. (10.3.19) Дело №66 Доказательства
+{kicker:"Дело №66 · Доказательства", render:()=>`
+  <h2 class="section-title">Доказательства по делу №66</h2>
+  ${numList(["заявления работников","приказы","наличие их свободного волеизъявления","объём работы","деятельность предприятия","документы о приостановке","длительность периода"])}`},
+// 91. (10.3.20) Дело №66 Результат
+{kicker:"Дело №66 · Результат", render:()=>`
+  <h2 class="section-title">Результат дела №66</h2>
+  <p class="lede">Суды удовлетворили часть денежных требований. Но весь заявленный период как простой не был признан доказанным.</p>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Правильная теоретическая квалификация не заменяет доказывания фактов.</p></div>`},
+// 92. (10.3.21) Дело №67 Фабула
+{kicker:"Дело №67 · Сағатбекқызы v «Учприбор Астана»", render:()=>`
+  <h2 class="section-title">«Нет денег»</h2>
+  <p class="lede">Работодатель признаёт: существование трудовых отношений, оклад, наличие задолженности. Но ссылается: нет заказов, простой, недостаток средств.</p>
+  <p class="note" style="margin-top:10px;">Может ли это уничтожить уже возникшую задолженность?</p>`},
+// 93. (10.3.22) Дело №67 Решение
+{kicker:"Дело №67 · Решение", render:()=>`
+  <h2 class="section-title">Решение дела №67</h2>
+  <p class="lede">Суд взыскал доказанную задолженность и иные причитающиеся трудовые выплаты.</p>
+  <div class="card navy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Отсутствие денег ≠ отсутствие обязательства.</p></div>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Ссылка на простой не устраняет уже возникшее право на оплату за фактически выполненную работу.</p></div>`},
+// 94. (10.3.23) Понятие гарантии
+{kicker:"Понятие гарантии", render:()=>`
+  <h2 class="section-title">Гарантии</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Гарантии — средства, способы и условия, с помощью которых обеспечивается осуществление трудовых прав.</p></div>`},
+// 95. (10.3.24) Гарантийная выплата
+{kicker:"Гарантийная выплата", render:()=>`
+  <h2 class="section-title">Гарантийная выплата</h2>
+  <p class="lede">Работник временно не выполняет обычную работу по предусмотренной законом причине. Но право не должно потерять экономический смысл.</p>`},
+// 96. (10.3.25) Гарантия ≠ зарплата
+{kicker:"Гарантия ≠ зарплата", render:()=>`
+  <h2 class="section-title">Гарантия ≠ заработная плата</h2>
+  <div class="grid cols-2">
+    ${infoCard("Заработная плата","За выполненный труд.")}
+    ${infoCard("Гарантия","Обеспечивает сохранение предусмотренного трудового положения при законном освобождении от обычной работы.")}
+  </div>`},
+// 97. (10.3.26) Виды гарантий
+{kicker:"Виды гарантий", render:()=>`
+  <h2 class="section-title">Виды гарантий</h2>
+  ${numList(["государственные обязанности","общественные обязанности","медосмотры","донорство","командировки","экологические территории","радиационный риск","миротворческие операции","иные случаи"])}`},
+// 98. (10.3.27) Государственные и общественные обязанности
+{kicker:"Государственные и общественные обязанности", render:()=>`
+  <h2 class="section-title">Государственные и общественные обязанности</h2>
+  <p class="lede">Работник освобождается от обычной работы. Сохраняется место / должность. Применимая выплата производится в предусмотренном законом порядке.</p>`},
+// 99. (10.3.28) Медицинский осмотр
+{kicker:"Медицинский осмотр", render:()=>`
+  <h2 class="section-title">Медицинский осмотр</h2>
+  ${verticalFlow(["Осмотр обязательный?","Освобождение от работы?","Какая гарантия сохраняется?"],{final:"Как оформлено?"})}`},
+// 100. (10.3.29) Донорство
+{kicker:"Донорство", render:()=>`
+  <h2 class="section-title">Донорство</h2>
+  ${revealBox('s100','Если работник в день сдачи крови по соглашению всё же работал — исчезает ли гарантия полностью?','Нет полностью — рассматриваются специальные последствия такого соглашения, а не автоматическая полная утрата гарантии.')}`},
+// 101. (10.3.30) Командировка
+{kicker:"Командировка", render:()=>`
+  <h2 class="section-title">Командировка</h2>
+  <div class="card navy"><p style="color:#fff;font-size:14px;">Командировка — направление работника по распоряжению работодателя на определённый срок вне места постоянной работы для выполнения трудовых обязанностей, а также предусмотренные законом направления на обучение в другую местность.</p></div>`},
+// 102. (10.3.31) Гарантия + компенсация
+{kicker:"Командировка: гарантия + компенсация", render:()=>`
+  <h2 class="section-title">Гарантия + компенсация</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>Гарантия</h3>${numList(["место работы","должность","предусмотренное сохранение оплаты"])}</div>
+    <div class="card"><h3>Компенсация</h3>${numList(["проезд","проживание","суточные"])}</div>
+  </div>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Одна ситуация может порождать и гарантию, и компенсацию.</p></div>`},
+// 103. (10.3.32) Понятие компенсации
+{kicker:"Понятие компенсации", render:()=>`
+  <h2 class="section-title">Компенсационная выплата</h2>
+  <div class="card navy" style="margin-bottom:12px;"><p style="color:#fff;font-size:14px;">Компенсационная выплата — денежная выплата, связанная с особым режимом работы, условиями труда, потерей работы, возмещением расходов, выполнением предусмотренных обязанностей, профессиональным обучением.</p></div>`},
+// 104. (10.3.33) Карта компенсаций
+{kicker:"Карта компенсаций", render:()=>`
+  <h2 class="section-title">Карта компенсаций</h2>
+  ${numList(["неиспользованный отпуск","прекращение договора","перевод в другую местность","разделение смены","обучение","командировка","дуальное обучение","переезд вместе с работодателем","личное имущество","разъездной характер","потеря работы","тяжёлые / вредные / опасные условия"])}`},
+// 105. (10.3.34) Личное имущество
+{kicker:"Использование личного имущества", render:()=>`
+  <h2 class="section-title">Использование личного имущества</h2>
+  <p class="lede">Работник использует автомобиль, оборудование, инструменты или иное имущество в интересах работодателя.</p>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Проверить:</p>
+  ${numList(["соглашение","размер","амортизацию","расходы","ремонт"])}`},
+// 106. (10.3.35) Разъездной характер ≠ командировка
+{kicker:"Разъездной характер ≠ командировка", render:()=>`
+  <h2 class="section-title">Разъездной характер работы ≠ командировка</h2>
+  <p class="lede">Работа сама по себе предполагает постоянные поездки. Примеры: транспорт, железная дорога, трубопровод, линии связи, обслуживаемые участки.</p>`},
+// 107. (10.3.36) Зарплата / Гарантия / Компенсация
+{kicker:"Зарплата / гарантия / компенсация", render:()=>`
+  <h2 class="section-title">Зарплата, гарантия или компенсация?</h2>
+  ${bucketSorter('s107',[
+    ["Оклад","salary"],
+    ["Суточные","comp"],
+    ["Гостиница","comp"],
+    ["Ночная доплата","salary"],
+    ["Сохранение дохода при законном освобождении","guarantee"],
+    ["Компенсация личного автомобиля","comp"],
+    ["Премия","salary"],
+    ["Компенсация отпуска","comp"],
+  ],[
+    {key:"salary",label:"Зарплата"},
+    {key:"guarantee",label:"Гарантия"},
+    {key:"comp",label:"Компенсация"},
+  ])}`},
+// 108. (10.3.37) Профессиональное развитие
+{kicker:"Профессиональное развитие", render:()=>`
+  <h2 class="section-title">Профессиональное развитие</h2>
+  <div class="grid cols-3">
+    ${infoCard("Профессиональная подготовка","Приобретение новых профессиональных навыков.")}
+    ${infoCard("Переподготовка","Освоение другой профессии / специальности.")}
+    ${infoCard("Повышение квалификации","Углубление и совершенствование имеющихся компетенций.")}
+  </div>`},
+// 109. (10.3.38) Национальная система квалификаций
+{kicker:"Национальная система квалификаций", render:()=>`
+  <h2 class="section-title">Национальная система квалификаций</h2>
+  ${verticalFlow(["Национальный классификатор занятий","Национальная рамка квалификаций","Отраслевые рамки","Профессиональные стандарты"],{final:"Требования к квалификации"})}`},
+// 110. (10.3.39) Договор обучения + дуальное обучение + финал
+{kicker:"Договор обучения, дуальное обучение и финал темы", render:()=>`
+  <h2 class="section-title">Договор обучения</h2>
+  ${numList(["кто оплатил","вид обучения","стоимость","срок отработки","основание досрочного прекращения","недоработанный срок","механизм возмещения"])}
+  <h2 class="section-title" style="margin-top:22px;">Дуальное обучение</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Обучающийся ↔ организация образования ↔ предприятие</p></div>
+  <p class="lede">На предприятии: производственное обучение, практика, правила внутреннего распорядка, охрана труда, наставник, возможная компенсационная выплата.</p>
+  <h2 class="section-title" style="margin-top:22px;">Payment test</h2>
+  ${numList(["Что за труд?","Как измеряется?","Какая норма?","Какая система?","Какова ставка?","Какие специальные условия?","Какие доплаты?","Есть ли премия?","Есть ли гарантия?","Есть ли компенсация?","Есть ли удержание?","Законно ли оно?","Есть ли обучение?","Возмещаются ли расходы?","Срок выплаты?","Какие доказательства?","Кто несёт риск?"])}
+  <div class="card burgundy" style="text-align:center;margin-top:16px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Трудовое право не просто считает деньги. Оно определяет юридическую цену труда и пределы власти над этой ценой.</p></div>`},
+
+];
+
+
+const TRAINERS=[
+{tag:"Тренажёр 1",title:"100% зарплаты",desc:"На основе дела №56: законно ли банк списал всю зарплату в счёт кредита?",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 2",title:"«Претензий не имею»",desc:"На основе дела №57: разнесите факты и попытки отказа от права.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 3",title:"Прибыль есть — премия есть?",desc:"На основе дела №58: соберите юридический состав права на премию.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 4",title:"Выговор + лишение премии",desc:"На основе дела №59: раздельно квалифицируйте взыскание и премию.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 5",title:"Три месяца",desc:"На основе дела №60: пройдите последовательный разбор фактов.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 6",title:"Премирую себя",desc:"На основе дела №61: проверьте компетенцию на назначение премии.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 7",title:"Разбитое стекло",desc:"На основе дела №62: пройдите тест материальной ответственности, затем тест удержания.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 8",title:"Простой одного",desc:"На основе дела №63: три раунда о простое одного работника.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 9",title:"Экономический простой и его окончание",desc:"На основе дела №64: выберите доказательства и определите момент окончания простоя.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 10",title:"Нет заказов",desc:"На основе дела №65: оцените причину простоя в динамике — 1, 3 и 6 месяцев.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 11",title:"Отпуск или простой",desc:"На основе дела №66: определите, какой документ запросить первым.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 12",title:"Нет денег",desc:"На основе дела №67: распределите аргументы работодателя по их юридическому значению.",level:"start",levelLabel:"По делу"},
+{tag:"Тренажёр 13",title:"Ночь + праздник",desc:"Рассчитайте оплату работы 1 января 22:00–02:00 при ставке 2 000 ₸.",level:"advanced",levelLabel:"Тематический"},
+{tag:"Тренажёр 14",title:"Сдельная расценка",desc:"Рассчитайте заработок по сдельной системе.",level:"advanced",levelLabel:"Тематический"},
+{tag:"Тренажёр 15",title:"Суммированный учёт",desc:"Определите индивидуальную норму и квалифицируйте специальные часы.",level:"advanced",levelLabel:"Тематический"},
+{tag:"Тренажёр 16",title:"Обучение",desc:"Рассчитайте возмещение расходов на обучение при досрочном увольнении.",level:"advanced",levelLabel:"Тематический"},
+{tag:"Тренажёр 17",title:"Final Payment Test",desc:"Комплексная учебная задача: оклад, суммированный учёт, ночные, праздничные, сверхурочные, совмещение, премия, удержание, простой, командировка, обучение, увольнение, задержка зарплаты.",level:"master",levelLabel:"Итоговый"},
+];
+const TRAINER_BODIES=[
+// 1. 100% зарплаты
+()=>`<div class="kicker">Тренажёр 1 · По делу №56</div><h2 class="section-title">100% зарплаты</h2>
+${trainerFabula("265 323 ₸ заработной платы поступили на счёт. Банк списал всю сумму в счёт кредитной задолженности.")}
+${choiceListFull('t0-q1',["Законно — банк вправе списывать долг с любых поступлений","Незаконно — государственная гарантия защищает зарплату и здесь","Зависит от условий банковского договора"],1,"Банк не является работодателем, но государственная гарантия в области оплаты труда защищает само право работника, а не только отношение «работник — работодатель».")}
+${revealBox('t0-q2','Достаточно ли того, что банк не является работодателем, чтобы исключить трудовую гарантию?','Нет. Далее нижестоящие суды (первая инстанция отказала, апелляция поддержала) сосредоточились на статусе субъекта; Верховный Суд сместил акцент на содержание гарантии и признал 100%-ное списание неправомерным.')}
+<div class="card burgundy" style="margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Ключевая ошибка — считать, что государственная гарантия в области оплаты труда действует только в отношении работодателя.</p></div>
+${teacherNote("Финальный вопрос: что важнее — отраслевой статус субъекта или то, что его действие затрагивает гарантированную заработную плату?")}
+${changeOneFactBox('t0','На счёте смешаны разные поступления: зарплата, деньги от продажи автомобиля, перевод родственника.','Как это влияет на доказывание?','Гарантия защищает право, но происхождение конкретных средств на смешанном счёте может требовать отдельного доказывания.')}
+${trainerDoneBtn(0)}`,
+// 2. Претензий не имею
+()=>`<div class="kicker">Тренажёр 2 · По делу №57</div><h2 class="section-title">«Претензий не имею»</h2>
+${trainerFabula("«Расчёт получил полностью. Претензий не имею и иметь не буду».")}
+<p class="lede" style="margin-bottom:10px;">Разнесите утверждения: это факт или попытка отказа от права?</p>
+${bucketSorter('t1',[
+  ["Получил 300 000 ₸","fact"],
+  ["Подписал документ","fact"],
+  ["Получил расчётный лист","fact"],
+  ["Никогда не буду обращаться в суд","waiver"],
+  ["Отказываюсь от любой будущей задолженности","waiver"],
+  ["Не имею права требовать недоплаченное","waiver"],
+],[
+  {key:"fact",label:"Факт"},
+  {key:"waiver",label:"Попытка отказа от права"},
+])}
+<div class="card burgundy" style="margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Человек не может сам себя ограничить в трудовой правоспособности вопреки императивной норме. Такая расписка в части отказа от предусмотренного законом права не создаёт самостоятельного правового последствия.</p></div>
+${trainerDoneBtn(1)}`,
+// 3. Прибыль есть — премия есть?
+()=>`<div class="kicker">Тренажёр 3 · По делу №58</div><h2 class="section-title">Прибыль есть — премия есть?</h2>
+${trainerFabula("Работница требует 6 643 008 ₸ за 2013 год и 2 428 000 ₸ за 2014 год. Аргументы: прибыль, KPI, выплаты другим управленческим работникам.")}
+<p class="lede" style="margin-bottom:10px;">Отметьте, что из перечисленного необходимо для возникновения права на премию.</p>
+${multiSelectExercise('t2',[
+  {text:"Прибыль организации",correct:true},
+  {text:"Индивидуальный или корпоративный KPI",correct:true},
+  {text:"Сформированный на работника резерв / отдельное решение",correct:true},
+  {text:"Минимальный отработанный срок, если он предусмотрен",correct:true},
+  {text:"Выплаты другим работникам сами по себе",correct:false},
+])}
+${revealBox('t2-r','Раскройте решающие факты.','2013 год: индивидуального резерва не сформировано, отдельная выплата не подтверждена. 2014 год: отработано 4 месяца 5 дней при условии «не менее 5 месяцев». Суд в иске отказал.')}
+${trainerDoneBtn(2)}`,
+// 4. Выговор + лишение премии
+()=>`<div class="kicker">Тренажёр 4 · По делу №59</div><h2 class="section-title">Выговор + лишение премии</h2>
+${trainerFabula("Работник нарушил требования безопасности. Работодатель одним приказом применил выговор и лишение премии на 3 месяца.")}
+${revealBox('t3-a','Квалифицируйте выговор отдельно от лишения премии.','Выговор — законен (дисциплинарное взыскание за доказанный проступок). Лишение премии на 3 месяца как дополнительная дисциплинарная мера — незаконно: невыполнение условий премирования и «лишение премии» как наказание — разные юридические конструкции.')}
+${changeOneFactBox('t3','Положение о премировании действительно предусматривает снижение премии при недостижении показателей.','Это то же самое, что наказать работника «лишением премии»?','Нет — это не второе дисциплинарное взыскание за тот же проступок, а применение заранее установленного условия премирования (недостижение показателя), что является самостоятельным и допустимым основанием, в отличие от произвольного «довеска» к дисциплинарному взысканию.')}
+${trainerDoneBtn(3)}`,
+// 5. Три месяца
+()=>`<div class="kicker">Тренажёр 5 · По делу №60</div><h2 class="section-title">Три месяца</h2>
+${trainerFabula("Работник трудится менее 3 месяцев. Внутреннее правило: работникам, отработавшим менее трёх месяцев, премия не начисляется.")}
+${votingTool('t4-1',{a:'Отказ законен',b:'Отказ незаконен',c:'Недостаточно данных'})}
+${revealBox('t4-2','Новый факт: к какой премии относится правило о трёх месяцах?','К ежеквартальной. А спор — о праздничной премии, для которой действовало отдельное распоряжение: постоянным работникам к празднику выплатить премию в размере оклада (150 000 ₸).')}
+${votingTool('t4-3',{a:'Отказ законен',b:'Отказ незаконен',c:'Недостаточно данных'})}
+${revealBox('t4-4','Итог апелляции.','Первая инстанция отказала, апелляция отменила решение и взыскала 150 000 ₸. Вывод: нельзя переносить условия одного вида премии на другой.')}
+${trainerDoneBtn(4)}`,
+// 6. Премирую себя
+()=>`<div class="kicker">Тренажёр 6 · По делу №61</div><h2 class="section-title">Премирую себя</h2>
+${trainerFabula("Генеральный директор издаёт приказ «Премировать генерального директора» в свою пользу.")}
+<p class="lede" style="margin-bottom:10px;">Вы — юрист компании. Какие документы вы запросите, чтобы проверить компетенцию?</p>
+${numList(["устав","систему премирования","орган, оценивающий директора","KPI","корпоративное решение","период полномочий"])}
+${revealBox('t5','Результат дела №61.','Суд установил необоснованные выплаты, взыскано 13 261 164 ₸ убытков. Право на выплату и компетенция назначить её — два разных вопроса: наличие системы премирования не даёт руководителю права самостоятельно назначать себе любые выплаты.')}
+${trainerDoneBtn(5)}`,
+// 7. Разбитое стекло
+()=>`<div class="kicker">Тренажёр 7 · По делу №62</div><h2 class="section-title">Разбитое стекло</h2>
+${trainerFabula("Работница автомойки повредила стекло автомобиля клиента. Работодатель компенсировал ущерб клиенту и удержал деньги из зарплаты работницы.")}
+<p class="lede" style="font-weight:700;color:var(--navy);">Шаг 1. Тест А — материальная ответственность.</p>
+${numList(["ущерб","противоправность","вина","причинная связь"])}
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Шаг 2. Только после этого — Тест Б, удержание.</p>
+${numList(["основание","компетенция","форма","согласие, где требуется","предел","процедура"])}
+<div class="card burgundy" style="margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">«Работник должен возместить ущерб» не равно «работодатель может произвольно удержать любую сумму из зарплаты» — оба теста должны быть пройдены отдельно.</p></div>
+${trainerDoneBtn(6)}`,
+// 8. Простой одного
+()=>`<div class="kicker">Тренажёр 8 · По делу №63</div><h2 class="section-title">Простой одного</h2>
+<p class="lede" style="font-weight:700;color:var(--navy);">Раунд 1.</p>
+${trainerFabula("Вся организация работает. Один работник — в простое.")}
+${votingTool('t7-1',{a:'Законно',b:'Незаконно — простой может касаться только всего предприятия',c:'Недостаточно данных'})}
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Раунд 2.</p>
+${revealBox('t7-2','Новый факт.','Функция этого работника временно исчезла / объём его работы отсутствует.')}
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Раунд 3.</p>
+${changeOneFactBox('t7','Работа у него есть, но работодатель просто не хочет его допускать из-за личного конфликта.','Меняется ли квалификация?','Да — отсутствие законодательного запрета на простой одного работника не означает права использовать простой произвольно: без реальной причины (приостановки работы) это уже не простой, а незаконное недопущение к работе.')}
+${trainerDoneBtn(7)}`,
+// 9. Экономический простой и его окончание
+()=>`<div class="kicker">Тренажёр 9 · По делу №64</div><h2 class="section-title">Экономический простой и его окончание</h2>
+<p class="lede" style="font-weight:700;color:var(--navy);">Этап 1. Работодатель говорит: «Снизился объём работ». Выберите сильные доказательства.</p>
+${multiSelectExercise('t8',[
+  {text:"Статистика заказов",correct:true},
+  {text:"Экономические показатели",correct:true},
+  {text:"Данные об объёмах перевозок / реализации",correct:true},
+  {text:"Договоры с контрагентами",correct:true},
+  {text:"Приказ директора",correct:false},
+  {text:"Мнение начальника цеха",correct:false},
+])}
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Этап 2. Хронология: 11 марта — простой; 27 мая — отзыв; 30 мая — перевод; 29 июня — увольнение.</p>
+${revealBox('t8-r','В какой момент прекратился специальный режим простоя?','27 мая — датой отзыва работника из простоя.')}
+${trainerDoneBtn(8)}`,
+// 10. Нет заказов
+()=>`<div class="kicker">Тренажёр 10 · По делу №65</div><h2 class="section-title">Нет заказов</h2>
+<p class="lede" style="font-weight:700;color:var(--navy);">Раунд 1. Сегодня крупный заказчик прекращает заказ.</p>
+${votingTool('t9-1',{a:'Независимое обстоятельство',b:'Уже требует экономических доказательств',c:'Недостаточно данных'})}
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Раунд 2. Проходит 1 месяц. Работодатель не предпринимает действий.</p>
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:10px;">Раунд 3. Проходит 3 месяца. Ситуация сохраняется.</p>
+<p class="lede" style="font-weight:700;color:var(--navy);margin-top:10px;">Раунд 4. Проходит 6 месяцев: нет новых заказов, нет реорганизации, нет иных разумных мер.</p>
+${votingTool('t9-2',{a:'Независимое обстоятельство',b:'Ответственность работодателя за длительное бездействие',c:'Недостаточно данных'})}
+<div class="card burgundy" style="margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">Правовая оценка причины простоя зависит не только от первоначального события, но и от последующего поведения работодателя.</p></div>
+${trainerDoneBtn(9)}`,
+// 11. Отпуск или простой
+()=>`<div class="kicker">Тренажёр 11 · По делу №66</div><h2 class="section-title">Отпуск или простой</h2>
+${trainerFabula("Приказ: «Предоставить отпуск без сохранения заработной платы в связи с отсутствием финансирования».")}
+${revealBox('t10-1','Какой документ вы попросите первым?','Заявление работника — чтобы проверить, было ли это его свободным волеизъявлением или фактически замаскированным простоем.')}
+<p class="lede" style="margin-top:10px;">После заявления проверяются: приказы, рабочие документы, наличие объёма работы, действительная воля сторон.</p>
+${trainerDoneBtn(10)}`,
+// 12. Нет денег
+()=>`<div class="kicker">Тренажёр 12 · По делу №67</div><h2 class="section-title">Нет денег</h2>
+${trainerFabula("Работодатель признаёт задолженность, но ссылается: нет заказов, нет денег, простой.")}
+${revealBox('t11','Могут ли эти ссылки уничтожить уже возникшую задолженность?','Нет. Отсутствие заказов, денег или простой могут влиять на режим будущего периода работы, но не устраняют уже возникший долг за фактически выполненную работу. Суд взыскал доказанную задолженность.')}
+${trainerDoneBtn(11)}`,
+// 13. Ночь + праздник
+()=>`<div class="kicker">Тренажёр 13 · Тематический</div><h2 class="section-title">Ночь + праздник</h2>
+${trainerFabula("Ставка 2 000 ₸. Работа 1 января 22:00–02:00.")}
+${revealBox('t12','Сначала квалификация, потом формула, потом расчёт.','Квалификация: все 4 часа одновременно ночные и праздничные — два статуса не исключают друг друга. Формула: 2 000 ₸ × применимые повышающие коэффициенты за ночные и праздничные часы отдельно по каждому основанию. Расчёт производится только после того, как оба применимых размера доплат установлены.')}
+${trainerDoneBtn(12)}`,
+// 14. Сдельная расценка
+()=>`<div class="kicker">Тренажёр 14 · Тематический</div><h2 class="section-title">Сдельная расценка</h2>
+<div class="grid cols-2" style="margin-bottom:12px;">
+  ${infoCard("Ставка","1 200 ₸ / час")}
+  ${infoCard("Норма","3 изделия / час")}
+</div>
+${revealBox('t13-1','Рассчитайте расценку за изделие.','1 200 / 3 = 400 ₸.')}
+${revealBox('t13-2','Изготовлено 180 изделий. Заработок?','180 × 400 ₸ = 72 000 ₸.')}
+${trainerDoneBtn(13)}`,
+// 15. Суммированный учёт
+()=>`<div class="kicker">Тренажёр 15 · Тематический</div><h2 class="section-title">Суммированный учёт</h2>
+<p class="lede">Даны: общая норма учётного периода, периоды болезни, отпуска, праздничная работа, фактические часы.</p>
+${numList(["Определите индивидуальную норму (с учётом болезни и отпуска)","Отдельно квалифицируйте специальные часы (праздничные, ночные)","Определите потенциальные сверхурочные только после первых двух шагов"])}
+${trainerDoneBtn(14)}`,
+// 16. Обучение
+()=>`<div class="kicker">Тренажёр 16 · Тематический</div><h2 class="section-title">Обучение</h2>
+<div class="grid cols-2" style="margin-bottom:12px;">
+  ${infoCard("Стоимость обучения","3 600 000 ₸")}
+  ${infoCard("Срок отработки","36 месяцев")}
+</div>
+${infoCard("Фактически отработано","30 месяцев. Работодатель требует все 3 600 000 ₸.")}
+${revealBox('t15','Можно ли сразу взыскать всю сумму?','Нет, пока нельзя считать. Нужно проверить: договор обучения, основание увольнения, условия возмещения, пропорциональность недоработанному периоду — как правило, взыскивается часть, пропорциональная недоработанному сроку, а не вся стоимость обучения.')}
+${trainerDoneBtn(15)}`,
+// 17. Final Payment Test
+()=>`<div class="kicker">Тренажёр 17 · Итоговый</div><h2 class="section-title">Final Payment Test</h2>
+<div class="card amber" style="margin-bottom:14px;"><p style="font-size:12px;font-weight:700;color:#7a4c00;text-transform:uppercase;letter-spacing:.06em;">Учебная задача</p></div>
+${trainerFabula("Работник: оклад 420 000 ₸, суммированный учёт, ночные часы, праздничная работа, сверхурочные, совмещение, KPI-премия, удержание за ущерб, два дня простоя, командировка, обучение за счёт работодателя, досрочное увольнение, задержка зарплаты.")}
+<p class="lede" style="font-weight:700;color:var(--navy);">Последовательно проверьте:</p>
+${numList(["трудовую функцию","меру труда","норму","систему оплаты","базовую ставку","специальные условия","доплаты","премию","простой","гарантию","компенсацию","удержание","обучение","срок выплаты","доказательства","правовой результат"])}
+<div class="grid cols-4" style="margin-top:16px;">
+  ${infoCard("Квалификация","")}${infoCard("Доказательства","")}${infoCard("Процедура","")}${infoCard("Расчёт","")}
+</div>
+${trainerDoneBtn(16)}`,
+];
+
+
+
+function trainerBody(idx){ return TRAINER_BODIES[idx] ? TRAINER_BODIES[idx]() : ''; }
+function trainerFabula(text){ return `<div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>${text}</i></p></div>`; }
+function trainerTakeaway(text){ return `<div class="card burgundy" style="margin-top:16px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:14px;">${text}</p></div>`; }
+function trainerDoneBtn(i){ const done=state.refl['t'+i+'-done']; return `<button class="btn btn-navy" style="margin-top:14px;" onclick="markTrainerDone(${i})">${done?'✓ Тренажёр пройден':'Отметить как пройденный'}</button>`; }
+window.markTrainerDone=function(i){ state.refl['t'+i+'-done']=true; save(); render(); };
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Тема 10 · Нормирование труда. Оплата труда</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Тема 10. Нормирование труда. Оплата труда. Гарантии и компенсационные выплаты. Профессиональная подготовка, переподготовка и повышение квалификации</p>
+      <p class="cover-question">Как выполненный человеком труд превращается в юридически защищённое право на вознаграждение?</p>
+      <div class="menu-cards">
+        <div class="menu-card" onclick="goTo101()"><div class="mc-eyebrow">10.1</div><h3>От нормы труда к заработной плате</h3></div>
+        <div class="menu-card" onclick="goTo102()"><div class="mc-eyebrow">10.2</div><h3>Цена труда в специальных условиях</h3></div>
+        <div class="menu-card" onclick="goTo103()"><div class="mc-eyebrow">10.3</div><h3>Простой, гарантии, компенсации и профессиональное развитие</h3></div>
+        <div class="menu-card" onclick="goTo('trainers')"><div class="mc-eyebrow">Юридическая лаборатория</div><h3>Тренажёры юридического мышления: оплата труда</h3></div>
+        <div class="menu-card" onclick="openTrainer(16)"><div class="mc-eyebrow">Итоговая проверка</div><h3>Final Payment Test</h3></div>
+      </div>
+      <div class="cover-author"><div><b>Хасенов Муслим Ханатович</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('trainers')">К юридической лаборатории →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад. Занятие 10.1 — слайды 1–36. Занятие 10.2 — слайды 37–71. Занятие 10.3 — слайды 72–110.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    const done = TRAINERS.reduce((n,_,i)=> n + (state.refl['t'+i+'-done']||state.sorters['t'+i]||state.multiSel['t'+i]||state.rankings['t'+i] ? 1:0), 0);
+    return `<div class="wrap">
+      <div class="kicker">Юридическая лаборатория: оплата труда</div>
+      <h2 class="section-title">17 тренажёров юридического мышления</h2>
+      <p class="lede" style="margin-bottom:12px;">12 тренажёров по реальным делам №56–67, 4 тематических тренажёра и 1 итоговый Final Payment Test. Тренажёры не входят в основные 180 минут занятий.</p>
+      <div class="progress-badge" style="margin-bottom:20px;">Прогресс: ${done} / ${TRAINERS.length}</div>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>`<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><span class="lvl lvl-${t.level}">${t.levelLabel}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+
+/* ============================================================
+   СОСТОЯНИЕ И НАВИГАЦИЯ
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{}, rankings:{}, rankChecked:{}, multiSel:{}, multiSelChecked:{}, refl:{}, teacherMode:true};
+if(!state.sorters) state.sorters={};
+if(!state.rankings) state.rankings={};
+if(!state.rankChecked) state.rankChecked={};
+if(!state.multiSel) state.multiSel={};
+if(!state.multiSelChecked) state.multiSelChecked={};
+if(!state.refl) state.refl={};
+if(state.teacherMode===undefined) state.teacherMode=true;
+function save(){try{localStorage.setItem('mnu_labor_law_topic10',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_topic10');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goTo101(){ currentScreen='presentation'; currentTrainer=null; goSlide(0,'full'); }
+function goTo102(){ currentScreen='presentation'; currentTrainer=null; goSlide(36,'full'); }
+function goTo103(){ currentScreen='presentation'; currentTrainer=null; goSlide(71,'full'); }
+window.toggleMode=function(){ state.teacherMode=!state.teacherMode; save(); render(); };
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+  const mb=document.getElementById('modeToggleBtn');
+  if(mb){ mb.textContent = state.teacherMode ? 'Режим преподавателя' : 'Режим студента'; mb.className = 'mode-toggle'+(state.teacherMode?'':' student'); }
+}
+function updateProgress(){
+  const order=['cover','presentation','trainers'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 10 + (state.slide/(SLIDES.length-1))*70; }
+  else{ const idx=order.indexOf(currentScreen); pct = [4,10,95][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
