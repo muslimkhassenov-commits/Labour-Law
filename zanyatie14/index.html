@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Трудовое право РК — Тема 14. Ответственность в трудовых отношениях</title>
+<meta name="description" content="Интерактивный юридический квалификатор MNU: административная, уголовная и материальная ответственность в сфере труда — составы, субъекты, вина, вред, причинная связь, полная судебная статистика и разобранные судебные дела." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --navy:#0c2340; --navy-2:#123058; --graphite:#2b2e33; --graphite-soft:#585c63;
+  --burgundy:#7c1327; --red:#c8102e; --paper:#f7f5f1; --paper-2:#efece5; --white:#ffffff;
+  --line:#dfdbd2; --ok:#1f6f43; --shadow:0 12px 30px -14px rgba(12,35,64,.28); --radius:18px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:var(--paper);color:var(--graphite);-webkit-font-smoothing:antialiased;}
+h1,h2,h3,.serif{font-family:'Fraunces',Georgia,serif;}
+h1,h2,h3{text-wrap:balance;}
+::-webkit-scrollbar{width:9px;height:9px;}
+::-webkit-scrollbar-thumb{background:#c9c3b6;border-radius:6px;}
+a{color:inherit;} button{font-family:inherit;} img{max-width:100%;}
+:focus-visible{outline:2px solid var(--red);outline-offset:2px;}
+
+.screen{display:none;min-height:100vh;}
+.screen.active{display:block;animation:fade .3s ease;}
+@keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  .screen.active{animation:none;}
+  .navbtn,.chip,.trainer-card,.choice,.branch-card{transition:none;}
+}
+
+.topbar{position:sticky;top:0;z-index:50;background:rgba(247,245,241,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:10px 20px;flex-wrap:wrap;}
+.topbar .brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--navy);white-space:nowrap;cursor:pointer;}
+.topbar .brand .logo-wrap{width:34px;height:34px;}
+.topbar .nav-scroll{display:flex;gap:8px;overflow-x:auto;flex:1;padding:2px 0;}
+.navbtn{border:1px solid var(--line);background:var(--white);color:var(--navy);padding:8px 14px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap;transition:.15s;}
+.navbtn:hover{border-color:var(--navy);}
+.navbtn.primary{background:var(--red);border-color:var(--red);color:#fff;}
+.navbtn.primary:hover{background:#a70d26;}
+.navbtn[disabled]{opacity:.35;cursor:default;}
+.progress-rail{height:4px;background:var(--line);width:100%;}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--burgundy),var(--red));transition:width .3s;}
+
+.mode-toggle{border:1.5px solid var(--navy);background:#fff;color:var(--navy);border-radius:999px;padding:7px 14px;font-size:12.5px;font-weight:700;cursor:pointer;white-space:nowrap;}
+.mode-toggle.student{background:var(--navy);color:#fff;}
+.teacher-note{border:1.5px dashed var(--navy);background:#eef2f7;border-radius:12px;padding:12px 14px;margin-top:10px;font-size:12.5px;color:var(--navy);line-height:1.6;}
+.teacher-note b{display:block;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);margin-bottom:6px;}
+.vote-tool{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfaf7;margin:12px 0;}
+
+.wrap{max-width:1100px;margin:0 auto;padding:48px 24px 80px;}
+.wrap.narrow{max-width:860px;}
+.kicker{display:inline-flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--burgundy);font-weight:700;margin-bottom:14px;}
+.kicker::before{content:"";width:22px;height:2px;background:var(--red);display:inline-block;}
+h2.section-title{font-size:clamp(20px,2.6vw,28px);color:var(--navy);margin:0 0 10px;line-height:1.2;}
+.subtitle{font-size:17px;color:var(--graphite-soft);max-width:680px;line-height:1.6;}
+.lede{font-size:14.5px;color:var(--graphite-soft);line-height:1.7;max-width:760px;}
+
+.logo-wrap{position:relative;display:inline-block;}
+.logo-wrap img{display:block;width:100%;height:100%;object-fit:contain;}
+.logo-fallback{display:none;width:100%;height:100%;}
+.logo-fallback svg{display:block;width:100%;height:100%;}
+.logo-wrap img.err{display:none;}
+.logo-wrap img.err + .logo-fallback{display:block;}
+.hero-photo-wrap{position:relative;border-radius:var(--radius);overflow:hidden;background:linear-gradient(180deg,#2a4d7a 0%,#0c2340 55%,#081527 100%);min-height:340px;}
+.hero-photo-wrap img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-photo-wrap img.err{display:none;}
+.hero-photo-fallback{position:absolute;inset:0;display:none;}
+.hero-photo-wrap img.err + .hero-photo-fallback{display:block;}
+.hero-photo-fallback svg{width:100%;height:100%;}
+
+.cover{background:var(--navy);color:#fff;position:relative;overflow:hidden;}
+.cover::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(12,35,64,.94),rgba(12,35,64,.72) 55%,rgba(124,19,39,.55));z-index:1;}
+.cover .hero-photo-wrap{position:absolute;inset:0;border-radius:0;min-height:0;}
+.cover-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto;padding:60px 24px 64px;}
+.cover-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:56px;}
+.cover-top .univ-name{font-size:13px;letter-spacing:.08em;text-transform:uppercase;opacity:.85;}
+.cover .logo-wrap{width:56px;height:56px;}
+.cover-eyebrow{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#f2c9c9;font-weight:700;margin-bottom:16px;}
+.cover h1{font-size:clamp(32px,5vw,54px);line-height:1.08;margin:0 0 14px;}
+.cover .cover-sub{font-size:clamp(16px,2vw,21px);font-weight:600;color:#dfe6ef;margin:0 0 20px;}
+.cover .cover-question{font-size:15.5px;line-height:1.6;max-width:660px;color:#c9d3e0;border-left:3px solid var(--red);padding-left:16px;margin-bottom:32px;}
+.cover-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:36px;}
+.btn{border:none;border-radius:10px;padding:13px 22px;font-weight:700;font-size:14px;cursor:pointer;transition:.15s;display:inline-flex;align-items:center;gap:8px;}
+.btn-red{background:var(--red);color:#fff;} .btn-red:hover{background:#a70d26;transform:translateY(-1px);}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);} .btn-outline:hover{border-color:#fff;}
+.btn-navy{background:var(--navy);color:#fff;} .btn-navy:hover{background:var(--navy-2);}
+.cover-author{display:flex;gap:12px;align-items:center;color:#c9d3e0;font-size:13px;border-top:1px solid rgba(255,255,255,.18);padding-top:18px;max-width:520px;}
+.cover-author b{color:#fff;display:block;font-size:14px;}
+
+.grid{display:grid;gap:16px;}
+.grid.cols-2{grid-template-columns:1fr 1fr;} .grid.cols-3{grid-template-columns:repeat(3,1fr);} .grid.cols-4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:820px){.grid.cols-2,.grid.cols-3,.grid.cols-4{grid-template-columns:1fr;}}
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:var(--shadow);}
+.card h3{margin:0 0 8px;color:var(--navy);font-size:16px;}
+.card p{margin:0;font-size:13.5px;color:var(--graphite-soft);line-height:1.6;}
+.card.accent-left{border-left:4px solid var(--red);}
+.card.navy{background:var(--navy);color:#fff;border-color:var(--navy);} .card.navy h3{color:#fff;} .card.navy p{color:#c9d3e0;}
+.card.burgundy{background:var(--burgundy);color:#fff;border-color:var(--burgundy);} .card.burgundy p{color:#ecd8dc;}
+.card.ok{background:#e9f5ee;border-color:#bfe3cd;}
+.card.danger{background:#fbeceb;border-color:#f0c2bd;}
+.card.amber{background:#fff3e0;border-color:#e6c48a;}
+
+.timeline{position:relative;padding-left:28px;}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--line);}
+.timeline-step{position:relative;padding-bottom:22px;}
+.timeline-step::before{content:attr(data-n);position:absolute;left:-28px;top:0;width:20px;height:20px;border-radius:50%;background:var(--navy);color:#fff;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+.timeline-step h4{margin:0 0 4px;color:var(--navy);font-size:14.5px;}
+.timeline-step p{margin:0;font-size:13px;color:var(--graphite-soft);}
+
+.qr-zone{display:flex;gap:14px;align-items:center;flex-wrap:wrap;border:1.5px dashed #c7bfae;border-radius:14px;padding:14px;background:#fbfaf7;}
+.qr-box{width:88px;height:88px;background:#fff;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;flex:none;overflow:hidden;}
+.qr-box canvas,.qr-box img{width:100%;height:100%;}
+.qr-meta{flex:1;min-width:180px;} .qr-meta b{display:block;font-size:13.5px;color:var(--navy);margin-bottom:6px;}
+.qr-meta input{width:100%;border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:12.5px;margin-bottom:6px;}
+.qr-meta button{border:1px solid var(--navy);background:#fff;color:var(--navy);border-radius:8px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer;}
+
+.slide-shell{background:var(--white);border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);padding:36px clamp(20px,4.5vw,52px);min-height:520px;}
+.slide-meta{display:flex;justify-content:space-between;align-items:center;font-size:12px;color:var(--graphite-soft);margin-bottom:16px;}
+.slide-controls{display:flex;justify-content:space-between;align-items:center;margin-top:26px;gap:10px;}
+.dot-row{display:flex;gap:4px;flex-wrap:wrap;justify-content:center;max-width:460px;}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--line);cursor:pointer;}
+.dot.active{background:var(--red);width:16px;border-radius:4px;}
+
+.choice{display:block;width:100%;text-align:left;border:1.5px solid var(--line);background:#fff;border-radius:12px;padding:12px 15px;margin-bottom:9px;cursor:pointer;font-size:14px;color:var(--graphite);transition:.15s;}
+.choice:hover{border-color:var(--navy);}
+.choice.correct{border-color:var(--ok);background:#e9f5ee;} .choice.wrong{border-color:var(--red);background:#fbeceb;}
+.choice b{color:var(--navy);margin-right:6px;}
+.explain-box{margin-top:12px;border-radius:12px;padding:13px 15px;font-size:13px;line-height:1.6;}
+.explain-box.ok{background:#e9f5ee;color:#1c5f3a;} .explain-box.no{background:#fbeceb;color:#8c2a26;} .explain-box.info{background:#eef2f7;color:var(--navy);}
+
+.trainer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+@media (max-width:940px){.trainer-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.trainer-grid{grid-template-columns:1fr;}}
+.trainer-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px;cursor:pointer;box-shadow:var(--shadow);transition:.18s;display:flex;flex-direction:column;gap:8px;}
+.trainer-card:hover{transform:translateY(-3px);border-color:var(--navy);}
+.trainer-card .n{font-family:'Fraunces',serif;font-size:24px;color:var(--red);font-weight:700;}
+.trainer-card h3{margin:0;color:var(--navy);font-size:15.5px;}
+.trainer-card p{margin:0;font-size:12.5px;color:var(--graphite-soft);flex:1;}
+.trainer-card .tag{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--burgundy);font-weight:700;}
+.trainer-card .status{font-size:10px;font-weight:700;padding:2px 8px;border-radius:999px;display:inline-block;}
+.status-none{background:#eef2f7;color:var(--graphite-soft);}
+.status-done{background:#e9f5ee;color:#1c5f3a;}
+.status-review{background:#fff3e0;color:#9a5b00;}
+
+.sort-layout{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.sort-layout.cols-3{grid-template-columns:1fr 1fr 1fr;}
+.sort-layout.cols-4{grid-template-columns:1fr 1fr;}
+.sort-layout.cols-5{grid-template-columns:1fr 1fr 1fr;}
+@media (max-width:760px){.sort-layout,.sort-layout.cols-3,.sort-layout.cols-4,.sort-layout.cols-5{grid-template-columns:1fr;}}
+.pool{display:flex;flex-wrap:wrap;gap:8px;min-height:50px;}
+.chip{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:7px 12px;font-size:12.5px;color:var(--graphite);display:inline-flex;align-items:center;gap:6px;cursor:pointer;}
+.chip button{border:none;background:none;cursor:pointer;font-size:11px;font-weight:700;padding:0;color:var(--navy);}
+.bucket{border:1.5px dashed #c7bfae;border-radius:14px;padding:13px;min-height:100px;background:#fbfaf7;}
+.bucket h4{margin:0 0 10px;font-size:13px;color:var(--navy);}
+
+textarea.answer{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 13px;font-size:13.5px;font-family:inherit;min-height:72px;resize:vertical;}
+label.q{display:block;font-size:13.5px;font-weight:600;color:var(--navy);margin:14px 0 6px;}
+p.q{font-size:14px;}
+
+.map-flow{display:flex;flex-direction:column;align-items:center;gap:0;}
+.map-node{background:#fff;border:1.5px solid var(--line);border-radius:14px;padding:13px 20px;font-weight:600;color:var(--navy);text-align:center;box-shadow:var(--shadow);max-width:560px;width:100%;font-size:13.5px;}
+.map-node.final{background:var(--navy);color:#fff;border-color:var(--navy);font-family:'Fraunces',serif;font-size:16px;}
+.map-arrow{color:var(--red);font-size:20px;line-height:1;padding:3px 0;}
+
+.msel-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:9px;font-size:13.5px;cursor:pointer;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:#fff;}
+
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow);}
+table.cmp{width:100%;border-collapse:collapse;font-size:12.3px;background:#fff;min-width:560px;}
+table.cmp th{background:var(--navy);color:#fff;text-align:left;padding:9px 11px;font-weight:600;white-space:nowrap;}
+table.cmp td{padding:9px 11px;border-top:1px solid var(--line);color:var(--graphite-soft);vertical-align:top;}
+table.cmp tr:nth-child(even) td{background:#faf9f6;}
+table.cmp td:first-child{font-weight:600;color:var(--navy);white-space:nowrap;}
+
+.branch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+@media (max-width:860px){.branch-grid{grid-template-columns:1fr;}}
+.branch-card{background:#fff;border:1.5px solid var(--line);border-radius:16px;padding:18px;cursor:pointer;box-shadow:var(--shadow);transition:.15s;}
+.branch-card:hover{border-color:var(--navy);transform:translateY(-2px);}
+.branch-card.active{border-color:var(--red);background:#fff8f7;}
+.branch-card .bn{font-family:'Fraunces',serif;font-size:20px;color:var(--red);font-weight:700;}
+.branch-card h4{margin:6px 0 0;color:var(--navy);font-size:14px;}
+
+.progress-badge{display:inline-block;background:var(--navy);color:#fff;border-radius:999px;padding:6px 16px;font-size:13px;font-weight:700;}
+.scale-row{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0;}
+.scale-row button{flex:1 1 90px;}
+
+.chart-legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px;font-size:12px;}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px;}
+.chart-legend i{width:14px;height:3px;border-radius:2px;display:inline-block;}
+
+.site-footer{border-top:1px solid var(--line);padding:26px 24px;text-align:center;font-size:12px;color:var(--graphite-soft);}
+.note{font-size:12px;color:var(--graphite-soft);font-style:italic;margin-top:9px;}
+hr.sep{border:none;border-top:1px solid var(--line);margin:22px 0;}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand" onclick="goTo('cover')">
+    <span class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback"><svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg></span></span>
+    <span>Трудовое право РК · Тема 14</span>
+  </div>
+  <div class="nav-scroll">
+    <button class="navbtn" onclick="goTo('cover')">Главный экран</button>
+    <button class="navbtn primary" onclick="goTo14()">Начать занятие</button>
+    <button class="navbtn" onclick="goTo('map')">Карта темы</button>
+    <button class="navbtn" onclick="goTo('trainers')">Тренажёры</button>
+    <button class="navbtn" onclick="goTo('selfcheck')">Проверьте себя</button>
+    <button class="navbtn" onclick="goTo('after')">Самостоятельная работа</button>
+  </div>
+  <button class="mode-toggle" id="modeToggleBtn" onclick="toggleMode()">Режим преподавателя</button>
+</div>
+<div class="progress-rail"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+<div id="app"></div>
+<div class="site-footer">Maqsut Narikbayev University · Курс «Трудовое право Республики Казахстан» · Тема 14. Ответственность в трудовых отношениях · Муслим Хасенов, PhD, Associate Professor</div>
+
+<script>
+/* ============================================================
+   ХЕЛПЕРЫ
+   ============================================================ */
+function logoSVG(){return `<svg viewBox="0 0 64 64"><rect width="64" height="64" rx="6" fill="#c8102e"/><text x="32" y="30" text-anchor="middle" font-family="Fraunces,Georgia,serif" font-weight="700" font-size="22" fill="#fff">MNU</text><path d="M18 46 L32 37 L46 46 Z" fill="none" stroke="#fff" stroke-width="2.5"/><rect x="16" y="46" width="4" height="8" fill="#fff"/><rect x="24" y="46" width="4" height="8" fill="#fff"/><rect x="32" y="46" width="4" height="8" fill="#fff"/><rect x="40" y="46" width="4" height="8" fill="#fff"/><rect x="14" y="54" width="36" height="3" fill="#fff"/></svg>`;}
+function campusSVG(){
+  return `<svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" style="width:100%;height:100%;">
+    <rect width="800" height="400" fill="#0c2340"/><rect width="800" height="400" fill="url(#g)"/>
+    <defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#123058"/><stop offset="1" stop-color="#081527"/></linearGradient></defs>
+    <rect x="120" y="180" width="560" height="140" fill="#1a3a63"/>
+    ${Array.from({length:9}).map((_,i)=>`<rect x="${150+i*58}" y="150" width="18" height="170" fill="#0c2340"/>`).join("")}
+    <polygon points="120,180 400,90 680,180" fill="#213f66"/>
+    <rect x="380" y="40" width="8" height="60" fill="#7c1327"/><rect x="386" y="40" width="30" height="18" fill="#7c1327"/>
+  </svg>`;
+}
+function infoCard(title,body){return `<div class="card"><h3>${title}</h3><p>${body}</p></div>`;}
+function numList(items){return `<ol style="padding-left:20px;font-size:14px;color:var(--graphite-soft);line-height:1.85;">${items.map(i=>`<li>${i}</li>`).join("")}</ol>`;}
+function verticalFlow(items,opts){
+  opts=opts||{};
+  return `<div class="map-flow">${items.map((n,i)=>`<div class="map-node">${n}</div>${i<items.length-1?'<div class="map-arrow">↓</div>':''}`).join("")}${opts.final?`<div class="map-arrow">↓</div><div class="map-node final">${opts.final}</div>`:''}</div>`;
+}
+function timelineStep(n,title,sub){return `<div class="timeline-step" data-n="${n}"><h4>${title}</h4>${sub?`<p>${sub}</p>`:""}</div>`;}
+function qrZone(id,label,placeholderUrl,prefillUrl){
+  return `<div class="qr-zone">
+    <div class="qr-box" id="qrbox-${id}"><span style="font-size:10px;color:#999;">QR</span></div>
+    <div class="qr-meta"><b>${label}</b>
+      <input type="text" id="qrurl-${id}" placeholder="Вставьте ссылку (${placeholderUrl})" value="${prefillUrl||''}" />
+      <button onclick="renderQr('${id}')">Показать QR-код</button>
+    </div></div>`;
+}
+function autoRenderQrZones(){
+  document.querySelectorAll('input[id^="qrurl-"]').forEach(input=>{
+    if(input.value && input.value.trim()){
+      const id = input.id.replace('qrurl-','');
+      renderQr(id);
+    }
+  });
+}
+function choiceListFull(id,opts,correctIdx,explain){
+  const letters=["A","B","C","D","E"];
+  return `<div id="choice-${id}">${opts.map((o,i)=>`<button class="choice" onclick="pickChoiceExplain('${id}',${i},${correctIdx},\`${(explain||"").replace(/`/g,"'")}\`)" id="choice-${id}-${i}"><b>${letters[i]}.</b> ${o}</button>`).join("")}
+  <div class="explain-box" id="explain-${id}" style="display:none;"></div></div>`;
+}
+window.pickChoiceExplain=function(id,i,correctIdx,explain){
+  for(let j=0;j<6;j++){const el=document.getElementById(`choice-${id}-${j}`);if(el)el.classList.remove('correct','wrong');}
+  const el=document.getElementById(`choice-${id}-${i}`);
+  if(el){ if(i===correctIdx) el.classList.add('correct'); else { el.classList.add('wrong'); const c=document.getElementById(`choice-${id}-${correctIdx}`); if(c) c.classList.add('correct'); } }
+  const ex=document.getElementById(`explain-${id}`);
+  if(ex){ ex.className='explain-box '+(i===correctIdx?'ok':'no'); ex.style.display='block'; ex.innerHTML=(i===correctIdx?'✓ Верно. ':'✕ Неверно. ')+(explain||''); }
+  state.answers[id]=i; save();
+};
+function trueFalse(id,statement,isTrue,explain){
+  const v = state.answers[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${statement}</p>
+    <div style="display:flex;gap:10px;">
+      <button class="navbtn ${v==='t'?(isTrue?'correct':'wrong'):''}" onclick="pickTF('${id}',true,${isTrue},\`${(explain||"").replace(/`/g,"'")}\`)">Верно</button>
+      <button class="navbtn ${v==='f'?(!isTrue?'correct':'wrong'):''}" onclick="pickTF('${id}',false,${isTrue},\`${(explain||"").replace(/`/g,"'")}\`)">Неверно</button>
+    </div>
+    <div class="explain-box" id="explain-${id}" style="display:${v?'block':'none'};"></div>
+  </div>`;
+}
+window.pickTF=function(id,chosen,isTrue,explain){
+  state.answers[id]= chosen?'t':'f';
+  save();
+  render();
+};
+function revealBox(id, question, answer, btnLabel){
+  const open = state.reveals[id];
+  return `<div class="card" style="margin-bottom:12px;">
+    <p style="font-size:13.5px;color:var(--graphite);margin:0 0 10px;">${question}</p>
+    <button class="navbtn" onclick="toggleReveal('${id}')">${open?'Скрыть':(btnLabel||'Открыть решение')}</button>
+    ${open?`<div class="explain-box info" style="margin-top:10px;">${answer}</div>`:""}
+  </div>`;
+}
+window.toggleReveal=function(id){ state.reveals[id]=!state.reveals[id]; save(); render(); };
+
+function comparisonTable(headers, rows){
+  return `<div class="table-wrap"><table class="cmp"><thead><tr>${headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead>
+  <tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+}
+
+/* multi-select exercise */
+function multiSelectExercise(key, items){
+  const picked = state.multiSel[key] || {};
+  const checked = state.multiSelChecked[key];
+  return `${items.map((it,i)=>{
+    let style='';
+    if(checked){
+      if(it.correct) style = picked[i] ? 'border-color:#1f6f43;background:#e9f5ee;' : 'border-color:#c8102e;background:#fbeceb;';
+      else style = picked[i] ? 'border-color:#c8102e;background:#fbeceb;' : '';
+    }
+    return `<label class="msel-item" style="${style}"><input type="checkbox" ${picked[i]?'checked':''} onchange="toggleMultiSel('${key}',${i})"> ${it.text}</label>`;
+  }).join("")}
+  <button class="btn btn-navy" style="margin-top:6px;" onclick="checkMultiSel('${key}')">Проверить</button>
+  ${checked?`<div class="explain-box ${items.every((it,i)=>!!picked[i]===!!it.correct)?'ok':'no'}" style="margin-top:12px;">${items.every((it,i)=>!!picked[i]===!!it.correct)?'✓ Все выбраны верно.':'✕ Есть ошибки — зелёным отмечены верные, красным — неверно отмеченные или пропущенные позиции.'}</div>`:''}`;
+}
+window.toggleMultiSel=function(key,i){
+  if(!state.multiSel[key]) state.multiSel[key]={};
+  state.multiSel[key][i]=!state.multiSel[key][i];
+  state.multiSelChecked[key]=false;
+  save(); render();
+};
+window.checkMultiSel=function(key){ state.multiSelChecked[key]=true; save(); render(); };
+
+function bucketSorter(sortKey, items, buckets){
+  const placed = state.sorters[sortKey]||{};
+  const pool = items.filter(([txt])=>!(txt in placed));
+  const cols = Math.min(buckets.length,4);
+  return `
+  <div class="pool" style="margin-bottom:14px;">${pool.map(([txt,correct])=>`
+    <span class="chip">${txt}
+      ${buckets.map(b=>`<button onclick="sortPick('${sortKey}','${txt.replace(/'/g,"\\'")}','${b.key}',${b.key===correct})">→${b.label.split(' ')[0]}</button>`).join("")}
+    </span>`).join("")||'<span class="note">Все карточки распределены.</span>'}</div>
+  <div class="sort-layout ${cols===3?'cols-3':cols===4?'cols-4':cols>=5?'cols-5':''}">
+    ${buckets.map(b=>`<div class="bucket"><h4>${b.label}</h4>${Object.entries(placed).filter(([,v])=>v.bucket===b.key).map(([txt,v])=>`<span class="chip" style="border-color:${v.ok?'#1f6f43':'#c8102e'};" onclick="unSort('${sortKey}','${txt.replace(/'/g,"\\'")}')">${v.ok?'✓':'✕'} ${txt}</span>`).join("")}</div>`).join("")}
+  </div>`;
+}
+window.sortPick=function(sortKey,item,bucketKey,isCorrect){
+  if(!state.sorters[sortKey]) state.sorters[sortKey]={};
+  state.sorters[sortKey][item]={bucket:bucketKey, ok:isCorrect};
+  save(); render();
+};
+window.unSort=function(sortKey,item){ if(state.sorters[sortKey]) delete state.sorters[sortKey][item]; save(); render(); };
+function answerBox(id){
+  const val = state.refl[id]||'';
+  return `<textarea class="answer" oninput="state.refl['${id}']=this.value;save();">${val}</textarea>`;
+}
+
+/* --- инструменты из предыдущих тем --- */
+function teacherNote(html){
+  return state.teacherMode ? `<div class="teacher-note"><b>Заметка преподавателя</b>${html}</div>` : '';
+}
+function votingTool(id, labels){
+  const v = state.answers['vote-'+id];
+  const L = labels || {a:'Вариант А', b:'Вариант Б', c:'Недостаточно данных'};
+  return `<div class="vote-tool">
+    <p class="q" style="margin:0 0 10px;font-weight:700;color:var(--navy);">Выберите решение</p>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;">
+      <button class="navbtn ${v==='a'?'primary':''}" onclick="castVote('${id}','a')">${L.a}</button>
+      <button class="navbtn ${v==='b'?'primary':''}" onclick="castVote('${id}','b')">${L.b}</button>
+      <button class="navbtn ${v==='c'?'primary':''}" onclick="castVote('${id}','c')">${L.c}</button>
+    </div>
+  </div>`;
+}
+window.castVote=function(id,v){ state.answers['vote-'+id]=v; save(); render(); };
+function choicePoll(id, options){
+  const v = state.answers['poll-'+id];
+  return `<div style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;">${options.map((o,i)=>`<button class="navbtn ${v===i?'primary':''}" onclick="pickPoll('${id}',${i})">${o}</button>`).join("")}</div>`;
+}
+window.pickPoll=function(id,i){ state.answers['poll-'+id]=(state.answers['poll-'+id]===i?undefined:i); save(); render(); };
+function factBadge(text){
+  return `<div class="card amber" style="margin-bottom:12px;"><p style="font-size:12px;font-weight:700;color:#9a5b00;text-transform:uppercase;letter-spacing:.06em;margin:0;">${text}</p></div>`;
+}
+function evidenceSplit(workerTitle, workerBody, employerTitle, employerBody){
+  return `<div class="grid cols-2" style="margin:12px 0;">${infoCard(workerTitle,workerBody)}${infoCard(employerTitle,employerBody)}</div>`;
+}
+function rangePicker(id, labels){
+  const v = state.answers['range-'+id];
+  return `<div class="scale-row">${labels.map((l,i)=>`<button class="navbtn ${v===i?'primary':''}" onclick="pickRange('${id}',${i})">${l}</button>`).join("")}</div>`;
+}
+window.pickRange=function(id,i){ state.answers['range-'+id]=i; save(); render(); };
+
+/* линейный график: series=[{label,color,values}], years=[...] */
+function chartSVG(years, series){
+  const W=880, H=320, padL=48, padR=20, padT=20, padB=36;
+  const innerW = W-padL-padR, innerH = H-padT-padB;
+  const allVals = series.flatMap(s=>s.values);
+  const maxV = Math.ceil(Math.max(...allVals)/1000)*1000;
+  const x = i => padL + (innerW*i/(years.length-1));
+  const y = v => padT + innerH - (innerH*v/maxV);
+  const gridLines = 4;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;height:auto;font-family:'Inter',sans-serif;">`;
+  for(let g=0; g<=gridLines; g++){
+    const v = maxV*g/gridLines;
+    const yy = y(v);
+    svg += `<line x1="${padL}" y1="${yy}" x2="${W-padR}" y2="${yy}" stroke="#e5e1d8" stroke-width="1"/>`;
+    svg += `<text x="${padL-8}" y="${yy+4}" font-size="10" fill="#585c63" text-anchor="end">${Math.round(v).toLocaleString('ru-RU')}</text>`;
+  }
+  years.forEach((yr,i)=>{
+    svg += `<text x="${x(i)}" y="${H-10}" font-size="10" fill="#585c63" text-anchor="middle">${yr}</text>`;
+  });
+  series.forEach(s=>{
+    const pts = s.values.map((v,i)=>`${x(i)},${y(v)}`).join(" ");
+    svg += `<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="2.5"/>`;
+    s.values.forEach((v,i)=>{ svg += `<circle cx="${x(i)}" cy="${y(v)}" r="3.2" fill="${s.color}"/>`; });
+  });
+  svg += `</svg>`;
+  const legend = `<div class="chart-legend">${series.map(s=>`<span><i style="background:${s.color};"></i>${s.label}</span>`).join("")}</div>`;
+  return `<div class="card" style="padding:18px;">${svg}${legend}</div>`;
+}
+
+const SLIDES = [
+// ===================== БЛОК 1. ВХОД В ТЕМУ =====================
+// 1. Титульный
+{kicker:"Титульный слайд", render:()=>`
+  <h2 class="section-title">Ответственность в трудовых отношениях</h2>
+  <p class="subtitle">Тема №14 · Трудовое право Республики Казахстан</p>
+  <div class="card navy" style="margin:16px 0;"><p style="color:#fff;font-size:14px;">Муслим Хасенов, PhD, Associate Professor, Maqsut Narikbayev University</p></div>`},
+// 2. Один факт — сколько видов ответственности?
+{kicker:"Один факт — сколько видов ответственности?", render:()=>`
+  <h2 class="section-title">Один факт — сколько видов ответственности?</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>Работодатель несколько месяцев не выплачивает заработную плату работникам.</i></p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Какие виды ответственности здесь могут возникнуть? Отметьте все варианты, которые считаете возможными.</p>
+  ${choicePoll('s2a',["Только гражданско-правовая"])}
+  ${choicePoll('s2b',["Только трудоправовая"])}
+  ${choicePoll('s2c',["Административная"])}
+  ${choicePoll('s2d',["Уголовная"])}
+  ${choicePoll('s2e',["Материальная"])}
+  ${choicePoll('s2f',["Несколько одновременно"])}
+  <p class="note" style="margin-top:12px;">Ответ пока не раскрывается — вернёмся к нему в конце занятия.</p>`},
+// 3. Главное различие
+{kicker:"Главное различие", render:()=>`
+  <h2 class="section-title">Главное различие</h2>
+  ${verticalFlow(["Нарушенное право работника"],{final:"восстановление права"})}
+  <div style="height:18px;"></div>
+  ${verticalFlow(["Правонарушитель"],{final:"юридическая ответственность"})}
+  <div class="card navy" style="text-align:center;margin-top:18px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2vw,18px);">Взыскание заработной платы с работодателя и штраф работодателю — не одно и то же.</p></div>`},
+// 4. Механизм ответственности
+{kicker:"Механизм ответственности", render:()=>`
+  <h2 class="section-title">Механизм ответственности</h2>
+  <div class="grid cols-4" style="margin-bottom:14px;">
+    ${infoCard("Дисциплинарная","")}
+    ${infoCard("Материальная","")}
+    ${infoCard("Административная","")}
+    ${infoCard("Уголовная","")}
+  </div>
+  <p class="lede">В данной теме подробно изучаются:</p>
+  <div class="grid cols-3">
+    ${infoCard("Административная","")}
+    ${infoCard("Уголовная","")}
+    ${infoCard("Материальная","")}
+  </div>`},
+// ===================== БЛОК VIII. СТАТИСТИЧЕСКИЙ ВХОД В ТЕМУ =====================
+// 5. Данные 2025 года
+{kicker:"Данные 2025 года", render:()=>`
+  <h2 class="section-title">2025 год: три линзы одного явления</h2>
+  <div class="grid cols-3">
+    <div class="card danger"><h3>Уголовная ответственность</h3><p>По 5 статьям УК РК.<br><b>возбуждено — 1 051 уголовное дело</b><br><b>до суда дошло — 27 дел</b><br><b>осуждено — 22 человека</b></p></div>
+    <div class="card amber"><h3>Административная ответственность</h3><p>По 12 статьям КоАП.<br><b>взыскано 482 млн тенге штрафов</b><br><b>привлечено к административной ответственности 3 526 лиц</b></p></div>
+    <div class="card ok"><h3>Судебное восстановление трудовых прав</h3><p><b>восстановлено 280 незаконно уволенных работников</b><br><b>выплачено около 370 млн тенге за вынужденный прогул</b></p></div>
+  </div>`},
+// 6. Данные 2024 года
+{kicker:"Данные 2024 года", render:()=>`
+  <h2 class="section-title">2024 год</h2>
+  <div class="grid cols-3">
+    <div class="card danger"><h3>УК</h3><p><b>1 227 уголовных дел</b><br><b>до суда дошло 25</b><br><b>осуждено 25 человек</b></p></div>
+    <div class="card amber"><h3>КоАП</h3><p><b>813 млн тенге штрафов</b><br><b>5 706 лиц привлечено</b></p></div>
+    <div class="card ok"><h3>Восстановление</h3><p><b>317 незаконно уволенных работников</b><br><b>455 млн тенге за вынужденный прогул</b></p></div>
+  </div>`},
+// 7. Данные 2023 года
+{kicker:"Данные 2023 года", render:()=>`
+  <h2 class="section-title">2023 год</h2>
+  <div class="grid cols-3">
+    <div class="card danger"><h3>УК</h3><p><b>1 184 уголовных дела</b><br><b>до суда дошло 20</b><br><b>осуждено 20 человек</b></p></div>
+    <div class="card amber"><h3>КоАП</h3><p><b>620 млн тенге штрафов</b><br><b>5 804 лица</b></p></div>
+    <div class="card ok"><h3>Восстановление</h3><p><b>246 работников</b><br><b>245 млн тенге за вынужденный прогул</b></p></div>
+  </div>`},
+// 8. Что вас удивляет?
+{kicker:"Что вас удивляет?", render:()=>`
+  <h2 class="section-title">Что вас удивляет?</h2>
+  ${numList([
+    "Почему уголовных дел регистрируется больше тысячи, а до суда доходят десятки?",
+    "Почему административная ответственность применяется значительно чаще?",
+    "Почему восстановление права работника нельзя считать наказанием работодателя?",
+    "Почему одно нарушение может иметь несколько юридических последствий?",
+  ])}
+  ${answerBox('s8')}`},
+// ===================== ЧАСТЬ I. АДМИНИСТРАТИВНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// ===================== БЛОК IX. ОБЩАЯ КАРТА =====================
+// 9. Общая карта КоАП
+{kicker:"Общая карта: составы КоАП в сфере труда", render:()=>`
+  <h2 class="section-title">Общая карта составов КоАП</h2>
+  <p class="lede" style="margin-bottom:12px;">КоАП содержит значительное число специальных составов правонарушений, связанных со сферой труда. Их удобно разделить на пять блоков.</p>
+  <div class="grid cols-2">
+    ${infoCard("1. Охрана труда и безопасность","")}
+    ${infoCard("2. Трудовые и коллективные отношения","")}
+    ${infoCard("3. Трудовая миграция","")}
+    ${infoCard("4. Занятость и социальная защита","")}
+    ${infoCard("5. Отдельные категории работников и деятельности","")}
+  </div>`},
+// ===================== БЛОК X. АДМИНИСТРАТИВНАЯ СТАТИСТИКА 2025 =====================
+// 10. Административная статистика 2025 (1/2)
+{kicker:"Административная статистика 2025 (1/2)", render:()=>`
+  <h2 class="section-title">Административная статистика 2025 года</h2>
+  ${comparisonTable(["Место","Статья","Количество","Сумма штрафов"],[
+    ["1","ст.87 — нарушение требований по оплате труда","2010","294 млн"],
+    ["2","ст.93 — нарушение правил обеспечения безопасности и охраны труда","526","28,9 млн"],
+    ["3","ст.86 — допуск к работе без трудового договора","280","35,7 млн"],
+    ["4","ст.298 — нарушение правил безопасного ведения работ","205","25,4 млн"],
+    ["5","ст.89 — незаконное превышение нормы рабочего времени","187","0,2 млн"],
+    ["6","ст.96 — несообщение о несчастном случае","132","34 млн"],
+  ])}
+  <p class="note" style="margin-top:10px;">Продолжение на следующем слайде.</p>`},
+// 11. Административная статистика 2025 (2/2)
+{kicker:"Административная статистика 2025 (2/2)", render:()=>`
+  <h2 class="section-title">Административная статистика 2025 года (продолжение)</h2>
+  ${comparisonTable(["Место","Статья","Количество","Сумма штрафов"],[
+    ["7","ст.98 — нарушение законодательства о занятости","118","0,1 млн"],
+    ["8","ст.88 — непредоставление отпусков","54","6 млн"],
+    ["9","ст.97 — нарушение требований по коллективному договору / соглашению","49","50,6 млн"],
+    ["10","ст.94 — нарушение требований по аттестации производственных объектов","35","2,3 млн"],
+    ["11","ст.95 — необеспечение расследования несчастных случаев","18","3,3 млн"],
+    ["12","ст.90 — дискриминация в сфере труда","14","2 млн"],
+  ])}
+  ${teacherNote("Все значения и порядок мест сохранены по авторской таблице без округления и перегруппировки.")}`},
+// ===================== БЛОК XI. АДМИНИСТРАТИВНАЯ СТАТИСТИКА 2024 =====================
+// 12. Административная статистика 2024 (1/2)
+{kicker:"Административная статистика 2024 (1/2)", render:()=>`
+  <h2 class="section-title">Административная статистика 2024 года</h2>
+  ${comparisonTable(["Место","Статья","Количество","Сумма штрафов"],[
+    ["1","ст.93 — БиОТ","2876","28,1 млн"],
+    ["2","ст.87 — оплата труда","2047","670,9 млн"],
+    ["3","ст.86 — работа без трудового договора","413","45,3 млн"],
+    ["4","ст.89 — рабочее время","270","0,2 млн"],
+    ["5","ст.98 — занятость","257","0"],
+    ["6","ст.298 — безопасное ведение работ","159","16,5 млн"],
+  ])}
+  <p class="note" style="margin-top:10px;">Продолжение на следующем слайде.</p>`},
+// 13. Административная статистика 2024 (2/2)
+{kicker:"Административная статистика 2024 (2/2)", render:()=>`
+  <h2 class="section-title">Административная статистика 2024 года (продолжение)</h2>
+  ${comparisonTable(["Место","Статья","Количество","Сумма штрафов"],[
+    ["7","ст.96 — несообщение о несчастном случае","89","16,3 млн"],
+    ["8","ст.94 — аттестация","81","1 млн"],
+    ["9","ст.97 — коллективные договоры","34","28,8 млн"],
+    ["10","ст.88 — отпуск","25","2,6 млн"],
+    ["11","ст.90 — дискриминация","15","1,5 млн"],
+    ["12","ст.95 — расследование НС","15","2 млн"],
+  ])}
+  ${teacherNote("Значения сохранены полностью по авторской таблице 2024 года, включая нулевую сумму штрафов по ст.98.")}`},
+// ===================== БЛОК XII. АНАЛИЗ СТАТИСТИКИ =====================
+// 14. Анализ статистики
+{kicker:"Анализ статистики", render:()=>`
+  <h2 class="section-title">Почему лидеры менялись местами?</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">Почему в 2024 году по количеству лидировала БиОТ (ст.93), а в 2025 году — оплата труда (ст.87)?</p>
+  ${answerBox('s14')}
+  <p class="lede" style="margin-top:14px;">Разграничьте в своём ответе:</p>
+  <div class="grid cols-2">
+    ${infoCard("Статистический факт","Количество зафиксированных нарушений и сумма штрафов за конкретный год.")}
+    ${infoCard("Гипотеза о причине","Возможное объяснение, почему показатель изменился — само по себе не доказано одной таблицей.")}
+  </div>`},
+// ===================== БЛОК XIII-XIV. БАЗОВЫЕ СОСТАВЫ КОАП: БиОТ =====================
+// 15. Статья 93 КоАП
+{kicker:"Статья 93 КоАП: БиОТ", render:()=>`
+  <h2 class="section-title">Статья 93. Нарушение требований безопасности и охраны труда</h2>
+  <p class="lede" style="margin-bottom:10px;">Что запрещено → кто субъект → санкция → кто рассматривает дело.</p>
+  ${numList([
+    "отсутствие службы / специалиста БиОТ",
+    "нарушение требований о медицинских осмотрах",
+    "необеспечение СИЗ и лечебно-профилактического питания",
+    "нарушение обучения и проверки знаний",
+    "нарушение инструктирования и отсутствие документов БиОТ",
+  ])}`},
+// 16. Проверка
+{kicker:"Проверка: СИЗ выданы, обучения не было", render:()=>`
+  <h2 class="section-title">Проверьте себя</h2>
+  <div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>Работодатель выдал СИЗ, но не организовал обязательное обучение.</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);">Имеется ли состав административного правонарушения?</p>
+  ${choiceListFull('s16',["Да — отдельно предусмотрено нарушение обучения и проверки знаний","Нет — раз СИЗ выданы, обязанность работодателя исполнена","Недостаточно данных"],0,"Выдача СИЗ и организация обучения — разные самостоятельные обязанности работодателя по ст.93 КоАП. Исполнение одной не освобождает от другой: нарушение обучения и проверки знаний образует отдельный состав.")}`},
+// 17. Статья 94
+{kicker:"Статья 94: аттестация производственных объектов", render:()=>`
+  <h2 class="section-title">Статья 94. Аттестация производственных объектов</h2>
+  <p class="lede">Нарушение требований по аттестации производственных объектов по условиям труда.</p>`},
+// 18. Статья 95
+{kicker:"Статья 95: расследование несчастного случая", render:()=>`
+  <h2 class="section-title">Статья 95. Необеспечение расследования несчастного случая</h2>
+  <p class="lede">Необеспечение работодателем расследования несчастного случая, связанного с трудовой деятельностью.</p>`},
+// 19. Статья 96
+{kicker:"Статья 96: несообщение о несчастном случае", render:()=>`
+  <h2 class="section-title">Статья 96. Несообщение о несчастном случае</h2>
+  <p class="lede">Несообщение или несвоевременное сообщение работодателем о несчастном случае, связанном с трудовой деятельностью.</p>`},
+// 20. Разграничение 95 и 96
+{kicker:"Разграничение статей 95 и 96", render:()=>`
+  <h2 class="section-title">Разграничение статей 95 и 96</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>Ситуация А</h3><p>Несчастный случай произошёл, работодатель не создал комиссию.</p><p style="margin-top:10px;font-weight:700;color:var(--burgundy);">→ ст.95</p></div>
+    <div class="card"><h3>Ситуация Б</h3><p>Расследование начато, но работодателем не направлено обязательное уведомление.</p><p style="margin-top:10px;font-weight:700;color:var(--burgundy);">→ ст.96</p></div>
+  </div>`},
+// 21. Статья 298
+{kicker:"Статья 298: безопасное ведение работ", render:()=>`
+  <h2 class="section-title">Статья 298. Нарушение правил безопасного ведения работ</h2>
+  <p class="lede">Отдельная граница для последующей квалификации:</p>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Если нарушение повлекло предусмотренный уголовным законодательством вред здоровью или смерть, возникает вопрос уже об уголовной квалификации.</p></div>`},
+// ===================== БЛОК XV. ТРУДОВЫЕ ОТНОШЕНИЯ =====================
+// 22. Статья 86
+{kicker:"Статья 86: допуск к работе без трудового договора", render:()=>`
+  <h2 class="section-title">Статья 86. Допуск к работе без заключения трудового договора</h2>
+  <p class="lede">Использование реального наёмного труда — без договора либо под видом гражданско-правового договора — может образовывать административное нарушение при наличии соответствующих признаков.</p>`},
+// 23. Статья 87
+{kicker:"Статья 87: нарушения оплаты труда", render:()=>`
+  <h2 class="section-title">Статья 87. Нарушения оплаты труда</h2>
+  ${numList([
+    "невыплата",
+    "неполная выплата",
+    "просрочка",
+    "неначисление / невыплата пени",
+    "неправильная оплата сверхурочных",
+    "работы в праздничные и выходные дни",
+    "ночной работы",
+  ])}`},
+// 24. Почему ст.87 — лидер 2025 года?
+{kicker:"Почему ст.87 — лидер 2025 года?", render:()=>`
+  <h2 class="section-title">Почему ст.87 — лидер 2025 года?</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">2010 правонарушений · 294 млн тенге штрафов</p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);">Что показывает эта цифра — количество нарушений или тяжесть каждого нарушения?</p>
+  ${answerBox('s24')}
+  ${teacherNote("Статистический показатель количества и суммы штрафов сам по себе не позволяет сделать вывод о тяжести каждого отдельного нарушения — это разные измерения одного явления.")}`},
+// 25. Статья 88
+{kicker:"Статья 88: непредоставление отпуска", render:()=>`
+  <h2 class="section-title">Статья 88. Непредоставление отпуска</h2>
+  <p class="lede">Непредоставление оплачиваемого ежегодного трудового отпуска либо его части в течение двух лет подряд.</p>`},
+// 26. Статья 89
+{kicker:"Статья 89: рабочее время", render:()=>`
+  <h2 class="section-title">Статья 89. Превышение продолжительности рабочего времени</h2>
+  <p class="lede">Незаконное превышение нормальной или сокращённой продолжительности рабочего времени и рабочей смены.</p>`},
+// 27. Статья 90
+{kicker:"Статья 90: дискриминация", render:()=>`
+  <h2 class="section-title">Статья 90. Дискриминация</h2>
+  ${numList([
+    "нарушение равной оплаты за равный труд",
+    "неравные производственно-бытовые условия",
+    "дискриминационные требования в объявлениях о вакансии",
+  ])}`},
+// 28. Статья 97
+{kicker:"Статья 97: коллективные договоры и соглашения", render:()=>`
+  <h2 class="section-title">Статья 97. Коллективные договоры и соглашения</h2>
+  ${numList([
+    "уклонение от переговоров",
+    "нарушение сроков",
+    "необоснованный отказ",
+    "невыполнение обязательств",
+    "непредоставление информации",
+  ])}`},
+// ===================== БЛОК XVI. ПРОБЕЛЫ В АДМИНИСТРАТИВНОЙ ОТВЕТСТВЕННОСТИ =====================
+// 29. Пробелы
+{kicker:"Пробелы в административной ответственности", render:()=>`
+  <div class="card navy" style="text-align:center;margin-bottom:16px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);">Нарушение нормы ТК не всегда означает наличие специальной санкции КоАП</p></div>
+  <p class="lede">Значительное число императивных обязанностей Трудового кодекса не подкреплено специальным административным составом.</p>
+  <div class="card accent-left" style="margin-top:10px;"><p style="font-size:13.5px;"><i>Пример: обязанность работодателя создавать согласительную комиссию.</i></p></div>`},
+// 30. Дискуссия
+{kicker:"Дискуссия: нужен ли общий состав?", render:()=>`
+  <h2 class="section-title">Нужно ли возвращать общий состав «нарушение трудового законодательства»?</h2>
+  <div class="grid cols-2">
+    <div class="card ok"><h3>Аргументы «за»</h3><p>${["отсутствие санкций за часть обязательных норм","универсальность"].map(x=>`• ${x}`).join("<br>")}</p></div>
+    <div class="card danger"><h3>Аргументы «против»</h3><p>${["неопределённость","риск чрезмерно широкой административной ответственности","принцип юридической определённости состава"].map(x=>`• ${x}`).join("<br>")}</p></div>
+  </div>
+  ${votingTool('s30',{a:'За возврат общего состава',b:'Против',c:'Нужны дополнительные данные'})}`},
+// ===================== БЛОК XVII. СОСТАВ АДМИНИСТРАТИВНОГО ПРАВОНАРУШЕНИЯ =====================
+// 31. Для привлечения необходимо установить
+{kicker:"Состав административного правонарушения", render:()=>`
+  <h2 class="section-title">Для привлечения необходимо установить</h2>
+  ${numList([
+    "событие",
+    "признаки состава",
+    "надлежащего субъекта",
+    "вину физического лица",
+    "соблюдение срока",
+    "отсутствие оснований освобождения",
+  ])}`},
+// 32. Кто может отвечать
+{kicker:"Кто может отвечать", render:()=>`
+  <h2 class="section-title">Кто может отвечать</h2>
+  <div class="grid cols-4">
+    ${infoCard("Физическое лицо","")}
+    ${infoCard("Должностное лицо","")}
+    ${infoCard("Юридическое лицо","")}
+    ${infoCard("Субъект предпринимательства","")}
+  </div>
+  <p class="note" style="margin-top:10px;">В зависимости от диспозиции и санкции конкретной статьи.</p>`},
+// 33. Вина физического лица
+{kicker:"Вина физического лица", render:()=>`
+  <h2 class="section-title">Вина физического лица</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Объективное вменение не допускается</p></div>
+  <p class="lede">Форма вины:</p>
+  <div class="grid cols-2">${infoCard("Умысел","")}${infoCard("Неосторожность","")}</div>`},
+// 34. Юридическое лицо
+{kicker:"Может ли юридическое лицо «быть виновным»?", render:()=>`
+  <h2 class="section-title">Юридическое лицо</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">Может ли организация «быть виновной» так же, как человек?</p>
+  ${votingTool('s34',{a:'Да, так же как человек',b:'Нет, по-другому',c:'Вопрос дискуссионный'})}
+  <p class="lede" style="margin-top:12px;">КоАП связывает ответственность юридического лица с деяниями, совершёнными, санкционированными или одобренными органом управления либо соответствующим работником организации.</p>`},
+// ===================== БЛОК XVIII. ДЛЯЩЕЕСЯ И НЕДЛЯЩЕЕСЯ ПРАВОНАРУШЕНИЕ =====================
+// 35. Ключевой вопрос
+{kicker:"Длящееся и недлящееся правонарушение", render:()=>`
+  <h2 class="section-title">Когда начинает течь срок привлечения?</h2>
+  <p class="lede">Это ключевой вопрос, от которого зависит судьба многих административных дел в сфере труда.</p>`},
+// 36. Длящееся / недлящееся
+{kicker:"Длящееся / недлящееся: определения", render:()=>`
+  <h2 class="section-title">Два типа правонарушений</h2>
+  <div class="grid cols-2">
+    <div class="card"><h3>Длящееся</h3><p>Правонарушение продолжается во времени вследствие длительного невыполнения обязанности.</p></div>
+    <div class="card"><h3>Недлящееся</h3><p>Правонарушение фактически заканчивается в момент конкретного действия / бездействия.</p></div>
+  </div>`},
+// ===================== БЛОК XIX. СУДЕБНОЕ ДЕЛО №1 — ТОО «К.» =====================
+// 37. Факты
+{kicker:"Дело №1 · ТОО «К.» и коллективный договор — факты", render:()=>`
+  <h2 class="section-title">Судебное дело №1. ТОО «К.» и коллективный договор</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>21 декабря 2015 года прокуратурой района внесено представление в Управление инспекции труда. Было установлено невыполнение ТОО «К.» обязательств коллективного договора.</i></p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);margin-top:14px;">Коллективный договор предусматривал:</p>
+  <div class="card" style="margin-bottom:10px;"><h3>Обязательство 1</h3><p>Удерживать из заработной платы профсоюзные взносы и перечислять их на счёт профсоюза не позднее трёх банковских дней после выплаты заработной платы.</p>
+  <p style="margin-top:8px;">За период с 1 апреля по 31 октября 2015 года: из <b>2,9 млн тенге</b> перечислено только <b>1,8 млн тенге</b>.</p></div>
+  <div class="card"><h3>Обязательство 2</h3><p>Работодатель должен был перечислять профсоюзу средства на спортивные и культурно-массовые мероприятия: <b>0,2% фонда оплаты труда</b> ежемесячно, но не реже одного раза в квартал.</p>
+  <p style="margin-top:8px;">Эти средства за проверяемый период вообще не перечислялись.</p></div>
+  <p class="note" style="margin-top:10px;">15 января 2016 года составлен протокол по ч.3 ст.97 КоАП.</p>`},
+// 38. Позиция работодателя
+{kicker:"Дело №1 · позиция работодателя", render:()=>`
+  <h2 class="section-title">Позиция работодателя</h2>
+  <p class="lede">Работодатель просит прекратить производство:</p>
+  <div class="card danger" style="margin:10px 0;"><p style="color:#8c2a26;font-weight:700;">«Срок привлечения истёк».</p></div>
+  <p class="lede">Аргумент: справка прокуратуры датирована <b>12 ноября 2015 года</b>, а протокол составлен только <b>15 января 2016 года</b>.</p>`},
+// 39. Позиция инспекции
+{kicker:"Дело №1 · позиция инспекции", render:()=>`
+  <h2 class="section-title">Позиция инспекции</h2>
+  <p class="lede">Представление прокуратуры поступило инспекции: <b>8 января 2016 года</b>.</p>
+  <p class="lede">Протокол: <b>15 января 2016 года</b>.</p>
+  <p class="lede">Инспекция считает моментом обнаружения дату поступления материалов инспектору.</p>`},
+// 40. Ваше решение
+{kicker:"Дело №1 · ваше решение", render:()=>`
+  <h2 class="section-title">Ваше решение</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">С какого дня считать срок?</p>
+  ${votingTool('s40',{a:'С 12 ноября 2015 (справка прокуратуры)',b:'С 8 января 2016 (поступление инспектору)',c:'С 21 декабря 2015 (представление прокуратуры)'})}
+  <p class="note" style="margin-top:12px;">Ответ пока не раскрывается.</p>`},
+// 41. Решение суда
+{kicker:"Дело №1 · решение суда", render:()=>`
+  <h2 class="section-title">Решение суда</h2>
+  <p class="lede">Суд признал вину подтверждённой:</p>
+  ${numList(["протоколом","представлением прокуратуры","материалами дела","объяснениями"])}
+  <p class="lede">Действия квалифицированы по ч.3 ст.97 КоАП.</p>
+  <div class="card navy" style="text-align:center;margin:14px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Срок суд исчислил с 21 декабря 2015 года — даты внесения представления прокуратуры.</p></div>
+  <p class="lede">ТОО признано виновным. Штраф: <b>400 МРП = 848 400 тенге</b>.</p>`},
+// 42. Юридический урок
+{kicker:"Дело №1 · юридический урок", render:()=>`
+  <h2 class="section-title">Юридический урок</h2>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);">Основная проблема дела — момент обнаружения длящегося правонарушения.</p></div>`},
+// ===================== БЛОК XX. СУДЕБНОЕ ДЕЛО №2 — УВОЛЬНЕНИЕ ЧЛЕНА ПРОФСОЮЗА =====================
+// 43. Полная фабула
+{kicker:"Дело №2 · увольнение члена профсоюза — фабула", render:()=>`
+  <h2 class="section-title">Судебное дело №2. Увольнение члена профсоюза</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>7 февраля 2018 года государственный инспектор составил протокол в отношении ГУ «К.» по ч.3 ст.97 КоАП. Основание: приказ от 11 декабря 2017 года об увольнении работницы Б. Работница являлась членом профсоюзного комитета. Коллективный договор предусматривал необходимость учёта / получения соответствующего мнения представителей работников. Однако увольнение произведено без предусмотренного коллективным договором участия профсоюзного комитета.</i></p></div>`},
+// 44. Позиция учреждения
+{kicker:"Дело №2 · позиция учреждения", render:()=>`
+  <h2 class="section-title">Позиция учреждения</h2>
+  <p class="lede">Руководитель учреждения вину не признала. Два аргумента:</p>
+  <div class="grid cols-2" style="margin-top:10px;">
+    ${infoCard("1. Ненадлежащий субъект","Юридическое лицо не является надлежащим субъектом этого состава.")}
+    ${infoCard("2. Истёк срок","Истёк срок привлечения.")}
+  </div>`},
+// 45. Кто субъект?
+{kicker:"Дело №2 · кто субъект?", render:()=>`
+  <h2 class="section-title">Кто субъект?</h2>
+  <p class="lede">Суд установил: санкция ч.3 ст.97 не предусматривает взыскание именно с субъекта предпринимательства / юридического лица в данной конструкции.</p>
+  <div class="card navy" style="text-align:center;margin:12px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:15px;">Ответственность должен нести уполномоченный субъект — лицо, ответственное за заключение и исполнение коллективного договора.</p></div>
+  <p class="lede">То есть руководитель.</p>`},
+// 46. Срок
+{kicker:"Дело №2 · срок", render:()=>`
+  <h2 class="section-title">Срок</h2>
+  <p class="lede">Приказ издан: <b>11 декабря 2017 года</b>.</p>
+  <p class="lede">Дело направлено в суд: <b>19 февраля 2018 года</b>.</p>
+  <p class="lede">Суд квалифицировал нарушение в этой части как <b>недлящееся</b>. Срок истёк.</p>`},
+// 47. Итог
+{kicker:"Дело №2 · итог", render:()=>`
+  <h2 class="section-title">Итог</h2>
+  <p class="lede">Производство прекращено:</p>
+  ${numList(["отсутствие соответствующего состава у привлечённого субъекта","истечение срока давности"])}`},
+// 48. Сравнение двух дел
+{kicker:"Сравнение двух дел по ст.97", render:()=>`
+  <h2 class="section-title">Сравнение двух дел по ст.97</h2>
+  ${comparisonTable(["Дело 1","Дело 2"],[
+    ["невыполнение обязательства","нарушение конкретного обязательства"],
+    ["длящееся","недлящееся"],
+    ["срок с обнаружения","срок с совершения"],
+    ["субъект установлен правильно","привлечён ненадлежащий субъект"],
+  ])}
+  <div class="card burgundy" style="text-align:center;margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(15px,2.1vw,18px);">Одна статья КоАП может охватывать правонарушения разной правовой природы.</p></div>`},
+// ===================== ЧАСТЬ II. УГОЛОВНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// ===================== БЛОК XXI. ГЛАВНЫЙ ВОПРОС =====================
+// 49. Главный вопрос
+{kicker:"Главный вопрос части II", render:()=>`
+  <h2 class="section-title">Когда нарушение трудового законодательства становится уголовным?</h2>
+  <div class="card accent-left"><p style="font-size:14px;"><i>Когда нарушение трудового законодательства перестаёт быть только административным нарушением и становится уголовным правонарушением?</i></p></div>
+  <p class="note" style="margin-top:10px;">Ответ пока не раскрывается.</p>`},
+// ===================== БЛОК XXII. КАРТА УГОЛОВНЫХ СОСТАВОВ =====================
+// 50. Карта уголовных составов
+{kicker:"Карта уголовных составов", render:()=>`
+  <h2 class="section-title">Карта уголовных составов</h2>
+  <div class="grid cols-2">
+    ${infoCard("1. Принудительный и детский труд","")}
+    ${infoCard("2. Охрана труда и безопасность","")}
+    ${infoCard("3. Трудовые и коллективные отношения","")}
+    ${infoCard("4. Трудовая миграция","")}
+  </div>`},
+// ===================== БЛОК XXIII. ПОЛНАЯ СТАТИСТИКА УК 2018-2024 =====================
+// 51. Статья 152
+{kicker:"Статья 152 УК: статистика 2018–2024", render:()=>`
+  <h2 class="section-title">Статья 152 УК РК</h2>
+  ${comparisonTable(["Год","Зарегистрировано","Прекращено","Направлено в суд","Осуждено"],[
+    ["2018","36","15","0","3"],
+    ["2019","98","73","1","1"],
+    ["2020","60","41","6","1"],
+    ["2021","29","22","2","2"],
+    ["2022","12","7","1","0"],
+    ["2023","10","7","1","0"],
+    ["2024","1","0","1","1"],
+  ])}
+  ${teacherNote("Исходная таблица указывает конкретные части ст.152, по которым вынесены обвинительные приговоры по каждому осуждённому; в доступном материале этот постатейный разбор по частям не детализирован — показана только агрегированная цифра осуждённых по году.")}`},
+// 52. Статья 153
+{kicker:"Статья 153 УК: статистика 2018–2024", render:()=>`
+  <h2 class="section-title">Статья 153 УК РК</h2>
+  ${comparisonTable(["Год","Зарегистрировано","Прекращено","В суд"],[
+    ["2018","5","5","0"],
+    ["2019","2","1","0"],
+    ["2020","4","2","1"],
+    ["2021","4","3","0"],
+    ["2022","1","0","0"],
+    ["2023","2","2","0"],
+    ["2024","0","0","0"],
+  ])}`},
+// 53. Статья 154
+{kicker:"Статья 154 УК: статистика 2018–2024", render:()=>`
+  <h2 class="section-title">Статья 154 УК РК</h2>
+  <div class="card amber" style="margin-bottom:12px;"><p style="font-size:12.5px;color:#9a5b00;margin:0;">Постатейная таблица 2018–2024 по ст.154 в доступном исходном материале не детализирована числом по годам. Ниже показана только качественная картина применения статьи, без замены отсутствующих данных собственными цифрами.</p></div>
+  <p class="lede">Статья 154 — воспрепятствование законной деятельности представителей работников — применяется существенно реже статей 152 и 156. Количественную таблицу по годам необходимо сверить и дополнить по первоисточнику автора курса.</p>`},
+// 54. Статья 156
+{kicker:"Статья 156 УК: статистика 2018–2024", render:()=>`
+  <h2 class="section-title">Статья 156 УК РК</h2>
+  ${comparisonTable(["Год","Зарегистрировано","Прекращено","В суд","Осуждено"],[
+    ["2018","2195","1686","60","56"],
+    ["2019","1939","1497","24","36"],
+    ["2020","1720","1283","37","33"],
+    ["2021","1653","1122","28","33"],
+    ["2022","1452","1077","13","14"],
+    ["2023","1172","784","19","20"],
+    ["2024","1225","803","25","25"],
+  ])}`},
+// 55. Статья 157
+{kicker:"Статья 157 УК: статистика 2018–2024", render:()=>`
+  <h2 class="section-title">Статья 157 УК РК</h2>
+  <div class="card amber" style="margin-bottom:12px;"><p style="font-size:12.5px;color:#9a5b00;margin:0;">Полная таблица 2018–2024 по ст.157 в доступном исходном материале не детализирована; достоверно известна только одна точка.</p></div>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">2024 год — зарегистрировано 1 дело</p></div>
+  <p class="note" style="margin-top:10px;">Остальные годы — сверить и дополнить по первоисточнику автора курса, не заменяя отсутствующие значения предположительными цифрами.</p>`},
+// 56. 2025 год — итог
+{kicker:"2025 год: итог по пяти статьям УК", render:()=>`
+  <h2 class="section-title">2025 год</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">1 051 уголовное дело</p></div>
+  <div class="grid cols-2">
+    <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">27 дошли до суда</p></div>
+    <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">22 осуждённых</p></div>
+  </div>`},
+// ===================== БЛОК XXIV. АНАЛИТИЧЕСКИЙ ВОПРОС =====================
+// 57. Аналитический вопрос
+{kicker:"Аналитический вопрос", render:()=>`
+  <h2 class="section-title">Почему уголовное преследование концентрируется вокруг охраны труда?</h2>
+  <div class="grid cols-2" style="margin-bottom:12px;">
+    ${infoCard("Статья 156","Тысячи регистраций ежегодно.")}
+    ${infoCard("Статьи 152–154, 157","Единичные дела.")}
+  </div>
+  ${answerBox('s57')}
+  ${teacherNote("Не давайте категоричный причинный ответ без дополнительных данных — контраст в цифрах сам по себе не доказывает единственную причину.")}`},
+// ===================== БЛОК XXV. СТАТЬЯ 152 УК =====================
+// 58. Статья 152 — три группы
+{kicker:"Статья 152 УК: три группы составов", render:()=>`
+  <h2 class="section-title">Статья 152 УК. Три основные группы</h2>
+  ${numList([
+    "незаконное прекращение трудового договора / неисполнение решения о восстановлении / иное нарушение с существенным вредом",
+    "дискриминационные отказы и увольнения специальных защищаемых категорий",
+    "неоднократная задержка зарплаты при использовании денег на иные цели",
+  ])}`},
+// 59. Существенный вред
+{kicker:"Существенный вред", render:()=>`
+  <h2 class="section-title">Любое незаконное увольнение — уголовное правонарушение?</h2>
+  ${votingTool('s59',{a:'Да',b:'Нет',c:'Зависит от обстоятельств'})}
+  <div class="card navy" style="text-align:center;margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Нет</p></div>
+  <p class="lede">Для соответствующей конструкции ч.1 необходимо наличие <b>существенного вреда</b> — квалифицирующего последствия, которое само по себе должно быть доказано.</p>`},
+// 60. Кейс
+{kicker:"Кейс: достаточно ли одного восстановления?", render:()=>`
+  <h2 class="section-title">Кейс</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работника незаконно уволили. Суд восстановил его и взыскал средний заработок.</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);">Этого достаточно для уголовной ответственности по ст.152?</p>
+  ${revealBox('s60','Откройте ответ.','Не автоматически. Нужно установить все признаки уголовного состава, включая предусмотренные последствия — в том числе существенный вред, который восстановление и взыскание среднего заработка сами по себе не подтверждают.')}`},
+// ===================== БЛОК XXVI. ДИСКРИМИНАЦИОННАЯ УГОЛОВНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// 61. Дискриминационная ответственность
+{kicker:"Дискриминационная уголовная ответственность", render:()=>`
+  <h2 class="section-title">Защищаемые категории</h2>
+  <div class="grid cols-4">
+    ${infoCard("Беременность","")}
+    ${infoCard("Ребёнок до 3 лет","")}
+    ${infoCard("Инвалидность","")}
+    ${infoCard("Несовершеннолетие","")}
+  </div>
+  <div class="card burgundy" style="text-align:center;margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Ключевой элемент — мотив</p></div>`},
+// 62. Юридическая развилка
+{kicker:"Юридическая развилка: увольнение беременной", render:()=>`
+  <h2 class="section-title">Юридическая развилка</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Работодатель увольняет беременную женщину.</i></p></div>
+  <p class="q" style="font-weight:700;color:var(--navy);">Это автоматически преступление?</p>
+  ${revealBox('s62','Откройте ответ.','Нет. Нужно доказать, что увольнение произведено именно по мотиву беременности, а не по иному, пусть и ошибочному, основанию.')}`},
+// ===================== БЛОК XXVII. ЗАРАБОТНАЯ ПЛАТА =====================
+// 63. Заработная плата
+{kicker:"Задержка заработной платы: когда возникает УК", render:()=>`
+  <h2 class="section-title">Заработная плата: признаки уголовного состава</h2>
+  ${numList(["неоднократность","управленческий субъект","задержка полной и своевременной выплаты","использование денег на иные цели"])}
+  ${comparisonTable(["Ситуация","Квалификация"],[
+    ["Обычная просрочка","административная ответственность"],
+    ["Специальный состав с признаками УК","возможна уголовная ответственность"],
+  ])}`},
+// ===================== БЛОК XXVIII. СТАТЬЯ 156 — ОХРАНА ТРУДА =====================
+// 64. Статья 156
+{kicker:"Статья 156 УК: охрана труда", render:()=>`
+  <h2 class="section-title">Статья 156. Нарушение правил охраны труда</h2>
+  <p class="lede"><b>Субъект:</b> лицо, на котором лежали обязанности по организации или обеспечению соблюдения правил охраны труда.</p>
+  <p class="lede" style="font-weight:700;color:var(--navy);margin-top:10px;">Нарушение:</p>
+  ${numList(["техника безопасности","промышленная санитария","иные правила охраны труда"])}
+  <p class="lede" style="font-weight:700;color:var(--navy);margin-top:10px;">Последствия:</p>
+  ${numList(["вред средней тяжести","тяжкий вред","смерть","смерть нескольких лиц"])}`},
+// 65. Причинная связь
+{kicker:"Причинная связь", render:()=>`
+  <h2 class="section-title">Причинная связь</h2>
+  ${verticalFlow(["Нарушение правила","Опасная ситуация"],{final:"Вред здоровью / смерть"})}
+  <p class="lede" style="margin-top:14px;">Без причинной связи уголовная квалификация по результативному составу невозможна.</p>`},
+// 66. Сравните КоАП и УК
+{kicker:"Сравните КоАП и УК", render:()=>`
+  <h2 class="section-title">Одно и то же нарушение БиОТ — три сценария</h2>
+  <div class="grid cols-3" style="margin-bottom:12px;">
+    ${infoCard("Вариант А","Никто не пострадал.")}
+    ${infoCard("Вариант Б","Причинён вред средней тяжести.")}
+    ${infoCard("Вариант В","Погиб работник.")}
+  </div>
+  <p class="q" style="font-weight:700;color:var(--navy);">Как меняется правовая квалификация?</p>
+  ${answerBox('s66')}`},
+// ===================== БЛОК XXIX. ДРУГИЕ СОСТАВЫ БЕЗОПАСНОСТИ =====================
+// 67. Статья 276
+{kicker:"Статья 276: атомная энергия", render:()=>`
+  <h2 class="section-title">Статья 276. Нарушение правил безопасности при использовании атомной энергии</h2>
+  <p class="lede">Специальный объект + специальное правило безопасности + предусмотренное последствие.</p>`},
+// 68. Статья 277
+{kicker:"Статья 277: горные и строительные работы", render:()=>`
+  <h2 class="section-title">Статья 277. Нарушение правил безопасности на горных или строительных работах</h2>
+  <p class="lede">Специальный объект + специальное правило безопасности + предусмотренное последствие.</p>`},
+// 69. Статья 281
+{kicker:"Статья 281: взрывоопасные объекты", render:()=>`
+  <h2 class="section-title">Статья 281. Нарушение правил безопасности на взрывоопасных объектах</h2>
+  <p class="lede">Специальный объект + специальное правило безопасности + предусмотренное последствие.</p>`},
+// 70. Статья 282
+{kicker:"Статья 282: космическая деятельность", render:()=>`
+  <h2 class="section-title">Статья 282. Нарушение правил безопасности при осуществлении космической деятельности</h2>
+  <p class="lede">Специальный объект + специальное правило безопасности + предусмотренное последствие.</p>
+  ${teacherNote("Главная логика статей 276, 277, 281, 282 одинакова: специальный объект + специальное правило безопасности + предусмотренное последствие. Не перегружайте их санкциями на занятии.")}`},
+// ===================== БЛОК XXX. ПРИНУДИТЕЛЬНЫЙ И ДЕТСКИЙ ТРУД =====================
+// 71. Принудительный и детский труд
+{kicker:"Принудительный и детский труд", render:()=>`
+  <h2 class="section-title">Связанные уголовные составы</h2>
+  ${numList(["торговля людьми","торговля несовершеннолетними","эксплуатация","иные формы использования человека в целях эксплуатации"])}`},
+// ===================== БЛОК XXXI. НЕСОВЕРШЕННОЛЕТНИЕ =====================
+// 72. Несовершеннолетние
+{kicker:"Статья 153: несовершеннолетние", render:()=>`
+  <h2 class="section-title">Статья 153. Привлечение несовершеннолетних к запрещённым работам</h2>
+  <p class="lede">Привлечение несовершеннолетних к работам, где использование труда лиц до 18 лет запрещено.</p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Достаточно ли согласия самого несовершеннолетнего?</p>
+  ${revealBox('s72','Откройте ответ.','Нет. Запрет носит императивный характер и не может быть снят согласием самого несовершеннолетнего.')}`},
+// ===================== БЛОК XXXII. КОЛЛЕКТИВНЫЕ ТРУДОВЫЕ ПРАВА =====================
+// 73. Статья 154
+{kicker:"Статья 154: воспрепятствование деятельности представителей работников", render:()=>`
+  <h2 class="section-title">Статья 154. Воспрепятствование законной деятельности представителей работников</h2>
+  <p class="lede">Состав охраняет коллективные трудовые права — возможность представителей работников законно осуществлять свою деятельность без незаконного противодействия.</p>`},
+// 74. Статья 157
+{kicker:"Статья 157: принуждение", render:()=>`
+  <h2 class="section-title">Статья 157. Принуждение к участию / отказу от участия в забастовке</h2>
+  ${numList(["к участию в забастовке","к отказу от участия"])}
+  <div class="card burgundy" style="text-align:center;margin-top:14px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Свобода не участвовать так же защищается, как свобода участвовать.</p></div>`},
+// 75. Статьи 401-402
+{kicker:"Статьи 401–402: незаконная забастовочная деятельность", render:()=>`
+  <h2 class="section-title">Статьи 401–402</h2>
+  <p class="lede">Специальные случаи незаконной забастовочной деятельности.</p>`},
+// ===================== БЛОК XXXIII. МИГРАЦИЯ =====================
+// 76. Статья 394
+{kicker:"Статья 394: организация незаконной миграции", render:()=>`
+  <h2 class="section-title">Статья 394. Организация незаконной миграции</h2>
+  <p class="lede">Организация незаконной миграции в контексте использования иностранной рабочей силы.</p>`},
+// 77. Статья 395
+{kicker:"Статья 395: привлечение иностранной рабочей силы", render:()=>`
+  <h2 class="section-title">Статья 395. Неоднократное нарушение правил привлечения иностранной рабочей силы</h2>
+  <p class="lede">Неоднократное нарушение правил привлечения и использования иностранной рабочей силы.</p>
+  <div class="card amber" style="margin-top:10px;"><p style="font-size:12.5px;color:#9a5b00;margin:0;">Разграничить с административной ст.519 КоАП: неоднократность и иные признаки уголовного состава отличают ст.395 УК от обычного административного нарушения правил привлечения иностранной рабочей силы.</p></div>`},
+// ===================== ЧАСТЬ III. МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// ===================== БЛОК XXXIV. ГЛАВНАЯ ИДЕЯ =====================
+// 78. Главная идея
+{kicker:"Материальная ответственность: главная идея", render:()=>`
+  <h2 class="section-title">Материальная ответственность сторон трудового договора</h2>
+  <div class="card navy"><p style="color:#fff;font-size:14px;">Обязанность одной стороны возместить имущественный ущерб, причинённый другой стороне ненадлежащим исполнением трудовых обязанностей.</p></div>
+  <div class="card burgundy" style="text-align:center;margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Ключевой принцип — взаимность</p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);margin-top:12px;">Ответственность может нести:</p>
+  <div class="grid cols-2">${infoCard("Работник перед работодателем","")}${infoCard("Работодатель перед работником","")}</div>`},
+// ===================== БЛОК XXXV. НЕ ЛЮБОЙ УБЫТОК = МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// 79. Условия ответственности работника
+{kicker:"Не любой убыток = материальная ответственность", render:()=>`
+  <h2 class="section-title">Для ответственности работника необходимо установить</h2>
+  ${numList(["наличие ущерба","противоправное поведение","вину","причинную связь","размер ущерба","отсутствие обстоятельств, исключающих ответственность"])}`},
+// 80. Прямой действительный ущерб
+{kicker:"Прямой действительный ущерб", render:()=>`
+  <h2 class="section-title">Что возмещает работник</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Прямой действительный ущерб</p></div>
+  <p class="lede">Не смешивать с предполагаемой упущенной выгодой работодателя.</p>`},
+// ===================== БЛОК XXXVI. ОБСТОЯТЕЛЬСТВА, ИСКЛЮЧАЮЩИЕ ОТВЕТСТВЕННОСТЬ =====================
+// 81. Обстоятельства, исключающие ответственность
+{kicker:"Обстоятельства, исключающие материальную ответственность", render:()=>`
+  <h2 class="section-title">Ответственность исключается, если ущерб возник вследствие</h2>
+  ${numList(["непреодолимой силы","крайней необходимости","необходимой обороны","неисполнения работодателем обязанности обеспечить надлежащие условия сохранности имущества"])}`},
+// ===================== БЛОК XXXVII. ПОЛНАЯ МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ =====================
+// 82. Распространённое заблуждение
+{kicker:"Полная материальная ответственность: заблуждение", render:()=>`
+  <h2 class="section-title">Распространённое заблуждение</h2>
+  <div class="card danger"><p style="color:#8c2a26;font-weight:700;">«Если есть договор — работник всегда отвечает за всё».</p></div>
+  <div class="card navy" style="text-align:center;margin-top:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Это неправильно.</p></div>`},
+// 83. Основания полной ответственности
+{kicker:"Основания полной материальной ответственности", render:()=>`
+  <h2 class="section-title">Основания полной материальной ответственности</h2>
+  ${numList([
+    "необеспечение сохранности имущества и ценностей, переданных по письменному договору о полной материальной ответственности",
+    "необеспечение сохранности имущества, полученного под отчёт по разовому документу",
+    "ущерб в состоянии алкогольного, наркотического либо токсикоманического опьянения",
+    "недостача, умышленное уничтожение или умышленная порча имущества, материалов, продукции, инструментов, специальной одежды и иных переданных предметов",
+    "нарушение условия о неконкуренции, повлёкшее ущерб",
+    "иные случаи, предусмотренные трудовым или коллективным договором либо соответствующими актами принимающей стороны в пределах закона",
+  ])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:14px;">Где предел договорного расширения полной материальной ответственности?</p>
+  ${answerBox('s83')}`},
+// ===================== БЛОК XXXVIII. ДОГОВОР О ПОЛНОЙ МАТЕРИАЛЬНОЙ ОТВЕТСТВЕННОСТИ =====================
+// 84. Обязанности работодателя
+{kicker:"Договор о полной материальной ответственности", render:()=>`
+  <h2 class="section-title">Работодатель должен определить</h2>
+  ${numList(["перечень должностей и работ","типовой договор"])}`},
+// 85. «Материально ответственный работник» ничего не доказывает
+{kicker:"Название должности само по себе ничего не доказывает", render:()=>`
+  <h2 class="section-title">«Материально ответственный работник» — не доказательство</h2>
+  <div class="card burgundy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Название «материально ответственный работник» само по себе ничего не доказывает.</p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Нужно установить:</p>
+  ${numList(["что ему передано","когда","по какому документу","кто имел доступ","когда возникла недостача","действия конкретного работника"])}`},
+// ===================== БЛОК XXXIX. СУДЕБНЫЙ КЕЙС №1 — МАГАЗИН «САЛТАНАТ» =====================
+// 86. Фабула
+{kicker:"Кейс №1 · магазин «Салтанат» — фабула", render:()=>`
+  <h2 class="section-title">Судебный кейс №1. Магазин «Салтанат»</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>5 июля 2017 года А.Ж.К. обратился в суд к П.А.М. и Л.Л.В. 1 марта 2017 года ответчики были приняты продавцами магазина «Салтанат». С ними были заключены трудовые договоры и договоры о полной материальной ответственности. 1 марта составлен акт приёма-передачи ТМЦ: 986 557 тенге. За период работы продавцы не сдавали выручку. 5 июня при комиссионной ревизии с участием ответчиков выявлена недостача. В материалах фигурирует сумма около 685 тыс. тенге. Работодатель потребовал взыскать недостачу солидарно, а также судебные расходы.</i></p></div>`},
+// 87. Дополнительные обстоятельства
+{kicker:"Кейс №1 · дополнительные обстоятельства", render:()=>`
+  <h2 class="section-title">Дополнительные обстоятельства</h2>
+  <p class="lede">Продавцы работали посменно. Но акты приёма-передачи между сменами не составлялись.</p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Можно ли установить, кто именно допустил недостачу?</p>
+  ${votingTool('s87',{a:'Да, легко',b:'Нет, невозможно без актов передачи',c:'Нужны дополнительные данные'})}`},
+// 88. Что было доказано
+{kicker:"Кейс №1 · что было доказано", render:()=>`
+  <h2 class="section-title">Что было доказано</h2>
+  <p class="lede">Без учёта неподтверждённого прихода товара доказанная часть недостачи составляла:</p>
+  <div class="card navy" style="text-align:center;margin:12px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">148 575 тенге</p></div>
+  <p class="lede">Но работодатель не установил, чьими именно противоправными действиями причинён ущерб.</p>`},
+// 89. Солидарная ответственность?
+{kicker:"Кейс №1 · солидарная ответственность?", render:()=>`
+  <h2 class="section-title">Можно ли взыскать всю недостачу солидарно?</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">Можно ли взыскать всю недостачу солидарно только потому, что оба продавца подписали индивидуальные договоры о полной ответственности?</p>
+  ${revealBox('s89','Откройте ответ.','Нет. Для коллективной солидарной материальной ответственности необходим соответствующий письменный договор о полной коллективной (солидарной) материальной ответственности — индивидуальные договоры каждого продавца его не заменяют.')}`},
+// 90. Вывод суда
+{kicker:"Кейс №1 · вывод суда", render:()=>`
+  <h2 class="section-title">Вывод суда</h2>
+  <p class="lede">Если невозможно разграничить ответственность работников, совместно работающих с ценностями, коллективная ответственность требует:</p>
+  <div class="card burgundy" style="text-align:center;margin:12px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Письменного договора о полной коллективной (солидарной) материальной ответственности.</p></div>
+  <p class="lede">Его не было. Это было упущением работодателя.</p>`},
+// 91. Урок
+{kicker:"Кейс №1 · урок", render:()=>`
+  <h2 class="section-title">Урок</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Недостача ≠ автоматический долг продавца.</p></div>
+  ${verticalFlow(["Передачу","Сохранность","Нарушение","Причинную связь"],{final:"Конкретного ответственного"})}`},
+// ===================== БЛОК XL. СУДЕБНЫЙ КЕЙС №2 — МАГАЗИН «ВАЛЕНТИНА» =====================
+// 92. Полная фабула
+{kicker:"Кейс №2 · магазин «Валентина» — фабула", render:()=>`
+  <h2 class="section-title">Судебный кейс №2. Магазин «Валентина»</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>К.В.А. была зарегистрирована как ИП с 15 июня 2009 года и занималась розничной торговлей в магазине «Валентина». С 22 июня 2009 года Ш.С.А. и К.В.Н. работали продавцами. Режим: 2 дня работы / 2 дня отдыха. При этом передача материальных ценностей между продавцами не осуществлялась; акты приёма-передачи смен не составлялись. С сентября 2017 года по сентябрь 2018 года К.В.Н. находилась в отпуске, однако иногда заменяла второго продавца. 13 июля 2019 года первоначальный ИП умер. ИП ликвидировано 29 августа 2019 года. Магазин продолжил работу у наследника.</i></p></div>`},
+// 93. Новые трудовые отношения
+{kicker:"Кейс №2 · новые трудовые отношения", render:()=>`
+  <h2 class="section-title">Новые трудовые отношения</h2>
+  <p class="lede">С 16 августа 2020 года продавцы оформлены к новому ИП. Но фактически они продолжали работать ранее. Схема смен осталась прежней.</p>
+  <div class="card danger" style="margin-top:10px;"><p style="color:#8c2a26;font-weight:700;">Акты передачи товара: опять не составлялись.</p></div>`},
+// 94. Ревизии
+{kicker:"Кейс №2 · ревизии", render:()=>`
+  <h2 class="section-title">Ревизии</h2>
+  <p class="lede">17 января 2021 года проведена ревизия за длительный период. Недостача:</p>
+  <div class="card navy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">4 770 501 тенге</p></div>
+  <p class="lede">20 февраля 2021 года произведён другой расчёт за период с 2 февраля 2020 года по 17 января 2021 года:</p>
+  <div class="card burgundy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">3 206 153 тенге</p></div>`},
+// 95. Расписки
+{kicker:"Кейс №2 · расписки", render:()=>`
+  <h2 class="section-title">Расписки</h2>
+  <p class="lede">6 февраля 2021 года: Ш.С.А. признала недостачу — <b>2 950 002 тенге</b>. К.В.Н. — <b>1 820 874 тенге</b>.</p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Расписка сама по себе доказывает законность всей суммы взыскания?</p>
+  ${votingTool('s95',{a:'Да, полностью доказывает',b:'Нет',c:'Доказывает только признанную часть'})}`},
+// 96. Главная проблема работодателя
+{kicker:"Кейс №2 · главная проблема работодателя", render:()=>`
+  <h2 class="section-title">Главная проблема работодателя</h2>
+  <p class="lede">Когда невозможно определить индивидуальный вклад каждого работника, коллективная ответственность возможна лишь при:</p>
+  <div class="card burgundy" style="text-align:center;margin:12px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">письменном договоре о полной коллективной материальной ответственности.</p></div>
+  <p class="lede">Такой договор отсутствовал.</p>`},
+// 97. Юридический урок
+{kicker:"Кейс №2 · юридический урок", render:()=>`
+  <h2 class="section-title">Юридический урок</h2>
+  <p class="lede">Необходимо различать:</p>
+  <div class="grid cols-2">
+    ${infoCard("Признание факта недостачи","")}
+    ${infoCard("Юридические основания взыскать её именно с конкретного работника","")}
+  </div>`},
+// ===================== БЛОК XLI. СУДЕБНЫЙ КЕЙС №3 — ДИРЕКТОР ТОО И НЕДОСТАЧА =====================
+// 98. Полная фабула
+{kicker:"Кейс №3 · директор ТОО и недостача — фабула", render:()=>`
+  <h2 class="section-title">Судебный кейс №3. Директор ТОО и недостача</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>С 1 сентября 2020 года по 2 августа 2021 года С.Н.В. работала директором ТОО «Ф.». ТОО предъявило иск: 1 872 572,78 тенге. Он состоял из двух частей:</i></p></div>
+  <div class="grid cols-2" style="margin-top:10px;">
+    ${infoCard("1. Недостача ТМЦ","1 516 612 / 1 516 613 тенге")}
+    ${infoCard("2. Сумма, выплаченная другому работнику Г.А.П. по судебному решению","355 960 тенге")}
+  </div>
+  <p class="note" style="margin-top:10px;">Также заявлены представительские расходы и госпошлина.</p>`},
+// 99. Недостача
+{kicker:"Кейс №3 · недостача", render:()=>`
+  <h2 class="section-title">Недостача</h2>
+  <p class="lede">Инвентаризация показала недостачу на складе. Но на складе имелся отдельный кладовщик С.О.Р. Период образования недостачи не установлен.</p>
+  <p class="lede">Директор: не принимала ТМЦ под отчёт; договор о полной материальной ответственности после назначения директором не заключала; в её обязанности не входило хранение складских ТМЦ.</p>
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:10px;">Можно ли взыскать всю недостачу с директора только потому, что она руководитель?</p>
+  ${revealBox('s99','Откройте ответ.','Нет. Без передачи ТМЦ под отчёт, без договора о полной материальной ответственности после назначения директором и при наличии отдельного материально ответственного кладовщика нет оснований взыскивать складскую недостачу именно с директора.')}`},
+// 100. Первая инстанция: 355 960 тенге
+{kicker:"Кейс №3 · первая инстанция: 355 960 тенге", render:()=>`
+  <h2 class="section-title">Первая инстанция: 355 960 тенге</h2>
+  <p class="lede">Работодатель также утверждал: директор допустила Г.А.П. к работе без оформления трудового договора. Впоследствии ТОО по судебному решению выплатило Г.А.П. заработную плату и отпускные — всего:</p>
+  <div class="card navy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">355 960 тенге</p></div>
+  <p class="lede">Первая инстанция признала эту сумму прямым ущербом и взыскала её с директора.</p>`},
+// 101. Ваше решение
+{kicker:"Кейс №3 · ваше решение", render:()=>`
+  <h2 class="section-title">Ваше решение</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">Если работодатель выплатил работнику заработанную заработную плату, является ли это «ущербом работодателя»?</p>
+  ${votingTool('s101',{a:'Да, это ущерб',b:'Нет, это не ущерб',c:'Зависит от обстоятельств'})}`},
+// 102. Апелляция
+{kicker:"Кейс №3 · апелляция", render:()=>`
+  <h2 class="section-title">Апелляция</h2>
+  <p class="lede">Апелляционная коллегия отменила взыскание 355 960 тенге. Ключевая логика:</p>
+  <div class="card burgundy" style="margin:12px 0;"><p style="color:#fff;font-size:13.5px;">Выплата заработной платы и отпускных не является ущербом работодателя, поскольку это его собственная обязанность по оплате труда работника.</p></div>
+  <p class="lede">То, что директор неправильно оформила отношения, может повлечь <b>иную юридическую ответственность</b>, но не превращает законную выплату работнику в материальный ущерб работодателя.</p>`},
+// 103. Ключевой принцип
+{kicker:"Кейс №3 · ключевой принцип", render:()=>`
+  <h2 class="section-title">Ключевой принцип</h2>
+  <div class="card navy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Не каждое уменьшение денег на счёте работодателя является прямым действительным ущербом.</p></div>`},
+// ===================== БЛОК XLII. СУДЕБНЫЙ КЕЙС №4 — БАНК И АДМИНИСТРАТИВНЫЙ ШТРАФ =====================
+// 104. Полная фабула
+{kicker:"Кейс №4 · банк и административный штраф — фабула", render:()=>`
+  <h2 class="section-title">Судебный кейс №4. Банк и административный штраф</h2>
+  <div class="card accent-left"><p style="font-size:13.5px;"><i>Б.А.А. работала менеджером-кассиром банка с 17 июня 2011 года. 17 июня 2019 года клиент Б.Ж.Д. обратилась за консультацией по беззалоговому займу. Клиент просила ускорить выдачу, но затем отказалась подписывать документы и ушла. Несмотря на это, менеджер оформила беззалоговый заём — без письменного согласия клиента на передачу данных в кредитное бюро; без подписанного договора банковского займа.</i></p></div>`},
+// 105. Реакция менеджера
+{kicker:"Кейс №4 · реакция менеджера", render:()=>`
+  <h2 class="section-title">Реакция менеджера</h2>
+  <p class="lede">18 июня менеджер направила служебную записку с просьбой отменить операцию. Ей ответили: операционный день уже закрыт, отменить операцию невозможно.</p>
+  <p class="lede">22 января 2020 года клиент подала жалобу финансовому регулятору. 23 января заём был сторнирован, счёт закрыт.</p>`},
+// 106. Штраф банку
+{kicker:"Кейс №4 · штраф банку", render:()=>`
+  <h2 class="section-title">Штраф банку</h2>
+  <p class="lede">4 марта 2020 года банк привлечён к административной ответственности. Штраф:</p>
+  <div class="card navy" style="text-align:center;margin:10px 0;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">530 200 тенге = 200 МРП</p></div>
+  <p class="lede">Банк уплатил штраф 27 марта 2020 года.</p>`},
+// 107. Регресс
+{kicker:"Кейс №4 · регресс", render:()=>`
+  <h2 class="section-title">Регресс</h2>
+  <p class="lede">Трудовой договор с менеджером прекращён 2 марта 2020 года. 12 марта 2021 года согласительная комиссия отказала банку во взыскании ущерба с работника.</p>
+  <p class="lede">2 июня 2021 года банк обратился в суд и потребовал <b>530 200 тенге</b>.</p>
+  <div class="card accent-left" style="margin-top:10px;"><p style="font-size:13.5px;"><i>Логика банка: штраф возник из-за действий работника, поэтому работник должен компенсировать его работодателю.</i></p></div>`},
+// 108. Вопрос
+{kicker:"Кейс №4 · вопрос", render:()=>`
+  <h2 class="section-title">Вопрос</h2>
+  <p class="q" style="font-weight:700;color:var(--navy);">Является ли административный штраф, наложенный на работодателя, прямым действительным ущербом, который можно переложить на работника?</p>
+  ${votingTool('s108',{a:'Да, полностью',b:'Нет',c:'Частично'})}`},
+// 109. Решение
+{kicker:"Кейс №4 · решение", render:()=>`
+  <h2 class="section-title">Решение</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">Нет</p></div>
+  <p class="lede">Административный штраф:</p>
+  ${numList(["является мерой государственного принуждения","назначается конкретному субъекту за его собственное правонарушение","не может быть переложен полностью или частично на другого субъекта как обычный ущерб"])}
+  <p class="lede">Кроме того, суд указал, что банк мог своевременно предотвратить последствия.</p>`},
+// 110. Итог
+{kicker:"Кейс №4 · итог", render:()=>`
+  <h2 class="section-title">Итог</h2>
+  <p class="lede">В иске о взыскании <b>530 200 тенге</b> отказано полностью. Апелляция оставила решение без изменения.</p>`},
+// 111. Очень важный принцип
+{kicker:"Кейс №4 · очень важный принцип", render:()=>`
+  <h2 class="section-title">Очень важный принцип</h2>
+  <div class="card burgundy" style="text-align:center;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Административный штраф работодателя ≠ материальный ущерб, который автоматически можно взыскать с работника.</p></div>`},
+// ===================== БЛОК XLIII. СРАВНЕНИЕ ЧЕТЫРЁХ КЕЙСОВ =====================
+// 112. Сравнение
+{kicker:"Сравнение четырёх кейсов", render:()=>`
+  <h2 class="section-title">Сравнение четырёх кейсов</h2>
+  ${comparisonTable(["Кейс","Ошибка работодателя"],[
+    ["«Салтанат»","нет коллективного договора о солидарной ответственности"],
+    ["«Валентина»","нет разграничения ответственности и передачи между сменами"],
+    ["Директор ТОО","пытаются превратить обычные обязанности работодателя в «ущерб»"],
+    ["Банк","пытаются переложить административную санкцию на работника"],
+  ])}
+  <p class="q" style="font-weight:700;color:var(--navy);margin-top:14px;">Что объединяет все четыре проигранные или частично проигранные позиции работодателя?</p>
+  <div class="card navy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(14px,2vw,17px);">Недостаточно доказать расход денег. Нужно доказать юридический состав материальной ответственности.</p></div>`},
+// ===================== БЛОК XLIV. МАТЕРИАЛЬНАЯ ОТВЕТСТВЕННОСТЬ РАБОТОДАТЕЛЯ =====================
+// 113. Вторая сторона взаимности
+{kicker:"Материальная ответственность работодателя", render:()=>`
+  <h2 class="section-title">Вторая сторона принципа взаимности</h2>
+  <p class="lede">Работодатель также несёт материальную ответственность перед работником.</p>`},
+// ===================== БЛОК XLV. ВРЕД ЖИЗНИ И ЗДОРОВЬЮ =====================
+// 114. Вред жизни и здоровью
+{kicker:"Вред жизни и здоровью работника", render:()=>`
+  <h2 class="section-title">Вред жизни и здоровью</h2>
+  <p class="lede">При причинении вреда жизни и здоровью работника в связи с исполнением трудовых обязанностей работодатель возмещает вред в предусмотренном законом порядке.</p>`},
+// 115. Страховая выплата
+{kicker:"Страховая выплата и разница", render:()=>`
+  <h2 class="section-title">При наличии страховой выплаты</h2>
+  <p class="lede">Работодатель возмещает предусмотренную законом разницу / соответствующие расходы.</p>`},
+// 116. Степень утраты трудоспособности
+{kicker:"Особое регулирование: 5–29% утраты трудоспособности", render:()=>`
+  <h2 class="section-title">Особое регулирование при степени утраты трудоспособности</h2>
+  <div class="card navy" style="text-align:center;margin-bottom:12px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:16px;">от 5% до 29% включительно</p></div>
+  <p class="lede" style="font-weight:700;color:var(--navy);">Работодатель возмещает:</p>
+  ${numList(["утраченный заработок","расходы, вызванные повреждением здоровья"])}`},
+// 117. 250 МРП
+{kicker:"Предел: 250 МРП", render:()=>`
+  <h2 class="section-title">250 МРП</h2>
+  <p class="lede">В соответствующей предусмотренной законом конструкции сохраняется предел расходов:</p>
+  <div class="card burgundy" style="text-align:center;margin-top:10px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:18px;">250 МРП</p></div>`},
+// ===================== БЛОК XLVI. ПАРАДОКС =====================
+// 118. Парадокс
+{kicker:"Парадокс законодательства", render:()=>`
+  <h2 class="section-title">Парадокс</h2>
+  <div class="card danger" style="margin-bottom:10px;"><p style="color:#8c2a26;font-weight:700;">У работника нет общего верхнего предела материальной ответственности.</p></div>
+  <div class="card amber"><p style="color:#9a5b00;font-weight:700;">Отдельные расходы работодателя по вреду здоровью ограничены 250 МРП.</p></div>
+  <p class="lede" style="margin-top:12px;">Это дискуссионная проблема законодательства.</p>
+  ${teacherNote("Сравните с прежним ТК 2007 года, где существовала общая модель ограничения материальной ответственности работника средней месячной заработной платой, если закон не устанавливал полную ответственность — современное регулирование от этой общей модели отошло.")}`},
+// ===================== БЛОК LIII. ИТОГОВАЯ СРАВНИТЕЛЬНАЯ ТАБЛИЦА =====================
+// 119. Итоговая сравнительная таблица
+{kicker:"Итоговая сравнительная таблица", render:()=>`
+  <h2 class="section-title">Административная, уголовная и материальная ответственность</h2>
+  ${comparisonTable(["Критерий","Административная","Уголовная","Материальная"],[
+    ["Основание","состав КоАП","состав УК","причинение имущественного вреда"],
+    ["Цель","публичное наказание","уголовно-правовое воздействие","восстановление имущественной сферы"],
+    ["Кому выплачивается","государству","государство применяет наказание","потерпевшей стороне"],
+    ["Нужен ущерб","чаще нет","зависит от состава","да"],
+    ["Причинная связь","зависит от состава","обязательна для результативных составов","обязательна"],
+    ["Субъект","физ./должн./юр. лицо","физическое лицо, иногда специальный субъект","сторона трудового отношения"],
+    ["Можно переложить штраф","нет","нет","не применяется"],
+  ])}`},
+// ===================== БЛОК LVI. ФИНАЛЬНЫЕ 10 ТЕЗИСОВ =====================
+// 120. Финальные 10 тезисов
+{kicker:"Финальные 10 тезисов", render:()=>`
+  <h2 class="section-title">Финальные 10 тезисов</h2>
+  ${numList([
+    "Нарушение трудового права может иметь несколько разных юридических последствий.",
+    "Восстановление нарушенного права не является административным или уголовным наказанием.",
+    "Административная ответственность возможна только за состав, прямо предусмотренный КоАП.",
+    "Правильное определение субъекта имеет принципиальное значение.",
+    "Не каждое административное нарушение требует наступления вреда.",
+    "Уголовная ответственность требует всех признаков конкретного состава УК.",
+    "Для результативных уголовных составов критична причинная связь.",
+    "Материальная ответственность работника требует доказательства прямого действительного ущерба.",
+    "Работодатель не может автоматически переложить на работника собственный административный штраф или обычные расходы по исполнению трудовых обязанностей.",
+    "Договор о полной материальной ответственности не освобождает работодателя от обязанности доказать юридический состав ответственности.",
+  ])}`},
+// ===================== БЛОК LVII. ПРЕДПОСЛЕДНИЙ СЛАЙД =====================
+// 121. Предпоследний слайд
+{kicker:"Предпоследний слайд", render:()=>`
+  <div class="card navy" style="text-align:center;padding:40px 24px;"><p style="color:#fff;font-family:'Fraunces',serif;font-size:clamp(17px,2.4vw,22px);margin:0;">Не всё, что стоит работодателю денег, является материальным ущербом</p></div>`},
+// ===================== БЛОК LVIII. ПОСЛЕДНИЙ СЛАЙД =====================
+// 122. Финальный вопрос темы
+{kicker:"Финальный вопрос темы", render:()=>`
+  <div class="card" style="text-align:center;padding:40px 24px;margin-bottom:14px;"><p class="q" style="font-weight:700;color:var(--navy);font-size:clamp(16px,2.2vw,20px);margin:0;">Если одно нарушение одновременно затрагивает ТК, КоАП и УК — с какого вопроса должен начать юрист?</p></div>
+  ${revealBox('s122','Открыть вывод после обсуждения.','С фактов и признаков состава, а не с названия ответственности.')}`},
+];
+
+const TRAINERS=[
+{tag:"Тренажёр 1",title:"Административная или уголовная?",desc:"10 ситуаций: определите вид ответственности, который наступает.",level:"base"},
+{tag:"Тренажёр 2",title:"Есть ли материальная ответственность?",desc:"8 ситуаций — пройдите 6-шаговый алгоритм: ущерб, противоправность, вина, причинная связь, размер, основание полной ответственности.",level:"base"},
+{tag:"Тренажёр 3",title:"Прямой ущерб или нет?",desc:"7 ситуаций — отделите прямой действительный ущерб от того, что им не является.",level:"base"},
+{tag:"Тренажёр 4",title:"Кто субъект?",desc:"Кейсы по КоАП — определите надлежащего субъекта ответственности.",level:"base"},
+{tag:"Тренажёр 5",title:"Длящееся или нет?",desc:"6 ситуаций — определите характер правонарушения и момент начала срока давности.",level:"base"},
+];
+
+const TRAINER_BODIES=[
+// 1. Административная или уголовная?
+()=>`<div class="kicker">Тренажёр 1</div><h2 class="section-title">Административная или уголовная?</h2>
+${[
+  ["СИЗ не выданы, вреда нет.",0,"Необеспечение СИЗ без наступления вреда здоровью — формальный состав ст.93 КоАП, уголовная ответственность требует предусмотренного законом последствия."],
+  ["Нарушены правила охраны труда, работник получил тяжкий вред.",1,"Тяжкий вред здоровью при нарушении правил охраны труда — результативный состав ст.156 УК: нарушение + причинная связь + предусмотренное последствие."],
+  ["Зарплата задержана пять дней.",0,"Обычная просрочка выплаты заработной платы без признаков неоднократности и иных квалифицирующих обстоятельств — административное нарушение по ст.87 КоАП."],
+  ["Руководитель неоднократно не платит зарплату и использует деньги организации на другие цели.",1,"Неоднократность, управленческий субъект и использование денег на иные цели — специальные признаки уголовного состава по ст.152 УК."],
+  ["Работодатель принимает сотрудника без договора.",0,"Допуск к работе без заключения трудового договора — административное нарушение по ст.86 КоАП."],
+  ["Работодатель незаконно увольняет беременную именно из-за беременности.",1,"Увольнение по мотиву беременности — дискриминационная группа составов ст.152 УК, при условии доказанности именно этого мотива."],
+  ["Работодатель не сообщил о несчастном случае.",0,"Несообщение о несчастном случае — административное нарушение по ст.96 КоАП."],
+  ["Работник погиб в результате нарушения правил охраны труда ответственным лицом.",1,"Смерть работника вследствие нарушения правил охраны труда — результативный состав ст.156 УК с наиболее тяжким предусмотренным последствием."],
+  ["Несовершеннолетний привлечён к запрещённой работе.",1,"Привлечение несовершеннолетнего к работам, где труд лиц до 18 лет запрещён императивно, образует состав ст.153 УК."],
+  ["Работодатель разместил дискриминационное объявление.",0,"Дискриминационные требования в объявлении о вакансии — административное нарушение по ст.90 КоАП."],
+].map(([t,correct,explain],i)=>`<div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin:0 0 10px;"><b>Ситуация ${i+1}.</b> ${t}</p>${choiceListFull('t0-'+i,["Административная","Уголовная","Возможно несколько видов","Недостаточно данных"],correct,explain)}</div>`).join("")}
+${trainerStatusBtns(0)}`,
+// 2. Есть ли материальная ответственность?
+()=>`<div class="kicker">Тренажёр 2</div><h2 class="section-title">Есть ли материальная ответственность?</h2>
+<p class="lede" style="margin-bottom:14px;">Для каждой ситуации пройдите шесть шагов: ущерб → противоправность → вина → причинная связь → размер → основание полной ответственности.</p>
+${[
+  {t:"Кассир во время смены разбила витрину, споткнувшись о кабель, который работодатель не убрал несмотря на жалобы работников.",
+   a:"Ущерб — есть (разбитая витрина). Противоправность поведения работника — сомнительна. Вина — скорее отсутствует: падение вызвано небезопасными условиями труда, которые обязан был устранить работодатель. Причинная связь — скорее с бездействием работодателя, а не с работником. Вывод: материальная ответственность работника, вероятнее всего, исключается — ущерб возник вследствие неисполнения работодателем обязанности обеспечить надлежащие условия."},
+  {t:"Водитель в состоянии алкогольного опьянения попал в ДТП и повредил служебный автомобиль.",
+   a:"Ущерб — есть. Противоправность — есть (вождение в состоянии опьянения). Вина — есть. Причинная связь — прямая. Размер — устанавливается по стоимости ремонта. Основание полной ответственности — есть прямо предусмотренное основание: ущерб причинён в состоянии опьянения."},
+  {t:"Менеджер подписал невыгодный контракт, что привело к упущенной выгоде компании.",
+   a:"Ущерб — упущенная выгода, а не прямой действительный ущерб, который один подлежит возмещению работником. Вывод: материальной ответственности работника в этой части нет независимо от вины и противоправности его решения."},
+  {t:"Кладовщик с договором о полной материальной ответственности не может объяснить недостачу, но доступ к складу бесконтрольно имели ещё 5 человек.",
+   a:"Ущерб — есть. Противоправность и вина именно кладовщика — не установлены, так как доступ был у нескольких лиц без разграничения. Причинная связь с действиями конкретно этого работника — не доказана. Основание полной ответственности по договору есть, но само по себе не заменяет доказывание состава в отношении конкретного лица. Вывод: взыскание с одного кладовщика без разграничения ответственности неправомерно."},
+  {t:"Работник умышленно повредил оборудование конкурента в личном конфликте вне работы.",
+   a:"Это не трудовой деликт между сторонами трудового договора — оборудование принадлежит третьему лицу, а не работодателю. Материальная ответственность по трудовому праву здесь неприменима; возможна гражданско-правовая ответственность перед собственником оборудования."},
+  {t:"Программист случайно удалил часть кода, что потребовало времени на восстановление без прямых денежных расходов.",
+   a:"Прямого действительного ущерба (реального уменьшения наличного имущества или необходимости реальных расходов) не возникло — только затраты рабочего времени. Вывод: оснований для материальной ответственности недостаточно без доказанных прямых расходов."},
+  {t:"Продавец в состоянии токсикоманического опьянения разбил товар на 200 000 тенге.",
+   a:"Ущерб — есть. Противоправность и вина — есть. Причинная связь — прямая. Основание полной ответственности — прямо предусмотренное основание (ущерб в состоянии опьянения). Размер определяется стоимостью утраченного товара."},
+  {t:"Охранник не предотвратил кражу, потому что сигнализация, которую обязан был обслуживать работодатель, была неисправна более полугода.",
+   a:"Ущерб — есть. Но причинная связь ведёт прежде всего к неисполнению работодателем обязанности обеспечить надлежащие условия сохранности имущества — это самостоятельное обстоятельство, исключающее материальную ответственность охранника."},
+].map((item,i)=>`<div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin:0 0 10px;"><b>Ситуация ${i+1}.</b> ${item.t}</p>${revealBox('t1-'+i,'Пройдите 6 шагов, затем откройте решение.',item.a)}</div>`).join("")}
+${trainerStatusBtns(1)}`,
+// 3. Прямой ущерб или нет?
+()=>`<div class="kicker">Тренажёр 3</div><h2 class="section-title">Прямой ущерб или нет?</h2>
+${[
+  ["Разбит служебный ноутбук",0,"Реальное уменьшение наличного имущества работодателя — классический пример прямого действительного ущерба."],
+  ["Упущенный выгодный контракт",1,"Упущенная выгода — это неполученные доходы, а не прямой действительный ущерб; работник её не возмещает."],
+  ["Штраф работодателю",1,"Административный штраф — мера государственного принуждения за собственное правонарушение работодателя, а не имущественный ущерб, причинённый работником."],
+  ["Выплаченная работнику зарплата",1,"Это исполнение собственной обязанности работодателя по оплате труда, а не ущерб, даже если трудовые отношения были оформлены с нарушениями."],
+  ["Похищенный товар",0,"Прямая утрата имущества работодателя — прямой действительный ущерб при доказанности состава (вина, противоправность, причинная связь)."],
+  ["Расходы работодателя на восстановление испорченного оборудования",0,"Реальные расходы на восстановление имущества — прямой действительный ущерб."],
+  ["Выплата третьему лицу вреда, действительно причинённого виновными действиями работника",0,"Если вред третьему лицу реально причинён виновными действиями работника и работодатель его возместил, это реальные расходы работодателя — прямой действительный ущерб, в отличие от штрафа, который является санкцией за собственное нарушение работодателя."],
+].map(([t,correct,explain],i)=>`<div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin:0 0 10px;"><b>Ситуация ${i+1}.</b> ${t}</p>${choiceListFull('t2-'+i,["Прямой действительный ущерб","Не является прямым действительным ущербом","Недостаточно данных"],correct,explain)}</div>`).join("")}
+${trainerStatusBtns(2)}`,
+// 4. Кто субъект?
+()=>`<div class="kicker">Тренажёр 4</div><h2 class="section-title">Кто субъект?</h2>
+<p class="lede" style="margin-bottom:14px;">Неправильное определение субъекта может привести к прекращению административного дела — вспомните судебные дела №1 и №2 по ст.97.</p>
+${[
+  ["ТОО на протяжении месяцев не перечисляет профсоюзные взносы, предусмотренные коллективным договором.",4,"Как и в Деле №1, субъектом здесь выступает само юридическое лицо — сторона коллективного договора, не исполнившая его условия."],
+  ["Работника-члена профкома увольняют без предусмотренного коллективным договором участия профсоюзного комитета.",3,"Как и в Деле №2, ответственность несёт уполномоченный субъект — руководитель, ответственный за заключение и исполнение коллективного договора, а не юридическое лицо как таковое."],
+  ["Специалист по БиОТ, несмотря на закупленные СИЗ, не организовал обязательное обучение работников технике безопасности.",1,"Обязанность организовать обучение возложена непосредственно на специалиста / должностное лицо, ответственное за охрану труда на предприятии."],
+  ["Индивидуальный предприниматель без образования юридического лица лично нанял работника без оформления трудового договора.",0,"Субъектом является сам работодатель — физическое лицо, зарегистрированное в качестве индивидуального предпринимателя."],
+  ["Крупная компания в целом не провела обязательную аттестацию производственных объектов.",2,"Обязанность по аттестации объектов возложена на организацию в целом — субъектом выступает юридическое лицо."],
+  ["Мастер участка лично не выдал работникам доступные на складе СИЗ.",1,"Непосредственная обязанность по выдаче СИЗ конкретным работникам лежит на мастере участка как должностном лице, ответственном за эту операцию."],
+].map(([t,correct,explain],i)=>`<div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin:0 0 10px;"><b>Кейс ${i+1}.</b> ${t}</p>${choiceListFull('t3-'+i,["Работодатель (физическое лицо)","Должностное лицо","Юридическое лицо","Руководитель (уполномоченный субъект)","Юридическое лицо как сторона коллективного договора"],correct,explain)}</div>`).join("")}
+${trainerStatusBtns(3)}`,
+// 5. Длящееся или нет?
+()=>`<div class="kicker">Тренажёр 5</div><h2 class="section-title">Длящееся или нет?</h2>
+<p class="lede" style="margin-bottom:14px;">Для каждой ситуации определите: характер нарушения, момент начала, момент окончания, момент обнаружения, начало срока давности.</p>
+${[
+  {t:"Работодатель не перечисляет профсоюзные взносы на протяжении семи месяцев подряд (аналог Дела №1).",
+   a:"Характер — длящееся: обязанность перечислять взносы не исполняется непрерывно. Начало — момент первой непогашенной обязанности. Окончание — момент фактического исполнения либо выявления. Обнаружение — дата поступления материалов уполномоченному органу (не дата первоначальной справки). Срок давности начинает течь с момента обнаружения длящегося правонарушения."},
+  {t:"Работодатель увольняет работника конкретным приказом без необходимого участия профкома, предусмотренного коллективным договором (аналог Дела №2).",
+   a:"Характер — недлящееся: нарушение совершено однократным действием — изданием приказа. Начало = окончание = дата приказа. Обнаружение может произойти позже, но срок давности отсчитывается от момента совершения, а не обнаружения. Это и стало причиной прекращения дела №2 по истечении срока."},
+  {t:"Работодатель на протяжении всего периода деятельности не создаёт обязательную службу охраны труда, хотя обязан по численности персонала.",
+   a:"Характер — длящееся: обязанность создать службу не исполняется непрерывно, пока работодатель её не создаст. Срок давности начинает течь с момента обнаружения факта неисполнения, а не с начала периода, когда обязанность впервые возникла."},
+  {t:"Работодатель разместил однократное дискриминационное объявление о вакансии.",
+   a:"Характер — недлящееся: нарушение совершено в момент публикации конкретного объявления. Срок давности отсчитывается от даты размещения объявления."},
+  {t:"Работодатель систематически, из месяца в месяц, не выплачивает часть заработной платы работникам.",
+   a:"Характер — длящееся: обязанность по полной и своевременной выплате не исполняется непрерывно. Срок давности привязывается к длящемуся характеру неисполнения, а для требований работника — также учитывает конституционно-правовое истолкование длящихся обязанностей по оплате труда."},
+  {t:"Работодатель не сообщил об одном конкретном несчастном случае в установленный законом срок уведомления.",
+   a:"Характер — недлящееся: обязанность привязана к конкретному событию и конкретному сроку уведомления о нём; нарушение завершается в момент истечения этого срока, а не продолжается бессрочно. Срок давности отсчитывается от момента истечения срока уведомления."},
+].map((item,i)=>`<div class="card" style="margin-bottom:12px;"><p style="font-size:13.5px;margin:0 0 10px;"><b>Ситуация ${i+1}.</b> ${item.t}</p>${revealBox('t4-'+i,'Пройдите 5 шагов анализа, затем откройте решение.',item.a)}</div>`).join("")}
+${trainerStatusBtns(4)}`,
+];
+function trainerBody(idx){ return TRAINER_BODIES[idx] ? TRAINER_BODIES[idx]() : ''; }
+function trainerFabula(text){ return `<div class="card accent-left" style="margin-bottom:14px;"><p style="font-size:13.5px;"><i>${text}</i></p></div>`; }
+function trainerVopros(text){ return `<p class="q" style="font-weight:700;color:var(--navy);margin:14px 0 10px;">${text}</p>`; }
+function trainerStatusBtns(i){
+  const st = state.trainerStatus[i];
+  return `<div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;">
+    <button class="btn ${st==='done'?'btn-navy':'btn-outline'}" style="${st!=='done'?'color:var(--navy);border-color:var(--navy);':''}" onclick="setTrainerStatus(${i},'done')">✓ Пройдено</button>
+    <button class="btn ${st==='review'?'btn-navy':'btn-outline'}" style="${st!=='review'?'color:var(--navy);border-color:var(--navy);':''}" onclick="setTrainerStatus(${i},'review')">Нужно повторить</button>
+  </div>`;
+}
+window.setTrainerStatus=function(i,v){ state.trainerStatus[i]=(state.trainerStatus[i]===v?undefined:v); save(); render(); };
+
+/* ============================================================
+   ЭКРАНЫ
+   ============================================================ */
+function screenCover(){
+  return `<section class="cover">
+    <div class="hero-photo-wrap"><img src="../assets/mnu-campus.jpg" onerror="this.classList.add('err')"><div class="hero-photo-fallback">${campusSVG()}</div></div>
+    <div class="cover-inner">
+      <div class="cover-top">
+        <div class="logo-wrap"><img src="../assets/mnu-logo.png" onerror="this.classList.add('err')"><span class="logo-fallback">${logoSVG()}</span></div>
+        <div class="univ-name">Maqsut Narikbayev University</div>
+      </div>
+      <div class="cover-eyebrow">Тема 14 · Ответственность в трудовых отношениях</div>
+      <h1>Трудовое право<br>Республики Казахстан</h1>
+      <p class="cover-sub">Тема №14. Ответственность в трудовых отношениях</p>
+      <p class="cover-question">Какие юридические последствия наступают, если нарушено трудовое законодательство?</p>
+      <div class="cover-actions">
+        <button class="btn btn-red" onclick="goTo14()">Начать занятие →</button>
+        <button class="btn btn-outline" onclick="goTo('map')">Карта темы</button>
+        <button class="btn btn-outline" onclick="goTo('trainers')">Тренажёры юридического мышления</button>
+        <button class="btn btn-outline" onclick="goTo('selfcheck')">Проверьте себя</button>
+        <button class="btn btn-outline" onclick="goTo('after')">Самостоятельная работа</button>
+      </div>
+      <div class="cover-author"><div><b>Муслим Хасенов</b>PhD, Associate Professor, Maqsut Narikbayev University</div></div>
+    </div>
+  </section>`;
+}
+const BRANCHES = [
+  {n:"I", title:"Административная", text:"Состав, субъект (физическое / должностное / юридическое лицо), срок давности, санкция, контролирующий орган (государственная инспекция труда)."},
+  {n:"II", title:"Уголовная", text:"Общественная опасность, специальный субъект, предусмотренное законом последствие, причинная связь, наказание."},
+  {n:"III", title:"Материальная", text:"Ущерб, противоправность, вина, причинная связь, прямой действительный ущерб, основания полной материальной ответственности."},
+];
+function screenMap(){
+  const active = state.mapBranch;
+  return `<div class="wrap">
+    <div class="kicker">Карта темы</div>
+    <h2 class="section-title">Ответственность в трудовых отношениях</h2>
+    <p class="lede" style="margin-bottom:20px;">Нажмите на ветвь, чтобы увидеть краткую памятку.</p>
+    <div class="branch-grid">${BRANCHES.map((b,i)=>`<div class="branch-card ${active===i?'active':''}" onclick="setMapBranch(${i})"><span class="bn">${b.n}</span><h4>${b.title}</h4></div>`).join("")}</div>
+    ${active!=null?`<div class="card burgundy" style="margin-top:20px;"><h3 style="color:#fff;">${BRANCHES[active].title}</h3><p style="color:#ecd8dc;">${BRANCHES[active].text}</p></div>`:''}
+    <div style="margin-top:36px;text-align:center;"><button class="btn btn-red" onclick="goTo14()">Перейти к занятию →</button></div>
+  </div>`;
+}
+window.setMapBranch=function(i){ state.mapBranch = (state.mapBranch===i?null:i); save(); render(); };
+
+function screenPresentation(){
+  const i=state.slide, s=SLIDES[i], stage=state.stage[i]||0;
+  const isLast = i===SLIDES.length-1;
+  const atMax = stage>=(s.maxStep||0);
+  return `<div class="wrap narrow">
+    <div class="slide-shell">
+      <div class="slide-meta"><span class="kicker" style="margin:0;">${s.kicker}</span><span>Слайд ${i+1} из ${SLIDES.length}</span></div>
+      ${s.render(stage)}
+      <div class="slide-controls">
+        <button class="navbtn" onclick="backSlide()" ${i===0&&stage===0?'disabled':''}>← Назад</button>
+        <div class="dot-row">${SLIDES.map((_,d)=>`<span class="dot ${d===i?'active':''}" onclick="goSlide(${d},'full')"></span>`).join("")}</div>
+        ${isLast&&atMax ? `<button class="navbtn primary" onclick="goTo('trainers')">К тренажёрам →</button>` : `<button class="navbtn primary" onclick="advanceSlide()">Далее →</button>`}
+      </div>
+    </div>
+    <p class="note" style="text-align:center;">Клавиши/кликер: → или Пробел — далее, ← — назад.</p>
+  </div>`;
+}
+function screenTrainers(){
+  if(currentTrainer===null){
+    const done = TRAINERS.reduce((n,_,i)=> n + (state.trainerStatus[i]==='done' ? 1:0), 0);
+    return `<div class="wrap">
+      <div class="kicker">Тренажёры юридического мышления</div>
+      <h2 class="section-title">Практикум по ответственности в трудовых отношениях</h2>
+      <p class="lede" style="margin-bottom:12px;">Для самостоятельного прохождения после занятия.</p>
+      <div class="progress-badge" style="margin-bottom:20px;">Прогресс: ${done} / ${TRAINERS.length}</div>
+      <div class="trainer-grid">${TRAINERS.map((t,i)=>{
+        const st = state.trainerStatus[i];
+        const label = st==='done'?'Пройдено':st==='review'?'Нужно повторить':'Не начато';
+        const cls = st==='done'?'status-done':st==='review'?'status-review':'status-none';
+        return `<div class="trainer-card" onclick="openTrainer(${i})"><span class="tag">${t.tag}</span><span class="status ${cls}">${label}</span><div class="n">${String(i+1).padStart(2,'0')}</div><h3>${t.title}</h3><p>${t.desc}</p></div>`;
+      }).join("")}</div>
+    </div>`;
+  }
+  return `<div class="wrap narrow"><button class="navbtn" onclick="goTo('trainers')" style="margin-bottom:18px;">← Все тренажёры</button>${trainerBody(currentTrainer)}</div>`;
+}
+
+const SELFCHECK=[
+{q:"Любое нарушение ТК влечёт административный штраф?",
+ render:()=>trueFalse('q1',"Любое нарушение нормы Трудового кодекса автоматически влечёт административный штраф по КоАП.",false,"Нет. Значительное число императивных обязанностей Трудового кодекса не подкреплено специальным административным составом КоАП — это прямой пробел, рассмотренный в теме."),
+},
+{q:"Чем восстановление права отличается от ответственности?",
+ render:()=>choiceListFull('q2',["Это одно и то же","Восстановление устраняет последствия нарушения для работника, ответственность — реакция государства или возмещение вреда нарушителем, это разные правовые институты","Восстановление — это вид уголовной ответственности","Ответственность всегда включает восстановление права"],1,"Восстановление нарушенного права работника (например, выплата задолженности, восстановление на работе) не является административным или уголовным наказанием работодателя — это разные правовые последствия одного факта."),
+},
+{q:"Что такое формальный состав?",
+ render:()=>choiceListFull('q3',["Состав, требующий обязательного наступления вреда","Состав, для которого наступление вреда не требуется — достаточно самого факта нарушения","Состав, применимый только к юридическим лицам","Состав, не имеющий субъекта"],1,"Формальный состав считается оконченным с момента совершения самого деяния, независимо от наступления вредных последствий — большинство административных составов КоАП в сфере труда именно такие."),
+},
+{q:"Кто может быть субъектом КоАП в трудовой сфере?",
+ render:()=>multiSelectExercise('q4',[{text:"Физическое лицо",correct:true},{text:"Должностное лицо",correct:true},{text:"Юридическое лицо",correct:true},{text:"Субъект предпринимательства",correct:true},{text:"Только государственный инспектор труда",correct:false}]),
+},
+{q:"Что такое длящееся правонарушение?",
+ render:()=>choiceListFull('q5',["Правонарушение, совершённое дважды","Правонарушение, продолжающееся во времени вследствие длительного невыполнения обязанности","Правонарушение, которое нельзя обнаружить","Правонарушение, совершённое только юридическим лицом"],1,"Длящееся правонарушение продолжается во времени, пока не исполнена обязанность или пока его не выявят — в отличие от недлящегося, которое оканчивается в момент конкретного действия или бездействия."),
+},
+{q:"Когда начинается срок давности по длящемуся нарушению?",
+ render:()=>choiceListFull('q6',["С момента возникновения обязанности","С момента обнаружения правонарушения уполномоченным органом","Срок давности по длящимся нарушениям не течёт никогда","С момента, когда нарушитель сам сообщил о нарушении"],1,"Как показало судебное дело №1 (ТОО «К.»), суд исчислил срок с даты обнаружения длящегося правонарушения (внесения представления прокуратуры), а не с более ранней даты первоначальной справки."),
+},
+{q:"Почему дело об увольнении члена профсоюза (судебное дело №2) было прекращено?",
+ render:()=>choiceListFull('q7',["Потому что увольнение было законным","Потому что истёк срок давности и был привлечён ненадлежащий субъект (юридическое лицо вместо уполномоченного руководителя)","Потому что потерпевшая не подала жалобу","Потому что коллективного договора не существовало"],1,"Два самостоятельных основания прекращения: нарушение в этой части квалифицировано как недлящееся с истёкшим сроком давности, и, кроме того, санкция ч.3 ст.97 требовала привлечения уполномоченного субъекта — руководителя, а не юридического лица."),
+},
+{q:"Любое незаконное увольнение образует состав ст.152 УК?",
+ render:()=>trueFalse('q8',"Любое незаконное увольнение автоматически образует уголовный состав по ст.152 УК.",false,"Нет. Для конструкции ч.1 ст.152 необходимо наличие существенного вреда либо иных квалифицирующих признаков (дискриминационный мотив, неоднократность задержки зарплаты и т.д.) — само по себе восстановление судом не доказывает уголовный состав."),
+},
+{q:"Что такое существенный вред применительно к ст.152 УК?",
+ render:()=>choiceListFull('q9',["Любая сумма взысканного среднего заработка","Квалифицирующее последствие, которое должно быть отдельно установлено и доказано, а не предполагается автоматически из факта незаконного увольнения","Штраф, наложенный на работодателя","Понятие, не имеющее значения для квалификации"],1,"Существенный вред — самостоятельный признак состава, который нужно доказывать отдельно; просто восстановление работника и взыскание среднего заработка его не подтверждают."),
+},
+{q:"Когда нарушение правил БиОТ становится уголовным?",
+ render:()=>choiceListFull('q10',["Как только выявлено любое нарушение","Когда нарушение правил охраны труда повлекло предусмотренное законом последствие — вред здоровью средней тяжести, тяжкий вред, смерть одного или нескольких лиц, при доказанной причинной связи","Когда работодатель — юридическое лицо","Когда нарушение было умышленным"],1,"Граница между ст.93/298 КоАП и ст.156 УК определяется наступившим последствием и причинной связью между нарушением правил и этим последствием."),
+},
+{q:"Кто субъект ст.156 УК?",
+ render:()=>choiceListFull('q11',["Любой работник организации","Лицо, на котором лежали обязанности по организации или обеспечению соблюдения правил охраны труда","Только директор организации","Государственный инспектор труда"],1,"Субъект специальный — тот, на ком лежала конкретная обязанность по организации или обеспечению соблюдения правил охраны труда, а не любой работник или формально высшее должностное лицо."),
+},
+{q:"Может ли административный штраф банка быть взыскан с работника?",
+ render:()=>trueFalse('q12',"Административный штраф, наложенный на работодателя (банк), можно впоследствии взыскать с виновного работника как материальный ущерб.",false,"Нет — именно так решил суд в кейсе о банке: административный штраф является мерой государственного принуждения за собственное правонарушение работодателя и не может быть переложен на работника как обычный имущественный ущерб."),
+},
+{q:"Может ли зарплата, выплаченная работнику по суду, считаться ущербом работодателя?",
+ render:()=>trueFalse('q13',"Заработная плата и отпускные, которые работодатель по суду выплатил фактически работавшему у него человеку, являются материальным ущербом, который можно взыскать с виновного должностного лица.",false,"Нет — апелляция в кейсе о директоре ТОО указала, что выплата заработанной зарплаты и отпускных является собственной обязанностью работодателя по оплате труда, а не ущербом, даже если трудовые отношения были оформлены с нарушением."),
+},
+{q:"Что такое прямой действительный ущерб?",
+ render:()=>choiceListFull('q14',["Любое уменьшение денег на счёте работодателя","Реальное уменьшение наличного имущества работодателя либо необходимость реальных расходов — в отличие от упущенной выгоды, штрафов и обычных обязательных выплат","Упущенная выгода работодателя","Штраф, наложенный на работодателя государственным органом"],1,"Прямой действительный ущерб — это реальное имущественное уменьшение или необходимость реальных расходов; он не включает упущенную выгоду, санкции государства и исполнение работодателем его собственных обязанностей."),
+},
+{q:"Всегда ли договор о полной материальной ответственности означает взыскание всей недостачи?",
+ render:()=>trueFalse('q15',"Подписанный работником договор о полной материальной ответственности сам по себе достаточен для взыскания с него всей суммы любой выявленной недостачи.",false,"Нет. Как показали кейсы «Салтанат» и «Валентина», нужно ещё доказать передачу ценностей, сохранность, противоправность, вину и причинную связь именно этого работника, а при нескольких работниках — наличие договора о коллективной (солидарной) ответственности."),
+},
+{q:"Что нужно для коллективной материальной ответственности?",
+ render:()=>choiceListFull('q16',["Достаточно индивидуальных договоров каждого работника","Письменный договор о полной коллективной (солидарной) материальной ответственности, заключённый именно в этом качестве","Устное согласие работников","Ничего дополнительного не требуется, если есть недостача"],1,"Когда невозможно разграничить вклад каждого работника, совместно работающего с ценностями, требуется отдельный письменный договор о полной коллективной (солидарной) материальной ответственности — индивидуальные договоры его не заменяют."),
+},
+{q:"Как отсутствие актов передачи между сменами повлияло на кейсы «Салтанат» и «Валентина»?",
+ render:()=>answerBox('q17')+revealBox('q17r','Открыть пояснение.','Без актов приёма-передачи между сменами невозможно установить, в чью смену и по чьей вине возникла недостача — это ключевая причина, по которой суды не признали автоматическое взыскание всей суммы с продавцов в обоих делах.'),
+},
+{q:"Может ли директор отвечать за недостачу склада только потому, что он директор?",
+ render:()=>trueFalse('q18',"Директор организации автоматически отвечает за любую недостачу на складе просто в силу своей должности.",false,"Нет — в кейсе о директоре ТОО суд учёл, что директор не принимала ТМЦ под отчёт, не заключала договор о полной материальной ответственности после назначения и что на складе имелся отдельный материально ответственный кладовщик."),
+},
+{q:"Какие обстоятельства исключают материальную ответственность работника?",
+ render:()=>multiSelectExercise('q19',[{text:"Непреодолимая сила",correct:true},{text:"Крайняя необходимость",correct:true},{text:"Необходимая оборона",correct:true},{text:"Неисполнение работодателем обязанности обеспечить надлежащие условия сохранности имущества",correct:true},{text:"Простая неосторожность работника без иных оснований",correct:false}]),
+},
+{q:"В чём состоит взаимность материальной ответственности?",
+ render:()=>answerBox('q20')+revealBox('q20r','Открыть пояснение.','Материальную ответственность могут нести обе стороны трудового договора: работник перед работодателем (за прямой действительный ущерб) и работодатель перед работником (например, за вред жизни и здоровью, причинённый в связи с исполнением трудовых обязанностей) — это не односторонняя конструкция.'),
+},
+];
+
+function screenSelfCheck(){
+  return `<div class="wrap">
+    <div class="kicker">Проверьте себя</div>
+    <h2 class="section-title">Итоговая проверка — 20 вопросов</h2>
+    <p class="lede" style="margin-bottom:20px;">После каждого ответа — короткое юридическое объяснение.</p>
+    ${SELFCHECK.map((q,i)=>`<div class="card" style="margin-bottom:16px;"><p class="q" style="font-weight:700;color:var(--navy);margin:0 0 12px;">${i+1}. ${q.q}</p>${q.render(i)}</div>`).join("")}
+  </div>`;
+}
+
+function screenAfter(){
+  return `<div class="wrap">
+    <div class="kicker">Самостоятельная работа</div>
+    <h2 class="section-title">Комплексный кейс</h2>
+
+    <div class="card accent-left" style="margin-bottom:20px;">
+      <p style="font-size:13.5px;"><i>Производственная компания нарушила правила охраны труда. Работник получил тяжёлую травму. Проверка установила отсутствие обучения. Государственный инспектор наложил административный штраф на организацию. Руководитель требует взыскать сумму штрафа со специалиста по БиОТ. Одновременно правоохранительные органы рассматривают вопрос об уголовной ответственности лица, ответственного за безопасность.</i></p>
+    </div>
+
+    <p class="lede" style="margin-bottom:16px;">Решите отдельно каждый из четырёх вопросов, используя алгоритм занятия: правило → субъект → состав → вид ответственности → вина → вред → причинная связь → последствие.</p>
+
+    <div class="card" style="margin-bottom:20px;">
+      <h3>1. Административная ответственность</h3>
+      <p>Кто субъект и какой состав?</p>
+      ${answerBox('after1')}
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <h3>2. Уголовная ответственность</h3>
+      <p>Какие признаки необходимо доказать?</p>
+      ${answerBox('after2')}
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <h3>3. Материальная ответственность</h3>
+      <p>Можно ли взыскать административный штраф с работника?</p>
+      ${answerBox('after3')}
+    </div>
+
+    <div class="card" style="margin-bottom:20px;">
+      <h3>4. Причинная связь</h3>
+      <p>Какие факты необходимо установить?</p>
+      ${answerBox('after4')}
+    </div>
+
+    <div class="card navy" style="margin-top:28px;">
+      <h3 style="color:#fff;">Экспорт ответов</h3>
+      <p style="color:#cfd8e3;font-size:13px;">Сохраните все свои ответы по теме в файл.</p>
+      <button class="btn btn-red" onclick="exportAnswers()" style="margin-top:10px;">Скачать мои ответы</button>
+      <p id="export-status" class="note" style="color:#cfd8e3;margin-top:8px;"></p>
+    </div>
+  </div>`;
+}
+
+window.exportAnswers=async function(){
+  const status=document.getElementById('export-status');
+  try{
+    const blob=new Blob([JSON.stringify(state,null,2)],{type:'application/json'});
+    const url=URL.createObjectURL(blob);
+    const a=document.createElement('a');
+    a.href=url; a.download='tema14-otvety.json'; document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+    if(status) status.textContent='Файл с ответами скачан.';
+  }catch(e){ if(status) status.textContent='Не удалось сформировать файл.'; }
+};
+
+/* ============================================================
+   СОСТОЯНИЕ И НАВИГАЦИЯ
+   ============================================================ */
+const state = load() || {slide:0, stage:{}, answers:{}, reveals:{}, sorters:{}, multiSel:{}, multiSelChecked:{}, refl:{}, trainerStatus:{}, mapBranch:null, teacherMode:true};
+if(!state.sorters) state.sorters={};
+if(!state.multiSel) state.multiSel={};
+if(!state.multiSelChecked) state.multiSelChecked={};
+if(!state.refl) state.refl={};
+if(!state.trainerStatus) state.trainerStatus={};
+if(state.mapBranch===undefined) state.mapBranch=null;
+if(state.teacherMode===undefined) state.teacherMode=true;
+function save(){try{localStorage.setItem('mnu_labor_law_topic14',JSON.stringify(state));}catch(e){}}
+function load(){try{const s=localStorage.getItem('mnu_labor_law_topic14');return s?JSON.parse(s):null;}catch(e){return null;}}
+
+let currentScreen='cover';
+let currentTrainer=null;
+
+function goTo(screen){ currentScreen=screen; currentTrainer=null; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function openTrainer(i){ currentScreen='trainers'; currentTrainer=i; render(); window.scrollTo({top:0,behavior:'smooth'}); }
+function goTo14(){ currentScreen='presentation'; currentTrainer=null; goSlide(0,'full'); }
+window.toggleMode=function(){ state.teacherMode=!state.teacherMode; save(); render(); };
+
+function goSlide(i, revealMode){
+  state.slide = Math.max(0, Math.min(SLIDES.length-1, i));
+  const s = SLIDES[state.slide];
+  if(revealMode==='full') state.stage[state.slide] = s.maxStep||0;
+  else if(revealMode==='reset') state.stage[state.slide] = 0;
+  save(); render(); window.scrollTo({top:0,behavior:'smooth'});
+}
+function advanceSlide(){
+  const i=state.slide, s=SLIDES[i], max=s.maxStep||0, cur=state.stage[i]||0;
+  if(cur<max){ state.stage[i]=cur+1; save(); render(); return; }
+  if(i<SLIDES.length-1) goSlide(i+1,'reset'); else render();
+}
+function backSlide(){
+  const i=state.slide, cur=state.stage[i]||0;
+  if(cur>0){ state.stage[i]=cur-1; save(); render(); return; }
+  if(i>0) goSlide(i-1,'full');
+}
+document.addEventListener('keydown', (e)=>{
+  if(currentScreen!=='presentation') return;
+  if(['ArrowRight','PageDown',' ','Spacebar'].includes(e.key)){ e.preventDefault(); advanceSlide(); }
+  else if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){ e.preventDefault(); backSlide(); }
+});
+
+function renderQr(id){
+  const url = document.getElementById(`qrurl-${id}`).value.trim();
+  const box = document.getElementById(`qrbox-${id}`);
+  if(!box) return;
+  box.innerHTML='';
+  if(!url){ box.innerHTML='<span style="font-size:10px;color:#999;">QR</span>'; return; }
+  if(typeof QRCode==='undefined'){ box.innerHTML='<span style="font-size:9px;color:#c8102e;padding:4px;text-align:center;">Библиотека QR не загрузилась</span>'; return; }
+  try{ new QRCode(box, {text:url, width:88, height:88, colorDark:"#0c2340", colorLight:"#ffffff"}); }
+  catch(e){ box.innerHTML='<span style="font-size:9px;color:#c8102e;">ошибка</span>'; }
+}
+
+function render(){
+  const app=document.getElementById('app');
+  let html='';
+  switch(currentScreen){
+    case 'cover': html=screenCover(); break;
+    case 'map': html=screenMap(); break;
+    case 'presentation': html=screenPresentation(); break;
+    case 'trainers': html=screenTrainers(); break;
+    case 'selfcheck': html=screenSelfCheck(); break;
+    case 'after': html=screenAfter(); break;
+    default: html=screenCover();
+  }
+  app.innerHTML = `<div class="screen active">${html}</div>`;
+  updateProgress();
+  autoRenderQrZones();
+  const mb=document.getElementById('modeToggleBtn');
+  if(mb){ mb.textContent = state.teacherMode ? 'Режим преподавателя' : 'Режим студента'; mb.className = 'mode-toggle'+(state.teacherMode?'':' student'); }
+}
+function updateProgress(){
+  const order=['cover','map','presentation','trainers','selfcheck','after'];
+  let pct=0;
+  if(currentScreen==='presentation'){ pct = 10 + (state.slide/(SLIDES.length-1))*60; }
+  else{ const idx=order.indexOf(currentScreen); pct = [3,6,10,85,92,100][idx] ?? 0; }
+  document.getElementById('progressFill').style.width=pct+'%';
+}
+render();
+</script>
+</body>
+</html>
